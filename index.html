@@ -241,93 +241,6 @@
     
   </div>
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%20nodestate%20down/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/3.jpg">
-      <meta itemprop="name" content="Bowen Hao">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bw blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Bw blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%20nodestate%20down/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:17:49" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/" itemprop="url" rel="index"><span itemprop="name">集群故障</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="集群故障排查日志-slurm-nodestate-down"><a href="#集群故障排查日志-slurm-nodestate-down" class="headerlink" title="集群故障排查日志-slurm nodestate down"></a>集群故障排查日志-slurm nodestate down</h1><ul>
-<li><p>今天是不知道为什么slurm节点状态变成了down，尝试了几次，在、要注意的点首先是修改slurm登录的账户要是和以前配置slurm的一样。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sinfo <span class="comment">#发现node 状态是down</span></span><br><span class="line"><span class="comment">#切换到root</span></span><br><span class="line">sudo scontrol update NodeName=node08 State=idle</span><br><span class="line">或者</span><br><span class="line">sudo scontrol update NodeName=node08 State=RESUME</span><br></pre></td></tr></table></figure>
-
-<p>搞定收工</p>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-  <div>
-    
-  </div>
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-conda%E5%B8%A6%E6%9D%A5%E7%9A%84%E9%97%AE%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -346,7 +259,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-conda%E5%B8%A6%E6%9D%A5%E7%9A%84%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">Untitled</a>
+          <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-conda%E5%B8%A6%E6%9D%A5%E7%9A%84%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">集群故障排查日志-conda带来的问题</a>
         </h2>
 
         <div class="post-meta-container">
@@ -358,7 +271,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:18:06" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
+      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:21:12" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -418,7 +331,7 @@
     
   </div>
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-vasp%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4%E5%8D%A1%E4%B8%80%E4%B8%8B%E7%84%B6%E5%90%8Evasp%E5%85%B3%E9%97%AD/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%20nodestate%20down/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/3.jpg">
@@ -436,7 +349,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-vasp%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4%E5%8D%A1%E4%B8%80%E4%B8%8B%E7%84%B6%E5%90%8Evasp%E5%85%B3%E9%97%AD/" class="post-title-link" itemprop="url">Untitled</a>
+          <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%20nodestate%20down/" class="post-title-link" itemprop="url">集群故障排查日志-slurm nodestate down</a>
         </h2>
 
         <div class="post-meta-container">
@@ -448,7 +361,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:17:22" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
+      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:21:23" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -470,10 +383,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="如题"><a href="#如题" class="headerlink" title="如题"></a>如题</h1><p>这个我先排查了内存情况，查看了系统日志，</p>
-<p> dmesg | egrep -i -B100 ‘killed process’</p>
-<p>发现是linux杀死了这个 因为内存占用过大。</p>
-<p>修改参数NCORE 调小内存占用</p>
+          <h1 id="集群故障排查日志-slurm-nodestate-down"><a href="#集群故障排查日志-slurm-nodestate-down" class="headerlink" title="集群故障排查日志-slurm nodestate down"></a>集群故障排查日志-slurm nodestate down</h1><ul>
+<li><p>今天是不知道为什么slurm节点状态变成了down，尝试了几次，在、要注意的点首先是修改slurm登录的账户要是和以前配置slurm的一样。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sinfo <span class="comment">#发现node 状态是down</span></span><br><span class="line"><span class="comment">#切换到root</span></span><br><span class="line">sudo scontrol update NodeName=node08 State=idle</span><br><span class="line">或者</span><br><span class="line">sudo scontrol update NodeName=node08 State=RESUME</span><br></pre></td></tr></table></figure>
+
+<p>搞定收工</p>
+</li>
+</ul>
 
       
     </div>
@@ -520,7 +436,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%E6%8F%90%E4%BA%A4%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%8D%A1%E5%9C%A8%E4%BA%86%E6%8F%90%E4%BA%A4setup/" class="post-title-link" itemprop="url">Untitled</a>
+          <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%E6%8F%90%E4%BA%A4%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%8D%A1%E5%9C%A8%E4%BA%86%E6%8F%90%E4%BA%A4setup/" class="post-title-link" itemprop="url">集群故障排查日志-slurm提交之后，卡在了提交setup</a>
         </h2>
 
         <div class="post-meta-container">
@@ -532,7 +448,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:17:37" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
+      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:21:44" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -615,7 +531,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/" class="post-title-link" itemprop="url">Untitled</a>
+          <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/" class="post-title-link" itemprop="url">集群故障排查日志—节点无法远程ssh链接</a>
         </h2>
 
         <div class="post-meta-container">
@@ -627,7 +543,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:16:33" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
+      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:22:39" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -680,6 +596,90 @@
     
   </div>
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-vasp%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4%E5%8D%A1%E4%B8%80%E4%B8%8B%E7%84%B6%E5%90%8Evasp%E5%85%B3%E9%97%AD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/3.jpg">
+      <meta itemprop="name" content="Bowen Hao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bw blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Bw blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-vasp%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4%E5%8D%A1%E4%B8%80%E4%B8%8B%E7%84%B6%E5%90%8Evasp%E5%85%B3%E9%97%AD/" class="post-title-link" itemprop="url">vasp进程自动被杀掉</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:22:20" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/" itemprop="url" rel="index"><span itemprop="name">集群故障</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="如题"><a href="#如题" class="headerlink" title="如题"></a>如题</h1><p>这个我先排查了内存情况，查看了系统日志，</p>
+<p> dmesg | egrep -i -B100 ‘killed process’</p>
+<p>发现是linux杀死了这个 因为内存占用过大。</p>
+<p>修改参数NCORE 调小内存占用</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+  <div>
+    
+  </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97%E2%80%94%E8%8A%82%E7%82%B9%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8Bssh%E9%93%BE%E6%8E%A5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -698,7 +698,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97%E2%80%94%E8%8A%82%E7%82%B9%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8Bssh%E9%93%BE%E6%8E%A5/" class="post-title-link" itemprop="url">Untitled</a>
+          <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97%E2%80%94%E8%8A%82%E7%82%B9%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8Bssh%E9%93%BE%E6%8E%A5/" class="post-title-link" itemprop="url">集群故障排查日志—节点无法远程ssh链接</a>
         </h2>
 
         <div class="post-meta-container">
@@ -710,7 +710,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:17:00" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
+      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:22:32" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">

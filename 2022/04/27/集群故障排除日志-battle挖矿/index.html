@@ -22,13 +22,13 @@
 
     <meta name="description" content="battle 挖矿提交任务发现算的很慢，发现cpu进程大部分都被占用了逮到一个kswapd0进程， 这个进程它是虚拟内存管理中，负责换页的，操作系统每过一定时间就会唤醒kswapd ，看看内存是否紧张，如果不紧张，则睡眠，在 kswapd 中，有2个阀值，pages_hige 和 pages_low，当空闲内存页的数量低于 pages_low的时候，kswapd进程就会扫描内存并且每次释放出32">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Bw blog">
+<meta property="og:title" content="集群故障排查日志—节点无法远程ssh链接">
 <meta property="og:url" content="http://example.com/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/index.html">
 <meta property="og:site_name" content="Bw blog">
 <meta property="og:description" content="battle 挖矿提交任务发现算的很慢，发现cpu进程大部分都被占用了逮到一个kswapd0进程， 这个进程它是虚拟内存管理中，负责换页的，操作系统每过一定时间就会唤醒kswapd ，看看内存是否紧张，如果不紧张，则睡眠，在 kswapd 中，有2个阀值，pages_hige 和 pages_low，当空闲内存页的数量低于 pages_low的时候，kswapd进程就会扫描内存并且每次释放出32">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-04-27T09:10:02.000Z">
-<meta property="article:modified_time" content="2022-04-27T09:16:33.136Z">
+<meta property="article:modified_time" content="2022-04-27T09:22:39.285Z">
 <meta property="article:author" content="Bowen Hao">
 <meta property="article:tag" content="集群故障">
 <meta name="twitter:card" content="summary">
@@ -38,10 +38,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/","path":"2022/04/27/集群故障排除日志-battle挖矿/","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/","path":"2022/04/27/集群故障排除日志-battle挖矿/","title":"集群故障排查日志—节点无法远程ssh链接"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title> | Bw blog</title>
+<title>集群故障排查日志—节点无法远程ssh链接 | Bw blog</title>
   
 
 
@@ -267,12 +267,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Bw blog">
+      <meta itemprop="name" content="集群故障排查日志—节点无法远程ssh链接 | Bw blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
+          集群故障排查日志—节点无法远程ssh链接
         </h1>
 
         <div class="post-meta-container">
@@ -284,7 +284,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:16:33" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
+      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:22:39" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -325,13 +325,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97%E2%80%94%E8%8A%82%E7%82%B9%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8Bssh%E9%93%BE%E6%8E%A5/" rel="prev" title="">
-                  <i class="fa fa-chevron-left"></i> 
+                <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-vasp%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4%E5%8D%A1%E4%B8%80%E4%B8%8B%E7%84%B6%E5%90%8Evasp%E5%85%B3%E9%97%AD/" rel="prev" title="vasp进程自动被杀掉">
+                  <i class="fa fa-chevron-left"></i> vasp进程自动被杀掉
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%E6%8F%90%E4%BA%A4%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%8D%A1%E5%9C%A8%E4%BA%86%E6%8F%90%E4%BA%A4setup/" rel="next" title="">
-                   <i class="fa fa-chevron-right"></i>
+                <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%E6%8F%90%E4%BA%A4%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%8D%A1%E5%9C%A8%E4%BA%86%E6%8F%90%E4%BA%A4setup/" rel="next" title="集群故障排查日志-slurm提交之后，卡在了提交setup">
+                  集群故障排查日志-slurm提交之后，卡在了提交setup <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
