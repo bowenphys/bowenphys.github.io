@@ -157,8 +157,9 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
+          <a href="/categories/">
         <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">categories</span>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
@@ -271,7 +272,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:21:12" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
+      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:38:45" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -301,93 +302,6 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda config --set auto_activate_base false</span><br><span class="line">conda deactivate</span><br></pre></td></tr></table></figure>
 
 <p>Looks like building up a new conda environment pinning to mpich 3.2.1 works properly and does not lead to conflicts.</p>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-  <div>
-    
-  </div>
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%20nodestate%20down/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/3.jpg">
-      <meta itemprop="name" content="Bowen Hao">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bw blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Bw blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%20nodestate%20down/" class="post-title-link" itemprop="url">集群故障排查日志-slurm nodestate down</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:21:23" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/" itemprop="url" rel="index"><span itemprop="name">集群故障</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="集群故障排查日志-slurm-nodestate-down"><a href="#集群故障排查日志-slurm-nodestate-down" class="headerlink" title="集群故障排查日志-slurm nodestate down"></a>集群故障排查日志-slurm nodestate down</h1><ul>
-<li><p>今天是不知道为什么slurm节点状态变成了down，尝试了几次，在、要注意的点首先是修改slurm登录的账户要是和以前配置slurm的一样。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sinfo <span class="comment">#发现node 状态是down</span></span><br><span class="line"><span class="comment">#切换到root</span></span><br><span class="line">sudo scontrol update NodeName=node08 State=idle</span><br><span class="line">或者</span><br><span class="line">sudo scontrol update NodeName=node08 State=RESUME</span><br></pre></td></tr></table></figure>
-
-<p>搞定收工</p>
 </li>
 </ul>
 
@@ -513,89 +427,6 @@
     
   </div>
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/3.jpg">
-      <meta itemprop="name" content="Bowen Hao">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bw blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Bw blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/" class="post-title-link" itemprop="url">集群故障排查日志—节点无法远程ssh链接</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:22:39" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/" itemprop="url" rel="index"><span itemprop="name">集群故障</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="battle-挖矿"><a href="#battle-挖矿" class="headerlink" title="battle 挖矿"></a>battle 挖矿</h1><p>提交任务发现算的很慢，发现cpu进程大部分都被占用了逮到一个kswapd0进程，</p>
-<p>这个进程它是虚拟内存管理中，负责换页的，操作系统每过一定时间就会唤醒kswapd ，看看内存是否紧张，如果不紧张，则睡眠，在 kswapd 中，有2<br>个阀值，pages_hige 和 pages_low，当空闲内存页的数量低于 pages_low<br>的时候，kswapd进程就会扫描内存并且每次释放出32 个free pages，直到 free page<br>的数量到达pages_high。通过阻止kswapd0进程过渡活跃地消耗CPU的方法是设置大页内存。<br>————————————————</p>
-<p>netstat -antlp查看了下系统外部连接发一个没见过的ip，剩下的就简单了，ban id 杀进程，查看定时任务。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-  <div>
-    
-  </div>
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-vasp%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4%E5%8D%A1%E4%B8%80%E4%B8%8B%E7%84%B6%E5%90%8Evasp%E5%85%B3%E9%97%AD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -652,6 +483,93 @@
 <p> dmesg | egrep -i -B100 ‘killed process’</p>
 <p>发现是linux杀死了这个 因为内存占用过大。</p>
 <p>修改参数NCORE 调小内存占用</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+  <div>
+    
+  </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%20nodestate%20down/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/3.jpg">
+      <meta itemprop="name" content="Bowen Hao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bw blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Bw blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%20nodestate%20down/" class="post-title-link" itemprop="url">集群故障排查日志-slurm nodestate down</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:21:23" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/" itemprop="url" rel="index"><span itemprop="name">集群故障</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="集群故障排查日志-slurm-nodestate-down"><a href="#集群故障排查日志-slurm-nodestate-down" class="headerlink" title="集群故障排查日志-slurm nodestate down"></a>集群故障排查日志-slurm nodestate down</h1><ul>
+<li><p>今天是不知道为什么slurm节点状态变成了down，尝试了几次，在、要注意的点首先是修改slurm登录的账户要是和以前配置slurm的一样。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sinfo <span class="comment">#发现node 状态是down</span></span><br><span class="line"><span class="comment">#切换到root</span></span><br><span class="line">sudo scontrol update NodeName=node08 State=idle</span><br><span class="line">或者</span><br><span class="line">sudo scontrol update NodeName=node08 State=RESUME</span><br></pre></td></tr></table></figure>
+
+<p>搞定收工</p>
+</li>
+</ul>
 
       
     </div>
@@ -755,6 +673,89 @@
 <li><p>这个问题我估计是去机房登录物理机导致的，去机房物理机插上键盘显示器调配东西的时候，进入桌面系统了，只有服务器系统才会有不休眠这个设定，所以以后如果要去物理机器调制的时候要注意这个问题。</p>
 </li>
 </ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+  <div>
+    
+  </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/3.jpg">
+      <meta itemprop="name" content="Bowen Hao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bw blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Bw blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/" class="post-title-link" itemprop="url">集群故障排查日志—节点无法远程ssh链接</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:22:39" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/" itemprop="url" rel="index"><span itemprop="name">集群故障</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="battle-挖矿"><a href="#battle-挖矿" class="headerlink" title="battle 挖矿"></a>battle 挖矿</h1><p>提交任务发现算的很慢，发现cpu进程大部分都被占用了逮到一个kswapd0进程，</p>
+<p>这个进程它是虚拟内存管理中，负责换页的，操作系统每过一定时间就会唤醒kswapd ，看看内存是否紧张，如果不紧张，则睡眠，在 kswapd 中，有2<br>个阀值，pages_hige 和 pages_low，当空闲内存页的数量低于 pages_low<br>的时候，kswapd进程就会扫描内存并且每次释放出32 个free pages，直到 free page<br>的数量到达pages_high。通过阻止kswapd0进程过渡活跃地消耗CPU的方法是设置大页内存。<br>————————————————</p>
+<p>netstat -antlp查看了下系统外部连接发一个没见过的ip，剩下的就简单了，ban id 杀进程，查看定时任务。</p>
 
       
     </div>
