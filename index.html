@@ -81,7 +81,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">2</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">1</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">7</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">3</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">2</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">8</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -152,18 +152,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -242,6 +242,96 @@
     
   </div>
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/27/conda-vscode-import-numpy%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/3.jpg">
+      <meta itemprop="name" content="Bowen Hao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bw blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Bw blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/27/conda-vscode-import-numpy%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">conda vscode import numpy问题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-04-27 17:50:53 / Modified: 17:53:20" itemprop="dateCreated datePublished" datetime="2022-04-27T17:50:53+08:00">2022-04-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">环境配置</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h1><blockquote>
+<p>Importing the numpy C-extensions failed. This error can happen for<br>many reasons, often due to issues with your setup or how NumPy was<br>installed.</p>
+</blockquote>
+<ul>
+<li><p>查阅了大量网页资料，经试验使用pip而非conda进行卸载和重装确实可以解决问题，但对于包的管理终究是不便的，报错中<a target="_blank" rel="noopener" href="https://numpy.org/devdocs/user/troubleshooting-importerror.html%E6%8C%87%E7%A4%BA%E6%88%91%E4%BB%AC%E5%8E%BBVSCode">https://numpy.org/devdocs/user/troubleshooting-importerror.html指示我们去VSCode</a> support寻求帮助，其中明确写道</p>
+<p>Conda environments can’t be automatically activated in the VS Code Integrated Terminal if the default shell is set to PowerShell. To change the shell, see Integrated terminal - Configuration.</p>
+<p>在vscode中 设置-用户-功能-终端-windows默认配置改成command prompt</p>
+<p>保存重启 解决问题</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+  <div>
+    
+  </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-conda%E5%B8%A6%E6%9D%A5%E7%9A%84%E9%97%AE%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -302,6 +392,93 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda config --set auto_activate_base false</span><br><span class="line">conda deactivate</span><br></pre></td></tr></table></figure>
 
 <p>Looks like building up a new conda environment pinning to mpich 3.2.1 works properly and does not lead to conflicts.</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+  <div>
+    
+  </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%20nodestate%20down/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/3.jpg">
+      <meta itemprop="name" content="Bowen Hao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bw blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Bw blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%20nodestate%20down/" class="post-title-link" itemprop="url">集群故障排查日志-slurm nodestate down</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:21:23" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/" itemprop="url" rel="index"><span itemprop="name">集群故障</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="集群故障排查日志-slurm-nodestate-down"><a href="#集群故障排查日志-slurm-nodestate-down" class="headerlink" title="集群故障排查日志-slurm nodestate down"></a>集群故障排查日志-slurm nodestate down</h1><ul>
+<li><p>今天是不知道为什么slurm节点状态变成了down，尝试了几次，在、要注意的点首先是修改slurm登录的账户要是和以前配置slurm的一样。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sinfo <span class="comment">#发现node 状态是down</span></span><br><span class="line"><span class="comment">#切换到root</span></span><br><span class="line">sudo scontrol update NodeName=node08 State=idle</span><br><span class="line">或者</span><br><span class="line">sudo scontrol update NodeName=node08 State=RESUME</span><br></pre></td></tr></table></figure>
+
+<p>搞定收工</p>
 </li>
 </ul>
 
@@ -511,7 +688,7 @@
     
   </div>
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%20nodestate%20down/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/3.jpg">
@@ -529,7 +706,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%20nodestate%20down/" class="post-title-link" itemprop="url">集群故障排查日志-slurm nodestate down</a>
+          <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/" class="post-title-link" itemprop="url">集群故障排查日志—节点无法远程ssh链接</a>
         </h2>
 
         <div class="post-meta-container">
@@ -541,7 +718,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:21:23" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
+      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:22:39" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -563,13 +740,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="集群故障排查日志-slurm-nodestate-down"><a href="#集群故障排查日志-slurm-nodestate-down" class="headerlink" title="集群故障排查日志-slurm nodestate down"></a>集群故障排查日志-slurm nodestate down</h1><ul>
-<li><p>今天是不知道为什么slurm节点状态变成了down，尝试了几次，在、要注意的点首先是修改slurm登录的账户要是和以前配置slurm的一样。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sinfo <span class="comment">#发现node 状态是down</span></span><br><span class="line"><span class="comment">#切换到root</span></span><br><span class="line">sudo scontrol update NodeName=node08 State=idle</span><br><span class="line">或者</span><br><span class="line">sudo scontrol update NodeName=node08 State=RESUME</span><br></pre></td></tr></table></figure>
-
-<p>搞定收工</p>
-</li>
-</ul>
+          <h1 id="battle-挖矿"><a href="#battle-挖矿" class="headerlink" title="battle 挖矿"></a>battle 挖矿</h1><p>提交任务发现算的很慢，发现cpu进程大部分都被占用了逮到一个kswapd0进程，</p>
+<p>这个进程它是虚拟内存管理中，负责换页的，操作系统每过一定时间就会唤醒kswapd ，看看内存是否紧张，如果不紧张，则睡眠，在 kswapd 中，有2<br>个阀值，pages_hige 和 pages_low，当空闲内存页的数量低于 pages_low<br>的时候，kswapd进程就会扫描内存并且每次释放出32 个free pages，直到 free page<br>的数量到达pages_high。通过阻止kswapd0进程过渡活跃地消耗CPU的方法是设置大页内存。<br>————————————————</p>
+<p>netstat -antlp查看了下系统外部连接发一个没见过的ip，剩下的就简单了，ban id 杀进程，查看定时任务。</p>
 
       
     </div>
@@ -673,89 +846,6 @@
 <li><p>这个问题我估计是去机房登录物理机导致的，去机房物理机插上键盘显示器调配东西的时候，进入桌面系统了，只有服务器系统才会有不休眠这个设定，所以以后如果要去物理机器调制的时候要注意这个问题。</p>
 </li>
 </ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-  <div>
-    
-  </div>
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/3.jpg">
-      <meta itemprop="name" content="Bowen Hao">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bw blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Bw blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/" class="post-title-link" itemprop="url">集群故障排查日志—节点无法远程ssh链接</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-04-27 17:10:02 / Modified: 17:22:39" itemprop="dateCreated datePublished" datetime="2022-04-27T17:10:02+08:00">2022-04-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/" itemprop="url" rel="index"><span itemprop="name">集群故障</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="battle-挖矿"><a href="#battle-挖矿" class="headerlink" title="battle 挖矿"></a>battle 挖矿</h1><p>提交任务发现算的很慢，发现cpu进程大部分都被占用了逮到一个kswapd0进程，</p>
-<p>这个进程它是虚拟内存管理中，负责换页的，操作系统每过一定时间就会唤醒kswapd ，看看内存是否紧张，如果不紧张，则睡眠，在 kswapd 中，有2<br>个阀值，pages_hige 和 pages_low，当空闲内存页的数量低于 pages_low<br>的时候，kswapd进程就会扫描内存并且每次释放出32 个free pages，直到 free page<br>的数量到达pages_high。通过阻止kswapd0进程过渡活跃地消耗CPU的方法是设置大页内存。<br>————————————————</p>
-<p>netstat -antlp查看了下系统外部连接发一个没见过的ip，剩下的就简单了，ban id 杀进程，查看定时任务。</p>
 
       
     </div>
