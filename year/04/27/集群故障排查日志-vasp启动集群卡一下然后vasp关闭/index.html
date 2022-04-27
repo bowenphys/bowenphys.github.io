@@ -5,14 +5,19 @@
   
 
   
-  <title>Category: 环境配置 | Bw blog</title>
+  <title>Vasp进程自动被杀掉 | Bw blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Bw blog">
-<meta property="og:url" content="http://example.com/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/index.html">
+  <meta name="description" content="如题这个我先排查了内存情况，查看了系统日志，  dmesg | egrep -i -B100 ‘killed process’ 发现是linux杀死了这个 因为内存占用过大。 修改参数NCORE 调小内存占用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vasp进程自动被杀掉">
+<meta property="og:url" content="http://example.com/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-vasp%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4%E5%8D%A1%E4%B8%80%E4%B8%8B%E7%84%B6%E5%90%8Evasp%E5%85%B3%E9%97%AD/index.html">
 <meta property="og:site_name" content="Bw blog">
+<meta property="og:description" content="如题这个我先排查了内存情况，查看了系统日志，  dmesg | egrep -i -B100 ‘killed process’ 发现是linux杀死了这个 因为内存占用过大。 修改参数NCORE 调小内存占用">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-04-27T09:10:02.000Z">
+<meta property="article:modified_time" content="2022-04-27T09:22:20.407Z">
 <meta property="article:author" content="Bowen Hao">
+<meta property="article:tag" content="集群故障">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Bw blog" type="application/atom+xml">
@@ -62,40 +67,70 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/year/04/27/conda-vscode-import-numpy%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  <time datetime="2022-04-27T09:50:53.000Z" itemprop="datePublished">Apr 27</time>
+        <section id="main"><article id="post-集群故障排查日志-vasp启动集群卡一下然后vasp关闭" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-vasp%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4%E5%8D%A1%E4%B8%80%E4%B8%8B%E7%84%B6%E5%90%8Evasp%E5%85%B3%E9%97%AD/" class="article-date">
+  <time datetime="2022-04-27T09:10:02.000Z" itemprop="datePublished">2022-04-27</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/">集群故障</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/year/04/27/conda-vscode-import-numpy%E9%97%AE%E9%A2%98/">Conda Vscode Import Numpy问题</a>
+    <h1 class="article-title" itemprop="name">
+      Vasp进程自动被杀掉
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="如题"><a href="#如题" class="headerlink" title="如题"></a>如题</h1><p>这个我先排查了内存情况，查看了系统日志，</p>
+<p> dmesg | egrep -i -B100 ‘killed process’</p>
+<p>发现是linux杀死了这个 因为内存占用过大。</p>
+<p>修改参数NCORE 调小内存占用</p>
 
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-vasp%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4%E5%8D%A1%E4%B8%80%E4%B8%8B%E7%84%B6%E5%90%8Evasp%E5%85%B3%E9%97%AD/" data-id="cl2hig46x000essvj7wgt0izm" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/" rel="tag">集群故障</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%E6%8F%90%E4%BA%A4%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%8D%A1%E5%9C%A8%E4%BA%86%E6%8F%90%E4%BA%A4setup/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          集群故障排查日志-Slurm提交之后，卡在了提交setup
+        
+      </div>
+    </a>
+  
+  
+    <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97%E2%80%94%E8%8A%82%E7%82%B9%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8Bssh%E9%93%BE%E6%8E%A5/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">集群故障排查日志—节点无法远程Ssh链接</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         
