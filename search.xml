@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>List of Conda</title>
-    <url>/year/04/27/conda/</url>
-    <content><![CDATA[<h1 id="为了解决conda"><a href="#为了解决conda" class="headerlink" title="为了解决conda"></a>为了解决conda</h1>]]></content>
-      <categories>
-        <category>conda</category>
-      </categories>
+    <title>Hello World</title>
+    <url>/year/04/25/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
       <tags>
-        <tag>conda</tag>
+        <tag>DFT</tag>
       </tags>
   </entry>
   <entry>
@@ -33,16 +43,24 @@
       </tags>
   </entry>
   <entry>
-    <title>集群故障排查日志-Conda带来的问题</title>
-    <url>/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-conda%E5%B8%A6%E6%9D%A5%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h1 id="集群故障排查日志-conda带来的问题"><a href="#集群故障排查日志-conda带来的问题" class="headerlink" title="集群故障排查日志-conda带来的问题"></a>集群故障排查日志-conda带来的问题</h1><ul>
-<li><p>今天是slurm调度系统出现问题，</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Error: node list format not recognized. Try using <span class="string">&#x27;-hosts=&lt;hostnames&gt;&#x27;</span>.</span><br></pre></td></tr></table></figure>
+    <title>List of Conda</title>
+    <url>/year/04/27/conda/</url>
+    <content><![CDATA[<h1 id="为了解决conda"><a href="#为了解决conda" class="headerlink" title="为了解决conda"></a>为了解决conda</h1>]]></content>
+      <categories>
+        <category>conda</category>
+      </categories>
+      <tags>
+        <tag>conda</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>集群故障排查日志-Slurm Nodestate Down</title>
+    <url>/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm-nodestate-down/</url>
+    <content><![CDATA[<h1 id="集群故障排查日志-slurm-nodestate-down"><a href="#集群故障排查日志-slurm-nodestate-down" class="headerlink" title="集群故障排查日志-slurm nodestate down"></a>集群故障排查日志-slurm nodestate down</h1><ul>
+<li><p>今天是不知道为什么slurm节点状态变成了down，尝试了几次，在、要注意的点首先是修改slurm登录的账户要是和以前配置slurm的一样。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">sinfo <span class="hljs-comment">#发现node 状态是down</span><br><span class="hljs-comment">#切换到root</span><br>sudo scontrol update NodeName=node08 State=idle<br>或者<br>sudo scontrol update NodeName=node08 State=RESUME<br></code></pre></td></tr></table></figure>
 
-<p>排查了一下发现是mpi版本的问题，更新3.2就不会出现，但是我又转念一想，一直以来都没有问题，我又深入的去检查了一下，发现了是调用环境出了问题，用户自己的目录下安装了anaconda3，默认环境切到了base。问题发现了直接不激活conda的环境就好了，</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda config --set auto_activate_base false</span><br><span class="line">conda deactivate</span><br></pre></td></tr></table></figure>
-
-<p>Looks like building up a new conda environment pinning to mpich 3.2.1 works properly and does not lead to conflicts.</p>
+<p>搞定收工</p>
 </li>
 </ul>
 ]]></content>
@@ -54,34 +72,16 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/year/04/25/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>集群故障排查日志-Conda带来的问题</title>
+    <url>/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-conda%E5%B8%A6%E6%9D%A5%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="集群故障排查日志-conda带来的问题"><a href="#集群故障排查日志-conda带来的问题" class="headerlink" title="集群故障排查日志-conda带来的问题"></a>集群故障排查日志-conda带来的问题</h1><ul>
+<li><p>今天是slurm调度系统出现问题，</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">Error: node list format not recognized. Try using <span class="hljs-string">&#x27;-hosts=&lt;hostnames&gt;&#x27;</span>.<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>排查了一下发现是mpi版本的问题，更新3.2就不会出现，但是我又转念一想，一直以来都没有问题，我又深入的去检查了一下，发现了是调用环境出了问题，用户自己的目录下安装了anaconda3，默认环境切到了base。问题发现了直接不激活conda的环境就好了，</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><code class="hljs routeros">conda<span class="hljs-built_in"> config </span>--<span class="hljs-built_in">set</span> auto_activate_base <span class="hljs-literal">false</span><br>conda deactivate<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <tags>
-        <tag>DFT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>集群故障排查日志-Slurm Nodestate Down</title>
-    <url>/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm-nodestate-down/</url>
-    <content><![CDATA[<h1 id="集群故障排查日志-slurm-nodestate-down"><a href="#集群故障排查日志-slurm-nodestate-down" class="headerlink" title="集群故障排查日志-slurm nodestate down"></a>集群故障排查日志-slurm nodestate down</h1><ul>
-<li><p>今天是不知道为什么slurm节点状态变成了down，尝试了几次，在、要注意的点首先是修改slurm登录的账户要是和以前配置slurm的一样。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sinfo <span class="comment">#发现node 状态是down</span></span><br><span class="line"><span class="comment">#切换到root</span></span><br><span class="line">sudo scontrol update NodeName=node08 State=idle</span><br><span class="line">或者</span><br><span class="line">sudo scontrol update NodeName=node08 State=RESUME</span><br></pre></td></tr></table></figure>
-
-<p>搞定收工</p>
+<p>Looks like building up a new conda environment pinning to mpich 3.2.1 works properly and does not lead to conflicts.</p>
 </li>
 </ul>
 ]]></content>
@@ -97,18 +97,18 @@
     <url>/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%E6%8F%90%E4%BA%A4%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%8D%A1%E5%9C%A8%E4%BA%86%E6%8F%90%E4%BA%A4setup/</url>
     <content><![CDATA[<h1 id="集群故障排查日志-slurm提交之后，卡在了提交setup"><a href="#集群故障排查日志-slurm提交之后，卡在了提交setup" class="headerlink" title="集群故障排查日志-slurm提交之后，卡在了提交setup"></a>集群故障排查日志-slurm提交之后，卡在了提交setup</h1><ul>
 <li><p>今天发现了这个问题，就是你在提交任务之后，</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">tail</span> -f slurm-jobid.out</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">tail</span> -f slurm-jobid.out<br></code></pre></td></tr></table></figure>
 
 
 
 <p>发现卡在了setup就是唤醒电子布之前的那一步</p>
 </li>
 <li><p>解决方案：一般出现在你</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scancel jobid</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">scancel jobid<br></code></pre></td></tr></table></figure>
 
 <p>因为虽然在slurm调度中取消的这个任务，但是有可能slurm并没有去别的节点取消掉。</p>
 <p>出现这种卡顿情况，</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">squence <span class="comment">#查看你的任务在哪一个节点</span></span><br><span class="line">ssh node02 <span class="comment">#进入你任务所在的节点</span></span><br><span class="line">top <span class="comment">#查看核使用情况，这时候你会发现你的进程还在运行，就是vasp_std或者vasp——ncl</span></span><br><span class="line">pkill vasp_std <span class="comment">#直接杀掉就好了</span></span><br><span class="line">top <span class="comment">#再次查看一下，确认节点空出来了</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">squence <span class="hljs-comment">#查看你的任务在哪一个节点</span><br>ssh node02 <span class="hljs-comment">#进入你任务所在的节点</span><br>top <span class="hljs-comment">#查看核使用情况，这时候你会发现你的进程还在运行，就是vasp_std或者vasp——ncl</span><br>pkill vasp_std <span class="hljs-comment">#直接杀掉就好了</span><br>top <span class="hljs-comment">#再次查看一下，确认节点空出来了</span><br><br></code></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
       <categories>
@@ -124,20 +124,20 @@
     <content><![CDATA[<h1 id="集群故障排查日志—节点无法远程ssh链接"><a href="#集群故障排查日志—节点无法远程ssh链接" class="headerlink" title="集群故障排查日志—节点无法远程ssh链接"></a>集群故障排查日志—节点无法远程ssh链接</h1><ul>
 <li><p>这几天突然发现实验室集群无法远程链接了；由于考试没有时间去处理，组里也没有会，放置了半个月，今天去物理机房插上了显示器和键盘，去看看了系统日志</p>
 <p>/var/log其中有</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Feb 25 22:15:38 server kernel: [ 1235.212537] PM: <span class="built_in">suspend</span> entry (s2idle)</span><br><span class="line">Feb 25 22:15:38 server systemd-sleep[1705]: Suspending system...</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">Feb 25 22:15:38 server kernel: [ 1235.212537] PM: <span class="hljs-built_in">suspend</span> entry (s2idle)<br>Feb 25 22:15:38 server systemd-sleep[1705]: Suspending system...<br></code></pre></td></tr></table></figure>
 
 
 
 <p>确定了是自动休眠的问题然后就好说了</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status sleep.target <span class="comment">#执行这个命令来确定一下状态</span></span><br><span class="line"> ● sleep.target - Sleep<span class="comment">#确认是休眠策略</span></span><br><span class="line">    Loaded: loaded (/lib/systemd/system/sleep.target; static; vendor preset: enabled)</span><br><span class="line">    Active: inactive (dead)</span><br><span class="line">      Docs: man:systemd.special(7)</span><br><span class="line"> Feb 24 13:18:08 xps systemd[1]: Reached target Sleep.</span><br><span class="line"> Feb 26 13:29:31 xps systemd[1]: Stopped target Sleep.</span><br><span class="line"> Feb 26 13:29:57 xps systemd[1]: Reached target Sleep.</span><br><span class="line"> Feb 26 13:30:19 xps systemd[1]: Stopped target Sleep.</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">systemctl status sleep.target <span class="hljs-comment">#执行这个命令来确定一下状态</span><br> ● sleep.target - Sleep<span class="hljs-comment">#确认是休眠策略</span><br>    Loaded: loaded (/lib/systemd/system/sleep.target; static; vendor preset: enabled)<br>    Active: inactive (dead)<br>      Docs: man:systemd.special(7)<br> Feb 24 13:18:08 xps systemd[1]: Reached target Sleep.<br> Feb 26 13:29:31 xps systemd[1]: Stopped target Sleep.<br> Feb 26 13:29:57 xps systemd[1]: Reached target Sleep.<br> Feb 26 13:30:19 xps systemd[1]: Stopped target Sleep.<br></code></pre></td></tr></table></figure>
 
 
 
 <p>然后</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target</span><br><span class="line"> Created symlink /etc/systemd/system/sleep.target → /dev/null.</span><br><span class="line"> Created symlink /etc/systemd/system/suspend.target → /dev/null.</span><br><span class="line"> Created symlink /etc/systemd/system/hibernate.target → /dev/null.</span><br><span class="line"> Created symlink /etc/systemd/system/hybrid-sleep.target → /dev/null.</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target<br> Created symlink /etc/systemd/system/sleep.target → /dev/null.<br> Created symlink /etc/systemd/system/suspend.target → /dev/null.<br> Created symlink /etc/systemd/system/hibernate.target → /dev/null.<br> Created symlink /etc/systemd/system/hybrid-sleep.target → /dev/null.<br></code></pre></td></tr></table></figure>
 
 <p>最后</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ systemctl status sleep.target</span><br><span class="line">● sleep.target</span><br><span class="line">   Loaded: masked (Reason: Unit sleep.target is masked.)</span><br><span class="line">   Active: inactive (dead)</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ systemctl status sleep.target<br>● sleep.target<br>   Loaded: masked (Reason: Unit sleep.target is masked.)<br>   Active: inactive (dead)<br></code></pre></td></tr></table></figure>
 
 <p>放了两天试了试，确定ok。自动休眠功能已经被关闭，不会出现自动休眠导致远程控制无法访问的情况了。</p>
 </li>
