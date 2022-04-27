@@ -1,24 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/year/04/25/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
+    <title>List of Conda</title>
+    <url>/year/04/27/conda/</url>
+    <content><![CDATA[<h1 id="为了解决conda"><a href="#为了解决conda" class="headerlink" title="为了解决conda"></a>为了解决conda</h1>]]></content>
+      <categories>
+        <category>conda</category>
+      </categories>
       <tags>
-        <tag>DFT</tag>
+        <tag>conda</tag>
       </tags>
   </entry>
   <entry>
@@ -43,32 +33,24 @@
       </tags>
   </entry>
   <entry>
-    <title>List of Conda</title>
-    <url>/year/04/27/conda/</url>
-    <content><![CDATA[<h1 id="为了解决conda"><a href="#为了解决conda" class="headerlink" title="为了解决conda"></a>为了解决conda</h1>]]></content>
-      <categories>
-        <category>conda</category>
-      </categories>
-      <tags>
-        <tag>conda</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>集群故障排查日志-Slurm Nodestate Down</title>
-    <url>/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm-nodestate-down/</url>
-    <content><![CDATA[<h1 id="集群故障排查日志-slurm-nodestate-down"><a href="#集群故障排查日志-slurm-nodestate-down" class="headerlink" title="集群故障排查日志-slurm nodestate down"></a>集群故障排查日志-slurm nodestate down</h1><ul>
-<li><p>今天是不知道为什么slurm节点状态变成了down，尝试了几次，在、要注意的点首先是修改slurm登录的账户要是和以前配置slurm的一样。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">sinfo <span class="hljs-comment">#发现node 状态是down</span><br><span class="hljs-comment">#切换到root</span><br>sudo scontrol update NodeName=node08 State=idle<br>或者<br>sudo scontrol update NodeName=node08 State=RESUME<br></code></pre></td></tr></table></figure>
+    <title>Hello World</title>
+    <url>/year/04/25/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
 
-<p>搞定收工</p>
-</li>
-</ul>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-      <categories>
-        <category>集群故障</category>
-      </categories>
       <tags>
-        <tag>集群故障</tag>
+        <tag>DFT</tag>
       </tags>
   </entry>
   <entry>
@@ -93,22 +75,14 @@
       </tags>
   </entry>
   <entry>
-    <title>集群故障排查日志-Slurm提交之后，卡在了提交setup</title>
-    <url>/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%E6%8F%90%E4%BA%A4%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%8D%A1%E5%9C%A8%E4%BA%86%E6%8F%90%E4%BA%A4setup/</url>
-    <content><![CDATA[<h1 id="集群故障排查日志-slurm提交之后，卡在了提交setup"><a href="#集群故障排查日志-slurm提交之后，卡在了提交setup" class="headerlink" title="集群故障排查日志-slurm提交之后，卡在了提交setup"></a>集群故障排查日志-slurm提交之后，卡在了提交setup</h1><ul>
-<li><p>今天发现了这个问题，就是你在提交任务之后，</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">tail</span> -f slurm-jobid.out<br></code></pre></td></tr></table></figure>
+    <title>集群故障排查日志-Slurm Nodestate Down</title>
+    <url>/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm-nodestate-down/</url>
+    <content><![CDATA[<h1 id="集群故障排查日志-slurm-nodestate-down"><a href="#集群故障排查日志-slurm-nodestate-down" class="headerlink" title="集群故障排查日志-slurm nodestate down"></a>集群故障排查日志-slurm nodestate down</h1><ul>
+<li><p>今天是不知道为什么slurm节点状态变成了down，尝试了几次，在、要注意的点首先是修改slurm登录的账户要是和以前配置slurm的一样。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">sinfo <span class="hljs-comment">#发现node 状态是down</span><br><span class="hljs-comment">#切换到root</span><br>sudo scontrol update NodeName=node08 State=idle<br>或者<br>sudo scontrol update NodeName=node08 State=RESUME<br></code></pre></td></tr></table></figure>
 
-
-
-<p>发现卡在了setup就是唤醒电子布之前的那一步</p>
+<p>搞定收工</p>
 </li>
-<li><p>解决方案：一般出现在你</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">scancel jobid<br></code></pre></td></tr></table></figure>
-
-<p>因为虽然在slurm调度中取消的这个任务，但是有可能slurm并没有去别的节点取消掉。</p>
-<p>出现这种卡顿情况，</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">squence <span class="hljs-comment">#查看你的任务在哪一个节点</span><br>ssh node02 <span class="hljs-comment">#进入你任务所在的节点</span><br>top <span class="hljs-comment">#查看核使用情况，这时候你会发现你的进程还在运行，就是vasp_std或者vasp——ncl</span><br>pkill vasp_std <span class="hljs-comment">#直接杀掉就好了</span><br>top <span class="hljs-comment">#再次查看一下，确认节点空出来了</span><br><br></code></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
       <categories>
@@ -143,6 +117,32 @@
 </li>
 <li><p>这个问题我估计是去机房登录物理机导致的，去机房物理机插上键盘显示器调配东西的时候，进入桌面系统了，只有服务器系统才会有不休眠这个设定，所以以后如果要去物理机器调制的时候要注意这个问题。</p>
 </li>
+</ul>
+]]></content>
+      <categories>
+        <category>集群故障</category>
+      </categories>
+      <tags>
+        <tag>集群故障</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>集群故障排查日志-Slurm提交之后，卡在了提交setup</title>
+    <url>/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%E6%8F%90%E4%BA%A4%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%8D%A1%E5%9C%A8%E4%BA%86%E6%8F%90%E4%BA%A4setup/</url>
+    <content><![CDATA[<h1 id="集群故障排查日志-slurm提交之后，卡在了提交setup"><a href="#集群故障排查日志-slurm提交之后，卡在了提交setup" class="headerlink" title="集群故障排查日志-slurm提交之后，卡在了提交setup"></a>集群故障排查日志-slurm提交之后，卡在了提交setup</h1><ul>
+<li><p>今天发现了这个问题，就是你在提交任务之后，</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">tail</span> -f slurm-jobid.out<br></code></pre></td></tr></table></figure>
+
+
+
+<p>发现卡在了setup就是唤醒电子布之前的那一步</p>
+</li>
+<li><p>解决方案：一般出现在你</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">scancel jobid<br></code></pre></td></tr></table></figure>
+
+<p>因为虽然在slurm调度中取消的这个任务，但是有可能slurm并没有去别的节点取消掉。</p>
+<p>出现这种卡顿情况，</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">squence <span class="hljs-comment">#查看你的任务在哪一个节点</span><br>ssh node02 <span class="hljs-comment">#进入你任务所在的节点</span><br>top <span class="hljs-comment">#查看核使用情况，这时候你会发现你的进程还在运行，就是vasp_std或者vasp——ncl</span><br>pkill vasp_std <span class="hljs-comment">#直接杀掉就好了</span><br>top <span class="hljs-comment">#再次查看一下，确认节点空出来了</span><br><br></code></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
       <categories>
