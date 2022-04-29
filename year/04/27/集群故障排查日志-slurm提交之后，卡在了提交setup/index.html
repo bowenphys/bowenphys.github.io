@@ -16,12 +16,12 @@
   <meta name="author" content="Bowen Hao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="集群故障排查日志-slurm提交之后，卡在了提交setup 今天发现了这个问题，就是你在提交任务之后， 1tail -f slurm-jobid.out    发现卡在了setup就是唤醒电子布之前的那一步  解决方案：一般出现在你 1scancel jobid  因为虽然在slurm调度中取消的这个任务，但是有可能slurm并没有去别的节点取消掉。 出现这种卡顿情况， 123456squence">
+    <meta name="description" content="集群故障排查日志-slurm提交之后，卡在了提交setup  今天发现了这个问题，就是你在提交任务之后， 1tail -f slurm-jobid.out 发现卡在了setup就是唤醒电子布之前的那一步 解决方案：一般出现在你 1scancel jobid 因为虽然在slurm调度中取消的这个任务，但是有可能slurm并没有去别的节点取消掉。 出现这种卡顿情况， 123456sq">
 <meta property="og:type" content="article">
 <meta property="og:title" content="集群故障排查日志-Slurm提交之后，卡在了提交setup">
 <meta property="og:url" content="http://example.com/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%E6%8F%90%E4%BA%A4%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%8D%A1%E5%9C%A8%E4%BA%86%E6%8F%90%E4%BA%A4setup/index.html">
 <meta property="og:site_name" content="Bw blog">
-<meta property="og:description" content="集群故障排查日志-slurm提交之后，卡在了提交setup 今天发现了这个问题，就是你在提交任务之后， 1tail -f slurm-jobid.out    发现卡在了setup就是唤醒电子布之前的那一步  解决方案：一般出现在你 1scancel jobid  因为虽然在slurm调度中取消的这个任务，但是有可能slurm并没有去别的节点取消掉。 出现这种卡顿情况， 123456squence">
+<meta property="og:description" content="集群故障排查日志-slurm提交之后，卡在了提交setup  今天发现了这个问题，就是你在提交任务之后， 1tail -f slurm-jobid.out 发现卡在了setup就是唤醒电子布之前的那一步 解决方案：一般出现在你 1scancel jobid 因为虽然在slurm调度中取消的这个任务，但是有可能slurm并没有去别的节点取消掉。 出现这种卡顿情况， 123456sq">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-27T09:10:02.000Z">
 <meta property="article:modified_time" content="2022-04-27T09:21:44.103Z">
@@ -231,17 +231,14 @@
             <h1 style="display: none">集群故障排查日志-Slurm提交之后，卡在了提交setup</h1>
             
             <div class="markdown-body">
-              <h1 id="集群故障排查日志-slurm提交之后，卡在了提交setup"><a href="#集群故障排查日志-slurm提交之后，卡在了提交setup" class="headerlink" title="集群故障排查日志-slurm提交之后，卡在了提交setup"></a>集群故障排查日志-slurm提交之后，卡在了提交setup</h1><ul>
+              <h1
+id="集群故障排查日志-slurm提交之后卡在了提交setup">集群故障排查日志-slurm提交之后，卡在了提交setup</h1>
+<ul>
 <li><p>今天发现了这个问题，就是你在提交任务之后，</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">tail</span> -f slurm-jobid.out<br></code></pre></td></tr></table></figure>
-
-
-
-<p>发现卡在了setup就是唤醒电子布之前的那一步</p>
-</li>
+<p>发现卡在了setup就是唤醒电子布之前的那一步</p></li>
 <li><p>解决方案：一般出现在你</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">scancel jobid<br></code></pre></td></tr></table></figure>
-
 <p>因为虽然在slurm调度中取消的这个任务，但是有可能slurm并没有去别的节点取消掉。</p>
 <p>出现这种卡顿情况，</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">squence <span class="hljs-comment">#查看你的任务在哪一个节点</span><br>ssh node02 <span class="hljs-comment">#进入你任务所在的节点</span><br>top <span class="hljs-comment">#查看核使用情况，这时候你会发现你的进程还在运行，就是vasp_std或者vasp——ncl</span><br>pkill vasp_std <span class="hljs-comment">#直接杀掉就好了</span><br>top <span class="hljs-comment">#再次查看一下，确认节点空出来了</span><br><br></code></pre></td></tr></table></figure></li>
@@ -280,9 +277,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97%E2%80%94%E8%8A%82%E7%82%B9%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8Bssh%E9%93%BE%E6%8E%A5/">
+                      <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-vasp%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4%E5%8D%A1%E4%B8%80%E4%B8%8B%E7%84%B6%E5%90%8Evasp%E5%85%B3%E9%97%AD/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">集群故障排查日志—节点无法远程Ssh链接</span>
+                        <span class="hidden-mobile">Vasp进程自动被杀掉</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -290,8 +287,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-vasp%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4%E5%8D%A1%E4%B8%80%E4%B8%8B%E7%84%B6%E5%90%8Evasp%E5%85%B3%E9%97%AD/">
-                        <span class="hidden-mobile">Vasp进程自动被杀掉</span>
+                      <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/">
+                        <span class="hidden-mobile">集群故障排查日志—节点无法远程Ssh链接</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -436,6 +433,48 @@
 
 
 
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          load: ['ui/lazy']
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" ></script>
+
+  
 
 
 
