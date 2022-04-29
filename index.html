@@ -430,53 +430,6 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-vasp%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4%E5%8D%A1%E4%B8%80%E4%B8%8B%E7%84%B6%E5%90%8Evasp%E5%85%B3%E9%97%AD/" target="_self">
-          Vasp进程自动被杀掉
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-vasp%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4%E5%8D%A1%E4%B8%80%E4%B8%8B%E7%84%B6%E5%90%8Evasp%E5%85%B3%E9%97%AD/" target="_self">
-          
-          如题 这个我先排查了内存情况，查看了系统日志， dmesg | egrep -i -B100 &#39;killed process&#39; 发现是linux杀死了这个 因为内存占用过大。 修改参数NCORE 调小内存占用
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-04-27 17:10" pubdate>
-              2022-04-27
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/">集群故障</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/">集群故障</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
         <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%E6%8F%90%E4%BA%A4%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%8D%A1%E5%9C%A8%E4%BA%86%E6%8F%90%E4%BA%A4setup/" target="_self">
           集群故障排查日志-Slurm提交之后，卡在了提交setup
         </a>
@@ -524,15 +477,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/" target="_self">
+        <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97%E2%80%94%E8%8A%82%E7%82%B9%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8Bssh%E9%93%BE%E6%8E%A5/" target="_self">
           集群故障排查日志—节点无法远程Ssh链接
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/" target="_self">
+        <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97%E2%80%94%E8%8A%82%E7%82%B9%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8Bssh%E9%93%BE%E6%8E%A5/" target="_self">
           
-          battle 挖矿 提交任务发现算的很慢，发现cpu进程大部分都被占用了逮到一个kswapd0进程， 这个进程它是虚拟内存管理中，负责换页的，操作系统每过一定时间就会唤醒kswapd ，看看内存是否紧张，如果不紧张，则睡眠，在 kswapd 中，有2 个阀值，pages_hige 和 pages_low，当空闲内存页的数量低于 pages_low 的时候，kswapd进程就会扫描内存并且
+          集群故障排查日志—节点无法远程ssh链接  这几天突然发现实验室集群无法远程链接了；由于考试没有时间去处理，组里也没有会，放置了半个月，今天去物理机房插上了显示器和键盘，去看看了系统日志 &#x2F;var&#x2F;log其中有 12Feb 25 22:15:38 server kernel: [ 1235.212537] PM: suspend entry (s2idle)Feb 25 22:15:38
         </a>
       </p>
 
@@ -571,15 +524,62 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97%E2%80%94%E8%8A%82%E7%82%B9%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8Bssh%E9%93%BE%E6%8E%A5/" target="_self">
+        <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-vasp%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4%E5%8D%A1%E4%B8%80%E4%B8%8B%E7%84%B6%E5%90%8Evasp%E5%85%B3%E9%97%AD/" target="_self">
+          Vasp进程自动被杀掉
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-vasp%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4%E5%8D%A1%E4%B8%80%E4%B8%8B%E7%84%B6%E5%90%8Evasp%E5%85%B3%E9%97%AD/" target="_self">
+          
+          如题 这个我先排查了内存情况，查看了系统日志， dmesg | egrep -i -B100 &#39;killed process&#39; 发现是linux杀死了这个 因为内存占用过大。 修改参数NCORE 调小内存占用
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-04-27 17:10" pubdate>
+              2022-04-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/">集群故障</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/">集群故障</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/" target="_self">
           集群故障排查日志—节点无法远程Ssh链接
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97%E2%80%94%E8%8A%82%E7%82%B9%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8Bssh%E9%93%BE%E6%8E%A5/" target="_self">
+        <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/" target="_self">
           
-          集群故障排查日志—节点无法远程ssh链接  这几天突然发现实验室集群无法远程链接了；由于考试没有时间去处理，组里也没有会，放置了半个月，今天去物理机房插上了显示器和键盘，去看看了系统日志 &#x2F;var&#x2F;log其中有 12Feb 25 22:15:38 server kernel: [ 1235.212537] PM: suspend entry (s2idle)Feb 25 22:15:38
+          battle 挖矿 提交任务发现算的很慢，发现cpu进程大部分都被占用了逮到一个kswapd0进程， 这个进程它是虚拟内存管理中，负责换页的，操作系统每过一定时间就会唤醒kswapd ，看看内存是否紧张，如果不紧张，则睡眠，在 kswapd 中，有2 个阀值，pages_hige 和 pages_low，当空闲内存页的数量低于 pages_low 的时候，kswapd进程就会扫描内存并且
         </a>
       </p>
 
