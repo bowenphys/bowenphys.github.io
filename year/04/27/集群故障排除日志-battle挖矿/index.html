@@ -16,17 +16,17 @@
   <meta name="author" content="Bowen Hao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="battle 挖矿 提交任务发现算的很慢，发现cpu进程大部分都被占用了逮到一个kswapd0进程， 这个进程它是虚拟内存管理中，负责换页的，操作系统每过一定时间就会唤醒kswapd ，看看内存是否紧张，如果不紧张，则睡眠，在 kswapd 中，有2 个阀值，pages_hige 和 pages_low，当空闲内存页的数量低于 pages_low 的时候，kswapd进程就会扫描内存并且">
+    <meta name="description" content="battle 挖矿  提交任务发现算的很慢，发现cpu进程大部分都被占用了逮到一个kswapd0进程，大概率是挖矿没跑了。   这个进程它是虚拟内存管理中，负责换页的，操作系统每过一定时间就会唤醒kswapd ，看看内存是否紧张，如果不紧张，则睡眠，在 kswapd 中，有2个阀值，pages_hige 和 pages_low，当空闲内存页的数量低于 pages_low 的时候，k">
 <meta property="og:type" content="article">
 <meta property="og:title" content="集群故障排查日志—节点无法远程Ssh链接">
 <meta property="og:url" content="http://example.com/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/index.html">
 <meta property="og:site_name" content="Bw blog">
-<meta property="og:description" content="battle 挖矿 提交任务发现算的很慢，发现cpu进程大部分都被占用了逮到一个kswapd0进程， 这个进程它是虚拟内存管理中，负责换页的，操作系统每过一定时间就会唤醒kswapd ，看看内存是否紧张，如果不紧张，则睡眠，在 kswapd 中，有2 个阀值，pages_hige 和 pages_low，当空闲内存页的数量低于 pages_low 的时候，kswapd进程就会扫描内存并且">
+<meta property="og:description" content="battle 挖矿  提交任务发现算的很慢，发现cpu进程大部分都被占用了逮到一个kswapd0进程，大概率是挖矿没跑了。   这个进程它是虚拟内存管理中，负责换页的，操作系统每过一定时间就会唤醒kswapd ，看看内存是否紧张，如果不紧张，则睡眠，在 kswapd 中，有2个阀值，pages_hige 和 pages_low，当空闲内存页的数量低于 pages_low 的时候，k">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-27T09:10:02.000Z">
-<meta property="article:modified_time" content="2022-04-27T10:58:59.416Z">
+<meta property="article:modified_time" content="2022-04-29T08:00:10.329Z">
 <meta property="article:author" content="Bowen Hao">
-<meta property="article:tag" content="集群故障">
+<meta property="article:tag" content="集群管理">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -197,7 +197,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      335 字
+      352 字
     </span>
   
 
@@ -232,17 +232,19 @@
             
             <div class="markdown-body">
               <h1 id="battle-挖矿">battle 挖矿</h1>
-<p>提交任务发现算的很慢，发现cpu进程大部分都被占用了逮到一个kswapd0进程，</p>
-<p>这个进程它是虚拟内存管理中，负责换页的，操作系统每过一定时间就会唤醒kswapd
-，看看内存是否紧张，如果不紧张，则睡眠，在 kswapd 中，有2
-个阀值，pages_hige 和 pages_low，当空闲内存页的数量低于 pages_low
+<blockquote>
+<p>提交任务发现算的很慢，发现cpu进程大部分都被占用了逮到一个kswapd0进程，大概率是挖矿没跑了。</p>
+</blockquote>
+<ul>
+<li><p>这个进程它是虚拟内存管理中，负责换页的，操作系统每过一定时间就会唤醒kswapd
+，看看内存是否紧张，如果不紧张，则睡眠，在 kswapd
+中，有2个阀值，pages_hige 和 pages_low，当空闲内存页的数量低于 pages_low
 的时候，kswapd进程就会扫描内存并且每次释放出32 个free pages，直到 free
-page
-的数量到达pages_high。通过阻止kswapd0进程过渡活跃地消耗CPU的方法是设置大页内存。
-————————————————</p>
-<p>netstat
--antlp查看了下系统外部连接发一个没见过的ip，剩下的就简单了，ban id
-杀进程，查看定时任务。</p>
+page的数量到达pages_high。通过阻止kswapd0进程过渡活跃地消耗CPU的方法是设置大页内存。
+————————————————</p></li>
+<li><p>使用<code>netstat -antlp</code>查看了下系统外部连接发一个没见过的ip，剩下的就简单了，ban
+ip 杀进程，查看定时任务是否被入侵。</p></li>
+</ul>
 
             </div>
             <hr>
@@ -260,7 +262,7 @@ page
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/">集群故障</a>
+                      <a class="hover-with-bg" href="/tags/%E9%9B%86%E7%BE%A4%E7%AE%A1%E7%90%86/">集群管理</a>
                     
                   </div>
                 
@@ -277,21 +279,15 @@ page
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-vasp%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4%E5%8D%A1%E4%B8%80%E4%B8%8B%E7%84%B6%E5%90%8Evasp%E5%85%B3%E9%97%AD/">
+                      <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97%E2%80%94%E8%8A%82%E7%82%B9%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8Bssh%E9%93%BE%E6%8E%A5/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Vasp进程自动被杀掉</span>
+                        <span class="hidden-mobile">集群故障排查日志—节点无法远程Ssh链接</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/year/04/25/hello-world/">
-                        <span class="hidden-mobile">Hello World</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>

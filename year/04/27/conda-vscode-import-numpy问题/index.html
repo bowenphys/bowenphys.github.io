@@ -16,17 +16,18 @@
   <meta name="author" content="Bowen Hao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="错误  Importing the numpy C-extensions failed. This error can happen for many reasons, often due to issues with your setup or how NumPy was installed.   查阅了大量网页资料，经试验使用pip而非conda进行卸载和重装确实可以解决问题，但">
+    <meta name="description" content="错误  在使用vscode计算wannierberri的时候发现了这个报错  123Importing the numpy C-extensions failed. This error can happen formany reasons, often due to issues with your setup or how NumPy wasinstalled.  查阅了大量网页资">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Conda Vscode Import Numpy问题">
 <meta property="og:url" content="http://example.com/year/04/27/conda-vscode-import-numpy%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="Bw blog">
-<meta property="og:description" content="错误  Importing the numpy C-extensions failed. This error can happen for many reasons, often due to issues with your setup or how NumPy was installed.   查阅了大量网页资料，经试验使用pip而非conda进行卸载和重装确实可以解决问题，但">
+<meta property="og:description" content="错误  在使用vscode计算wannierberri的时候发现了这个报错  123Importing the numpy C-extensions failed. This error can happen formany reasons, often due to issues with your setup or how NumPy wasinstalled.  查阅了大量网页资">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-27T09:50:53.000Z">
-<meta property="article:modified_time" content="2022-04-27T09:53:20.337Z">
+<meta property="article:modified_time" content="2022-04-29T07:57:38.645Z">
 <meta property="article:author" content="Bowen Hao">
-<meta property="article:tag" content="conda vscode">
+<meta property="article:tag" content="conda">
+<meta property="article:tag" content="vscode">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -197,7 +198,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      490 字
+      532 字
     </span>
   
 
@@ -233,17 +234,17 @@
             <div class="markdown-body">
               <h1 id="错误">错误</h1>
 <blockquote>
-<p>Importing the numpy C-extensions failed. This error can happen for
-many reasons, often due to issues with your setup or how NumPy was
-installed.</p>
+<p>在使用vscode计算wannierberri的时候发现了这个报错</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><pre><code class="hljs bash">Importing the numpy C-extensions failed. This error can happen <span class="hljs-keyword">for</span><br>many reasons, often due to issues with your setup or how NumPy was<br>installed.<br></code></pre></td></tr></table></figure>
 <ul>
-<li><p>查阅了大量网页资料，经试验使用pip而非conda进行卸载和重装确实可以解决问题，但对于包的管理终究是不便的，报错中https://numpy.org/devdocs/user/troubleshooting-importerror.html指示我们去VSCode
+<li><p>查阅了大量网页资料，发现使用pip而非conda进行卸载和重装确实可以解决问题，但对于包的管理终究是不便的，报错中https://numpy.org/devdocs/user/troubleshooting-importerror.html指示我们去VSCode
 support寻求帮助，其中明确写道</p>
 <p>Conda environments can’t be automatically activated in the VS Code
 Integrated Terminal if the default shell is set to PowerShell. To change
 the shell, see Integrated terminal - Configuration.</p>
-<p>在vscode中 设置-用户-功能-终端-windows默认配置改成command prompt</p>
+<p>对此我们只需要在vscode中
+设置-用户-功能-终端-windows默认配置改成command prompt</p>
 <p>保存重启 解决问题</p></li>
 </ul>
 
@@ -263,7 +264,9 @@ the shell, see Integrated terminal - Configuration.</p>
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/conda-vscode/">conda vscode</a>
+                      <a class="hover-with-bg" href="/tags/conda/">conda</a>
+                    
+                      <a class="hover-with-bg" href="/tags/vscode/">vscode</a>
                     
                   </div>
                 
@@ -280,9 +283,9 @@ the shell, see Integrated terminal - Configuration.</p>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/year/04/27/conda/">
+                      <a href="/year/04/27/Wannier90-%E9%9C%8D%E5%B0%94%E7%94%B5%E5%AF%BC%E7%8E%87%E7%9A%84%E8%AE%A1%E7%AE%97-AHC/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">List of Conda</span>
+                        <span class="hidden-mobile">Wannier90 霍尔电导率的计算(AHC)</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
