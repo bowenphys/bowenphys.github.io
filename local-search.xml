@@ -4,6 +4,83 @@
   
   
   <entry>
+    <title>离线QE编译踩坑</title>
+    <link href="/year/05/02/QE%E7%A6%BB%E7%BA%BF%E7%BC%96%E8%AF%91/"/>
+    <url>/year/05/02/QE%E7%A6%BB%E7%BA%BF%E7%BC%96%E8%AF%91/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>因为最近看到了wannier90的超越算法，能够更好的拟合wannier轨道，支持QE，所以就在服务器上编译一下QE，但是因为挖矿的事情，学校网络中心禁止集群连接外网，所以就离线编译。</p></blockquote><h2 id="软件准备">软件准备</h2><ul><li><p><ahref="https://github.com/QEF/q-e/releases">QE官网</a>下载QE源代码。</p></li><li><p>QE应该是在6.5以后的版本引入了devxlib，需要用wget或者curl从gitlab上获取devxlib，本地没有网络就会报错。</p><figure class="highlight gauss"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs gauss"><span class="hljs-built_in">make</span>: *** [Makefile:<span class="hljs-number">227</span>: libcuda] <span class="hljs-built_in">Error</span> <span class="hljs-number">2</span><br></code></pre></td></tr></table></figure></li></ul><h2 id="开始安装">开始安装</h2><ul><li><p>将两个包都传送到服务器解压</p><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs subunit">tar -xvf &quot;qe<span class="hljs-string">-7</span>.0-ReleasePack.tar<br>tar -xzvf devicexlib<span class="hljs-string">-0</span>.1.0.tar<br></code></pre></td></tr></table></figure></li><li><p>把devicexlib-0.10文件夹里的内容复制到QE/external/devxlib里面，注意这里是文件夹里的内容不是文件夹。</p></li><li><p>然后就是进入QE主目录执行</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs vim">./configure<br><span class="hljs-keyword">make</span> <span class="hljs-keyword">all</span><br></code></pre></td></tr></table></figure></li><li><p>安装之后执行文件会在BIN目录。</p></li></ul><h2 id="配置wannier90">配置wannier90</h2><ul><li><p>把wannier90放在QE目录下的archive文件夹内。</p></li><li><p>修改安装包的名字改为，v+版本号。例如我的是3.1.0就修改为</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">mv</span> wannier90-<span class="hljs-number">3</span>.<span class="hljs-number">1</span>.<span class="hljs-number">0</span>.tar.gz v3.<span class="hljs-number">1</span>.<span class="hljs-number">0</span><br></code></pre></td></tr></table></figure></li><li><p>回到QE主目录，运行</p><figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gauss"><span class="hljs-built_in">make</span> w90<br></code></pre></td></tr></table></figure></li></ul><h2 id="感想">感想</h2><ul><li>QE的自动化确实做的好，整个过程我都没配置什么环境，他都自己找到了位置，自己写入。</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>环境配置</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>QE</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>常用的Linux脚本</title>
+    <link href="/year/05/01/%E5%B8%B8%E7%94%A8linux%E8%84%9A%E6%9C%AC/"/>
+    <url>/year/05/01/%E5%B8%B8%E7%94%A8linux%E8%84%9A%E6%9C%AC/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>这里放一下计算常用的脚本，解放双手。抽空更新。</p></blockquote><ul><li><p>E-ferimi</p><figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> OUTCAR |grep E-fermi|awk <span class="hljs-string">&#x27;BEGIN &#123;FS=&quot; &quot;&#125; &#123;print $3&#125;&#x27;</span><br></code></pre></td></tr></table></figure></li><li><p>sigma</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">if</span> [ `<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$absaveenergy</span> &lt; 0.001&quot;</span> | bc` -eq 1 ] ; <span class="hljs-keyword">then</span><br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Your sigma <span class="hljs-variable">$sigma</span> is okay; for average T*S <span class="hljs-variable">$absaveenergy</span> is &lt; 0.001 eV &quot;</span><br><span class="hljs-keyword">else</span><br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Your sigma <span class="hljs-variable">$sigma</span> is BAD; for average T*S <span class="hljs-variable">$absaveenergy</span>  is &gt; 0.001 eV,try to decrease sigma!&quot;</span><br><span class="hljs-keyword">fi</span><br></code></pre></td></tr></table></figure></li><li><p>DMI</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> num&#123;1..4..1&#125;<br><span class="hljs-keyword">do</span><br><span class="hljs-built_in">mkdir</span> DMI_X_<span class="hljs-variable">$i</span><br><span class="hljs-built_in">cp</span> scf_kuobao/&#123;INCAR,POSCAR,POTCAR,KPOINTS,vasp_ncl.slurm&#125; DMI_X_<span class="hljs-variable">$i</span><br><span class="hljs-keyword">done</span><br><span class="hljs-keyword">do</span><br><span class="hljs-built_in">mkdir</span> DMI_Y_<span class="hljs-variable">$i</span><br><span class="hljs-built_in">cp</span> scf_kuobao/&#123;INCAR,POSCAR,POTCAR,KPOINTS,vasp_ncl.slurm&#125; DMI_Y_<span class="hljs-variable">$i</span><br><span class="hljs-keyword">done</span><br><span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> num&#123;1..4..1&#125;<br><span class="hljs-keyword">do</span><br><span class="hljs-built_in">mkdir</span> DMI_Z_<span class="hljs-variable">$j</span><br><span class="hljs-built_in">cp</span> scf_kuobao/&#123;INCAR,POSCAR,POTCAR,KPOINTS,vasp_ncl.slurm&#125; DMI_Z_<span class="hljs-variable">$j</span><br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure></li><li><p>cpre</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># bash</span><br><span class="hljs-built_in">cp</span> ../relaxation/&#123;CONTCAR,INCAR,POTCAR,KPOINTS&#125; .<br><span class="hljs-built_in">cp</span> ~/bin/&#123;vasp_std.slurm,vasp_ncl.slurm&#125; .<br><span class="hljs-built_in">mv</span> CONTCAR POSCAR<br><span class="hljs-built_in">ls</span><br><br></code></pre></td></tr></table></figure></li><li><p>cpscf</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cp</span> ../scf/&#123;CHGCAR,POTCAR,POSCAR,INCAR,KPOINTS&#125; .<br><span class="hljs-built_in">cp</span> ~/bin/&#123;vasp_std.slurm,vasp_ncl.slurm&#125; .<br><span class="hljs-built_in">ls</span><br><br></code></pre></td></tr></table></figure></li><li><p>E-TOTEN</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">grep <span class="hljs-string">&#x27;entropy=&#x27;</span> OUTCAR |<span class="hljs-built_in">tail</span> -1|awk <span class="hljs-string">&#x27;&#123;if($7~/^-/)&#123;print &quot; total energy   :       &quot; $7 &quot; eV&quot;&#125;else&#123;print &quot; total energy   :         &quot; $7 &quot; eV&quot;&#125;&#125;&#x27;</span><br></code></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>脚本</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vasp</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>常用Linux命令</title>
+    <link href="/year/05/01/%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/"/>
+    <url>/year/05/01/%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>整理了下做计算常用的Linux命令，长期更新</p></blockquote><ul><li><p>如何踢掉自己别的窗口，用于自己突然网络掉线，别的链接还在。如果你是非root用户只能用来T自己的。</p><figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">who</span><span class="hljs-comment">#先用who来确定几个</span><br><span class="hljs-built_in">who</span> am i <span class="hljs-comment">#用来确定自己是哪一个窗口</span><br>pkill -t pts/2 <span class="hljs-comment">#愉悦送走：再见了您嘞</span><br></code></pre></td></tr></table></figure></li><li><p>vim</p><p>查找字符用斜杠<code>/</code>然后敲回车，n是向下寻找shift+n是向上寻找。</p><p>可以利用正则表达式/slu*.out</p></li><li><p>反引号（`）这个字符一般在键盘的左上角反引号括起来的字符串被shell解释为命令行，在执行时，shell首先执行该命令行.</p></li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> `<span class="hljs-built_in">date</span>`<br></code></pre></td></tr></table></figure><ul><li><p>xargs</p><p>管道是实现“将前面的标准输出作为后面的标准输入”</p><p>xargs是实现“将标准输入作为命令的参数”</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">date</span> | xargs <span class="hljs-built_in">echo</span><br>thu mar 7 21:25<br></code></pre></td></tr></table></figure></li><li><p>查看空间磁盘内存情况</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">df</span><br></code></pre></td></tr></table></figure></li><li><p>将文件夹或者文件按照大小排序</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">du</span> -h --max-depth=1<br></code></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>环境配置</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>脚本</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Wannier90 霍尔电导率的计算(AHC)</title>
     <link href="/year/04/27/Wannier90-%E9%9C%8D%E5%B0%94%E7%94%B5%E5%AF%BC%E7%8E%87%E7%9A%84%E8%AE%A1%E7%AE%97-AHC/"/>
     <url>/year/04/27/Wannier90-%E9%9C%8D%E5%B0%94%E7%94%B5%E5%AF%BC%E7%8E%87%E7%9A%84%E8%AE%A1%E7%AE%97-AHC/</url>
@@ -85,31 +162,6 @@
   
   
   <entry>
-    <title>Vasp进程自动被杀掉</title>
-    <link href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-vasp%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4%E5%8D%A1%E4%B8%80%E4%B8%8B%E7%84%B6%E5%90%8Evasp%E5%85%B3%E9%97%AD/"/>
-    <url>/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-vasp%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4%E5%8D%A1%E4%B8%80%E4%B8%8B%E7%84%B6%E5%90%8Evasp%E5%85%B3%E9%97%AD/</url>
-    
-    <content type="html"><![CDATA[<h1 id="如题">如题</h1><p>这个我先排查了内存情况，查看了系统日志，</p><p>dmesg | egrep -i -B100 'killed process'</p><p>发现是linux杀死了这个 因为内存占用过大。</p><p>修改参数NCORE 调小内存占用</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>集群故障</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>集群故障</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>集群故障排查日志-Slurm Nodestate Down</title>
     <link href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm-nodestate-down/"/>
     <url>/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm-nodestate-down/</url>
@@ -161,10 +213,35 @@
   
   <entry>
     <title>集群故障排查日志—节点无法远程Ssh链接</title>
-    <link href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97%E2%80%94%E8%8A%82%E7%82%B9%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8Bssh%E9%93%BE%E6%8E%A5/"/>
-    <url>/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97%E2%80%94%E8%8A%82%E7%82%B9%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8Bssh%E9%93%BE%E6%8E%A5/</url>
+    <link href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/"/>
+    <url>/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/</url>
     
-    <content type="html"><![CDATA[<h1id="集群故障排查日志节点无法远程ssh链接">集群故障排查日志—节点无法远程ssh链接</h1><ul><li><p>这几天突然发现实验室集群无法远程链接了；由于考试没有时间去处理，组里也没有会，放置了半个月，今天去物理机房插上了显示器和键盘，去看看了系统日志</p><p>/var/log其中有</p><figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><pre><code class="hljs bash">Feb 25 22:15:38 server kernel: [ 1235.212537] PM: <span class="hljs-built_in">suspend</span> entry (s2idle)<br>Feb 25 22:15:38 server systemd-sleep[1705]: Suspending system...<br></code></pre></td></tr></table></figure><p>确定了是自动休眠的问题然后就好说了</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash">systemctl status sleep.target <span class="hljs-comment">#执行这个命令来确定一下状态</span><br> ● sleep.target - Sleep<span class="hljs-comment">#确认是休眠策略</span><br>    Loaded: loaded (/lib/systemd/system/sleep.target; static; vendor preset: enabled)<br>    Active: inactive (dead)<br>      Docs: man:systemd.special(7)<br> Feb 24 13:18:08 xps systemd[1]: Reached target Sleep.<br> Feb 26 13:29:31 xps systemd[1]: Stopped target Sleep.<br> Feb 26 13:29:57 xps systemd[1]: Reached target Sleep.<br> Feb 26 13:30:19 xps systemd[1]: Stopped target Sleep.<br></code></pre></td></tr></table></figure><p>然后</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target<br> Created symlink /etc/systemd/system/sleep.target → /dev/null.<br> Created symlink /etc/systemd/system/suspend.target → /dev/null.<br> Created symlink /etc/systemd/system/hibernate.target → /dev/null.<br> Created symlink /etc/systemd/system/hybrid-sleep.target → /dev/null.<br></code></pre></td></tr></table></figure><p>最后</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ systemctl status sleep.target<br>● sleep.target<br>   Loaded: masked (Reason: Unit sleep.target is masked.)<br>   Active: inactive (dead)<br></code></pre></td></tr></table></figure><p>放了两天试了试，确定ok。自动休眠功能已经被关闭，不会出现自动休眠导致远程控制无法访问的情况了。</p></li><li><p>这个问题我估计是去机房登录物理机导致的，去机房物理机插上键盘显示器调配东西的时候，进入桌面系统了，只有服务器系统才会有不休眠这个设定，所以以后如果要去物理机器调制的时候要注意这个问题。</p></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="battle-挖矿">battle 挖矿</h1><blockquote><p>提交任务发现算的很慢，发现cpu进程大部分都被占用了逮到一个kswapd0进程，大概率是挖矿没跑了。</p></blockquote><ul><li><p>这个进程它是虚拟内存管理中，负责换页的，操作系统每过一定时间就会唤醒kswapd，看看内存是否紧张，如果不紧张，则睡眠，在 kswapd中，有2个阀值，pages_hige 和 pages_low，当空闲内存页的数量低于 pages_low的时候，kswapd进程就会扫描内存并且每次释放出32 个free pages，直到 freepage的数量到达pages_high。通过阻止kswapd0进程过渡活跃地消耗CPU的方法是设置大页内存。————————————————</p></li><li><p>使用<code>netstat -antlp</code>查看了下系统外部连接发一个没见过的ip，剩下的就简单了，banip 杀进程，查看定时任务是否被入侵。</p></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>集群故障</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>集群管理</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Vasp进程自动被杀掉</title>
+    <link href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-vasp%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4%E5%8D%A1%E4%B8%80%E4%B8%8B%E7%84%B6%E5%90%8Evasp%E5%85%B3%E9%97%AD/"/>
+    <url>/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-vasp%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4%E5%8D%A1%E4%B8%80%E4%B8%8B%E7%84%B6%E5%90%8Evasp%E5%85%B3%E9%97%AD/</url>
+    
+    <content type="html"><![CDATA[<h1 id="如题">如题</h1><p>这个我先排查了内存情况，查看了系统日志，</p><p>dmesg | egrep -i -B100 'killed process'</p><p>发现是linux杀死了这个 因为内存占用过大。</p><p>修改参数NCORE 调小内存占用</p>]]></content>
     
     
     <categories>
@@ -186,10 +263,10 @@
   
   <entry>
     <title>集群故障排查日志—节点无法远程Ssh链接</title>
-    <link href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/"/>
-    <url>/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/</url>
+    <link href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97%E2%80%94%E8%8A%82%E7%82%B9%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8Bssh%E9%93%BE%E6%8E%A5/"/>
+    <url>/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97%E2%80%94%E8%8A%82%E7%82%B9%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8Bssh%E9%93%BE%E6%8E%A5/</url>
     
-    <content type="html"><![CDATA[<h1 id="battle-挖矿">battle 挖矿</h1><blockquote><p>提交任务发现算的很慢，发现cpu进程大部分都被占用了逮到一个kswapd0进程，大概率是挖矿没跑了。</p></blockquote><ul><li><p>这个进程它是虚拟内存管理中，负责换页的，操作系统每过一定时间就会唤醒kswapd，看看内存是否紧张，如果不紧张，则睡眠，在 kswapd中，有2个阀值，pages_hige 和 pages_low，当空闲内存页的数量低于 pages_low的时候，kswapd进程就会扫描内存并且每次释放出32 个free pages，直到 freepage的数量到达pages_high。通过阻止kswapd0进程过渡活跃地消耗CPU的方法是设置大页内存。————————————————</p></li><li><p>使用<code>netstat -antlp</code>查看了下系统外部连接发一个没见过的ip，剩下的就简单了，banip 杀进程，查看定时任务是否被入侵。</p></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1id="集群故障排查日志节点无法远程ssh链接">集群故障排查日志—节点无法远程ssh链接</h1><ul><li><p>这几天突然发现实验室集群无法远程链接了；由于考试没有时间去处理，组里也没有会，放置了半个月，今天去物理机房插上了显示器和键盘，去看看了系统日志</p><p>/var/log其中有</p><figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><pre><code class="hljs bash">Feb 25 22:15:38 server kernel: [ 1235.212537] PM: <span class="hljs-built_in">suspend</span> entry (s2idle)<br>Feb 25 22:15:38 server systemd-sleep[1705]: Suspending system...<br></code></pre></td></tr></table></figure><p>确定了是自动休眠的问题然后就好说了</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash">systemctl status sleep.target <span class="hljs-comment">#执行这个命令来确定一下状态</span><br> ● sleep.target - Sleep<span class="hljs-comment">#确认是休眠策略</span><br>    Loaded: loaded (/lib/systemd/system/sleep.target; static; vendor preset: enabled)<br>    Active: inactive (dead)<br>      Docs: man:systemd.special(7)<br> Feb 24 13:18:08 xps systemd[1]: Reached target Sleep.<br> Feb 26 13:29:31 xps systemd[1]: Stopped target Sleep.<br> Feb 26 13:29:57 xps systemd[1]: Reached target Sleep.<br> Feb 26 13:30:19 xps systemd[1]: Stopped target Sleep.<br></code></pre></td></tr></table></figure><p>然后</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target<br> Created symlink /etc/systemd/system/sleep.target → /dev/null.<br> Created symlink /etc/systemd/system/suspend.target → /dev/null.<br> Created symlink /etc/systemd/system/hibernate.target → /dev/null.<br> Created symlink /etc/systemd/system/hybrid-sleep.target → /dev/null.<br></code></pre></td></tr></table></figure><p>最后</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ systemctl status sleep.target<br>● sleep.target<br>   Loaded: masked (Reason: Unit sleep.target is masked.)<br>   Active: inactive (dead)<br></code></pre></td></tr></table></figure><p>放了两天试了试，确定ok。自动休眠功能已经被关闭，不会出现自动休眠导致远程控制无法访问的情况了。</p></li><li><p>这个问题我估计是去机房登录物理机导致的，去机房物理机插上键盘显示器调配东西的时候，进入桌面系统了，只有服务器系统才会有不休眠这个设定，所以以后如果要去物理机器调制的时候要注意这个问题。</p></li></ul>]]></content>
     
     
     <categories>
@@ -201,7 +278,7 @@
     
     <tags>
       
-      <tag>集群管理</tag>
+      <tag>集群故障</tag>
       
     </tags>
     

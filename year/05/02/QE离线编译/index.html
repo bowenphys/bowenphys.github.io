@@ -16,21 +16,21 @@
   <meta name="author" content="Bowen Hao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="集群故障排查日志-conda带来的问题  今天是slurm调度系统出现问题， 1Error: node list format not recognized. Try using &amp;#x27;-hosts&#x3D;&lt;hostnames&gt;&amp;#x27;. 排查了一下发现是mpi版本的问题，更新3.2就不会出现，但是我又转念一想，一直以来都没有问题，我又深入的去检查了一下，发现了是调用环境出">
+    <meta name="description" content="因为最近看到了wannier90的超越算法，能够更好的拟合wannier轨道，支持QE，所以就在服务器上编译一下QE，但是因为挖矿的事情，学校网络中心禁止集群连接外网，所以就离线编译。  软件准备  QE官网下载QE源代码。 QE应该是在6.5以后的版本引入了devxlib，需要用wget或者curl从gitlab上获取devxlib，本地没有网络就会报错。 1make: ***">
 <meta property="og:type" content="article">
-<meta property="og:title" content="集群故障排查日志-Conda带来的问题">
-<meta property="og:url" content="http://example.com/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-conda%E5%B8%A6%E6%9D%A5%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="离线QE编译踩坑">
+<meta property="og:url" content="http://example.com/year/05/02/QE%E7%A6%BB%E7%BA%BF%E7%BC%96%E8%AF%91/index.html">
 <meta property="og:site_name" content="Bw blog">
-<meta property="og:description" content="集群故障排查日志-conda带来的问题  今天是slurm调度系统出现问题， 1Error: node list format not recognized. Try using &amp;#x27;-hosts&#x3D;&lt;hostnames&gt;&amp;#x27;. 排查了一下发现是mpi版本的问题，更新3.2就不会出现，但是我又转念一想，一直以来都没有问题，我又深入的去检查了一下，发现了是调用环境出">
+<meta property="og:description" content="因为最近看到了wannier90的超越算法，能够更好的拟合wannier轨道，支持QE，所以就在服务器上编译一下QE，但是因为挖矿的事情，学校网络中心禁止集群连接外网，所以就离线编译。  软件准备  QE官网下载QE源代码。 QE应该是在6.5以后的版本引入了devxlib，需要用wget或者curl从gitlab上获取devxlib，本地没有网络就会报错。 1make: ***">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-04-27T09:10:02.000Z">
-<meta property="article:modified_time" content="2022-04-27T10:52:28.766Z">
+<meta property="article:published_time" content="2022-05-02T08:02:48.000Z">
+<meta property="article:modified_time" content="2022-05-02T08:44:44.041Z">
 <meta property="article:author" content="Bowen Hao">
-<meta property="article:tag" content="集群故障">
+<meta property="article:tag" content="QE">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>集群故障排查日志-Conda带来的问题 - Bw blog</title>
+  <title>离线QE编译踩坑 - Bw blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -176,7 +176,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="集群故障排查日志-Conda带来的问题">
+            <span class="h2" id="subtitle" title="离线QE编译踩坑">
               
             </span>
 
@@ -186,8 +186,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-04-27 17:10" pubdate>
-        2022年4月27日 下午
+      <time datetime="2022-05-02 16:02" pubdate>
+        2022年5月2日 下午
       </time>
     </span>
   
@@ -197,7 +197,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      396 字
+      573 字
     </span>
   
 
@@ -228,18 +228,39 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">集群故障排查日志-Conda带来的问题</h1>
+            <h1 style="display: none">离线QE编译踩坑</h1>
             
             <div class="markdown-body">
-              <h1
-id="集群故障排查日志-conda带来的问题">集群故障排查日志-conda带来的问题</h1>
+              <blockquote>
+<p>因为最近看到了wannier90的超越算法，能够更好的拟合wannier轨道，支持QE，所以就在服务器上编译一下QE，但是因为挖矿的事情，学校网络中心禁止集群连接外网，所以就离线编译。</p>
+</blockquote>
+<h2 id="软件准备">软件准备</h2>
 <ul>
-<li><p>今天是slurm调度系统出现问题，</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs bash">Error: node list format not recognized. Try using <span class="hljs-string">&#x27;-hosts=&lt;hostnames&gt;&#x27;</span>.<br></code></pre></td></tr></table></figure>
-<p>排查了一下发现是mpi版本的问题，更新3.2就不会出现，但是我又转念一想，一直以来都没有问题，我又深入的去检查了一下，发现了是调用环境出了问题，用户自己的目录下安装了anaconda3，默认环境切到了base。问题发现了直接不激活conda的环境就好了，</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs routeros">conda<span class="hljs-built_in"> config </span>--<span class="hljs-built_in">set</span> auto_activate_base <span class="hljs-literal">false</span><br>conda deactivate<br></code></pre></td></tr></table></figure>
-<p>Looks like building up a new conda environment pinning to mpich 3.2.1
-works properly and does not lead to conflicts.</p></li>
+<li><p><a
+target="_blank" rel="noopener" href="https://github.com/QEF/q-e/releases">QE官网</a>下载QE源代码。</p></li>
+<li><p>QE应该是在6.5以后的版本引入了devxlib，需要用wget或者curl从gitlab上获取devxlib，本地没有网络就会报错。</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs gauss"><span class="hljs-built_in">make</span>: *** [Makefile:<span class="hljs-number">227</span>: libcuda] <span class="hljs-built_in">Error</span> <span class="hljs-number">2</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="开始安装">开始安装</h2>
+<ul>
+<li><p>将两个包都传送到服务器解压</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs subunit">tar -xvf &quot;qe<span class="hljs-string">-7</span>.0-ReleasePack.tar<br>tar -xzvf devicexlib<span class="hljs-string">-0</span>.1.0.tar<br></code></pre></td></tr></table></figure></li>
+<li><p>把devicexlib-0.10文件夹里的内容复制到QE/external/devxlib里面，注意这里是文件夹里的内容不是文件夹。</p></li>
+<li><p>然后就是进入QE主目录执行</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs vim">./configure<br><span class="hljs-keyword">make</span> <span class="hljs-keyword">all</span><br></code></pre></td></tr></table></figure></li>
+<li><p>安装之后执行文件会在BIN目录。</p></li>
+</ul>
+<h2 id="配置wannier90">配置wannier90</h2>
+<ul>
+<li><p>把wannier90放在QE目录下的archive文件夹内。</p></li>
+<li><p>修改安装包的名字改为，v+版本号。例如我的是3.1.0就修改为</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">mv</span> wannier90-<span class="hljs-number">3</span>.<span class="hljs-number">1</span>.<span class="hljs-number">0</span>.tar.gz v3.<span class="hljs-number">1</span>.<span class="hljs-number">0</span><br></code></pre></td></tr></table></figure></li>
+<li><p>回到QE主目录，运行</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gauss"><span class="hljs-built_in">make</span> w90<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="感想">感想</h2>
+<ul>
+<li>QE的自动化确实做的好，整个过程我都没配置什么环境，他都自己找到了位置，自己写入。</li>
 </ul>
 
             </div>
@@ -250,7 +271,7 @@ works properly and does not lead to conflicts.</p></li>
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/">集群故障</a>
+                      <a class="hover-with-bg" href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">环境配置</a>
                     
                   </div>
                 
@@ -258,7 +279,7 @@ works properly and does not lead to conflicts.</p></li>
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/">集群故障</a>
+                      <a class="hover-with-bg" href="/tags/QE/">QE</a>
                     
                   </div>
                 
@@ -275,18 +296,12 @@ works properly and does not lead to conflicts.</p></li>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/year/04/27/conda-vscode-import-numpy%E9%97%AE%E9%A2%98/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Conda Vscode Import Numpy问题</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm-nodestate-down/">
-                        <span class="hidden-mobile">集群故障排查日志-Slurm Nodestate Down</span>
+                      <a href="/year/05/01/%E5%B8%B8%E7%94%A8linux%E8%84%9A%E6%9C%AC/">
+                        <span class="hidden-mobile">常用的Linux脚本</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

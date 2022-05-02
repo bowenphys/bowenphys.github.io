@@ -16,21 +16,21 @@
   <meta name="author" content="Bowen Hao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="集群故障排查日志-conda带来的问题  今天是slurm调度系统出现问题， 1Error: node list format not recognized. Try using &amp;#x27;-hosts&#x3D;&lt;hostnames&gt;&amp;#x27;. 排查了一下发现是mpi版本的问题，更新3.2就不会出现，但是我又转念一想，一直以来都没有问题，我又深入的去检查了一下，发现了是调用环境出">
+    <meta name="description" content="这里放一下计算常用的脚本，解放双手。抽空更新。   E-ferimi 1cat OUTCAR |grep E-fermi|awk &amp;#x27;BEGIN &amp;#123;FS&#x3D;&quot; &quot;&amp;#125; &amp;#123;print $3&amp;#125;&amp;#x27; sigma 12345if [ &#96;echo &quot;$absaveenergy &lt; 0.001&quot;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="集群故障排查日志-Conda带来的问题">
-<meta property="og:url" content="http://example.com/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-conda%E5%B8%A6%E6%9D%A5%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="常用的Linux脚本">
+<meta property="og:url" content="http://example.com/year/05/01/%E5%B8%B8%E7%94%A8linux%E8%84%9A%E6%9C%AC/index.html">
 <meta property="og:site_name" content="Bw blog">
-<meta property="og:description" content="集群故障排查日志-conda带来的问题  今天是slurm调度系统出现问题， 1Error: node list format not recognized. Try using &amp;#x27;-hosts&#x3D;&lt;hostnames&gt;&amp;#x27;. 排查了一下发现是mpi版本的问题，更新3.2就不会出现，但是我又转念一想，一直以来都没有问题，我又深入的去检查了一下，发现了是调用环境出">
+<meta property="og:description" content="这里放一下计算常用的脚本，解放双手。抽空更新。   E-ferimi 1cat OUTCAR |grep E-fermi|awk &amp;#x27;BEGIN &amp;#123;FS&#x3D;&quot; &quot;&amp;#125; &amp;#123;print $3&amp;#125;&amp;#x27; sigma 12345if [ &#96;echo &quot;$absaveenergy &lt; 0.001&quot;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-04-27T09:10:02.000Z">
-<meta property="article:modified_time" content="2022-04-27T10:52:28.766Z">
+<meta property="article:published_time" content="2022-05-01T02:24:25.000Z">
+<meta property="article:modified_time" content="2022-05-02T08:41:53.162Z">
 <meta property="article:author" content="Bowen Hao">
-<meta property="article:tag" content="集群故障">
+<meta property="article:tag" content="vasp">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>集群故障排查日志-Conda带来的问题 - Bw blog</title>
+  <title>常用的Linux脚本 - Bw blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -176,7 +176,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="集群故障排查日志-Conda带来的问题">
+            <span class="h2" id="subtitle" title="常用的Linux脚本">
               
             </span>
 
@@ -186,8 +186,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-04-27 17:10" pubdate>
-        2022年4月27日 下午
+      <time datetime="2022-05-01 10:24" pubdate>
+        2022年5月1日 上午
       </time>
     </span>
   
@@ -197,7 +197,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      396 字
+      1.2k 字
     </span>
   
 
@@ -228,18 +228,25 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">集群故障排查日志-Conda带来的问题</h1>
+            <h1 style="display: none">常用的Linux脚本</h1>
             
             <div class="markdown-body">
-              <h1
-id="集群故障排查日志-conda带来的问题">集群故障排查日志-conda带来的问题</h1>
+              <blockquote>
+<p>这里放一下计算常用的脚本，解放双手。抽空更新。</p>
+</blockquote>
 <ul>
-<li><p>今天是slurm调度系统出现问题，</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs bash">Error: node list format not recognized. Try using <span class="hljs-string">&#x27;-hosts=&lt;hostnames&gt;&#x27;</span>.<br></code></pre></td></tr></table></figure>
-<p>排查了一下发现是mpi版本的问题，更新3.2就不会出现，但是我又转念一想，一直以来都没有问题，我又深入的去检查了一下，发现了是调用环境出了问题，用户自己的目录下安装了anaconda3，默认环境切到了base。问题发现了直接不激活conda的环境就好了，</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs routeros">conda<span class="hljs-built_in"> config </span>--<span class="hljs-built_in">set</span> auto_activate_base <span class="hljs-literal">false</span><br>conda deactivate<br></code></pre></td></tr></table></figure>
-<p>Looks like building up a new conda environment pinning to mpich 3.2.1
-works properly and does not lead to conflicts.</p></li>
+<li><p>E-ferimi</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> OUTCAR |grep E-fermi|awk <span class="hljs-string">&#x27;BEGIN &#123;FS=&quot; &quot;&#125; &#123;print $3&#125;&#x27;</span><br></code></pre></td></tr></table></figure></li>
+<li><p>sigma</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">if</span> [ `<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$absaveenergy</span> &lt; 0.001&quot;</span> | bc` -eq 1 ] ; <span class="hljs-keyword">then</span><br>	<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Your sigma <span class="hljs-variable">$sigma</span> is okay; for average T*S <span class="hljs-variable">$absaveenergy</span> is &lt; 0.001 eV &quot;</span><br><span class="hljs-keyword">else</span><br>	<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Your sigma <span class="hljs-variable">$sigma</span> is BAD; for average T*S <span class="hljs-variable">$absaveenergy</span>  is &gt; 0.001 eV,try to decrease sigma!&quot;</span><br><span class="hljs-keyword">fi</span>	<br></code></pre></td></tr></table></figure></li>
+<li><p>DMI</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> num&#123;1..4..1&#125;<br><span class="hljs-keyword">do</span><br>	<span class="hljs-built_in">mkdir</span> DMI_X_<span class="hljs-variable">$i</span><br>	<span class="hljs-built_in">cp</span> scf_kuobao/&#123;INCAR,POSCAR,POTCAR,KPOINTS,vasp_ncl.slurm&#125; DMI_X_<span class="hljs-variable">$i</span><br><span class="hljs-keyword">done</span><br><span class="hljs-keyword">do</span><br>	<span class="hljs-built_in">mkdir</span> DMI_Y_<span class="hljs-variable">$i</span><br>	<span class="hljs-built_in">cp</span> scf_kuobao/&#123;INCAR,POSCAR,POTCAR,KPOINTS,vasp_ncl.slurm&#125; DMI_Y_<span class="hljs-variable">$i</span><br><span class="hljs-keyword">done</span><br><span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> num&#123;1..4..1&#125;<br><span class="hljs-keyword">do</span><br>	<span class="hljs-built_in">mkdir</span> DMI_Z_<span class="hljs-variable">$j</span><br>	<span class="hljs-built_in">cp</span> scf_kuobao/&#123;INCAR,POSCAR,POTCAR,KPOINTS,vasp_ncl.slurm&#125; DMI_Z_<span class="hljs-variable">$j</span><br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure></li>
+<li><p>cpre</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># bash</span><br><span class="hljs-built_in">cp</span> ../relaxation/&#123;CONTCAR,INCAR,POTCAR,KPOINTS&#125; .<br><span class="hljs-built_in">cp</span> ~/bin/&#123;vasp_std.slurm,vasp_ncl.slurm&#125; .<br><span class="hljs-built_in">mv</span> CONTCAR POSCAR<br><span class="hljs-built_in">ls</span><br><br></code></pre></td></tr></table></figure></li>
+<li><p>cpscf</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cp</span> ../scf/&#123;CHGCAR,POTCAR,POSCAR,INCAR,KPOINTS&#125; .<br><span class="hljs-built_in">cp</span> ~/bin/&#123;vasp_std.slurm,vasp_ncl.slurm&#125; .<br><span class="hljs-built_in">ls</span><br><br></code></pre></td></tr></table></figure></li>
+<li><p>E-TOTEN</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">grep <span class="hljs-string">&#x27;entropy=&#x27;</span> OUTCAR |<span class="hljs-built_in">tail</span> -1|awk <span class="hljs-string">&#x27;&#123;if($7~/^-/)&#123;print &quot; total energy   :       &quot; $7 &quot; eV&quot;&#125;else&#123;print &quot; total energy   :         &quot; $7 &quot; eV&quot;&#125;&#125;&#x27;</span><br></code></pre></td></tr></table></figure></li>
 </ul>
 
             </div>
@@ -250,7 +257,7 @@ works properly and does not lead to conflicts.</p></li>
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/">集群故障</a>
+                      <a class="hover-with-bg" href="/categories/%E8%84%9A%E6%9C%AC/">脚本</a>
                     
                   </div>
                 
@@ -258,7 +265,7 @@ works properly and does not lead to conflicts.</p></li>
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/">集群故障</a>
+                      <a class="hover-with-bg" href="/tags/vasp/">vasp</a>
                     
                   </div>
                 
@@ -275,9 +282,9 @@ works properly and does not lead to conflicts.</p></li>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/year/04/27/conda-vscode-import-numpy%E9%97%AE%E9%A2%98/">
+                      <a href="/year/05/02/QE%E7%A6%BB%E7%BA%BF%E7%BC%96%E8%AF%91/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Conda Vscode Import Numpy问题</span>
+                        <span class="hidden-mobile">离线QE编译踩坑</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -285,8 +292,8 @@ works properly and does not lead to conflicts.</p></li>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/year/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm-nodestate-down/">
-                        <span class="hidden-mobile">集群故障排查日志-Slurm Nodestate Down</span>
+                      <a href="/year/05/01/%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/">
+                        <span class="hidden-mobile">常用Linux命令</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
