@@ -226,67 +226,6 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%20nodestate%20down/" target="_self">
-          集群故障排查日志-slurm nodestate down
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%20nodestate%20down/" target="_self">
-        <div>
-          集群故障排查日志-slurm nodestate down 今天是不知道为什么slurm节点状态变成了down，尝试了几次，在、要注意的点首先是修改slurm登录的账户要是和以前配置slurm的一样。 12345sinfo #发现node 状态是down#切换到rootsudo scontrol update NodeName=node08 State=idle或者sudo scontrol up
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-04-27 17:10" pubdate>
-              2022-04-27
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/" class="category-chain-item">集群故障</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/">#集群故障</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
         <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%97%A5%E5%BF%97-battle%E6%8C%96%E7%9F%BF/" target="_self">
           集群故障排查日志—节点无法远程ssh链接
         </a>
@@ -335,6 +274,67 @@
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/%E9%9B%86%E7%BE%A4%E7%AE%A1%E7%90%86/">#集群管理</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%E6%8F%90%E4%BA%A4%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%8D%A1%E5%9C%A8%E4%BA%86%E6%8F%90%E4%BA%A4setup/" target="_self">
+          集群故障排查日志-slurm提交之后，卡在了提交setup
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%E6%8F%90%E4%BA%A4%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%8D%A1%E5%9C%A8%E4%BA%86%E6%8F%90%E4%BA%A4setup/" target="_self">
+        <div>
+          集群故障排查日志-slurm提交之后，卡在了提交setup 今天发现了这个问题，就是你在提交任务之后， 1tail -f slurm-jobid.out    发现卡在了setup就是唤醒电子布之前的那一步  解决方案：一般出现在你 1scancel jobid  因为虽然在slurm调度中取消的这个任务，但是有可能slurm并没有去别的节点取消掉。 出现这种卡顿情况， 123456squence
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-04-27 17:10" pubdate>
+              2022-04-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/" class="category-chain-item">集群故障</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C/">#集群故障</a>
             
           </div>
         
