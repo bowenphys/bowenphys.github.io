@@ -226,15 +226,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97%E2%80%94%E8%8A%82%E7%82%B9%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8Bssh%E9%93%BE%E6%8E%A5/" target="_self">
-          集群故障排查日志—节点无法远程ssh链接
+        <a href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%20nodestate%20down/" target="_self">
+          集群故障排查日志-slurm nodestate down
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97%E2%80%94%E8%8A%82%E7%82%B9%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8Bssh%E9%93%BE%E6%8E%A5/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%20nodestate%20down/" target="_self">
         <div>
-          集群故障排查日志—节点无法远程ssh链接 这几天突然发现实验室集群无法远程链接了；由于考试没有时间去处理，组里也没有会，放置了半个月，今天去物理机房插上了显示器和键盘，去看看了系统日志 &#x2F;var&#x2F;log其中有 12Feb 25 22:15:38 server kernel: [ 1235.212537] PM: suspend entry (s2idle)Feb 25 22:1
+          集群故障排查日志-slurm nodestate down 今天是不知道为什么slurm节点状态变成了down，尝试了几次，在、要注意的点首先是修改slurm登录的账户要是和以前配置slurm的一样。 12345sinfo #发现node 状态是down#切换到rootsudo scontrol update NodeName=node08 State=idle或者sudo scontrol up
         </div>
       </a>
 

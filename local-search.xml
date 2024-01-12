@@ -150,31 +150,6 @@
   
   
   <entry>
-    <title>集群故障排查日志-slurm nodestate down</title>
-    <link href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%20nodestate%20down/"/>
-    <url>/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%20nodestate%20down/</url>
-    
-    <content type="html"><![CDATA[<h1 id="集群故障排查日志-slurm-nodestate-down"><a href="#集群故障排查日志-slurm-nodestate-down" class="headerlink" title="集群故障排查日志-slurm nodestate down"></a>集群故障排查日志-slurm nodestate down</h1><ul><li><p>今天是不知道为什么slurm节点状态变成了down，尝试了几次，在、要注意的点首先是修改slurm登录的账户要是和以前配置slurm的一样。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">sinfo <span class="hljs-comment">#发现node 状态是down</span><br><span class="hljs-comment">#切换到root</span><br>sudo scontrol update NodeName=node08 State=idle<br>或者<br>sudo scontrol update NodeName=node08 State=RESUME<br></code></pre></td></tr></table></figure><p>搞定收工</p></li></ul>]]></content>
-    
-    
-    <categories>
-      
-      <category>集群故障</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>集群故障</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>集群故障排查日志-conda带来的问题</title>
     <link href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-conda%E5%B8%A6%E6%9D%A5%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <url>/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-conda%E5%B8%A6%E6%9D%A5%E7%9A%84%E9%97%AE%E9%A2%98/</url>
@@ -225,6 +200,31 @@
   
   
   <entry>
+    <title>集群故障排查日志—节点无法远程ssh链接</title>
+    <link href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97%E2%80%94%E8%8A%82%E7%82%B9%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8Bssh%E9%93%BE%E6%8E%A5/"/>
+    <url>/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97%E2%80%94%E8%8A%82%E7%82%B9%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8Bssh%E9%93%BE%E6%8E%A5/</url>
+    
+    <content type="html"><![CDATA[<h1 id="集群故障排查日志—节点无法远程ssh链接"><a href="#集群故障排查日志—节点无法远程ssh链接" class="headerlink" title="集群故障排查日志—节点无法远程ssh链接"></a>集群故障排查日志—节点无法远程ssh链接</h1><ul><li><p>这几天突然发现实验室集群无法远程链接了；由于考试没有时间去处理，组里也没有会，放置了半个月，今天去物理机房插上了显示器和键盘，去看看了系统日志</p><p>&#x2F;var&#x2F;log其中有</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">Feb 25 22:15:38 server kernel: [ 1235.212537] PM: <span class="hljs-built_in">suspend</span> entry (s2idle)<br>Feb 25 22:15:38 server systemd-sleep[1705]: Suspending system...<br></code></pre></td></tr></table></figure><p>确定了是自动休眠的问题然后就好说了</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash">systemctl status sleep.target <span class="hljs-comment">#执行这个命令来确定一下状态</span><br> ● sleep.target - Sleep<span class="hljs-comment">#确认是休眠策略</span><br>    Loaded: loaded (/lib/systemd/system/sleep.target; static; vendor preset: enabled)<br>    Active: inactive (dead)<br>      Docs: man:systemd.special(7)<br> Feb 24 13:18:08 xps systemd[1]: Reached target Sleep.<br> Feb 26 13:29:31 xps systemd[1]: Stopped target Sleep.<br> Feb 26 13:29:57 xps systemd[1]: Reached target Sleep.<br> Feb 26 13:30:19 xps systemd[1]: Stopped target Sleep.<br></code></pre></td></tr></table></figure><p>然后</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target<br> Created symlink /etc/systemd/system/sleep.target → /dev/null.<br> Created symlink /etc/systemd/system/suspend.target → /dev/null.<br> Created symlink /etc/systemd/system/hibernate.target → /dev/null.<br> Created symlink /etc/systemd/system/hybrid-sleep.target → /dev/null.<br></code></pre></td></tr></table></figure><p>最后</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ systemctl status sleep.target<br>● sleep.target<br>   Loaded: masked (Reason: Unit sleep.target is masked.)<br>   Active: inactive (dead)<br></code></pre></td></tr></table></figure><p>放了两天试了试，确定ok。自动休眠功能已经被关闭，不会出现自动休眠导致远程控制无法访问的情况了。</p></li><li><p>这个问题我估计是去机房登录物理机导致的，去机房物理机插上键盘显示器调配东西的时候，进入桌面系统了，只有服务器系统才会有不休眠这个设定，所以以后如果要去物理机器调制的时候要注意这个问题。</p></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>集群故障</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>集群故障</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>vasp进程自动被杀掉</title>
     <link href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-vasp%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4%E5%8D%A1%E4%B8%80%E4%B8%8B%E7%84%B6%E5%90%8Evasp%E5%85%B3%E9%97%AD/"/>
     <url>/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-vasp%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4%E5%8D%A1%E4%B8%80%E4%B8%8B%E7%84%B6%E5%90%8Evasp%E5%85%B3%E9%97%AD/</url>
@@ -250,11 +250,11 @@
   
   
   <entry>
-    <title>集群故障排查日志—节点无法远程ssh链接</title>
-    <link href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97%E2%80%94%E8%8A%82%E7%82%B9%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8Bssh%E9%93%BE%E6%8E%A5/"/>
-    <url>/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97%E2%80%94%E8%8A%82%E7%82%B9%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8Bssh%E9%93%BE%E6%8E%A5/</url>
+    <title>集群故障排查日志-slurm nodestate down</title>
+    <link href="/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%20nodestate%20down/"/>
+    <url>/2022/04/27/%E9%9B%86%E7%BE%A4%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%97%A5%E5%BF%97-slurm%20nodestate%20down/</url>
     
-    <content type="html"><![CDATA[<h1 id="集群故障排查日志—节点无法远程ssh链接"><a href="#集群故障排查日志—节点无法远程ssh链接" class="headerlink" title="集群故障排查日志—节点无法远程ssh链接"></a>集群故障排查日志—节点无法远程ssh链接</h1><ul><li><p>这几天突然发现实验室集群无法远程链接了；由于考试没有时间去处理，组里也没有会，放置了半个月，今天去物理机房插上了显示器和键盘，去看看了系统日志</p><p>&#x2F;var&#x2F;log其中有</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">Feb 25 22:15:38 server kernel: [ 1235.212537] PM: <span class="hljs-built_in">suspend</span> entry (s2idle)<br>Feb 25 22:15:38 server systemd-sleep[1705]: Suspending system...<br></code></pre></td></tr></table></figure><p>确定了是自动休眠的问题然后就好说了</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash">systemctl status sleep.target <span class="hljs-comment">#执行这个命令来确定一下状态</span><br> ● sleep.target - Sleep<span class="hljs-comment">#确认是休眠策略</span><br>    Loaded: loaded (/lib/systemd/system/sleep.target; static; vendor preset: enabled)<br>    Active: inactive (dead)<br>      Docs: man:systemd.special(7)<br> Feb 24 13:18:08 xps systemd[1]: Reached target Sleep.<br> Feb 26 13:29:31 xps systemd[1]: Stopped target Sleep.<br> Feb 26 13:29:57 xps systemd[1]: Reached target Sleep.<br> Feb 26 13:30:19 xps systemd[1]: Stopped target Sleep.<br></code></pre></td></tr></table></figure><p>然后</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target<br> Created symlink /etc/systemd/system/sleep.target → /dev/null.<br> Created symlink /etc/systemd/system/suspend.target → /dev/null.<br> Created symlink /etc/systemd/system/hibernate.target → /dev/null.<br> Created symlink /etc/systemd/system/hybrid-sleep.target → /dev/null.<br></code></pre></td></tr></table></figure><p>最后</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ systemctl status sleep.target<br>● sleep.target<br>   Loaded: masked (Reason: Unit sleep.target is masked.)<br>   Active: inactive (dead)<br></code></pre></td></tr></table></figure><p>放了两天试了试，确定ok。自动休眠功能已经被关闭，不会出现自动休眠导致远程控制无法访问的情况了。</p></li><li><p>这个问题我估计是去机房登录物理机导致的，去机房物理机插上键盘显示器调配东西的时候，进入桌面系统了，只有服务器系统才会有不休眠这个设定，所以以后如果要去物理机器调制的时候要注意这个问题。</p></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="集群故障排查日志-slurm-nodestate-down"><a href="#集群故障排查日志-slurm-nodestate-down" class="headerlink" title="集群故障排查日志-slurm nodestate down"></a>集群故障排查日志-slurm nodestate down</h1><ul><li><p>今天是不知道为什么slurm节点状态变成了down，尝试了几次，在、要注意的点首先是修改slurm登录的账户要是和以前配置slurm的一样。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">sinfo <span class="hljs-comment">#发现node 状态是down</span><br><span class="hljs-comment">#切换到root</span><br>sudo scontrol update NodeName=node08 State=idle<br>或者<br>sudo scontrol update NodeName=node08 State=RESUME<br></code></pre></td></tr></table></figure><p>搞定收工</p></li></ul>]]></content>
     
     
     <categories>
