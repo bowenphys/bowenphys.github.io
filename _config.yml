@@ -1,0 +1,66 @@
+# Hexo 配置文件
+## 文档: https://hexo.io/docs/configuration.html
+
+# 网站
+title: "Bowen | Condensed Matter Theory"
+subtitle: "Research Notes and Scientific Journey"
+description: "凝聚态物理与计算理论研究记录"
+keywords: "凝聚态物理,计算理论,科研笔记,数值模拟,理论物理"
+author: "Bowen"
+language: "zh-CN"
+timezone: "Asia/Shanghai"
+
+# 链接
+url: https://bowenphys.github.io
+root: /
+permalink: posts/:year/:month/:hash/
+pretty_urls:
+  trailing_index: false
+  trailing_html: false
+
+# 目录
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# 文章
+new_post_name: :title.md
+default_layout: post
+post_meta:
+  page:
+    date_type: created # created or updated or both 主頁文章日期是創建日或者更新日或都顯示
+    date_format: date # date/relative 顯示日期還是相對日期
+    categories: true # true or false 主頁是否顯示分類
+    tags: true # true or false 主頁是否顯示標籤
+  post:
+    date_type: both # created or updated or both 文章頁日期是創建日或者更新日或都顯示
+    date_format: relative # date/relative 顯示日期還是相對日期
+    categories: true # true or false 文章頁是否顯示分類
+    tags: true # true or false 文章頁是否顯示標籤
+
+# 日期时间格式
+date_format: YYYY-MM-DD
+time_format: HH:mm
+updated_option: "mtime"
+
+# 扩展
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: "butterfly"
+
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
+
+
+deploy:
+  type: git
+  repository: git@github.com:bowenphys/bowenphys.github.io.git
+  branch: gh-pages

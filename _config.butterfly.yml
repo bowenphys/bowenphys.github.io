@@ -1,0 +1,112 @@
+# Butterfly 个性化覆盖配置
+nav:
+  logo: /img/1.jpg
+  display_title: true
+  fixed: false
+
+default_top_img: /static/images/0.webp
+background: /static/images/bg.jpg
+favicon: /favicon.ico
+
+social:
+  fab fa-github: https://github.com/bowenphys || GitHub
+  fas fa-envelope: mailto:bowen.phys@example.edu || Email
+  fas fa-graduation-cap: https://scholar.google.com/citations?user=PLACEHOLDER || Scholar
+  fab fa-orcid: https://orcid.org/0000-0000-0000-0000 || ORCID
+
+avatar:
+  img: /img/1.jpg
+  effect: true
+
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true
+  position: right
+  card_author:
+    enable: true
+    description: PhD (Condensed Matter Physics) | Computational Theory
+    button:
+      enable: true
+      icon: fab fa-github
+      text: Follow on GitHub
+      link: https://github.com/bowenphys
+  card_announcement:
+    enable: true
+    content: 持续记录科研历程与方法论。
+
+menu:
+  首页: / || fa fa-home
+  研究: /research/ || fa fa-flask
+  论文: /publications/ || fa fa-book
+  项目: /projects/ || fa fa-code
+  简历: /cv/ || fa fa-id-card
+  时间轴: /archives/ || fa fa-archive
+  标签: /tags/ || fa fa-tags
+  分类: /categories/ || fa fa-folder-open
+  EN: /en/ || fa fa-language
+
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: 1
+rightside_scroll_percent: true
+
+cover:
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  default_cover:
+    - /static/images/0.webp
+    - /static/images/bg.jpg
+
+math:
+  use: katex
+  per_page: true
+  hide_scrollbar: false
+  katex:
+    copy_tex: true
+
+mermaid:
+  enable: true
+  code_write: true
+  theme:
+    light: default
+    dark: dark
+
+search:
+  use: local_search
+  placeholder: 输入关键词搜索...
+  local_search:
+    preload: false
+    top_n_per_article: 1
+    unescape: false
+    pagination:
+      enable: true
+      hitsPerPage: 8
+
+comments:
+  use:
+  text: false
+  lazyload: false
+  count: false
+  card_post_count: false
+
+footer:
+  owner:
+    enable: true
+    since: 2026
+  custom_text: Scientific notes and reproducible research workflow.
+  copyright: true
+
+busuanzi:
+  site_uv: true
+  site_pv: true
+  page_pv: true
+
+inject:
+  head:
+    - <link rel="stylesheet" href="/css/custom.css">
+  bottom:
+    - <script defer src="/js/lang-toggle.js"></script>

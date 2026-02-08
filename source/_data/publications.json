@@ -1,0 +1,53 @@
+[
+  {
+    "id": "Zhang2026TopoSC",
+    "title": "Topological Superconductivity from Minimal Lattice Models: A Reproducible Study",
+    "authors": [
+      "Bowen Zhang",
+      "Alice Doe",
+      "Bob Smith"
+    ],
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "type": "article-journal",
+    "links": {
+      "doi": "",
+      "url": "https://arxiv.org/abs/2602.01234",
+      "arxiv": "https://arxiv.org/abs/2602.01234",
+      "code": "https://github.com/bowenphys/topo-sc-minimal"
+    }
+  },
+  {
+    "id": "Zhang2025KuboTransport",
+    "title": "Kubo Transport in Tight-Binding Models: Benchmarks and Numerical Pitfalls",
+    "authors": [
+      "Bowen Zhang",
+      "Carol Roe"
+    ],
+    "year": 2025,
+    "venue": "Journal of Computational Condensed Matter",
+    "type": "article-journal",
+    "links": {
+      "doi": "https://doi.org/10.1234/jccm.2025.0123",
+      "url": "https://doi.org/10.1234/jccm.2025.0123",
+      "arxiv": "",
+      "code": "https://github.com/bowenphys/kubo-bench"
+    }
+  },
+  {
+    "id": "Zhang2024TensorWorkflow",
+    "title": "A Practical Workflow for Tensor-Network Simulations with Reproducible Outputs",
+    "authors": [
+      "Bowen Zhang"
+    ],
+    "year": 2024,
+    "venue": "Proceedings of the Example Workshop on Scientific Computing",
+    "type": "paper-conference",
+    "links": {
+      "doi": "",
+      "url": "https://example.edu/workshop/2024/tensor-workflow",
+      "arxiv": "",
+      "code": "https://github.com/bowenphys/tn-workflow"
+    }
+  }
+]
