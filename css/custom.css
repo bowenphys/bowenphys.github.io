@@ -1,0 +1,114 @@
+#footer {
+  background: transparent !important;
+}
+
+#footer::before {
+  display: none !important;
+}
+
+/* 让卡片/容器更“融入”背景图（浅色模式） */
+html[data-theme='light'] {
+  --card-bg: rgba(255, 255, 255, 0.62);
+  --sidebar-bg: rgba(255, 255, 255, 0.55);
+  --sidebar-menu-bg: rgba(255, 255, 255, 0.62);
+}
+
+/* 玻璃感（不改文字布局/动效） */
+.cardHover,
+.card-widget,
+.recent-post-item,
+#aside-content .card-widget,
+.layout > div:first-child:not(.nc) {
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  backdrop-filter: blur(10px) saturate(120%);
+}
+
+.pub-container {
+  margin-top: 1rem;
+}
+
+.pub-counter {
+  opacity: 0.78;
+  margin-bottom: 1rem;
+}
+
+.pub-list {
+  margin: 0;
+  padding-left: 1.35rem;
+}
+
+.pub-item {
+  margin-bottom: 1.25rem;
+  line-height: 1.65;
+}
+
+.pub-title {
+  font-weight: 600;
+}
+
+.pub-authors {
+  margin-top: 0.25rem;
+  opacity: 0.92;
+}
+
+.pub-meta {
+  margin-top: 0.2rem;
+  opacity: 0.82;
+}
+
+.pub-links {
+  margin-top: 0.2rem;
+}
+
+.pub-link {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+html[data-theme='dark'] .pub-link {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+html[data-theme='dark'] {
+  --font-color: #d9e9f8;
+  --second-text-color: #98b3cc;
+  --post-link-color: #8fe8ff;
+  --headline-presudo-bgcolor: #6ce7ff;
+  --blockquote-padding-color: #0d2236;
+}
+
+html[data-theme='dark'] #article-container h1,
+html[data-theme='dark'] #article-container h2,
+html[data-theme='dark'] #article-container h3 {
+  color: #eef7ff;
+}
+
+html[data-theme='dark'] #article-container code {
+  color: #c4f7ff;
+  background: rgba(14, 32, 49, 0.72);
+}
+
+html[data-theme='dark'] #article-container pre code {
+  color: #d8efff;
+  background: transparent;
+}
+
+html[data-theme='dark'] #article-container blockquote {
+  border-left: 3px solid rgba(110, 214, 255, 0.62);
+  background: rgba(10, 23, 37, 0.72);
+}
+
+#search-mask,
+#local-search .search-dialog,
+#rightside {
+  z-index: 9999;
+}
+
+html[data-theme='dark'] .search-dialog {
+  border: 1px solid rgba(116, 198, 255, 0.35);
+  box-shadow: 0 14px 34px rgba(2, 10, 18, 0.46);
+}
