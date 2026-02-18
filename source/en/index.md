@@ -7,6 +7,8 @@ lang: en
 
 Welcome to the English section of my academic site.
 
+This is the international entry of the research console.
+
 Quick links:
 
 - [About](/en/about/)

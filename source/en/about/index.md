@@ -7,16 +7,26 @@ lang: en
 
 I am a PhD researcher at **Example University**, working on condensed matter physics with a focus on computational theory.
 
-This website tracks my research journey with an emphasis on reproducibility:
+This site acts as a research console where theory, numerics, and reproducibility are tracked in one place.
 
-- mathematical derivations and physical interpretations
-- numerical workflows and implementation details
-- paper reading notes and project retrospectives
+Current focus:
+
+- low-energy theory in topological and superconducting systems
+- scalable numerical pipelines and benchmark protocols
+- paper-to-code translation with explicit assumptions and error logs
+
+Lab snapshot (fictional placeholder):
+
+- Active Projects: `07`
+- Weekly Compute Time: `186 GPU-hours`
+- Reproducibility Score: `96.4%`
+- Pipeline Status: `PASS`
 
 Contact:
 
 - Email: `bowen.phys@example.edu`
 - GitHub: <https://github.com/bowenphys>
+- Scholar: <https://scholar.google.com/citations?user=PLACEHOLDER>
 
 Quick links:
 

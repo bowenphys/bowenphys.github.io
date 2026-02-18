@@ -72,3 +72,43 @@ html[data-theme='light'] {
 html[data-theme='dark'] .pub-link {
   border-color: rgba(255, 255, 255, 0.22);
 }
+
+html[data-theme='dark'] {
+  --font-color: #d9e9f8;
+  --second-text-color: #98b3cc;
+  --post-link-color: #8fe8ff;
+  --headline-presudo-bgcolor: #6ce7ff;
+  --blockquote-padding-color: #0d2236;
+}
+
+html[data-theme='dark'] #article-container h1,
+html[data-theme='dark'] #article-container h2,
+html[data-theme='dark'] #article-container h3 {
+  color: #eef7ff;
+}
+
+html[data-theme='dark'] #article-container code {
+  color: #c4f7ff;
+  background: rgba(14, 32, 49, 0.72);
+}
+
+html[data-theme='dark'] #article-container pre code {
+  color: #d8efff;
+  background: transparent;
+}
+
+html[data-theme='dark'] #article-container blockquote {
+  border-left: 3px solid rgba(110, 214, 255, 0.62);
+  background: rgba(10, 23, 37, 0.72);
+}
+
+#search-mask,
+#local-search .search-dialog,
+#rightside {
+  z-index: 9999;
+}
+
+html[data-theme='dark'] .search-dialog {
+  border: 1px solid rgba(116, 198, 255, 0.35);
+  box-shadow: 0 14px 34px rgba(2, 10, 18, 0.46);
+}

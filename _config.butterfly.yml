@@ -51,6 +51,7 @@ darkmode:
   enable: true
   button: true
   autoChangeMode: 1
+display_mode: dark
 rightside_scroll_percent: true
 
 cover:
@@ -108,5 +109,9 @@ busuanzi:
 inject:
   head:
     - <link rel="stylesheet" href="/css/custom.css">
+    - <link rel="stylesheet" href="/css/lab-tech.css">
+    - <link rel="stylesheet" href="/css/lab-tech-v2.css">
   bottom:
     - <script defer src="/js/lang-toggle.js"></script>
+    - <script defer src="/js/lab-tech-home.js"></script>
+    - <script defer src="/js/lab-tech-effects.js"></script>

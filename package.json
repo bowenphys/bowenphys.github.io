@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "build:dashboard": "node tools/build-dashboard.mjs",
     "build:publications": "node tools/build-publications.mjs",
-    "build": "npm run build:publications && hexo generate",
+    "build": "npm run build:publications && npm run build:dashboard && hexo clean && hexo generate",
     "clean": "hexo clean",
-    "deploy": "npm run build:publications && hexo deploy",
-    "server": "npm run build:publications && hexo server"
+    "deploy": "npm run build && hexo deploy",
+    "server": "npm run build:publications && npm run build:dashboard && hexo server"
   },
   "hexo": {
     "version": "7.3.0"

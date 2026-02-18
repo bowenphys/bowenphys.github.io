@@ -8,6 +8,7 @@ lang: en
 ## Education
 
 - Example University | PhD in Condensed Matter Physics (Computational Theory) | 2022 - Present
+- Example Institute | BSc in Physics | 2018 - 2022
 
 ## Interests
 
@@ -25,5 +26,11 @@ lang: en
 
 - GitHub: <https://github.com/bowenphys>
 - Email: `bowen.phys@example.edu`
+
+## Selected outputs (fictional placeholder)
+
+- 2026: Topological Superconductivity Parameter Atlas
+- 2025: Kubo Transport Benchmark Protocol
+- 2024: Tensor Workflow Reproducibility Toolkit
 
 [中文页面](/cv/)

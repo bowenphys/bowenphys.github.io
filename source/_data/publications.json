@@ -1,5 +1,23 @@
 [
   {
+    "id": "Zhang2026FiniteSizeAtlas",
+    "title": "Finite-Size Scaling Atlas for Topological Pairing Models",
+    "authors": [
+      "Bowen Zhang",
+      "Daniel Lee",
+      "Eva Wang"
+    ],
+    "year": 2026,
+    "venue": "Computational Physics Communications",
+    "type": "article-journal",
+    "links": {
+      "doi": "https://doi.org/10.1016/j.cpc.2026.109281",
+      "url": "https://doi.org/10.1016/j.cpc.2026.109281",
+      "arxiv": "",
+      "code": ""
+    }
+  },
+  {
     "id": "Zhang2026TopoSC",
     "title": "Topological Superconductivity from Minimal Lattice Models: A Reproducible Study",
     "authors": [
@@ -15,6 +33,23 @@
       "url": "https://arxiv.org/abs/2602.01234",
       "arxiv": "https://arxiv.org/abs/2602.01234",
       "code": "https://github.com/bowenphys/topo-sc-minimal"
+    }
+  },
+  {
+    "id": "Zhang2025GPUdmrg",
+    "title": "GPU-Accelerated DMRG Workflow with Explicit Error Tracking",
+    "authors": [
+      "Bowen Zhang",
+      "Farah Noor"
+    ],
+    "year": 2025,
+    "venue": "arXiv preprint",
+    "type": "article-journal",
+    "links": {
+      "doi": "",
+      "url": "https://arxiv.org/abs/2511.06789",
+      "arxiv": "https://arxiv.org/abs/2511.06789",
+      "code": "https://github.com/bowenphys/gpu-dmrg-lab"
     }
   },
   {

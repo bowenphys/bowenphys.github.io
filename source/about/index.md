@@ -4,26 +4,34 @@ date: 2026-02-08 22:30:00
 comments: false
 ---
 
-欢迎来到我的个人学术站。
+欢迎来到我的研究控制台。
 
-我目前在 **Example University** 从事凝聚态物理方向的计算理论研究（PhD）。长期目标是把研究问题、方法选择、数值实现和思考路径持续记录成可复用的知识体系。
+我目前在 **Example University** 从事凝聚态物理计算理论研究。这个站点定位为“方法学仓库 + 科研历程日志”：把问题定义、模型推导、数值实验、误差来源和复现实验统一到同一条工作流里。
 
-## 研究关键词
+## 当前聚焦
 
-- 拓扑物态、超导与低能有效理论
-- 多体问题的数值方法（张量网络 / 量子输运 / 有效模型）
-- 可复现计算流程与科研软件工程
+- 拓扑超导与低能有效模型
+- 多体体系的数值计算（张量网络 / 量子输运 / 稀疏本征求解）
+- 可复现实验与科研软件工程
 
-## 这个站点会持续更新
+## Lab Snapshot（虚构占位）
 
-- 科研笔记：推导、代码、数值结果与失败案例
-- 论文阅读：核心问题、方法要点、个人理解
-- 项目记录：从问题定义到可运行实现
+- Active Projects: `07`
+- Weekly Compute Time: `186 GPU-hours`
+- Reproducibility Score: `96.4%`
+- Last Pipeline Status: `PASS`
+
+## 内容模块
+
+- 科研日志：记录从假设到验证的完整路径
+- 论文速读：提取关键方程、边界条件与数值风险
+- 项目档案：统一维护代码入口、参数配置与结果追踪
 
 ## 联系方式
 
 - Email: `bowen.phys@example.edu`
 - GitHub: <https://github.com/bowenphys>
+- Scholar: <https://scholar.google.com/citations?user=PLACEHOLDER>
 
 ## 快速入口
 
