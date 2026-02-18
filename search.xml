@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>科研日志 000 | 站点初始化与记录规范</title>
+    <url>/posts/2026/02/a9d6ee9d4942/</url>
+    <content><![CDATA[<p>这是新站点的第一篇公开日志，用于约定后续科研记录格式。</p>
+<h2 id="记录原则"><a href="#记录原则" class="headerlink" title="记录原则"></a>记录原则</h2><ul>
+<li>问题定义明确：先写清目标和已知条件</li>
+<li>假设可追溯：标记每个近似和边界条件</li>
+<li>结果可复现：给出参数、脚本入口和版本</li>
+</ul>
+<h2 id="公式测试"><a href="#公式测试" class="headerlink" title="公式测试"></a>公式测试</h2><p>行内公式：$E &#x3D; \hbar \omega$。</p>
+<p>行间公式：</p>
+<p>$$<br>H &#x3D; \sum_{ij} t_{ij} c_i^\dagger c_j + \sum_i U_i n_{i\uparrow} n_{i\downarrow}<br>$$</p>
+<h2 id="Mermaid-测试"><a href="#Mermaid-测试" class="headerlink" title="Mermaid 测试"></a>Mermaid 测试</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">  A[Define model] --&gt; B[Derive equations]</span><br><span class="line">  B --&gt; C[Implement numerics]</span><br><span class="line">  C --&gt; D[Validate and iterate]</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Research Diary</category>
+      </categories>
+      <tags>
+        <tag>workflow</tag>
+        <tag>reproducibility</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>科研日志 001 | 拓扑超导参数扫描引擎上线（虚构）</title>
     <url>/posts/2026/02/d22b78ea1490/</url>
     <content><![CDATA[<p>今天完成了 TopoSC Scan Engine 的第一版参数扫描管线，目标是稳定输出二维参数空间相图，并自动附带误差评估结果。</p>
@@ -23,28 +45,6 @@
         <tag>topology</tag>
         <tag>superconductivity</tag>
         <tag>numerical</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>科研日志 000 | 站点初始化与记录规范</title>
-    <url>/posts/2026/02/a9d6ee9d4942/</url>
-    <content><![CDATA[<p>这是新站点的第一篇公开日志，用于约定后续科研记录格式。</p>
-<h2 id="记录原则"><a href="#记录原则" class="headerlink" title="记录原则"></a>记录原则</h2><ul>
-<li>问题定义明确：先写清目标和已知条件</li>
-<li>假设可追溯：标记每个近似和边界条件</li>
-<li>结果可复现：给出参数、脚本入口和版本</li>
-</ul>
-<h2 id="公式测试"><a href="#公式测试" class="headerlink" title="公式测试"></a>公式测试</h2><p>行内公式：$E &#x3D; \hbar \omega$。</p>
-<p>行间公式：</p>
-<p>$$<br>H &#x3D; \sum_{ij} t_{ij} c_i^\dagger c_j + \sum_i U_i n_{i\uparrow} n_{i\downarrow}<br>$$</p>
-<h2 id="Mermaid-测试"><a href="#Mermaid-测试" class="headerlink" title="Mermaid 测试"></a>Mermaid 测试</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">  A[Define model] --&gt; B[Derive equations]</span><br><span class="line">  B --&gt; C[Implement numerics]</span><br><span class="line">  C --&gt; D[Validate and iterate]</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Research Diary</category>
-      </categories>
-      <tags>
-        <tag>workflow</tag>
-        <tag>reproducibility</tag>
       </tags>
   </entry>
   <entry>
