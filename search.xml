@@ -76,54 +76,6 @@
       </tags>
   </entry>
   <entry>
-    <title>项目纪要 003 | 量子输运计算平台 v0.3（虚构）</title>
-    <url>/posts/2026/02/352a3fd05692/</url>
-    <content><![CDATA[<p>TransportLab-Kubo 发布 <code>v0.3</code>，本次版本重点提升了批量任务稳定性与结果回放能力。</p>
-<h2 id="v0-3-关键更新"><a href="#v0-3-关键更新" class="headerlink" title="v0.3 关键更新"></a>v0.3 关键更新</h2><ul>
-<li>新增统一配置文件：支持实验参数版本化</li>
-<li>新增 HDF5 中间结果缓存：中断后可续跑</li>
-<li>新增报告生成器：自动导出指标与关键图表</li>
-</ul>
-<h2 id="性能对比（虚构占位）"><a href="#性能对比（虚构占位）" class="headerlink" title="性能对比（虚构占位）"></a>性能对比（虚构占位）</h2><table>
-<thead>
-<tr>
-<th>指标</th>
-<th>v0.2</th>
-<th>v0.3</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>单任务平均耗时</td>
-<td>7.4 min</td>
-<td>5.9 min</td>
-</tr>
-<tr>
-<td>失败重跑次数</td>
-<td>11</td>
-<td>3</td>
-</tr>
-<tr>
-<td>结果回放耗时</td>
-<td>2.1 min</td>
-<td>0.8 min</td>
-</tr>
-</tbody></table>
-<h2 id="后续路线图"><a href="#后续路线图" class="headerlink" title="后续路线图"></a>后续路线图</h2><ol>
-<li>引入任务优先级调度</li>
-<li>增加多节点并行支持</li>
-<li>与论文图表模板自动对接</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Project Notes</category>
-      </categories>
-      <tags>
-        <tag>transport</tag>
-        <tag>kubo</tag>
-        <tag>hpc</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>项目纪要 004 | Codex 连接 Blender MCP（macOS + uv）安装与排障</title>
     <url>/posts/2026/02/249314c5f0e6/</url>
     <content><![CDATA[<p>本文记录一次“在 macOS 上让 Codex（就是现在这个）通过 MCP 连接 Blender”的最小正确配置与排障要点。本文以仓库 <a href="https://github.com/ahujasid/blender-mcp"><code>ahujasid/blender-mcp</code></a> 为准。</p>
@@ -194,6 +146,54 @@
         <tag>mcp</tag>
         <tag>codex</tag>
         <tag>uv</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>项目纪要 003 | 量子输运计算平台 v0.3（虚构）</title>
+    <url>/posts/2026/02/352a3fd05692/</url>
+    <content><![CDATA[<p>TransportLab-Kubo 发布 <code>v0.3</code>，本次版本重点提升了批量任务稳定性与结果回放能力。</p>
+<h2 id="v0-3-关键更新"><a href="#v0-3-关键更新" class="headerlink" title="v0.3 关键更新"></a>v0.3 关键更新</h2><ul>
+<li>新增统一配置文件：支持实验参数版本化</li>
+<li>新增 HDF5 中间结果缓存：中断后可续跑</li>
+<li>新增报告生成器：自动导出指标与关键图表</li>
+</ul>
+<h2 id="性能对比（虚构占位）"><a href="#性能对比（虚构占位）" class="headerlink" title="性能对比（虚构占位）"></a>性能对比（虚构占位）</h2><table>
+<thead>
+<tr>
+<th>指标</th>
+<th>v0.2</th>
+<th>v0.3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单任务平均耗时</td>
+<td>7.4 min</td>
+<td>5.9 min</td>
+</tr>
+<tr>
+<td>失败重跑次数</td>
+<td>11</td>
+<td>3</td>
+</tr>
+<tr>
+<td>结果回放耗时</td>
+<td>2.1 min</td>
+<td>0.8 min</td>
+</tr>
+</tbody></table>
+<h2 id="后续路线图"><a href="#后续路线图" class="headerlink" title="后续路线图"></a>后续路线图</h2><ol>
+<li>引入任务优先级调度</li>
+<li>增加多节点并行支持</li>
+<li>与论文图表模板自动对接</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Project Notes</category>
+      </categories>
+      <tags>
+        <tag>transport</tag>
+        <tag>kubo</tag>
+        <tag>hpc</tag>
       </tags>
   </entry>
   <entry>
