@@ -7,7 +7,7 @@ lang: en
 
 ## Education
 
-- Example University | PhD in Condensed Matter Physics (Computational Theory) | 2022 - Present
+- Eastern Institute of Technology, Ningbo & University of Science and Technology of China (Joint Program) | PhD Student in Physics (in progress) | 2022 - Present
 - Example Institute | BSc in Physics | 2018 - 2022
 
 ## Interests

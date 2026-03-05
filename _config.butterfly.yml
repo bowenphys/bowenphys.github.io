@@ -26,7 +26,7 @@ aside:
   position: right
   card_author:
     enable: true
-    description: PhD (Condensed Matter Physics) | Computational Theory
+    description: 宁波东方理工大学与中国科学技术大学联合培养 | 物理学在读博士
     button:
       enable: true
       icon: fab fa-github

@@ -6,7 +6,7 @@ comments: false
 
 ## 教育背景
 
-- Example University | PhD in Condensed Matter Physics (Computational Theory) | 2022 - Present
+- 宁波东方理工大学 & 中国科学技术大学（联合培养）| 物理学博士研究生（在读）| 2022 - Present
 - Example Institute | BSc in Physics | 2018 - 2022
 
 ## 研究兴趣

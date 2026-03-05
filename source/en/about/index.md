@@ -5,7 +5,7 @@ comments: false
 lang: en
 ---
 
-I am a PhD researcher at **Example University**, working on condensed matter physics with a focus on computational theory.
+I am a PhD student in Physics jointly trained by **Eastern Institute of Technology, Ningbo** and the **University of Science and Technology of China**, working on condensed matter physics with a focus on computational theory.
 
 This site acts as a research console where theory, numerics, and reproducibility are tracked in one place.
 
