@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>科研日志 000 | 站点初始化与记录规范</title>
-    <url>/posts/2026/02/a9d6ee9d4942/</url>
-    <content><![CDATA[<p>这是新站点的第一篇公开日志，用于约定后续科研记录格式。</p>
-<h2 id="记录原则"><a href="#记录原则" class="headerlink" title="记录原则"></a>记录原则</h2><ul>
-<li>问题定义明确：先写清目标和已知条件</li>
-<li>假设可追溯：标记每个近似和边界条件</li>
-<li>结果可复现：给出参数、脚本入口和版本</li>
+    <title>科研日志 002 | 张量网络基准测试与误差预算（虚构）</title>
+    <url>/posts/2026/02/30755cba4822/</url>
+    <content><![CDATA[<p>本周对张量网络求解流程进行了系统基准测试，重点比较截断误差、边界条件与迭代收敛策略对最终观测量的影响。</p>
+<h2 id="误差分解"><a href="#误差分解" class="headerlink" title="误差分解"></a>误差分解</h2><p>将总误差近似写为：</p>
+<p>$$<br>\epsilon_{\mathrm{total}} \approx \epsilon_{\chi} + \epsilon_{\mathrm{iter}} + \epsilon_{\mathrm{finite}}<br>$$</p>
+<p>其中：</p>
+<ul>
+<li>$\epsilon_{\chi}$：截断维度带来的误差</li>
+<li>$\epsilon_{\mathrm{iter}}$：迭代未收敛误差</li>
+<li>$\epsilon_{\mathrm{finite}}$：有限尺寸误差</li>
 </ul>
-<h2 id="公式测试"><a href="#公式测试" class="headerlink" title="公式测试"></a>公式测试</h2><p>行内公式：$E &#x3D; \hbar \omega$。</p>
-<p>行间公式：</p>
-<p>$$<br>H &#x3D; \sum_{ij} t_{ij} c_i^\dagger c_j + \sum_i U_i n_{i\uparrow} n_{i\downarrow}<br>$$</p>
-<h2 id="Mermaid-测试"><a href="#Mermaid-测试" class="headerlink" title="Mermaid 测试"></a>Mermaid 测试</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">  A[Define model] --&gt; B[Derive equations]</span><br><span class="line">  B --&gt; C[Implement numerics]</span><br><span class="line">  C --&gt; D[Validate and iterate]</span><br></pre></td></tr></table></figure>
+<h2 id="基准结果（虚构占位）"><a href="#基准结果（虚构占位）" class="headerlink" title="基准结果（虚构占位）"></a>基准结果（虚构占位）</h2><ul>
+<li>截断维度从 <code>chi=128</code> 提升到 <code>chi=256</code> 后，关键可观测量偏差下降 <code>41%</code></li>
+<li>采用混合收敛准则后，平均迭代步数下降 <code>18%</code></li>
+<li>全流程复现实验通过率达到 <code>95.8%</code></li>
+</ul>
+<p>下一步会把误差预算写入自动报告模板，确保每次提交都能自动输出误差来源摘要。</p>
 ]]></content>
       <categories>
         <category>Research Diary</category>
       </categories>
       <tags>
-        <tag>workflow</tag>
+        <tag>tensor-network</tag>
+        <tag>benchmark</tag>
         <tag>reproducibility</tag>
       </tags>
   </entry>
@@ -48,31 +54,169 @@
       </tags>
   </entry>
   <entry>
-    <title>科研日志 002 | 张量网络基准测试与误差预算（虚构）</title>
-    <url>/posts/2026/02/30755cba4822/</url>
-    <content><![CDATA[<p>本周对张量网络求解流程进行了系统基准测试，重点比较截断误差、边界条件与迭代收敛策略对最终观测量的影响。</p>
-<h2 id="误差分解"><a href="#误差分解" class="headerlink" title="误差分解"></a>误差分解</h2><p>将总误差近似写为：</p>
-<p>$$<br>\epsilon_{\mathrm{total}} \approx \epsilon_{\chi} + \epsilon_{\mathrm{iter}} + \epsilon_{\mathrm{finite}}<br>$$</p>
-<p>其中：</p>
-<ul>
-<li>$\epsilon_{\chi}$：截断维度带来的误差</li>
-<li>$\epsilon_{\mathrm{iter}}$：迭代未收敛误差</li>
-<li>$\epsilon_{\mathrm{finite}}$：有限尺寸误差</li>
+    <title>科研日志 006 | 相图控制塔首轮数据回流（虚构）</title>
+    <url>/posts/2026/03/38a13f43a5b7/</url>
+    <content><![CDATA[<section class="lab-doc-panel is-hero">
+  <div class="lab-doc-eyebrow">Research Diary / Phase Atlas</div>
+  <h2>相图控制塔完成首轮高维参数回流</h2>
+  <p>今天的重点不是“又跑完一次扫描”，而是把参数回流、相边界提取和误差摘要写进了同一个 atlas 管线。这样后续每次复验都能直接定位到输入、脚本和图表来源。</p>
+</section>
+
+<span id="more"></span>
+
+<section class="lab-record-card">
+  <div class="lab-doc-eyebrow">Run Summary</div>
+  <div class="lab-metric-line"><span>Grid Size</span><span>12,480 points</span></div>
+  <div class="lab-metric-line"><span>Boundary Candidates</span><span>148</span></div>
+  <div class="lab-metric-line"><span>Failed Jobs</span><span>03 / auto recovered</span></div>
+</section>
+
+<h2 id="今日结论"><a href="#今日结论" class="headerlink" title="今日结论"></a>今日结论</h2><ul>
+<li>参数调度、边界检测和误差摘要第一次实现了统一写回。</li>
+<li>对于接近相变边界的区间，有限尺寸效应依旧是主要风险源。</li>
+<li>atlas 图谱已经足够作为下一轮局部细化扫描的入口。</li>
 </ul>
-<h2 id="基准结果（虚构占位）"><a href="#基准结果（虚构占位）" class="headerlink" title="基准结果（虚构占位）"></a>基准结果（虚构占位）</h2><ul>
-<li>截断维度从 <code>chi=128</code> 提升到 <code>chi=256</code> 后，关键可观测量偏差下降 <code>41%</code></li>
-<li>采用混合收敛准则后，平均迭代步数下降 <code>18%</code></li>
-<li>全流程复现实验通过率达到 <code>95.8%</code></li>
+<section class="lab-doc-panel">
+  <div class="lab-doc-eyebrow">Protocol Notes</div>
+  <ul class="lab-protocol-list">
+    <li>先做稀疏粗扫，再对高梯度区域启用 adaptive refinement。</li>
+    <li>每个区块都写入收敛步数、剩余误差与边界评分。</li>
+    <li>自动生成的报告不写结论句，只写现象、风险与下一步动作。</li>
+  </ul>
+</section>
+
+<p>$$<br>\epsilon_{atlas} &#x3D; \epsilon_{\mathrm{finite\ size}} + \epsilon_{\mathrm{solver}} + \epsilon_{\mathrm{threshold}}<br>$$</p>
+<blockquote>
+<p>下一步是把 atlas 控制塔接入张量网络误差门控器，让相图与张量实验共享一套风险判别逻辑。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Research Diary</category>
+      </categories>
+      <tags>
+        <tag>Phase Atlas</tag>
+        <tag>Topology</tag>
+        <tag>Reproducibility</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科研日志 000 | 站点初始化与记录规范</title>
+    <url>/posts/2026/02/a9d6ee9d4942/</url>
+    <content><![CDATA[<p>这是新站点的第一篇公开日志，用于约定后续科研记录格式。</p>
+<h2 id="记录原则"><a href="#记录原则" class="headerlink" title="记录原则"></a>记录原则</h2><ul>
+<li>问题定义明确：先写清目标和已知条件</li>
+<li>假设可追溯：标记每个近似和边界条件</li>
+<li>结果可复现：给出参数、脚本入口和版本</li>
 </ul>
-<p>下一步会把误差预算写入自动报告模板，确保每次提交都能自动输出误差来源摘要。</p>
+<h2 id="公式测试"><a href="#公式测试" class="headerlink" title="公式测试"></a>公式测试</h2><p>行内公式：$E &#x3D; \hbar \omega$。</p>
+<p>行间公式：</p>
+<p>$$<br>H &#x3D; \sum_{ij} t_{ij} c_i^\dagger c_j + \sum_i U_i n_{i\uparrow} n_{i\downarrow}<br>$$</p>
+<h2 id="Mermaid-测试"><a href="#Mermaid-测试" class="headerlink" title="Mermaid 测试"></a>Mermaid 测试</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">  A[Define model] --&gt; B[Derive equations]</span><br><span class="line">  B --&gt; C[Implement numerics]</span><br><span class="line">  C --&gt; D[Validate and iterate]</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>Research Diary</category>
       </categories>
       <tags>
         <tag>reproducibility</tag>
-        <tag>tensor-network</tag>
-        <tag>benchmark</tag>
+        <tag>workflow</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科研日志 007 | 输运算符缓存层压测（虚构）</title>
+    <url>/posts/2026/03/363f67552e46/</url>
+    <content><![CDATA[<section class="lab-doc-panel is-hero">
+  <div class="lab-doc-eyebrow">Research Diary / Transport Bus</div>
+  <h2>输运算符缓存层开始产生稳定收益</h2>
+  <p>今天的工作是验证缓存层是否真的改善了 Kubo 管线，而不是只在单一输入上看起来更快。重点观察求解器切换、I/O 命中率和重复调用的收益衰减。</p>
+</section>
+
+<span id="more"></span>
+
+<div class="lab-param-strip">
+  <span>Backend: CUDA</span>
+  <span>Kernel: Kubo</span>
+  <span>Batch: 32</span>
+</div>
+
+<section class="lab-record-card">
+  <div class="lab-doc-eyebrow">Benchmark Snapshot</div>
+  <div class="lab-metric-line"><span>Median Speedup</span><span>1.41x</span></div>
+  <div class="lab-metric-line"><span>I/O Reduction</span><span>37%</span></div>
+  <div class="lab-metric-line"><span>Numerical Drift</span><span>&lt; 1.2e-4</span></div>
+</section>
+
+<h2 id="风险项"><a href="#风险项" class="headerlink" title="风险项"></a>风险项</h2><ul>
+<li>缓存层收益主要集中在算符结构重复的任务族。</li>
+<li>当参数剧烈变化时，命中率下降明显，需要单独建模是否值得缓存。</li>
+<li>如果只追求加速，很容易忽略由于截断策略变更引入的系统偏差。</li>
+</ul>
+<section class="lab-doc-panel">
+  <div class="lab-doc-eyebrow">Execution Log</div>
+  <ul class="lab-log-stream">
+    <li>21:02 — baseline run finished</li>
+    <li>21:09 — cache warmup hit rate crossed 74%</li>
+    <li>21:16 — one solver branch produced inconsistent tail behavior</li>
+    <li>21:28 — fallback precision profile enabled</li>
+  </ul>
+</section>
+
+<p>$$<br>\sigma_{xy}(\omega) \sim \mathrm{Tr}\left[v_x G^R(\omega) v_y G^A(\omega)\right]<br>$$</p>
+]]></content>
+      <categories>
+        <category>Research Diary</category>
+      </categories>
+      <tags>
+        <tag>Transport</tag>
+        <tag>Kubo</tag>
+        <tag>Benchmark</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>项目纪要 003 | 量子输运计算平台 v0.3（虚构）</title>
+    <url>/posts/2026/02/352a3fd05692/</url>
+    <content><![CDATA[<p>TransportLab-Kubo 发布 <code>v0.3</code>，本次版本重点提升了批量任务稳定性与结果回放能力。</p>
+<h2 id="v0-3-关键更新"><a href="#v0-3-关键更新" class="headerlink" title="v0.3 关键更新"></a>v0.3 关键更新</h2><ul>
+<li>新增统一配置文件：支持实验参数版本化</li>
+<li>新增 HDF5 中间结果缓存：中断后可续跑</li>
+<li>新增报告生成器：自动导出指标与关键图表</li>
+</ul>
+<h2 id="性能对比（虚构占位）"><a href="#性能对比（虚构占位）" class="headerlink" title="性能对比（虚构占位）"></a>性能对比（虚构占位）</h2><table>
+<thead>
+<tr>
+<th>指标</th>
+<th>v0.2</th>
+<th>v0.3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单任务平均耗时</td>
+<td>7.4 min</td>
+<td>5.9 min</td>
+</tr>
+<tr>
+<td>失败重跑次数</td>
+<td>11</td>
+<td>3</td>
+</tr>
+<tr>
+<td>结果回放耗时</td>
+<td>2.1 min</td>
+<td>0.8 min</td>
+</tr>
+</tbody></table>
+<h2 id="后续路线图"><a href="#后续路线图" class="headerlink" title="后续路线图"></a>后续路线图</h2><ol>
+<li>引入任务优先级调度</li>
+<li>增加多节点并行支持</li>
+<li>与论文图表模板自动对接</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Project Notes</category>
+      </categories>
+      <tags>
+        <tag>transport</tag>
+        <tag>kubo</tag>
+        <tag>hpc</tag>
       </tags>
   </entry>
   <entry>
@@ -146,54 +290,6 @@
         <tag>mcp</tag>
         <tag>codex</tag>
         <tag>uv</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>项目纪要 003 | 量子输运计算平台 v0.3（虚构）</title>
-    <url>/posts/2026/02/352a3fd05692/</url>
-    <content><![CDATA[<p>TransportLab-Kubo 发布 <code>v0.3</code>，本次版本重点提升了批量任务稳定性与结果回放能力。</p>
-<h2 id="v0-3-关键更新"><a href="#v0-3-关键更新" class="headerlink" title="v0.3 关键更新"></a>v0.3 关键更新</h2><ul>
-<li>新增统一配置文件：支持实验参数版本化</li>
-<li>新增 HDF5 中间结果缓存：中断后可续跑</li>
-<li>新增报告生成器：自动导出指标与关键图表</li>
-</ul>
-<h2 id="性能对比（虚构占位）"><a href="#性能对比（虚构占位）" class="headerlink" title="性能对比（虚构占位）"></a>性能对比（虚构占位）</h2><table>
-<thead>
-<tr>
-<th>指标</th>
-<th>v0.2</th>
-<th>v0.3</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>单任务平均耗时</td>
-<td>7.4 min</td>
-<td>5.9 min</td>
-</tr>
-<tr>
-<td>失败重跑次数</td>
-<td>11</td>
-<td>3</td>
-</tr>
-<tr>
-<td>结果回放耗时</td>
-<td>2.1 min</td>
-<td>0.8 min</td>
-</tr>
-</tbody></table>
-<h2 id="后续路线图"><a href="#后续路线图" class="headerlink" title="后续路线图"></a>后续路线图</h2><ol>
-<li>引入任务优先级调度</li>
-<li>增加多节点并行支持</li>
-<li>与论文图表模板自动对接</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Project Notes</category>
-      </categories>
-      <tags>
-        <tag>transport</tag>
-        <tag>kubo</tag>
-        <tag>hpc</tag>
       </tags>
   </entry>
   <entry>
@@ -293,6 +389,50 @@
         <tag>skyrmion</tag>
         <tag>插件</tag>
         <tag>可视化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>项目纪要 008 | 张量网络门控器与误差面板（虚构）</title>
+    <url>/posts/2026/03/a8c55b40e825/</url>
+    <content><![CDATA[<section class="lab-doc-panel is-hero">
+  <div class="lab-doc-eyebrow">Project Notes / Tensor Stack</div>
+  <h2>张量网络门控器开始替代手工判断</h2>
+  <p>目标不是生成更多图，而是把“这个结果是否可信”变成一个有规则、可记录、可审计的问题。今天完成了第一版 error gate panel。</p>
+</section>
+
+<span id="more"></span>
+
+<section class="lab-record-card">
+  <div class="lab-doc-eyebrow">Gate Rules</div>
+  <ul class="lab-protocol-list">
+    <li>若 truncation error 超过阈值，自动标记为 yellow gate。</li>
+    <li>若迭代残差与物理量波动同时异常，直接进入 red gate。</li>
+    <li>有限尺寸外推只在至少三组长度参数稳定时进入 green gate。</li>
+  </ul>
+</section>
+
+<div class="lab-dual-column">
+  <section class="lab-doc-panel">
+    <div class="lab-doc-eyebrow">Current Panel</div>
+    <div class="lab-metric-line"><span>Truncation Gate</span><span>GREEN</span></div>
+    <div class="lab-metric-line"><span>Iteration Gate</span><span>YELLOW</span></div>
+    <div class="lab-metric-line"><span>Finite-size Gate</span><span>RED</span></div>
+  </section>
+  <section class="lab-doc-panel">
+    <div class="lab-doc-eyebrow">Next Action</div>
+    <p>优先补齐长度参数点，再检查不同 bond dimension 下的稳定性。当前不应该给出“已收敛”的叙述。</p>
+  </section>
+</div>
+
+<p>$$<br>\epsilon_{\mathrm{tot}}&#x3D;\epsilon_{\mathrm{trunc}}+\epsilon_{\mathrm{iter}}+\epsilon_{L}<br>$$</p>
+]]></content>
+      <categories>
+        <category>Project Notes</category>
+      </categories>
+      <tags>
+        <tag>Tensor Network</tag>
+        <tag>DMRG</tag>
+        <tag>Error Budget</tag>
       </tags>
   </entry>
 </search>
