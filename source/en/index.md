@@ -5,15 +5,9 @@ comments: false
 lang: en
 ---
 
-Welcome to the English section of my academic site.
-
-This is the international entry of the research console.
-
-Quick links:
-
-- [About](/en/about/)
-- [Research](/en/research/)
-- [Publications](/en/publications/)
-- [Projects](/en/projects/)
-- [CV](/en/cv/)
-- [中文主页](/)
+<section class="lab-doc-panel is-hero">
+  <div class="lab-doc-eyebrow">Mirror Console / English Entry</div>
+  <h2>The English section is a mirrored console entry</h2>
+  <p>This page keeps a lighter information density than the Chinese homepage. The injected control-system layout remains the main interface, while this note serves as a compact portal to the English pages.</p>
+  <p><a href="/en/about/">About</a> · <a href="/en/research/">Research</a> · <a href="/en/publications/">Publications</a> · <a href="/en/projects/">Projects</a> · <a href="/en/cv/">CV</a> · <a href="/">中文主页</a></p>
+</section>

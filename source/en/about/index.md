@@ -5,33 +5,49 @@ comments: false
 lang: en
 ---
 
-I am a PhD student in Physics jointly trained by **Eastern Institute of Technology, Ningbo** and the **University of Science and Technology of China**, working on condensed matter physics with a focus on computational theory.
+<section class="lab-doc-panel is-hero">
+  <div class="lab-doc-eyebrow">Researcher Dossier</div>
+  <h2>Turning condensed matter computational theory into an executable system</h2>
+  <p>I am a <strong>PhD student in Physics jointly trained by Eastern Institute of Technology, Ningbo and the University of Science and Technology of China</strong>. This site is a research control system rather than a static profile page.</p>
+  <div class="lab-chip-cloud">
+    <span>Condensed Matter</span>
+    <span>Computational Theory</span>
+    <span>Topology</span>
+    <span>Quantum Transport</span>
+    <span>Tensor Network</span>
+  </div>
+</section>
 
-This site acts as a research console where theory, numerics, and reproducibility are tracked in one place.
+## System manifesto
 
-Current focus:
+- Theory, numerics, error budgets, and outputs should remain inside one versioned loop.
+- Every result should map to assumptions, parameters, scripts, and readable interpretation.
+- The site is designed as a navigation layer for ongoing research process.
 
-- low-energy theory in topological and superconducting systems
-- scalable numerical pipelines and benchmark protocols
-- paper-to-code translation with explicit assumptions and error logs
+<div class="lab-doc-grid">
+  <section class="lab-doc-card">
+    <h3>Current focus</h3>
+    <p>Low-energy theory in topological and superconducting systems, transport response numerics, tensor-network methodology, and reproducible workflow design.</p>
+  </section>
+  <section class="lab-doc-card">
+    <h3>Site role</h3>
+    <p>Method vault + research diary + project dashboard. The long-term goal is to preserve not only conclusions, but also intermediate decisions.</p>
+  </section>
+</div>
 
-Lab snapshot (fictional placeholder):
-
-- Active Projects: `07`
-- Weekly Compute Time: `186 GPU-hours`
-- Reproducibility Score: `96.4%`
-- Pipeline Status: `PASS`
-
-Contact:
-
-- Email: `bowen.phys@example.edu`
-- GitHub: <https://github.com/bowenphys>
-- Scholar: <https://scholar.google.com/citations?user=PLACEHOLDER>
-
-Quick links:
-
-- [Research](/en/research/)
-- [Publications](/en/publications/)
-- [Projects](/en/projects/)
-- [CV](/en/cv/)
-- [中文页面](/about/)
+<div class="lab-dual-column">
+  <section class="lab-doc-panel">
+    <div class="lab-doc-eyebrow">Lab Snapshot</div>
+    <div class="lab-metric-line"><span>Active Modules</span><span>04</span></div>
+    <div class="lab-metric-line"><span>Weekly Compute</span><span>186 GPU-hours</span></div>
+    <div class="lab-metric-line"><span>Reproducibility</span><span>96.8%</span></div>
+    <div class="lab-metric-line"><span>Pipeline</span><span>PASS</span></div>
+  </section>
+  <section class="lab-doc-panel">
+    <div class="lab-doc-eyebrow">Contact</div>
+    <p>Email: <code>bowen.phys@example.edu</code></p>
+    <p>GitHub: <a href="https://github.com/bowenphys">https://github.com/bowenphys</a></p>
+    <p>Scholar: <a href="https://scholar.google.com/citations?user=PLACEHOLDER">Google Scholar</a></p>
+    <p><a href="/en/research/">Research</a> · <a href="/en/projects/">Projects</a> · <a href="/about/">中文页面</a></p>
+  </section>
+</div>

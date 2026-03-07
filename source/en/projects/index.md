@@ -5,34 +5,42 @@ comments: false
 lang: en
 ---
 
-This page tracks reproducible research projects and technical tooling.
+<section class="lab-doc-panel is-hero">
+  <div class="lab-doc-eyebrow">Project Vault</div>
+  <h2>Research modules designed for replay, maintenance, and extension</h2>
+  <p>These are not productized apps. They are the operational units behind parameter sweeps, transport benchmarks, tensor reports, and paper-to-code scaffolds.</p>
+</section>
 
-## Project 01: TopoSC Scan Engine
+<section class="lab-record-card">
+  <div class="lab-doc-eyebrow">Module 01</div>
+  <h3>Phase Atlas Core</h3>
+  <div class="lab-metric-line"><span>Purpose</span><span>Phase atlas generation and diagnostics</span></div>
+  <div class="lab-metric-line"><span>Stack</span><span>Python / C++ / Sparse Solver</span></div>
+  <div class="lab-metric-line"><span>Status</span><span>ACTIVE</span></div>
+</section>
 
-- goal: sweep topological superconducting models and generate phase atlas
-- stack: Python + C++ extension + sparse solver
-- status: `ACTIVE`
-- repo: `https://github.com/bowenphys/topo-sc-minimal`
+<section class="lab-record-card">
+  <div class="lab-doc-eyebrow">Module 02</div>
+  <h3>Transport Bus</h3>
+  <div class="lab-metric-line"><span>Purpose</span><span>Kubo benchmark protocol and cache optimization</span></div>
+  <div class="lab-metric-line"><span>Stack</span><span>Julia / CUDA / HDF5</span></div>
+  <div class="lab-metric-line"><span>Status</span><span>BENCHMARKING</span></div>
+</section>
 
-## Project 02: TransportLab-Kubo
+<section class="lab-record-card">
+  <div class="lab-doc-eyebrow">Module 03</div>
+  <h3>Tensor Gate Controller</h3>
+  <div class="lab-metric-line"><span>Purpose</span><span>Error gating and dossier generation</span></div>
+  <div class="lab-metric-line"><span>Stack</span><span>Python / Snakemake / LaTeX</span></div>
+  <div class="lab-metric-line"><span>Status</span><span>VALIDATING</span></div>
+</section>
 
-- goal: standardized Kubo transport implementation with error checks
-- stack: Julia + CUDA + HDF5
-- status: `BENCHMARKING`
-- repo: `https://github.com/bowenphys/kubo-bench`
-
-## Project 03: Tensor Workflow Ops
-
-- goal: automated report pipeline for tensor-network experiments
-- stack: Python + Snakemake + LaTeX
-- status: `PROTOTYPE`
-- repo: `https://github.com/bowenphys/tn-workflow`
-
-## Standard project layout
-
-- `README`: context, dependencies, run command, outputs
-- `scripts/`: minimal reproducible execution
-- `configs/`: versioned experiment parameters
-- `reports/`: generated summaries and figures
+<section class="lab-record-card">
+  <div class="lab-doc-eyebrow">Module 04</div>
+  <h3>Paper-to-Code Forge</h3>
+  <div class="lab-metric-line"><span>Purpose</span><span>Minimal executable cases and reusable workflow skeletons</span></div>
+  <div class="lab-metric-line"><span>Stack</span><span>Markdown / Python / Hexo</span></div>
+  <div class="lab-metric-line"><span>Status</span><span>ITERATING</span></div>
+</section>
 
 [中文页面](/projects/)

@@ -52,7 +52,9 @@
 
   const bindCardMagnet = (runtime) => {
     if (isMobileViewport() || isReducedMotion()) return;
-    const targets = Array.from(document.querySelectorAll(".recent-post-item, .card-widget, .pub-item, .lab-skill-card"));
+    const targets = Array.from(
+      document.querySelectorAll(".recent-post-item, .card-widget, .pub-item, .lab-skill-card, .lab-feed-panel, .lab-doc-panel, .lab-doc-card, .lab-record-card")
+    );
     targets.forEach((target) => {
       const onMove = (event) => {
         const rect = target.getBoundingClientRect();
@@ -77,7 +79,9 @@
 
   const bindReveal = (runtime, reducedMotion) => {
     const revealTargets = Array.from(
-      document.querySelectorAll(".lab-hero, .lab-dashboard, .lab-showcase, .lab-skill-card, .recent-post-item, .card-widget, #article-container > *")
+      document.querySelectorAll(
+        ".lab-mainframe, .lab-sectors, .lab-livefeed, .lab-sector-node, .lab-skill-card, .lab-feed-panel, .lab-doc-panel, .lab-doc-card, .lab-record-card, .recent-post-item, .card-widget, #article-container > *"
+      )
     );
     if (!revealTargets.length) return;
 

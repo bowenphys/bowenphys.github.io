@@ -1,50 +1,52 @@
-console_title: "Research Operations Console"
+console_title: "Mainframe Execution Bus"
 status_bar:
-  - label: PIPELINE
-    value: PASS
+  - label: CORE TEMP
+    value: STABLE
     tone: ok
   - label: CLUSTER
-    value: 87% UTIL
+    value: 128/144 NODES
     tone: warn
-  - label: QUEUE
-    value: 23 JOBS
+  - label: REPRO
+    value: 96.8%
     tone: ok
-  - label: RISK
-    value: LOW
+  - label: PAPER QUEUE
+    value: 03 ACTIVE
     tone: ok
 timeline:
   - phase: "2026 Q1"
-    event: "Topological SC Scan Engine v2"
+    event: "TopoSC parameter atlas revision"
     status: "Done"
   - phase: "2026 Q1"
-    event: "Transport Kubo Benchmark Suite"
+    event: "Kubo transport cache layer"
     status: "Done"
   - phase: "2026 Q2"
-    event: "Tensor Network Error Budget AutoReport"
+    event: "Tensor-network gate controller"
     status: "Running"
   - phase: "2026 Q2"
-    event: "Hybrid DMRG-GPU Pipeline"
-    status: "Testing"
+    event: "Auto reproducibility dossier"
+    status: "Validating"
 terminal_tasks:
-  - cmd: "scan-toposc --grid dense --seed 42"
+  - cmd: "phase-atlas --mesh adaptive --checkpoint on"
     status: done
-  - cmd: "benchmark-kubo --backend cuda --batch 32"
+  - cmd: "transport-bus --kernel kubo --backend cuda"
     status: run
-  - cmd: "report-merge --source logs --target dashboard"
+  - cmd: "tn-gate --budget trunc+iter+finite"
+    status: run
+  - cmd: "dossier-sync --source notebooks --target reports"
     status: queue
 system_logs:
-  - time: "22:31:05"
+  - time: "22:48:05"
     level: INFO
-    message: "Phase atlas export completed"
-  - time: "22:31:17"
+    message: "Phase boundary extractor wrote atlas snapshot #31"
+  - time: "22:48:31"
     level: INFO
-    message: "Kubo benchmark submitted to cluster queue"
-  - time: "22:31:42"
+    message: "Transport cache warmed with 14 benchmark kernels"
+  - time: "22:49:07"
     level: WARN
-    message: "One node reported thermal throttling"
-  - time: "22:32:06"
+    message: "One GPU node reported thermal drift during long sweep"
+  - time: "22:49:22"
     level: INFO
-    message: "Auto-report pipeline synced with latest figures"
-  - time: "22:32:19"
+    message: "Tensor gate controller updated truncation threshold"
+  - time: "22:49:44"
     level: INFO
-    message: "Reproducibility checksum passed"
+    message: "Reproducibility checksum passed for latest dossier build"

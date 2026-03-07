@@ -4,34 +4,53 @@ date: 2026-02-08 22:33:00
 comments: false
 ---
 
-该页面用于追踪可复现研究项目与计算工具链，以下内容为占位示例。
+<section class="lab-doc-panel is-hero">
+  <div class="lab-doc-eyebrow">Project Vault / 模块库</div>
+  <h2>把研究拆成可维护、可回放、可扩展的模块</h2>
+  <p>这里收录的不是“产品化项目”，而是科研过程中的核心工具链：参数扫描、输运 benchmark、张量网络报告和 paper-to-code 脚手架。</p>
+</section>
 
-## Project 01 | TopoSC Scan Engine
+<section class="lab-record-card">
+  <div class="lab-doc-eyebrow">Module 01</div>
+  <h3>Phase Atlas Core</h3>
+  <p>批量扫描拓扑超导模型参数空间，输出 phase atlas、边界热图和误差摘要。</p>
+  <div class="lab-metric-line"><span>Stack</span><span>Python / C++ / Sparse Solver</span></div>
+  <div class="lab-metric-line"><span>Status</span><span>ACTIVE</span></div>
+  <div class="lab-metric-line"><span>Repo</span><span>github.com/bowenphys/phase-atlas-core</span></div>
+</section>
 
-- 目标：批量扫描拓扑超导模型参数空间并生成相图
-- 技术：Python + C++ Extension + Sparse Solver
-- 状态：`ACTIVE`
-- 仓库：`https://github.com/bowenphys/topo-sc-minimal`
+<section class="lab-record-card">
+  <div class="lab-doc-eyebrow">Module 02</div>
+  <h3>Transport Bus</h3>
+  <p>围绕 Kubo 公式建立统一求解与 benchmark protocol，关注吞吐、缓存命中与误差控制。</p>
+  <div class="lab-metric-line"><span>Stack</span><span>Julia / CUDA / HDF5</span></div>
+  <div class="lab-metric-line"><span>Status</span><span>BENCHMARKING</span></div>
+  <div class="lab-metric-line"><span>Repo</span><span>github.com/bowenphys/transport-bus</span></div>
+</section>
 
-## Project 02 | TransportLab-Kubo
+<section class="lab-record-card">
+  <div class="lab-doc-eyebrow">Module 03</div>
+  <h3>Tensor Gate Controller</h3>
+  <p>把 truncation、iteration 与 finite-size 误差合并成 gate rule，并自动生成报告与版本记录。</p>
+  <div class="lab-metric-line"><span>Stack</span><span>Python / Snakemake / LaTeX</span></div>
+  <div class="lab-metric-line"><span>Status</span><span>VALIDATING</span></div>
+  <div class="lab-metric-line"><span>Repo</span><span>github.com/bowenphys/tensor-gate</span></div>
+</section>
 
-- 目标：统一 Kubo 公式数值实现与误差校验流程
-- 技术：Julia + CUDA + HDF5
-- 状态：`BENCHMARKING`
-- 仓库：`https://github.com/bowenphys/kubo-bench`
+<section class="lab-record-card">
+  <div class="lab-doc-eyebrow">Module 04</div>
+  <h3>Paper-to-Code Forge</h3>
+  <p>把论文阅读模板、假设清单、最小运行脚本和图表输出骨架合并为统一脚手架。</p>
+  <div class="lab-metric-line"><span>Stack</span><span>Markdown / Python / Hexo</span></div>
+  <div class="lab-metric-line"><span>Status</span><span>ITERATING</span></div>
+  <div class="lab-metric-line"><span>Repo</span><span>github.com/bowenphys/paper-forge</span></div>
+</section>
 
-## Project 03 | Tensor Workflow Ops
+## 标准项目骨架
 
-- 目标：构建张量网络实验的自动报告流水线
-- 技术：Python + Snakemake + LaTeX
-- 状态：`PROTOTYPE`
-- 仓库：`https://github.com/bowenphys/tn-workflow`
-
-## 标准项目模板
-
-- `README`：问题定义、依赖、运行方式、输出示例
-- `scripts/`：最小复现脚本与参数入口
-- `configs/`：实验参数版本
-- `reports/`：自动生成的结果摘要
+- `README`：问题定义、输入输出、运行方式、结果解释
+- `configs/`：参数版本与实验编号
+- `scripts/`：最小复现入口与批量调度脚本
+- `reports/`：图表、摘要、误差预算与结论快照
 
 [English Version](/en/projects/)

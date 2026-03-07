@@ -5,32 +5,44 @@ comments: false
 lang: en
 ---
 
-## Education
+<section class="lab-doc-panel is-hero">
+  <div class="lab-doc-eyebrow">Academic Dossier</div>
+  <h2>Real identity retained, expandable structure for future outputs</h2>
+  <p>The affiliation and status below are real. Publications, service, and selected outputs remain placeholder entries that can be replaced incrementally.</p>
+</section>
 
-- Eastern Institute of Technology, Ningbo & University of Science and Technology of China (Joint Program) | PhD Student in Physics (in progress) | 2022 - Present
-- Example Institute | BSc in Physics | 2018 - 2022
+<div class="lab-doc-grid">
+  <section class="lab-doc-card">
+    <h3>Education</h3>
+    <p>Eastern Institute of Technology, Ningbo &amp; USTC (Joint Program)</p>
+    <p>PhD Student in Physics ｜ 2022 - Present</p>
+    <p>Example Institute ｜ BSc in Physics ｜ 2018 - 2022</p>
+  </section>
+  <section class="lab-doc-card">
+    <h3>Research Interests</h3>
+    <p>Topological quantum matter, unconventional superconductivity, transport numerics, tensor methods, and scientific workflow engineering.</p>
+  </section>
+</div>
 
-## Interests
+<section class="lab-doc-panel">
+  <div class="lab-doc-eyebrow">Technical Stack</div>
+  <div class="lab-metric-line"><span>Languages</span><span>Python / Julia / C++</span></div>
+  <div class="lab-metric-line"><span>Methods</span><span>Tensor Network / Sparse Solver / Transport Numerics</span></div>
+  <div class="lab-metric-line"><span>Workflow</span><span>Snakemake / LaTeX / Versioned Reports</span></div>
+</section>
 
-- Topological phases
-- Superconductivity and many-body physics
-- Numerical simulation and scientific computing
+<section class="lab-doc-panel">
+  <div class="lab-doc-eyebrow">Selected Outputs / placeholders</div>
+  <ul class="lab-log-stream">
+    <li>2026 — Topological Superconductivity Parameter Atlas</li>
+    <li>2025 — Kubo Transport Benchmark Protocol</li>
+    <li>2024 — Tensor-Network Reproducibility Toolkit</li>
+  </ul>
+</section>
 
-## Technical Skills
-
-- Python / Julia / C++
-- Numerical linear algebra and parallel computing
-- Reproducible research workflow
-
-## Contact
-
-- GitHub: <https://github.com/bowenphys>
-- Email: `bowen.phys@example.edu`
-
-## Selected outputs (fictional placeholder)
-
-- 2026: Topological Superconductivity Parameter Atlas
-- 2025: Kubo Transport Benchmark Protocol
-- 2024: Tensor Workflow Reproducibility Toolkit
-
-[中文页面](/cv/)
+<section class="lab-doc-panel">
+  <div class="lab-doc-eyebrow">Contact</div>
+  <p>GitHub: <a href="https://github.com/bowenphys">https://github.com/bowenphys</a></p>
+  <p>Email: <code>bowen.phys@example.edu</code></p>
+  <p><a href="/cv/">中文页面</a></p>
+</section>

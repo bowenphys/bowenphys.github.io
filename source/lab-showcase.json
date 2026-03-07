@@ -1,73 +1,73 @@
 {
   "zh": {
-    "section_title": "精选研究模块",
-    "section_subtitle": "借鉴技能市场卡片编排，聚焦当前高价值计算任务与可复用科研工作流。",
-    "cta_text": "查看全部研究轨道",
+    "section_title": "研究扇区",
+    "section_subtitle": "每张卡片对应一条长期研究主线：相图、输运、张量网络和方法学，不再只是装饰性推荐位。",
+    "cta_text": "查看全部研究扇区",
     "cta_href": "/research/",
     "cards": [
       {
-        "title": "拓扑相图自动化管线",
-        "description": "面向高维参数扫描自动生成相边界、误差区间与复现实验摘要，支持批量任务回放。",
+        "title": "相图控制塔 / Phase Atlas",
+        "description": "高维参数空间扫描、相边界自动提取、有限尺寸与收敛误差统一打包进 atlas 报告。",
         "metric": "12,480 参数点",
-        "tags": ["Topology", "Automation", "Reproducibility"],
-        "href": "/projects/"
+        "tags": ["Phase Atlas", "Topology", "Finite Size"],
+        "href": "/research/#sector-phase-atlas"
       },
       {
-        "title": "Kubo 输运基准套件",
-        "description": "统一比较不同求解器与截断策略在输运响应计算中的稳定性、精度和吞吐表现。",
-        "metric": "误差下降 41%",
-        "tags": ["Kubo", "Benchmark", "HPC"],
-        "href": "/publications/"
+        "title": "输运总线 / Transport Bus",
+        "description": "围绕 Kubo 公式构建统一 benchmark protocol，比较求解器、截断策略与缓存层收益。",
+        "metric": "41% 时间缩短",
+        "tags": ["Kubo", "Transport", "Benchmark"],
+        "href": "/research/#sector-transport"
       },
       {
-        "title": "Tensor Network 误差预算",
-        "description": "将截断误差、迭代收敛误差和有限尺寸误差纳入自动报告，确保每次实验可追踪。",
-        "metric": "复现率 95.8%",
+        "title": "张量栈 / Tensor Stack",
+        "description": "把 DMRG、截断阈值、误差预算与自动报告连接起来，形成可回放的张量实验闭环。",
+        "metric": "复现率 96.8%",
         "tags": ["Tensor Network", "DMRG", "Error Budget"],
-        "href": "/research/"
+        "href": "/research/#sector-tensor"
       },
       {
-        "title": "Paper-to-Code 快速转译",
-        "description": "从论文模型到最小可运行算例的结构化流程，缩短验证周期并沉淀方法学模板。",
-        "metric": "周均 3 篇",
-        "tags": ["Methodology", "Workflow", "Codegen"],
-        "href": "/about/"
+        "title": "方法铸造厂 / Method Forge",
+        "description": "从 paper 到 minimal executable case 的标准流程，沉淀成长期可复用的方法模板与脚本骨架。",
+        "metric": "周均 3 次转译",
+        "tags": ["Methodology", "Paper-to-Code", "Workflow"],
+        "href": "/research/#sector-methodology"
       }
     ]
   },
   "en": {
-    "section_title": "Featured Research Modules",
-    "section_subtitle": "Skill-market-inspired cards to surface high-value tasks and reusable computational workflows.",
-    "cta_text": "View All Research Tracks",
+    "section_title": "Research Sectors",
+    "section_subtitle": "Each card points to a persistent research sector: phase atlas, transport, tensor networks, and methodology.",
+    "cta_text": "View All Sectors",
     "cta_href": "/en/research/",
     "cards": [
       {
-        "title": "Topological Phase Mapping Pipeline",
-        "description": "Automates dense parameter scans with phase boundaries, uncertainty bands, and reproducibility snapshots.",
+        "title": "Phase Atlas",
+        "description": "Dense parameter scans, phase-boundary extraction, and finite-size / convergence diagnostics in one atlas report.",
         "metric": "12,480 grid points",
-        "tags": ["Topology", "Automation", "Reproducibility"],
-        "href": "/en/projects/"
+        "tags": ["Phase Atlas", "Topology", "Finite Size"],
+        "href": "/en/research/#sector-phase-atlas"
       },
       {
-        "title": "Kubo Transport Benchmark Suite",
-        "description": "Compares solvers and truncation strategies for transport response accuracy, stability, and throughput.",
-        "metric": "41% error reduction",
-        "tags": ["Kubo", "Benchmark", "HPC"],
-        "href": "/en/publications/"
+        "title": "Transport Bus",
+        "description": "A benchmark protocol around the Kubo formula to compare solvers, truncation rules, and cache-layer gains.",
+        "metric": "41% faster runtime",
+        "tags": ["Kubo", "Transport", "Benchmark"],
+        "href": "/en/research/#sector-transport"
       },
       {
-        "title": "Tensor-Network Error Budget",
-        "description": "Tracks truncation, iteration, and finite-size errors in a versioned auto-report for each experiment.",
-        "metric": "95.8% reproducibility",
+        "title": "Tensor Stack",
+        "description": "DMRG routines, truncation budgets, and auto-generated reports wired into a replayable tensor experiment loop.",
+        "metric": "96.8% reproducibility",
         "tags": ["Tensor Network", "DMRG", "Error Budget"],
-        "href": "/en/research/"
+        "href": "/en/research/#sector-tensor"
       },
       {
-        "title": "Paper-to-Code Accelerator",
-        "description": "A structured path from model reading to executable experiments for rapid verification.",
-        "metric": "3 papers/week",
-        "tags": ["Methodology", "Workflow", "Codegen"],
-        "href": "/en/about/"
+        "title": "Method Forge",
+        "description": "A repeatable paper-to-code path that turns model reading into executable cases and reusable workflow templates.",
+        "metric": "3 translations/week",
+        "tags": ["Methodology", "Paper-to-Code", "Workflow"],
+        "href": "/en/research/#sector-methodology"
       }
     ]
   }
