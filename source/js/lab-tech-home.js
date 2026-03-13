@@ -22,13 +22,12 @@
         { text: "项目仓库", href: "/projects/" },
         { text: "学术 dossier", href: "/cv/" }
       ],
-      tags: ["Topology", "Transport", "Tensor Network", "HPC Workflow", "Error Budget"],
+      tags: ["Quantum Computing", "First-Principles", "Micromagnetics", "Wannier Tools", "DFT"],
       ticker: [
-        "PHASE-ATLAS // RUNNING",
-        "KUBO-BENCH // STABLE",
-        "TN-GATE // VALIDATING",
-        "PAPER-TO-CODE // ACTIVE",
-        "REPRODUCIBILITY // 96.8%"
+        "QUANTUM-COMPUTING // ALGORITHM",
+        "FIRST-PRINCIPLES // DFT STUDY",
+        "MICROMAGNETICS // SIMULATING",
+        "WANNIER-TOOLS // DEVELOPING"
       ],
       side_title: "Research Kernel",
       side_copy: "把模型、数值实验、误差预算与复现实验记录整合到同一套科研操作系统中。",
@@ -85,13 +84,12 @@
         { text: "Project Vault", href: "/en/projects/" },
         { text: "Academic Dossier", href: "/en/cv/" }
       ],
-      tags: ["Topology", "Transport", "Tensor Network", "HPC Workflow", "Error Budget"],
+      tags: ["Quantum Computing", "First-Principles", "Micromagnetics", "Wannier Tools", "DFT"],
       ticker: [
-        "PHASE-ATLAS // RUNNING",
-        "KUBO-BENCH // STABLE",
-        "TN-GATE // VALIDATING",
-        "PAPER-TO-CODE // ACTIVE",
-        "REPRODUCIBILITY // 96.8%"
+        "QUANTUM-COMPUTING // ALGORITHM",
+        "FIRST-PRINCIPLES // DFT STUDY",
+        "MICROMAGNETICS // SIMULATING",
+        "WANNIER-TOOLS // DEVELOPING"
       ],
       side_title: "Research Kernel",
       side_copy: "A research operating system for model building, numerics, error budgeting, and reproducibility.",

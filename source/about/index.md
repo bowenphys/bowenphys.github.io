@@ -41,10 +41,10 @@ comments: false
   <div class="lab-doc-eyebrow">Focus Map</div>
   <h3>当前聚焦</h3>
   <ul class="lab-protocol-list">
-    <li>拓扑量子态与第一性原理计算</li>
-    <li>量子输运响应、Kubo 公式及其数值 benchmark protocol</li>
-    <li>量子计算与张量网络方法</li>
-    <li>paper-to-code 的快速转译与科研软件工程</li>
+    <li>量子计算：量子金融与量子化学算法开发</li>
+    <li>第一性原理计算：凝聚态磁性研究</li>
+    <li>微磁学：自旋原子动力学模拟</li>
+    <li>Wannier 后处理：非线性光学与电学计算</li>
   </ul>
 </section>
 

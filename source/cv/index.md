@@ -19,7 +19,7 @@ comments: false
   </section>
   <section class="lab-doc-card">
     <h3>研究兴趣</h3>
-    <p>拓扑量子态、第一性原理计算、量子输运与量子计算。</p>
+    <p>量子计算（量子金融/量子化学）、第一性原理计算（磁性）、微磁学（自旋动力学）、Wannier 后处理（光学/电学）。</p>
   </section>
 </div>
 

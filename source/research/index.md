@@ -6,74 +6,75 @@ comments: false
 
 <section class="lab-doc-panel is-hero">
   <div class="lab-doc-eyebrow">Research Map / 研究地图</div>
-  <h2>四条主线并行：相图、输运、张量网络、方法学</h2>
-  <p>这里不是一组松散关键词，而是我当前科研工作的控制面板。每条主线都对应问题定义、数值策略、误差来源和可复现输出。</p>
-  <div class="lab-param-strip">
-    <span>Phase Atlas: ACTIVE</span>
-    <span>Transport Bus: BENCHMARKING</span>
-    <span>Tensor Stack: VALIDATING</span>
+  <h2>四个研究方向并行推进</h2>
+  <p>聚焦量子计算、第一性原理、微磁学与 Wannier 后处理工具开发，探索凝聚态物理的前沿问题。</p>
+  <div class="lab-param-strow">
+    <span>Quantum Computing: ALGORITHM DEVELOPMENT</span>
+    <span>First-Principles: DFT STUDY</span>
+    <span>Micromagnetics: SIMULATING</span>
+    <span>Wannier Tools: DEVELOPING</span>
   </div>
 </section>
 
-<section id="sector-phase-atlas" class="lab-record-card">
-  <div class="lab-doc-eyebrow">Sector 01 / Phase Atlas</div>
-  <h3>相图控制塔：拓扑量子态与第一性原理计算</h3>
-  <p>目标是从模型层面提取能够与可观测量直接关联的结构，并把相边界、有限尺寸效应和收敛误差统一纳入 atlas 报告。</p>
+<section id="sector-quantum" class="lab-record-card">
+  <div class="lab-doc-eyebrow">Sector 01 / Quantum Computing</div>
+  <h3>量子计算：量子金融与量子化学算法</h3>
+  <p>探索量子计算在金融建模与化学模拟中的应用，开发变分量子本征求解器（VQE）和量子机器学习算法。</p>
   <ul class="lab-protocol-list">
-    <li>解析推导与最小模型化简</li>
-    <li>高维参数扫描与 phase boundary extraction</li>
-    <li>finite-size scaling 与误差条自动生成</li>
+    <li>量子金融：投资组合优化、风险分析的量子算法</li>
+    <li>量子化学：分子基态能量计算与反应路径模拟</li>
+    <li>量子近似优化：QAOA 在组合优化问题中的应用</li>
   </ul>
-  <div class="lab-metric-line"><span>当前任务</span><span>TopoSC parameter atlas revision</span></div>
-  <div class="lab-metric-line"><span>输出形式</span><span>Derivation note / Atlas report / Repro script</span></div>
+  <div class="lab-metric-line"><span>当前任务</span><span>VQE 误差缓解算法开发</span></div>
+  <div class="lab-metric-line"><span>合作团队</span><span>量子计算实验室</span></div>
 </section>
 
-<section id="sector-transport" class="lab-record-card">
-  <div class="lab-doc-eyebrow">Sector 02 / Transport Bus</div>
-  <h3>输运总线：Kubo 公式、数值响应与 benchmark protocol</h3>
-  <p>这条主线面向“不同实现给出相同物理量时，代价、稳定性和误差如何比较”的问题。核心是统一 Kubo 管线与缓存策略。</p>
+<section id="sector-first-principles" class="lab-record-card">
+  <div class="lab-doc-eyebrow">Sector 02 / First-Principles</div>
+  <h3>第一性原理计算：凝聚态磁性</h3>
+  <p>运用密度泛函理论（DFT）及其扩展方法，研究强关联电子体系中的磁性现象。</p>
   <ul class="lab-protocol-list">
-    <li>solver / backend / truncation rule 的横向比较</li>
-    <li>矩阵元缓存、I/O 管线与吞吐分析</li>
-    <li>误差预算写入自动报告，避免 benchmark 只剩速度数字</li>
+    <li>DFT+DMFT：处理强关联体系的磁性</li>
+    <li>磁性材料设计：寻找新型拓扑磁体</li>
+    <li>自旋-轨道耦合效应：Rashba 与 Dresselhaus 体系</li>
   </ul>
-  <div class="lab-metric-line"><span>当前任务</span><span>Kubo transport cache layer</span></div>
-  <div class="lab-metric-line"><span>核心指标</span><span>41% runtime reduction</span></div>
+  <div class="lab-metric-line"><span>当前任务</span><span>拓扑磁体电子结构计算</span></div>
+  <div class="lab-metric-line"><span>计算软件</span><span>VASP / Quantum ESPRESSO</span></div>
 </section>
 
-<section id="sector-tensor" class="lab-record-card">
-  <div class="lab-doc-eyebrow">Sector 03 / Tensor Stack</div>
-  <h3>张量栈：DMRG、量子计算、误差门控与自动 dossier</h3>
-  <p>我把张量网络计算看作一套受控实验：截断阈值、迭代收敛和有限尺寸外推要被同时记录，而不是分散在 notebook 和记忆里。</p>
+<section id="sector-micromagnetics" class="lab-record-card">
+  <div class="lab-doc-eyebrow">Sector 03 / Micromagnetics</div>
+  <h3>微磁学：自旋原子动力学</h3>
+  <p>基于 Landau-Lifshitz-Bloch (LLB) 方程模拟自旋动力学，研究磁畴壁运动和磁化反转过程。</p>
   <ul class="lab-protocol-list">
-    <li>truncation / iteration / finite-size 三类误差分层建模</li>
-    <li>张量实验自动生成摘要、图和日志</li>
-    <li>将“是否可信”从主观判断转成可比对的 gate rule</li>
+    <li>磁畴壁运动：Walker breakdown 与类Walker 模式</li>
+    <li>磁skyrmion：动力学稳定性与霍尔效应</li>
+    <li>热辅助磁化反转：Arrhenius 激活与能垒计算</li>
   </ul>
-  <div class="lab-metric-line"><span>当前任务</span><span>Tensor-network gate controller</span></div>
-  <div class="lab-metric-line"><span>当前状态</span><span>VALIDATING</span></div>
+  <div class="lab-metric-line"><span>当前任务</span><span>多尺度磁动力学模拟</span></div>
+  <div class="lab-metric-line"><span>仿真工具</span><span> mumax3 / OOMMF</span></div>
 </section>
 
-<section id="sector-methodology" class="lab-record-card">
-  <div class="lab-doc-eyebrow">Sector 04 / Method Forge</div>
-  <h3>方法铸造厂：paper-to-code 与科研软件工程</h3>
-  <p>这是最偏工程的一条主线，目的是把论文阅读转成可执行的最小算例，并沉淀成长期可以复用的模板。</p>
+<section id="sector-wannier" class="lab-record-card">
+  <div class="lab-doc-eyebrow">Sector 04 / Wannier Tools</div>
+  <h3>Wannier 后处理：非线性光学与电学</h3>
+  <p>开发基于 Wannier90 的后处理工具，计算凝聚态体系的非线性光学响应和拓扑电学性质。</p>
   <ul class="lab-protocol-list">
-    <li>paper reading template：假设、边界条件、风险点一页收束</li>
-    <li>minimal executable case：最快得到可跑原型，而不是一次写完整系统</li>
-    <li>workflow skeleton：配置、脚本、报告结构统一</li>
+    <li>二次谐波产生 (SHG)：非线性极化率计算</li>
+    <li>Berry 曲率与反常霍尔效应</li>
+    <li>量子电容与介电函数：低维材料光学性质</li>
   </ul>
-  <div class="lab-metric-line"><span>当前任务</span><span>Auto reproducibility dossier</span></div>
-  <div class="lab-metric-line"><span>产物类型</span><span>Template / Script / Report / Checklist</span></div>
+  <div class="lab-metric-line"><span>当前任务</span><span>SHG 响应函数开发</span></div>
+  <div class="lab-metric-line"><span>代码仓库</span><span>wannier-postproc</span></div>
 </section>
 
 ## 近期里程碑
 
 | 时间 | 里程碑 | 状态 |
 | --- | --- | --- |
-| 2026 Q1 | TopoSC 参数图谱控制塔重构 | ✅ 完成 |
-| 2026 Q1 | Kubo 输运缓存层基准协议 | ✅ 完成 |
-| 2026 Q2 | 张量网络误差门控器 | 🚧 进行中 |
-| 2026 Q2 | 自动化学术 dossier 管线 | 🧪 验证中 |
+| 2026 Q1 | 量子化学算法初步验证 | ✅ 完成 |
+| 2026 Q1 | 拓扑磁体 DFT 计算 | ✅ 完成 |
+| 2026 Q2 | 微磁学模拟框架搭建 | 🚧 进行中 |
+| 2026 Q2 | Wannier 后处理工具开发 | 🧪 验证中 |
 
 [English Version](/en/research/)

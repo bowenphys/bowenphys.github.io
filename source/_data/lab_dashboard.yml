@@ -14,25 +14,25 @@ status_bar:
     tone: ok
 timeline:
   - phase: "2026 Q1"
-    event: "TopoSC parameter atlas revision"
+    event: "Quantum chemistry algorithm validation"
     status: "Done"
   - phase: "2026 Q1"
-    event: "Kubo transport cache layer"
+    event: "Topological magnet DFT calculation"
     status: "Done"
   - phase: "2026 Q2"
-    event: "Tensor-network gate controller"
+    event: "Micromagnetics simulation framework"
     status: "Running"
   - phase: "2026 Q2"
-    event: "Auto reproducibility dossier"
+    event: "Wannier post-processing tool"
     status: "Validating"
 terminal_tasks:
-  - cmd: "phase-atlas --mesh adaptive --checkpoint on"
+  - cmd: "vqe --molecule h2o --backend quantum-simulator"
     status: done
-  - cmd: "transport-bus --kernel kubo --backend cuda"
+  - cmd: "dft --magnetic calc --software vasp"
     status: run
-  - cmd: "tn-gate --budget trunc+iter+finite"
+  - cmd: "llb-solver --domain-wall --mesh 512x64"
     status: run
-  - cmd: "dossier-sync --source notebooks --target reports"
+  - cmd: "wannier-postproc --shg --material MoS2"
     status: queue
 system_logs:
   - time: "22:48:05"

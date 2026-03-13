@@ -7,57 +7,66 @@ lang: en
 
 <section class="lab-doc-panel is-hero">
   <div class="lab-doc-eyebrow">Research Map</div>
-  <h2>Four sectors running in parallel: phase atlas, transport, tensor stack, methodology</h2>
-  <p>This page is a structural map of ongoing research rather than a list of interests. Each sector maps to questions, methods, error sources, and replayable outputs.</p>
+  <h2>Four Research Directions in Parallel</h2>
+  <p>Focusing on quantum computing, first-principles calculations, micromagnetics, and Wannier post-processing tools to explore frontier problems in condensed matter physics.</p>
   <div class="lab-param-strip">
-    <span>Phase Atlas: ACTIVE</span>
-    <span>Transport Bus: BENCHMARKING</span>
-    <span>Tensor Stack: VALIDATING</span>
+    <span>Quantum Computing: ALGORITHM DEVELOPMENT</span>
+    <span>First-Principles: DFT STUDY</span>
+    <span>Micromagnetics: SIMULATING</span>
+    <span>Wannier Tools: DEVELOPING</span>
   </div>
 </section>
 
-<section id="sector-phase-atlas" class="lab-record-card">
-  <div class="lab-doc-eyebrow">Sector 01 / Phase Atlas</div>
-  <h3>Topological Quantum States and First-Principles Calculations</h3>
-  <p>Focused on linking model-level assumptions to observable phase structures and packaging finite-size / convergence diagnostics into one atlas report.</p>
+<section id="sector-quantum" class="lab-record-card">
+  <div class="lab-doc-eyebrow">Sector 01 / Quantum Computing</div>
+  <h3>Quantum Computing: Quantum Finance & Quantum Chemistry Algorithms</h3>
+  <p>Exploring quantum computing applications in financial modeling and chemical simulations, developing VQE and quantum machine learning algorithms.</p>
   <ul class="lab-protocol-list">
-    <li>Model reduction and controlled analytical derivation</li>
-    <li>Dense parameter sweeps with automatic boundary extraction</li>
-    <li>Finite-size scaling and uncertainty visualization</li>
+    <li>Quantum Finance: Portfolio optimization and risk analysis</li>
+    <li>Quantum Chemistry: Molecular ground state energy calculation</li>
+    <li>Quantum Approximate Optimization: QAOA applications</li>
   </ul>
+  <div class="lab-metric-line"><span>Current Task</span><span>VQE error mitigation algorithm development</span></div>
+  <div class="lab-metric-line"><span>Collaboration</span><span>Quantum Computing Lab</span></div>
 </section>
 
-<section id="sector-transport" class="lab-record-card">
-  <div class="lab-doc-eyebrow">Sector 02 / Transport Bus</div>
-  <h3>Kubo response, runtime stability, and benchmark protocol</h3>
-  <p>This sector compares implementations in terms of accuracy, throughput, and cache behavior instead of reporting isolated runtime numbers.</p>
+<section id="sector-first-principles" class="lab-record-card">
+  <div class="lab-doc-eyebrow">Sector 02 / First-Principles</div>
+  <h3>First-Principles Calculations: Condensed Matter Magnetism</h3>
+  <p>Using DFT and extended methods to study magnetism in strongly correlated electron systems.</p>
   <ul class="lab-protocol-list">
-    <li>Cross-solver comparison with unified benchmark rules</li>
-    <li>Cache-layer and I/O pipeline optimization</li>
-    <li>Error budget tracked inside reports rather than separate notes</li>
+    <li>DFT+DMFT: Strongly correlated magnetism</li>
+    <li>Magnetic material design: Topological magnets</li>
+    <li>Spin-orbit coupling: Rashba and Dresselhaus systems</li>
   </ul>
+  <div class="lab-metric-line"><span>Current Task</span><span>Topological magnet electronic structure</span></div>
+  <div class="lab-metric-line"><span>Software</span><span>VASP / Quantum ESPRESSO</span></div>
 </section>
 
-<section id="sector-tensor" class="lab-record-card">
-  <div class="lab-doc-eyebrow">Sector 03 / Tensor Stack</div>
-  <h3>Tensor Networks, Quantum Computing, and Error Gating</h3>
-  <p>Tensor-network computation is treated as a controlled experiment where truncation, iteration, and finite-size errors are recorded together.</p>
+<section id="sector-micromagnetics" class="lab-record-card">
+  <div class="lab-doc-eyebrow">Sector 03 / Micromagnetics</div>
+  <h3>Micromagnetics: Spin Atomic Dynamics</h3>
+  <p>Simulating spin dynamics based on Landau-Lifshitz-Bloch (LLB) equation, studying domain wall motion and magnetization reversal.</p>
   <ul class="lab-protocol-list">
-    <li>Hierarchical error model for truncation / iteration / finite size</li>
-    <li>Auto-generated reports and versioned logs</li>
-    <li>Gate rules for deciding whether a result is trustworthy</li>
+    <li>Domain wall motion: Walker breakdown and Walker-like modes</li>
+    <li>Magnetic skyrmion: Dynamics and Hall effect</li>
+    <li>Thermally assisted magnetization reversal</li>
   </ul>
+  <div class="lab-metric-line"><span>Current Task</span><span>Multiscale magnetic dynamics simulation</span></div>
+  <div class="lab-metric-line"><span>Tools</span><span>mumax3 / OOMMF</span></div>
 </section>
 
-<section id="sector-methodology" class="lab-record-card">
-  <div class="lab-doc-eyebrow">Sector 04 / Method Forge</div>
-  <h3>Paper-to-code translation and scientific workflow engineering</h3>
-  <p>The engineering-heavy branch of the system: turn reading into executable minimal cases and reusable workflow skeletons.</p>
+<section id="sector-wannier" class="lab-record-card">
+  <div class="lab-doc-eyebrow">Sector 04 / Wannier Tools</div>
+  <h3>Wannier Post-Processing: Nonlinear Optics & Electrical</h3>
+  <p>Developing Wannier90-based post-processing tools for computing nonlinear optical responses and topological electrical properties.</p>
   <ul class="lab-protocol-list">
-    <li>Reading templates for assumptions, boundaries, and failure modes</li>
-    <li>Minimal executable cases before full-system implementation</li>
-    <li>Reusable project skeletons for scripts, configs, and reports</li>
+    <li>Second Harmonic Generation (SHG) calculations</li>
+    <li>Berry curvature and anomalous Hall effect</li>
+    <li>Quantum capacitance and dielectric function</li>
   </ul>
+  <div class="lab-metric-line"><span>Current Task</span><span>SHG response function development</span></div>
+  <div class="lab-metric-line"><span>Code</span><span>wannier-postproc</span></div>
 </section>
 
 [中文页面](/research/)

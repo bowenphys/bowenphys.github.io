@@ -20,7 +20,7 @@ lang: en
   </section>
   <section class="lab-doc-card">
     <h3>Research Interests</h3>
-    <p>Topological quantum states, first-principles calculations, quantum transport, and quantum computing with tensor network methods.</p>
+    <p>Quantum computing (quantum finance/quantum chemistry), first-principles calculations (magnetism), micromagnetics (spin dynamics), Wannier post-processing (optics/electrical).</p>
   </section>
 </div>
 

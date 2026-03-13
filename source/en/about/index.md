@@ -28,7 +28,7 @@ lang: en
 <div class="lab-doc-grid">
   <section class="lab-doc-card">
     <h3>Current focus</h3>
-    <p>Topological quantum states, first-principles calculations, quantum transport, and quantum computing with tensor network methods.</p>
+    <p>Quantum computing (quantum finance/quantum chemistry), first-principles calculations (magnetism), micromagnetics (spin dynamics), Wannier post-processing (optics/electrical).</p>
   </section>
   <section class="lab-doc-card">
     <h3>Site role</h3>
