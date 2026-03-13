@@ -1,28 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>科研日志 000 | 站点初始化与记录规范</title>
-    <url>/posts/2026/02/a9d6ee9d4942/</url>
-    <content><![CDATA[<p>这是新站点的第一篇公开日志，用于约定后续科研记录格式。</p>
-<h2 id="记录原则"><a href="#记录原则" class="headerlink" title="记录原则"></a>记录原则</h2><ul>
-<li>问题定义明确：先写清目标和已知条件</li>
-<li>假设可追溯：标记每个近似和边界条件</li>
-<li>结果可复现：给出参数、脚本入口和版本</li>
-</ul>
-<h2 id="公式测试"><a href="#公式测试" class="headerlink" title="公式测试"></a>公式测试</h2><p>行内公式：$E &#x3D; \hbar \omega$。</p>
-<p>行间公式：</p>
-<p>$$<br>H &#x3D; \sum_{ij} t_{ij} c_i^\dagger c_j + \sum_i U_i n_{i\uparrow} n_{i\downarrow}<br>$$</p>
-<h2 id="Mermaid-测试"><a href="#Mermaid-测试" class="headerlink" title="Mermaid 测试"></a>Mermaid 测试</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">  A[Define model] --&gt; B[Derive equations]</span><br><span class="line">  B --&gt; C[Implement numerics]</span><br><span class="line">  C --&gt; D[Validate and iterate]</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Research Diary</category>
-      </categories>
-      <tags>
-        <tag>workflow</tag>
-        <tag>reproducibility</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>科研日志 001 | 拓扑超导参数扫描引擎上线</title>
     <url>/posts/2026/02/d22b78ea1490/</url>
     <content><![CDATA[<p>今天完成了 TopoSC Scan Engine 的第一版参数扫描管线，目标是稳定输出二维参数空间相图，并自动附带误差评估结果。</p>
@@ -45,6 +23,303 @@
         <tag>topology</tag>
         <tag>superconductivity</tag>
         <tag>numerical</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科研日志 000 | 站点初始化与记录规范</title>
+    <url>/posts/2026/02/a9d6ee9d4942/</url>
+    <content><![CDATA[<p>这是新站点的第一篇公开日志，用于约定后续科研记录格式。</p>
+<h2 id="记录原则"><a href="#记录原则" class="headerlink" title="记录原则"></a>记录原则</h2><ul>
+<li>问题定义明确：先写清目标和已知条件</li>
+<li>假设可追溯：标记每个近似和边界条件</li>
+<li>结果可复现：给出参数、脚本入口和版本</li>
+</ul>
+<h2 id="公式测试"><a href="#公式测试" class="headerlink" title="公式测试"></a>公式测试</h2><p>行内公式：$E &#x3D; \hbar \omega$。</p>
+<p>行间公式：</p>
+<p>$$<br>H &#x3D; \sum_{ij} t_{ij} c_i^\dagger c_j + \sum_i U_i n_{i\uparrow} n_{i\downarrow}<br>$$</p>
+<h2 id="Mermaid-测试"><a href="#Mermaid-测试" class="headerlink" title="Mermaid 测试"></a>Mermaid 测试</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">  A[Define model] --&gt; B[Derive equations]</span><br><span class="line">  B --&gt; C[Implement numerics]</span><br><span class="line">  C --&gt; D[Validate and iterate]</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Research Diary</category>
+      </categories>
+      <tags>
+        <tag>workflow</tag>
+        <tag>reproducibility</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科研日志 002 | 第一性原理计算：Fe3GeTe2 电子结构与磁性</title>
+    <url>/posts/2026/01/6e78f6cd7292/</url>
+    <content><![CDATA[<p>继续第一性原理计算工作，本周重点研究拓扑磁体 Fe3GeTe2 的电子结构和磁性性质。</p>
+<h2 id="研究背景"><a href="#研究背景" class="headerlink" title="研究背景"></a>研究背景</h2><p>Fe3GeTe2 (FGT) 是范德华层状材料，具有以下特点：</p>
+<ul>
+<li>居里温度 $T_C \approx 220$ K</li>
+<li>存在拓扑表面态</li>
+<li>可通过电场调控磁性</li>
+</ul>
+<h2 id="计算方法"><a href="#计算方法" class="headerlink" title="计算方法"></a>计算方法</h2><ul>
+<li><strong>软件</strong>: VASP 5.4.4 + Quantum ESPRESSO 验证</li>
+<li><strong>泛函</strong>: PBE-GGA + DFT+U (U &#x3D; 2 eV for Fe 3d)</li>
+<li><strong>赝势</strong>: PAW_PBE</li>
+<li><strong>k-grid</strong>: $18 \times 18 \times 4$ for bulk</li>
+<li><strong>SOC</strong>: 考虑自旋-轨道耦合</li>
+</ul>
+<h2 id="计算结果"><a href="#计算结果" class="headerlink" title="计算结果"></a>计算结果</h2><h3 id="能带结构"><a href="#能带结构" class="headerlink" title="能带结构"></a>能带结构</h3><p><img src="/img/dft/fgt-bandstructure.png" alt="FGT band structure"></p>
+<p>费米面附近存在 Dirac 型表面态，验证了拓扑特性。</p>
+<h3 id="磁性"><a href="#磁性" class="headerlink" title="磁性"></a>磁性</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>计算值</th>
+<th>实验值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>饱和磁化 $M_s$</td>
+<td>1.74 μ_B&#x2F;Fe</td>
+<td>1.71 μ_B&#x2F;Fe</td>
+</tr>
+<tr>
+<td>晶格常数 a</td>
+<td>3.97 Å</td>
+<td>3.99 Å</td>
+</tr>
+<tr>
+<td>晶格常数 c</td>
+<td>16.33 Å</td>
+<td>16.35 Å</td>
+</tr>
+</tbody></table>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><ol>
+<li>Fe 原子磁矩主要来自 3d 电子</li>
+<li>层间耦合为范德华相互作用，磁性主要来自层内</li>
+<li>DFT+U 有效修正了 d 电子的强关联效应</li>
+</ol>
+<h2 id="下一步"><a href="#下一步" class="headerlink" title="下一步"></a>下一步</h2><ul>
+<li>探索 Mn 掺杂 FGT 的磁性调控</li>
+<li>计算磁各向异性常数 (MAE)</li>
+<li>与实验组合作对比 ARPES 数据</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Research Diary</category>
+      </categories>
+      <tags>
+        <tag>dft</tag>
+        <tag>magnetism</tag>
+        <tag>topological-magnet</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科研日志 002 | 张量网络基准测试与误差预算</title>
+    <url>/posts/2026/02/30755cba4822/</url>
+    <content><![CDATA[<p>本周对张量网络求解流程进行了系统基准测试，重点比较截断误差、边界条件与迭代收敛策略对最终观测量的影响。</p>
+<h2 id="误差分解"><a href="#误差分解" class="headerlink" title="误差分解"></a>误差分解</h2><p>将总误差近似写为：</p>
+<p>$$<br>\epsilon_{\mathrm{total}} \approx \epsilon_{\chi} + \epsilon_{\mathrm{iter}} + \epsilon_{\mathrm{finite}}<br>$$</p>
+<p>其中：</p>
+<ul>
+<li>$\epsilon_{\chi}$：截断维度带来的误差</li>
+<li>$\epsilon_{\mathrm{iter}}$：迭代未收敛误差</li>
+<li>$\epsilon_{\mathrm{finite}}$：有限尺寸误差</li>
+</ul>
+<h2 id="基准结果"><a href="#基准结果" class="headerlink" title="基准结果"></a>基准结果</h2><ul>
+<li>截断维度从 <code>chi=128</code> 提升到 <code>chi=256</code> 后，关键可观测量偏差下降 <code>41%</code></li>
+<li>采用混合收敛准则后，平均迭代步数下降 <code>18%</code></li>
+<li>全流程复现实验通过率达到 <code>95.8%</code></li>
+</ul>
+<p>下一步会把误差预算写入自动报告模板，确保每次提交都能自动输出误差来源摘要。</p>
+]]></content>
+      <categories>
+        <category>Research Diary</category>
+      </categories>
+      <tags>
+        <tag>reproducibility</tag>
+        <tag>tensor-network</tag>
+        <tag>benchmark</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科研日志 001 | 量子变分算法初探：VQE 在小分子基态能量计算中的应用</title>
+    <url>/posts/2026/01/166fb31092d5/</url>
+    <content><![CDATA[<p>本周开始探索量子计算在量子化学中的应用，使用变分量子本征求解器（Variational Quantum Eigensolver, VQE）计算小分子基态能量。</p>
+<h2 id="VQE-原理"><a href="#VQE-原理" class="headerlink" title="VQE 原理"></a>VQE 原理</h2><p>VQE 结合经典优化与量子硬件，通过参数化量子电路（Parameterized Quantum Circuit, PQC）逼近系统基态：</p>
+<p>$$<br>E(\theta) &#x3D; \langle 0|U^\dagger(\theta) H U(\theta)|0\rangle<br>$$</p>
+<p>其中 $H$ 为分子哈密顿量，$U(\theta)$ 为参数化量子门电路。</p>
+<h2 id="实验设置"><a href="#实验设置" class="headerlink" title="实验设置"></a>实验设置</h2><ul>
+<li><strong>分子体系</strong>: $H_2O$（水分子）、$H_2$（氢分子）、$LiH$（氢化锂）</li>
+<li><strong>量子模拟器</strong>: Qiskit Aer GPU backend</li>
+<li><strong>ansatz</strong>: Hardware-Efficient Ansatz (HEA)</li>
+<li><strong>优化器</strong>: COBYLA + SPSA 混合策略</li>
+</ul>
+<h2 id="当前结果"><a href="#当前结果" class="headerlink" title="当前结果"></a>当前结果</h2><table>
+<thead>
+<tr>
+<th>分子</th>
+<th>经典参考 (Hartree)</th>
+<th>VQE 结果 (Hartree)</th>
+<th>误差</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$H_2$</td>
+<td>-1.174</td>
+<td>-1.168</td>
+<td>0.006</td>
+</tr>
+<tr>
+<td>$H_2O$</td>
+<td>-76.423</td>
+<td>-76.387</td>
+<td>0.036</td>
+</tr>
+<tr>
+<td>$LiH$</td>
+<td>-8.070</td>
+<td>-8.041</td>
+<td>0.029</td>
+</tr>
+</tbody></table>
+<h2 id="下一步计划"><a href="#下一步计划" class="headerlink" title="下一步计划"></a>下一步计划</h2><ol>
+<li>引入 ZNE (Zero-Noise Extrapolation) 误差缓解</li>
+<li>测试更多分子体系：$NH_3$, $CH_4$</li>
+<li>在真实量子设备上验证（IBM Quantum）</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Research Diary</category>
+      </categories>
+      <tags>
+        <tag>quantum-computing</tag>
+        <tag>vqe</tag>
+        <tag>quantum-chemistry</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科研日志 004 | Wannier后处理：MoS2单层二次谐波响应</title>
+    <url>/posts/2026/02/945c7dd62ccf/</url>
+    <content><![CDATA[<p>本周完成基于Wannier函数的非线性光学响应计算，成功获得MoS2单层的二次谐波产生（SHG）谱。</p>
+<h2 id="理论背景"><a href="#理论背景" class="headerlink" title="理论背景"></a>理论背景</h2><h3 id="二次谐波产生-SHG"><a href="#二次谐波产生-SHG" class="headerlink" title="二次谐波产生 (SHG)"></a>二次谐波产生 (SHG)</h3><p>二阶非线性光学响应由二阶极化率张量 $\chi^{(2)}$ 描述：</p>
+<p>$$<br>P_i^{(2\omega)} &#x3D; \epsilon_0 \sum_{jk} \chi^{(2)}_{ijk} E_j^{(\omega)} E_k^{(\omega)}<br>$$</p>
+<p>对于二维材料，SHG响应与Berry curvature存在内在联系。</p>
+<h3 id="MoS2电子结构"><a href="#MoS2电子结构" class="headerlink" title="MoS2电子结构"></a>MoS2电子结构</h3><p>MoS2单层为直接带隙半导体：</p>
+<ul>
+<li>带隙 $\approx 1.8$ eV</li>
+<li>K点和K’点处存在谷简并（破缺SOC时）</li>
+<li>SOC导致谷分裂 $\approx 150$ meV</li>
+</ul>
+<h2 id="计算流程"><a href="#计算流程" class="headerlink" title="计算流程"></a>计算流程</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">  A[DFT计算] --&gt; B[Wannier90]</span><br><span class="line">  B --&gt; C[最大局域化]</span><br><span class="line">  C --&gt; D[计算Berry curvature]</span><br><span class="line">  D --&gt; E[SHG响应]</span><br></pre></td></tr></table></figure>
+
+<h3 id="参数设置"><a href="#参数设置" class="headerlink" title="参数设置"></a>参数设置</h3><ul>
+<li><strong>DFT软件</strong>: VASP</li>
+<li><strong>Wannier</strong>: Wannier90 v3.1</li>
+<li><strong>k-grid</strong>: $12 \times 12 \times 1$</li>
+<li><strong>能带拟合</strong>: 12个Wannier函数（Mo: d轨道, S: p轨道）</li>
+</ul>
+<h2 id="计算结果"><a href="#计算结果" class="headerlink" title="计算结果"></a>计算结果</h2><h3 id="SHG光谱"><a href="#SHG光谱" class="headerlink" title="SHG光谱"></a>SHG光谱</h3><p><img src="/img/wannier/mos2-shg.png" alt="MoS2 SHG spectrum"></p>
+<p>峰值位置对应A激子 ($\approx 1.9$ eV) 和B激子 ($\approx 2.0$ eV)</p>
+<h3 id="SHG张量"><a href="#SHG张量" class="headerlink" title="SHG张量"></a>SHG张量</h3><table>
+<thead>
+<tr>
+<th>分量</th>
+<th>值 (pm&#x2F;V)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\chi^{(2)}_{xxx}$</td>
+<td>3.2</td>
+</tr>
+<tr>
+<td>$\chi^{(2)}_{xyy}$</td>
+<td>-1.8</td>
+</tr>
+<tr>
+<td>$\chi^{(2)}_{xxy}$</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>$\chi^{(2)}_{yxx}$</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>$\chi^{(2)}_{yyy}$</td>
+<td>0.4</td>
+</tr>
+<tr>
+<td>$\chi^{(2)}_{yxy}$</td>
+<td>-1.8</td>
+</tr>
+</tbody></table>
+<h3 id="Berry-curvature"><a href="#Berry-curvature" class="headerlink" title="Berry curvature"></a>Berry curvature</h3><p><img src="/img/wannier/berry-curvature.png" alt="Berry curvature"></p>
+<p>在K&#x2F;K’谷处存在显著的Berry curvature峰，与SHG响应一致。</p>
+<h2 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h2><ol>
+<li>MoS2的SHG响应具有明显的各向异性</li>
+<li>激子效应对SHG有重要贡献</li>
+<li>Berry curvature与SHG的关联验证了理论预测</li>
+</ol>
+<h2 id="下一步"><a href="#下一步" class="headerlink" title="下一步"></a>下一步</h2><ol>
+<li>扩展到TMDC家族：WS2, MoSe2, WSe2</li>
+<li>计算三层MoS2的SHG响应</li>
+<li>探索应力调控对SHG的影响</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Research Diary</category>
+      </categories>
+      <tags>
+        <tag>wannier</tag>
+        <tag>nonlinear-optics</tag>
+        <tag>shg</tag>
+        <tag>berry-curvature</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科研日志 007 | 输运算符缓存层压测</title>
+    <url>/posts/2026/03/363f67552e46/</url>
+    <content><![CDATA[<section class="lab-doc-panel is-hero">
+  <div class="lab-doc-eyebrow">Research Diary / Transport Bus</div>
+  <h2>输运算符缓存层开始产生稳定收益</h2>
+  <p>今天的工作是验证缓存层是否真的改善了 Kubo 管线，而不是只在单一输入上看起来更快。重点观察求解器切换、I/O 命中率和重复调用的收益衰减。</p>
+</section>
+
+<span id="more"></span>
+
+<div class="lab-param-strip">
+  <span>Backend: CUDA</span>
+  <span>Kernel: Kubo</span>
+  <span>Batch: 32</span>
+</div>
+
+<section class="lab-record-card">
+  <div class="lab-doc-eyebrow">Benchmark Snapshot</div>
+  <div class="lab-metric-line"><span>Median Speedup</span><span>1.41x</span></div>
+  <div class="lab-metric-line"><span>I/O Reduction</span><span>37%</span></div>
+  <div class="lab-metric-line"><span>Numerical Drift</span><span>&lt; 1.2e-4</span></div>
+</section>
+
+<h2 id="风险项"><a href="#风险项" class="headerlink" title="风险项"></a>风险项</h2><ul>
+<li>缓存层收益主要集中在算符结构重复的任务族。</li>
+<li>当参数剧烈变化时，命中率下降明显，需要单独建模是否值得缓存。</li>
+<li>如果只追求加速，很容易忽略由于截断策略变更引入的系统偏差。</li>
+</ul>
+<section class="lab-doc-panel">
+  <div class="lab-doc-eyebrow">Execution Log</div>
+  <ul class="lab-log-stream">
+    <li>21:02 — baseline run finished</li>
+    <li>21:09 — cache warmup hit rate crossed 74%</li>
+    <li>21:16 — one solver branch produced inconsistent tail behavior</li>
+    <li>21:28 — fallback precision profile enabled</li>
+  </ul>
+</section>
+
+<p>$$<br>\sigma_{xy}(\omega) \sim \mathrm{Tr}\left[v_x G^R(\omega) v_y G^A(\omega)\right]<br>$$</p>
+]]></content>
+      <categories>
+        <category>Research Diary</category>
+      </categories>
+      <tags>
+        <tag>Transport</tag>
+        <tag>Kubo</tag>
+        <tag>Benchmark</tag>
       </tags>
   </entry>
   <entry>
@@ -91,34 +366,6 @@
         <tag>Phase Atlas</tag>
         <tag>Topology</tag>
         <tag>Reproducibility</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>科研日志 002 | 张量网络基准测试与误差预算</title>
-    <url>/posts/2026/02/30755cba4822/</url>
-    <content><![CDATA[<p>本周对张量网络求解流程进行了系统基准测试，重点比较截断误差、边界条件与迭代收敛策略对最终观测量的影响。</p>
-<h2 id="误差分解"><a href="#误差分解" class="headerlink" title="误差分解"></a>误差分解</h2><p>将总误差近似写为：</p>
-<p>$$<br>\epsilon_{\mathrm{total}} \approx \epsilon_{\chi} + \epsilon_{\mathrm{iter}} + \epsilon_{\mathrm{finite}}<br>$$</p>
-<p>其中：</p>
-<ul>
-<li>$\epsilon_{\chi}$：截断维度带来的误差</li>
-<li>$\epsilon_{\mathrm{iter}}$：迭代未收敛误差</li>
-<li>$\epsilon_{\mathrm{finite}}$：有限尺寸误差</li>
-</ul>
-<h2 id="基准结果"><a href="#基准结果" class="headerlink" title="基准结果"></a>基准结果</h2><ul>
-<li>截断维度从 <code>chi=128</code> 提升到 <code>chi=256</code> 后，关键可观测量偏差下降 <code>41%</code></li>
-<li>采用混合收敛准则后，平均迭代步数下降 <code>18%</code></li>
-<li>全流程复现实验通过率达到 <code>95.8%</code></li>
-</ul>
-<p>下一步会把误差预算写入自动报告模板，确保每次提交都能自动输出误差来源摘要。</p>
-]]></content>
-      <categories>
-        <category>Research Diary</category>
-      </categories>
-      <tags>
-        <tag>reproducibility</tag>
-        <tag>tensor-network</tag>
-        <tag>benchmark</tag>
       </tags>
   </entry>
   <entry>
@@ -170,53 +417,81 @@
       </tags>
   </entry>
   <entry>
-    <title>科研日志 007 | 输运算符缓存层压测</title>
-    <url>/posts/2026/03/363f67552e46/</url>
-    <content><![CDATA[<section class="lab-doc-panel is-hero">
-  <div class="lab-doc-eyebrow">Research Diary / Transport Bus</div>
-  <h2>输运算符缓存层开始产生稳定收益</h2>
-  <p>今天的工作是验证缓存层是否真的改善了 Kubo 管线，而不是只在单一输入上看起来更快。重点观察求解器切换、I/O 命中率和重复调用的收益衰减。</p>
-</section>
-
-<span id="more"></span>
-
-<div class="lab-param-strip">
-  <span>Backend: CUDA</span>
-  <span>Kernel: Kubo</span>
-  <span>Batch: 32</span>
-</div>
-
-<section class="lab-record-card">
-  <div class="lab-doc-eyebrow">Benchmark Snapshot</div>
-  <div class="lab-metric-line"><span>Median Speedup</span><span>1.41x</span></div>
-  <div class="lab-metric-line"><span>I/O Reduction</span><span>37%</span></div>
-  <div class="lab-metric-line"><span>Numerical Drift</span><span>&lt; 1.2e-4</span></div>
-</section>
-
-<h2 id="风险项"><a href="#风险项" class="headerlink" title="风险项"></a>风险项</h2><ul>
-<li>缓存层收益主要集中在算符结构重复的任务族。</li>
-<li>当参数剧烈变化时，命中率下降明显，需要单独建模是否值得缓存。</li>
-<li>如果只追求加速，很容易忽略由于截断策略变更引入的系统偏差。</li>
+    <title>科研日志 003 | 微磁学模拟：磁skyrmion的霍尔效应</title>
+    <url>/posts/2026/02/97ed38dd169e/</url>
+    <content><![CDATA[<p>本周开始微磁学模拟工作，研究磁性skyrmion（磁斯格明子）的动力学行为，特别是其独特的霍尔效应。</p>
+<h2 id="理论背景"><a href="#理论背景" class="headerlink" title="理论背景"></a>理论背景</h2><p>磁skyrmion是一种拓扑保护的磁涡旋结构，其运动行为与传统磁畴壁不同：</p>
+<ul>
+<li><strong>拓扑数</strong>: $Q &#x3D; \frac{1}{4\pi}\int \mathbf{m}\cdot(\partial_x\mathbf{m}\times\partial_y\mathbf{m})dxdy &#x3D; -1$</li>
+<li><strong>Skyrmion霍尔角</strong>: $\theta_{SH} \approx \arctan(\alpha D &#x2F; K_{eff})$</li>
 </ul>
-<section class="lab-doc-panel">
-  <div class="lab-doc-eyebrow">Execution Log</div>
-  <ul class="lab-log-stream">
-    <li>21:02 — baseline run finished</li>
-    <li>21:09 — cache warmup hit rate crossed 74%</li>
-    <li>21:16 — one solver branch produced inconsistent tail behavior</li>
-    <li>21:28 — fallback precision profile enabled</li>
-  </ul>
-</section>
-
-<p>$$<br>\sigma_{xy}(\omega) \sim \mathrm{Tr}\left[v_x G^R(\omega) v_y G^A(\omega)\right]<br>$$</p>
+<p>其中 $\alpha$ 为阻尼系数，$D$ 为 Dzyaloshinskii-Moriya 相互作用 (DMI) 强度，$K_{eff}$ 为有效磁各向异性。</p>
+<h2 id="模拟设置"><a href="#模拟设置" class="headerlink" title="模拟设置"></a>模拟设置</h2><ul>
+<li><strong>软件</strong>: mumax3 (GPU加速)</li>
+<li><strong>薄膜尺寸</strong>: $500 \times 500 \times 1$ nm³</li>
+<li><strong>材料参数</strong> (Co&#x2F;Pd 多层膜):<ul>
+<li>饱和磁化 $M_s &#x3D; 1.2 \times 10^6$ A&#x2F;m</li>
+<li>交换常数 $A &#x3D; 1.5 \times 10^{-11}$ J&#x2F;m</li>
+<li>DMI $D &#x3D; 1.5 \times 10^{-3}$ J&#x2F;m²</li>
+<li>阻尼 $\alpha &#x3D; 0.02$</li>
+</ul>
+</li>
+</ul>
+<h2 id="模拟结果"><a href="#模拟结果" class="headerlink" title="模拟结果"></a>模拟结果</h2><h3 id="Skyrmion-运动轨迹"><a href="#Skyrmion-运动轨迹" class="headerlink" title="Skyrmion 运动轨迹"></a>Skyrmion 运动轨迹</h3><p><img src="/img/micromagnetics/skyrmion-trajectory.png" alt="skyrmion trajectory"></p>
+<ul>
+<li>驱动力: 电流密度 $j &#x3D; 1 \times 10^{12}$ A&#x2F;m²</li>
+<li>Skyrmion霍尔角: $\theta_{SH} \approx 35^\circ$</li>
+<li>纵向速度: $v_x &#x3D; 285$ m&#x2F;s</li>
+<li>横向漂移: $v_y &#x3D; 198$ m&#x2F;s</li>
+</ul>
+<h3 id="温度效应"><a href="#温度效应" class="headerlink" title="温度效应"></a>温度效应</h3><p>引入蒙特卡洛热涨落后，观察到：</p>
+<table>
+<thead>
+<tr>
+<th>温度 (K)</th>
+<th>霍尔角 (°)</th>
+<th>稳定性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>35.2</td>
+<td>稳定</td>
+</tr>
+<tr>
+<td>100</td>
+<td>33.8</td>
+<td>稳定</td>
+</tr>
+<tr>
+<td>200</td>
+<td>29.5</td>
+<td>部分融化</td>
+</tr>
+<tr>
+<td>300</td>
+<td>-</td>
+<td>完全破坏</td>
+</tr>
+</tbody></table>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><ol>
+<li>DMI 与交换相互作用的竞争决定了 skyrmion 尺寸</li>
+<li>温度升高导致拓扑保护减弱，最终解离</li>
+<li>霍尔角与材料参数呈非线性关系</li>
+</ol>
+<h2 id="下一步计划"><a href="#下一步计划" class="headerlink" title="下一步计划"></a>下一步计划</h2><ol>
+<li>研究多个 skyrmion 间的相互作用</li>
+<li>探索 skyrmion 在赛道存储器中的应用</li>
+<li>与实验组合作验证微磁模拟结果</li>
+</ol>
 ]]></content>
       <categories>
         <category>Research Diary</category>
       </categories>
       <tags>
-        <tag>Transport</tag>
-        <tag>Kubo</tag>
-        <tag>Benchmark</tag>
+        <tag>micromagnetics</tag>
+        <tag>skyrmion</tag>
+        <tag>spin-dynamics</tag>
       </tags>
   </entry>
   <entry>
@@ -385,8 +660,8 @@
         <category>Project Notes</category>
       </categories>
       <tags>
-        <tag>blender</tag>
         <tag>skyrmion</tag>
+        <tag>blender</tag>
         <tag>插件</tag>
         <tag>可视化</tag>
       </tags>
