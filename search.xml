@@ -351,6 +351,52 @@
       </tags>
   </entry>
   <entry>
+    <title>科研日志 006 | 相图控制塔首轮数据回流</title>
+    <url>/posts/2026/03/38a13f43a5b7/</url>
+    <content><![CDATA[<section class="lab-doc-panel is-hero">
+  <div class="lab-doc-eyebrow">Research Diary / Phase Atlas</div>
+  <h2>相图控制塔完成首轮高维参数回流</h2>
+  <p>今天的重点不是“又跑完一次扫描”，而是把参数回流、相边界提取和误差摘要写进了同一个 atlas 管线。这样后续每次复验都能直接定位到输入、脚本和图表来源。</p>
+</section>
+
+<span id="more"></span>
+
+<section class="lab-record-card">
+  <div class="lab-doc-eyebrow">Run Summary</div>
+  <div class="lab-metric-line"><span>Grid Size</span><span>12,480 points</span></div>
+  <div class="lab-metric-line"><span>Boundary Candidates</span><span>148</span></div>
+  <div class="lab-metric-line"><span>Failed Jobs</span><span>03 / auto recovered</span></div>
+</section>
+
+<h2 id="今日结论"><a href="#今日结论" class="headerlink" title="今日结论"></a>今日结论</h2><ul>
+<li>参数调度、边界检测和误差摘要第一次实现了统一写回。</li>
+<li>对于接近相变边界的区间，有限尺寸效应依旧是主要风险源。</li>
+<li>atlas 图谱已经足够作为下一轮局部细化扫描的入口。</li>
+</ul>
+<section class="lab-doc-panel">
+  <div class="lab-doc-eyebrow">Protocol Notes</div>
+  <ul class="lab-protocol-list">
+    <li>先做稀疏粗扫，再对高梯度区域启用 adaptive refinement。</li>
+    <li>每个区块都写入收敛步数、剩余误差与边界评分。</li>
+    <li>自动生成的报告不写结论句，只写现象、风险与下一步动作。</li>
+  </ul>
+</section>
+
+<p>$$<br>\epsilon_{atlas} &#x3D; \epsilon_{\mathrm{finite\ size}} + \epsilon_{\mathrm{solver}} + \epsilon_{\mathrm{threshold}}<br>$$</p>
+<blockquote>
+<p>下一步是把 atlas 控制塔接入张量网络误差门控器，让相图与张量实验共享一套风险判别逻辑。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Research Diary</category>
+      </categories>
+      <tags>
+        <tag>Phase Atlas</tag>
+        <tag>Topology</tag>
+        <tag>Reproducibility</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>科研日志 007 | 输运算符缓存层压测</title>
     <url>/posts/2026/03/363f67552e46/</url>
     <content><![CDATA[<section class="lab-doc-panel is-hero">
@@ -398,52 +444,6 @@
         <tag>Transport</tag>
         <tag>Kubo</tag>
         <tag>Benchmark</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>科研日志 006 | 相图控制塔首轮数据回流</title>
-    <url>/posts/2026/03/38a13f43a5b7/</url>
-    <content><![CDATA[<section class="lab-doc-panel is-hero">
-  <div class="lab-doc-eyebrow">Research Diary / Phase Atlas</div>
-  <h2>相图控制塔完成首轮高维参数回流</h2>
-  <p>今天的重点不是“又跑完一次扫描”，而是把参数回流、相边界提取和误差摘要写进了同一个 atlas 管线。这样后续每次复验都能直接定位到输入、脚本和图表来源。</p>
-</section>
-
-<span id="more"></span>
-
-<section class="lab-record-card">
-  <div class="lab-doc-eyebrow">Run Summary</div>
-  <div class="lab-metric-line"><span>Grid Size</span><span>12,480 points</span></div>
-  <div class="lab-metric-line"><span>Boundary Candidates</span><span>148</span></div>
-  <div class="lab-metric-line"><span>Failed Jobs</span><span>03 / auto recovered</span></div>
-</section>
-
-<h2 id="今日结论"><a href="#今日结论" class="headerlink" title="今日结论"></a>今日结论</h2><ul>
-<li>参数调度、边界检测和误差摘要第一次实现了统一写回。</li>
-<li>对于接近相变边界的区间，有限尺寸效应依旧是主要风险源。</li>
-<li>atlas 图谱已经足够作为下一轮局部细化扫描的入口。</li>
-</ul>
-<section class="lab-doc-panel">
-  <div class="lab-doc-eyebrow">Protocol Notes</div>
-  <ul class="lab-protocol-list">
-    <li>先做稀疏粗扫，再对高梯度区域启用 adaptive refinement。</li>
-    <li>每个区块都写入收敛步数、剩余误差与边界评分。</li>
-    <li>自动生成的报告不写结论句，只写现象、风险与下一步动作。</li>
-  </ul>
-</section>
-
-<p>$$<br>\epsilon_{atlas} &#x3D; \epsilon_{\mathrm{finite\ size}} + \epsilon_{\mathrm{solver}} + \epsilon_{\mathrm{threshold}}<br>$$</p>
-<blockquote>
-<p>下一步是把 atlas 控制塔接入张量网络误差门控器，让相图与张量实验共享一套风险判别逻辑。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Research Diary</category>
-      </categories>
-      <tags>
-        <tag>Phase Atlas</tag>
-        <tag>Topology</tag>
-        <tag>Reproducibility</tag>
       </tags>
   </entry>
   <entry>
@@ -594,50 +594,6 @@
       </tags>
   </entry>
   <entry>
-    <title>项目纪要 008 | 张量网络门控器与误差面板</title>
-    <url>/posts/2026/03/a8c55b40e825/</url>
-    <content><![CDATA[<section class="lab-doc-panel is-hero">
-  <div class="lab-doc-eyebrow">Project Notes / Tensor Stack</div>
-  <h2>张量网络门控器开始替代手工判断</h2>
-  <p>目标不是生成更多图，而是把“这个结果是否可信”变成一个有规则、可记录、可审计的问题。今天完成了第一版 error gate panel。</p>
-</section>
-
-<span id="more"></span>
-
-<section class="lab-record-card">
-  <div class="lab-doc-eyebrow">Gate Rules</div>
-  <ul class="lab-protocol-list">
-    <li>若 truncation error 超过阈值，自动标记为 yellow gate。</li>
-    <li>若迭代残差与物理量波动同时异常，直接进入 red gate。</li>
-    <li>有限尺寸外推只在至少三组长度参数稳定时进入 green gate。</li>
-  </ul>
-</section>
-
-<div class="lab-dual-column">
-  <section class="lab-doc-panel">
-    <div class="lab-doc-eyebrow">Current Panel</div>
-    <div class="lab-metric-line"><span>Truncation Gate</span><span>GREEN</span></div>
-    <div class="lab-metric-line"><span>Iteration Gate</span><span>YELLOW</span></div>
-    <div class="lab-metric-line"><span>Finite-size Gate</span><span>RED</span></div>
-  </section>
-  <section class="lab-doc-panel">
-    <div class="lab-doc-eyebrow">Next Action</div>
-    <p>优先补齐长度参数点，再检查不同 bond dimension 下的稳定性。当前不应该给出“已收敛”的叙述。</p>
-  </section>
-</div>
-
-<p>$$<br>\epsilon_{\mathrm{tot}}&#x3D;\epsilon_{\mathrm{trunc}}+\epsilon_{\mathrm{iter}}+\epsilon_{L}<br>$$</p>
-]]></content>
-      <categories>
-        <category>Project Notes</category>
-      </categories>
-      <tags>
-        <tag>Tensor Network</tag>
-        <tag>DMRG</tag>
-        <tag>Error Budget</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>项目纪要 004 | Codex 连接 Blender MCP（macOS + uv）安装与排障</title>
     <url>/posts/2026/02/249314c5f0e6/</url>
     <content><![CDATA[<p>本文记录一次“在 macOS 上让 Codex（就是现在这个）通过 MCP 连接 Blender”的最小正确配置与排障要点。本文以仓库 <a href="https://github.com/ahujasid/blender-mcp"><code>ahujasid/blender-mcp</code></a> 为准。</p>
@@ -708,6 +664,50 @@
         <tag>mcp</tag>
         <tag>codex</tag>
         <tag>uv</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>项目纪要 008 | 张量网络门控器与误差面板</title>
+    <url>/posts/2026/03/a8c55b40e825/</url>
+    <content><![CDATA[<section class="lab-doc-panel is-hero">
+  <div class="lab-doc-eyebrow">Project Notes / Tensor Stack</div>
+  <h2>张量网络门控器开始替代手工判断</h2>
+  <p>目标不是生成更多图，而是把“这个结果是否可信”变成一个有规则、可记录、可审计的问题。今天完成了第一版 error gate panel。</p>
+</section>
+
+<span id="more"></span>
+
+<section class="lab-record-card">
+  <div class="lab-doc-eyebrow">Gate Rules</div>
+  <ul class="lab-protocol-list">
+    <li>若 truncation error 超过阈值，自动标记为 yellow gate。</li>
+    <li>若迭代残差与物理量波动同时异常，直接进入 red gate。</li>
+    <li>有限尺寸外推只在至少三组长度参数稳定时进入 green gate。</li>
+  </ul>
+</section>
+
+<div class="lab-dual-column">
+  <section class="lab-doc-panel">
+    <div class="lab-doc-eyebrow">Current Panel</div>
+    <div class="lab-metric-line"><span>Truncation Gate</span><span>GREEN</span></div>
+    <div class="lab-metric-line"><span>Iteration Gate</span><span>YELLOW</span></div>
+    <div class="lab-metric-line"><span>Finite-size Gate</span><span>RED</span></div>
+  </section>
+  <section class="lab-doc-panel">
+    <div class="lab-doc-eyebrow">Next Action</div>
+    <p>优先补齐长度参数点，再检查不同 bond dimension 下的稳定性。当前不应该给出“已收敛”的叙述。</p>
+  </section>
+</div>
+
+<p>$$<br>\epsilon_{\mathrm{tot}}&#x3D;\epsilon_{\mathrm{trunc}}+\epsilon_{\mathrm{iter}}+\epsilon_{L}<br>$$</p>
+]]></content>
+      <categories>
+        <category>Project Notes</category>
+      </categories>
+      <tags>
+        <tag>Tensor Network</tag>
+        <tag>DMRG</tag>
+        <tag>Error Budget</tag>
       </tags>
   </entry>
 </search>
