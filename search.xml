@@ -4,19 +4,15 @@
     <title>科研日志 000 | 站点初始化与记录规范</title>
     <url>/posts/2026/02/a9d6ee9d4942/</url>
     <content><![CDATA[<p>这是新站点的第一篇公开日志，用于约定后续科研记录格式。</p>
-<h2 id="记录原则"><a class="markdownIt-Anchor" href="#记录原则"></a> 记录原则</h2>
-<ul>
+<h2 id="记录原则"><a href="#记录原则" class="headerlink" title="记录原则"></a>记录原则</h2><ul>
 <li>问题定义明确：先写清目标和已知条件</li>
 <li>假设可追溯：标记每个近似和边界条件</li>
 <li>结果可复现：给出参数、脚本入口和版本</li>
 </ul>
-<h2 id="公式测试"><a class="markdownIt-Anchor" href="#公式测试"></a> 公式测试</h2>
-<p>行内公式：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mi mathvariant="normal">ℏ</mi><mi>ω</mi></mrow><annotation encoding="application/x-tex">E = \hbar \omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68889em;vertical-align:0em;"></span><span class="mord">ℏ</span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span></span></span></span>。</p>
+<h2 id="公式测试"><a href="#公式测试" class="headerlink" title="公式测试"></a>公式测试</h2><p>行内公式：$E &#x3D; \hbar \omega$。</p>
 <p>行间公式：</p>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>H</mi><mo>=</mo><munder><mo>∑</mo><mrow><mi>i</mi><mi>j</mi></mrow></munder><msub><mi>t</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msubsup><mi>c</mi><mi>i</mi><mo>†</mo></msubsup><msub><mi>c</mi><mi>j</mi></msub><mo>+</mo><munder><mo>∑</mo><mi>i</mi></munder><msub><mi>U</mi><mi>i</mi></msub><msub><mi>n</mi><mrow><mi>i</mi><mo>↑</mo></mrow></msub><msub><mi>n</mi><mrow><mi>i</mi><mo>↓</mo></mrow></msub></mrow><annotation encoding="application/x-tex">H = \sum_{ij} t_{ij} c_i^\dagger c_j + \sum_i U_i n_{i\uparrow} n_{i\downarrow}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.463782em;vertical-align:-1.413777em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.050005em;"><span style="top:-1.8723309999999997em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.413777em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9670159999999998em;"><span style="top:-2.4231360000000004em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span><span style="top:-3.180908em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">†</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.276864em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.327674em;vertical-align:-1.277669em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0500050000000003em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">↑</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">↓</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span></span></p>
-<h2 id="mermaid-测试"><a class="markdownIt-Anchor" href="#mermaid-测试"></a> Mermaid 测试</h2>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">  A[Define model] --&gt; B[Derive equations]</span><br><span class="line">  B --&gt; C[Implement numerics]</span><br><span class="line">  C --&gt; D[Validate and iterate]</span><br></pre></td></tr></table></figure>
+<p>$$<br>H &#x3D; \sum_{ij} t_{ij} c_i^\dagger c_j + \sum_i U_i n_{i\uparrow} n_{i\downarrow}<br>$$</p>
+<h2 id="Mermaid-测试"><a href="#Mermaid-测试" class="headerlink" title="Mermaid 测试"></a>Mermaid 测试</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">  A[Define model] --&gt; B[Derive equations]</span><br><span class="line">  B --&gt; C[Implement numerics]</span><br><span class="line">  C --&gt; D[Validate and iterate]</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>Research Diary</category>
@@ -27,392 +23,15 @@
       </tags>
   </entry>
   <entry>
-    <title>科研日志 002 | 张量网络基准测试与误差预算</title>
-    <url>/posts/2026/02/30755cba4822/</url>
-    <content><![CDATA[<p>本周对张量网络求解流程进行了系统基准测试，重点比较截断误差、边界条件与迭代收敛策略对最终观测量的影响。</p>
-<h2 id="误差分解"><a class="markdownIt-Anchor" href="#误差分解"></a> 误差分解</h2>
-<p>将总误差近似写为：</p>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>ϵ</mi><mrow><mi mathvariant="normal">t</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">l</mi></mrow></msub><mo>≈</mo><msub><mi>ϵ</mi><mi>χ</mi></msub><mo>+</mo><msub><mi>ϵ</mi><mrow><mi mathvariant="normal">i</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">r</mi></mrow></msub><mo>+</mo><msub><mi>ϵ</mi><mrow><mi mathvariant="normal">f</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">e</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\epsilon_{\mathrm{total}} \approx \epsilon_{\chi} + \epsilon_{\mathrm{iter}} + \epsilon_{\mathrm{finite}}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.63312em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">ϵ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">t</span><span class="mord mathrm mtight">o</span><span class="mord mathrm mtight">t</span><span class="mord mathrm mtight">a</span><span class="mord mathrm mtight">l</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8694379999999999em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal">ϵ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">χ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">ϵ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31750199999999995em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">i</span><span class="mord mathrm mtight">t</span><span class="mord mathrm mtight">e</span><span class="mord mathrm mtight">r</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">ϵ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight" style="margin-right:0.07778em;">f</span><span class="mord mathrm mtight">i</span><span class="mord mathrm mtight">n</span><span class="mord mathrm mtight">i</span><span class="mord mathrm mtight">t</span><span class="mord mathrm mtight">e</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
-<p>其中：</p>
-<ul>
-<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ϵ</mi><mi>χ</mi></msub></mrow><annotation encoding="application/x-tex">\epsilon_{\chi}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal">ϵ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">χ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span>：截断维度带来的误差</li>
-<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ϵ</mi><mrow><mi mathvariant="normal">i</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">r</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\epsilon_{\mathrm{iter}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">ϵ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31750199999999995em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">i</span><span class="mord mathrm mtight">t</span><span class="mord mathrm mtight">e</span><span class="mord mathrm mtight">r</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>：迭代未收敛误差</li>
-<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ϵ</mi><mrow><mi mathvariant="normal">f</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">e</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\epsilon_{\mathrm{finite}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">ϵ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight" style="margin-right:0.07778em;">f</span><span class="mord mathrm mtight">i</span><span class="mord mathrm mtight">n</span><span class="mord mathrm mtight">i</span><span class="mord mathrm mtight">t</span><span class="mord mathrm mtight">e</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>：有限尺寸误差</li>
-</ul>
-<h2 id="基准结果"><a class="markdownIt-Anchor" href="#基准结果"></a> 基准结果</h2>
-<ul>
-<li>截断维度从 <code>chi=128</code> 提升到 <code>chi=256</code> 后，关键可观测量偏差下降 <code>41%</code></li>
-<li>采用混合收敛准则后，平均迭代步数下降 <code>18%</code></li>
-<li>全流程复现实验通过率达到 <code>95.8%</code></li>
-</ul>
-<p>下一步会把误差预算写入自动报告模板，确保每次提交都能自动输出误差来源摘要。</p>
-]]></content>
-      <categories>
-        <category>Research Diary</category>
-      </categories>
-      <tags>
-        <tag>reproducibility</tag>
-        <tag>tensor-network</tag>
-        <tag>benchmark</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>科研日志 006 | 相图控制塔首轮数据回流</title>
-    <url>/posts/2026/03/38a13f43a5b7/</url>
-    <content><![CDATA[<section class="lab-doc-panel is-hero">
-  <div class="lab-doc-eyebrow">Research Diary / Phase Atlas</div>
-  <h2>相图控制塔完成首轮高维参数回流</h2>
-  <p>今天的重点不是“又跑完一次扫描”，而是把参数回流、相边界提取和误差摘要写进了同一个 atlas 管线。这样后续每次复验都能直接定位到输入、脚本和图表来源。</p>
-</section>
-<span id="more"></span>
-<section class="lab-record-card">
-  <div class="lab-doc-eyebrow">Run Summary</div>
-  <div class="lab-metric-line"><span>Grid Size</span><span>12,480 points</span></div>
-  <div class="lab-metric-line"><span>Boundary Candidates</span><span>148</span></div>
-  <div class="lab-metric-line"><span>Failed Jobs</span><span>03 / auto recovered</span></div>
-</section>
-<h2 id="今日结论"><a class="markdownIt-Anchor" href="#今日结论"></a> 今日结论</h2>
-<ul>
-<li>参数调度、边界检测和误差摘要第一次实现了统一写回。</li>
-<li>对于接近相变边界的区间，有限尺寸效应依旧是主要风险源。</li>
-<li>atlas 图谱已经足够作为下一轮局部细化扫描的入口。</li>
-</ul>
-<section class="lab-doc-panel">
-  <div class="lab-doc-eyebrow">Protocol Notes</div>
-  <ul class="lab-protocol-list">
-    <li>先做稀疏粗扫，再对高梯度区域启用 adaptive refinement。</li>
-    <li>每个区块都写入收敛步数、剩余误差与边界评分。</li>
-    <li>自动生成的报告不写结论句，只写现象、风险与下一步动作。</li>
-  </ul>
-</section>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>ϵ</mi><mrow><mi>a</mi><mi>t</mi><mi>l</mi><mi>a</mi><mi>s</mi></mrow></msub><mo>=</mo><msub><mi>ϵ</mi><mrow><mi mathvariant="normal">f</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">e</mi><mtext> </mtext><mi mathvariant="normal">s</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">z</mi><mi mathvariant="normal">e</mi></mrow></msub><mo>+</mo><msub><mi>ϵ</mi><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">v</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">r</mi></mrow></msub><mo>+</mo><msub><mi>ϵ</mi><mrow><mi mathvariant="normal">t</mi><mi mathvariant="normal">h</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">s</mi><mi mathvariant="normal">h</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">d</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\epsilon_{atlas} = \epsilon_{\mathrm{finite\ size}} + \epsilon_{\mathrm{solver}} + \epsilon_{\mathrm{threshold}}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">ϵ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">s</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">ϵ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight" style="margin-right:0.07778em;">f</span><span class="mord mathrm mtight">i</span><span class="mord mathrm mtight">n</span><span class="mord mathrm mtight">i</span><span class="mord mathrm mtight">t</span><span class="mord mathrm mtight">e</span><span class="mspace mtight"><span class="mtight"> </span></span><span class="mord mathrm mtight">s</span><span class="mord mathrm mtight">i</span><span class="mord mathrm mtight">z</span><span class="mord mathrm mtight">e</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">ϵ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">s</span><span class="mord mathrm mtight">o</span><span class="mord mathrm mtight">l</span><span class="mord mathrm mtight" style="margin-right:0.01389em;">v</span><span class="mord mathrm mtight">e</span><span class="mord mathrm mtight">r</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">ϵ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">t</span><span class="mord mathrm mtight">h</span><span class="mord mathrm mtight">r</span><span class="mord mathrm mtight">e</span><span class="mord mathrm mtight">s</span><span class="mord mathrm mtight">h</span><span class="mord mathrm mtight">o</span><span class="mord mathrm mtight">l</span><span class="mord mathrm mtight">d</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
-<blockquote>
-<p>下一步是把 atlas 控制塔接入张量网络误差门控器，让相图与张量实验共享一套风险判别逻辑。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Research Diary</category>
-      </categories>
-      <tags>
-        <tag>Phase Atlas</tag>
-        <tag>Topology</tag>
-        <tag>Reproducibility</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>科研日志 007 | 输运算符缓存层压测</title>
-    <url>/posts/2026/03/363f67552e46/</url>
-    <content><![CDATA[<section class="lab-doc-panel is-hero">
-  <div class="lab-doc-eyebrow">Research Diary / Transport Bus</div>
-  <h2>输运算符缓存层开始产生稳定收益</h2>
-  <p>今天的工作是验证缓存层是否真的改善了 Kubo 管线，而不是只在单一输入上看起来更快。重点观察求解器切换、I/O 命中率和重复调用的收益衰减。</p>
-</section>
-<span id="more"></span>
-<div class="lab-param-strip">
-  <span>Backend: CUDA</span>
-  <span>Kernel: Kubo</span>
-  <span>Batch: 32</span>
-</div>
-<section class="lab-record-card">
-  <div class="lab-doc-eyebrow">Benchmark Snapshot</div>
-  <div class="lab-metric-line"><span>Median Speedup</span><span>1.41x</span></div>
-  <div class="lab-metric-line"><span>I/O Reduction</span><span>37%</span></div>
-  <div class="lab-metric-line"><span>Numerical Drift</span><span>&lt; 1.2e-4</span></div>
-</section>
-<h2 id="风险项"><a class="markdownIt-Anchor" href="#风险项"></a> 风险项</h2>
-<ul>
-<li>缓存层收益主要集中在算符结构重复的任务族。</li>
-<li>当参数剧烈变化时，命中率下降明显，需要单独建模是否值得缓存。</li>
-<li>如果只追求加速，很容易忽略由于截断策略变更引入的系统偏差。</li>
-</ul>
-<section class="lab-doc-panel">
-  <div class="lab-doc-eyebrow">Execution Log</div>
-  <ul class="lab-log-stream">
-    <li>21:02 — baseline run finished</li>
-    <li>21:09 — cache warmup hit rate crossed 74%</li>
-    <li>21:16 — one solver branch produced inconsistent tail behavior</li>
-    <li>21:28 — fallback precision profile enabled</li>
-  </ul>
-</section>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>σ</mi><mrow><mi>x</mi><mi>y</mi></mrow></msub><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo><mo>∼</mo><mrow><mi mathvariant="normal">T</mi><mi mathvariant="normal">r</mi></mrow><mrow><mo fence="true">[</mo><msub><mi>v</mi><mi>x</mi></msub><msup><mi>G</mi><mi>R</mi></msup><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo><msub><mi>v</mi><mi>y</mi></msub><msup><mi>G</mi><mi>A</mi></msup><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex">\sigma_{xy}(\omega) \sim \mathrm{Tr}\left[v_x G^R(\omega) v_y G^A(\omega)\right]
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.2413409999999998em;vertical-align:-0.35001em;"></span><span class="mord"><span class="mord mathrm">T</span><span class="mord mathrm">r</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size1">[</span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913309999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913309999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">A</span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="mclose">)</span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size1">]</span></span></span></span></span></span></span></p>
-]]></content>
-      <categories>
-        <category>Research Diary</category>
-      </categories>
-      <tags>
-        <tag>Transport</tag>
-        <tag>Kubo</tag>
-        <tag>Benchmark</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>项目纪要 003 | 量子输运计算平台 v0.3</title>
-    <url>/posts/2026/02/352a3fd05692/</url>
-    <content><![CDATA[<p>TransportLab-Kubo 发布 <code>v0.3</code>，本次版本重点提升了批量任务稳定性与结果回放能力。</p>
-<h2 id="v03-关键更新"><a class="markdownIt-Anchor" href="#v03-关键更新"></a> v0.3 关键更新</h2>
-<ul>
-<li>新增统一配置文件：支持实验参数版本化</li>
-<li>新增 HDF5 中间结果缓存：中断后可续跑</li>
-<li>新增报告生成器：自动导出指标与关键图表</li>
-</ul>
-<h2 id="性能对比"><a class="markdownIt-Anchor" href="#性能对比"></a> 性能对比</h2>
-<table>
-<thead>
-<tr>
-<th>指标</th>
-<th>v0.2</th>
-<th>v0.3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>单任务平均耗时</td>
-<td>7.4 min</td>
-<td>5.9 min</td>
-</tr>
-<tr>
-<td>失败重跑次数</td>
-<td>11</td>
-<td>3</td>
-</tr>
-<tr>
-<td>结果回放耗时</td>
-<td>2.1 min</td>
-<td>0.8 min</td>
-</tr>
-</tbody>
-</table>
-<h2 id="后续路线图"><a class="markdownIt-Anchor" href="#后续路线图"></a> 后续路线图</h2>
-<ol>
-<li>引入任务优先级调度</li>
-<li>增加多节点并行支持</li>
-<li>与论文图表模板自动对接</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Project Notes</category>
-      </categories>
-      <tags>
-        <tag>transport</tag>
-        <tag>kubo</tag>
-        <tag>hpc</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>项目纪要 004 | Codex 连接 Blender MCP（macOS + uv）安装与排障</title>
-    <url>/posts/2026/02/249314c5f0e6/</url>
-    <content><![CDATA[<p>本文记录一次“在 macOS 上让 Codex（就是现在这个）通过 MCP 连接 Blender”的最小正确配置与排障要点。本文以仓库 <a href="https://github.com/ahujasid/blender-mcp"><code>ahujasid/blender-mcp</code></a> 为准。</p>
-<h2 id="目标"><a class="markdownIt-Anchor" href="#目标"></a> 目标</h2>
-<ul>
-<li>Blender 侧：启用 <code>blender-mcp</code> 的 Blender 插件，让 Blender 在本机监听一个 TCP 端口（示例：<code>127.0.0.1:9876</code>）。</li>
-<li>Codex 侧：在 <code>~/.codex/config.toml</code> 中配置 MCP server，用 <code>uvx blender-mcp</code> 拉起服务并连接到 Blender。</li>
-</ul>
-<h2 id="前置依赖macos"><a class="markdownIt-Anchor" href="#前置依赖macos"></a> 前置依赖（macOS）</h2>
-<ol>
-<li>安装 <code>uv</code>（Homebrew）：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install uv</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>Blender 已安装并可运行。</li>
-</ol>
-<h2 id="blender-侧安装启用插件"><a class="markdownIt-Anchor" href="#blender-侧安装启用插件"></a> Blender 侧：安装/启用插件</h2>
-<p>仓库提供的是单文件插件 <code>addon.py</code>，安装流程：</p>
-<ol>
-<li>从 GitHub 仓库下载 <code>addon.py</code>（保持文件名不变也可以）。</li>
-<li>打开 Blender：
-<ul>
-<li><code>Edit</code> → <code>Preferences</code> → <code>Add-ons</code> → <code>Install...</code></li>
-<li>选择 <code>addon.py</code> 安装</li>
-</ul>
-</li>
-<li>在插件列表中勾选启用：<code>Interface: Blender MCP</code></li>
-</ol>
-<p>一般情况下插件会在本机监听端口（默认示例里常用 <code>9876</code>）。如果你改过端口，以你插件设置为准。</p>
-<h2 id="codex-侧配置-mcp关键"><a class="markdownIt-Anchor" href="#codex-侧配置-mcp关键"></a> Codex 侧：配置 MCP（关键）</h2>
-<p>Codex 的 MCP server 配置在 <code>~/.codex/config.toml</code>。建议点：</p>
-<ul>
-<li><strong>command 用绝对路径</strong>：桌面 App 启动的进程经常拿不到你 shell 里的 PATH（尤其是 conda 初始化脚本），所以不要依赖 <code>uvx</code> “刚好在 PATH 里”。</li>
-<li><strong>host 用 <code>127.0.0.1</code></strong>：比 <code>localhost</code> 更直接；同时可以绕开少数环境里 <code>localhost</code> 解析/优先级导致的奇怪行为。</li>
-</ul>
-<p>示例配置（核心片段）：</p>
-<figure class="highlight toml"><table><tr><td class="code"><pre><span class="line"><span class="section">[mcp_servers.blender]</span></span><br><span class="line"><span class="attr">command</span> = <span class="string">&quot;/opt/homebrew/bin/uvx&quot;</span></span><br><span class="line"><span class="attr">args</span> = [<span class="string">&quot;blender-mcp&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="section">[mcp_servers.blender.env]</span></span><br><span class="line"><span class="attr">BLENDER_HOST</span> = <span class="string">&quot;127.0.0.1&quot;</span></span><br><span class="line"><span class="attr">BLENDER_PORT</span> = <span class="string">&quot;9876&quot;</span></span><br><span class="line"><span class="attr">DISABLE_TELEMETRY</span> = <span class="string">&quot;true&quot;</span></span><br></pre></td></tr></table></figure>
-<p>改完后需要<strong>重启 Codex</strong>（或至少重开会话/项目）让它重新加载配置。</p>
-<h2 id="快速连通性验证"><a class="markdownIt-Anchor" href="#快速连通性验证"></a> 快速连通性验证</h2>
-<h3 id="1-先确认-blender-端口确实在监听"><a class="markdownIt-Anchor" href="#1-先确认-blender-端口确实在监听"></a> 1) 先确认 Blender 端口确实在监听</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsof -nP -iTCP:9876 -sTCP:LISTEN</span><br><span class="line">nc -vz 127.0.0.1 9876</span><br></pre></td></tr></table></figure>
-<p>如果 <code>lsof</code> 没看到 Blender 在 LISTEN，说明 Blender 插件没启用/没启动成功/端口不是 9876。</p>
-<h3 id="2-确认-uvx-可用"><a class="markdownIt-Anchor" href="#2-确认-uvx-可用"></a> 2) 确认 <code>uvx</code> 可用</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/opt/homebrew/bin/uvx --version</span><br></pre></td></tr></table></figure>
-<h3 id="3-让-codex-真正通过-mcp-调-blender"><a class="markdownIt-Anchor" href="#3-让-codex-真正通过-mcp-调-blender"></a> 3) 让 Codex 真正通过 MCP 调 Blender</h3>
-<p>最直观的验证是让 Codex 调用 <code>get_viewport_screenshot</code>（抓一张 Blender 视口截图）。如果能返回 PNG，就说明链路是通的：</p>
-<p>Codex →（stdio MCP server: <code>uvx blender-mcp</code>）→（TCP）→ Blender 插件</p>
-<h2 id="常见坑-处理方式"><a class="markdownIt-Anchor" href="#常见坑-处理方式"></a> 常见坑 &amp; 处理方式</h2>
-<h3 id="坑-1hostdockerinternal-在本机解析失败"><a class="markdownIt-Anchor" href="#坑-1hostdockerinternal-在本机解析失败"></a> 坑 1：<code>host.docker.internal</code> 在本机解析失败</h3>
-<p><code>host.docker.internal</code> 主要是“容器内访问宿主机”场景；在宿主机上直接用它反而可能 DNS 找不到。</p>
-<p>如果你是在宿主机上跑 Codex/Blender，优先用：</p>
-<ul>
-<li><code>BLENDER_HOST=127.0.0.1</code></li>
-</ul>
-<h3 id="坑-2桌面-app-找不到-conda用户-shell-的-path"><a class="markdownIt-Anchor" href="#坑-2桌面-app-找不到-conda用户-shell-的-path"></a> 坑 2：桌面 App 找不到 conda/用户 shell 的 PATH</h3>
-<p>你在终端里 <code>uvx blender-mcp</code> 能跑，不代表 Codex 里也能跑。</p>
-<p>最稳的办法是：在 <code>~/.codex/config.toml</code> 里把 <code>command</code> 写成绝对路径（例如 <code>/opt/homebrew/bin/uvx</code>）。</p>
-<h3 id="坑-3blender-插件与-mcp-server-版本不完全匹配"><a class="markdownIt-Anchor" href="#坑-3blender-插件与-mcp-server-版本不完全匹配"></a> 坑 3：Blender 插件与 MCP server 版本不完全匹配</h3>
-<p>我实际遇到过 MCP server 启动时会向 Blender 发送 <code>get_telemetry_consent</code>，但 Blender 端返回 “Unknown command type”。这类报错通常不致命（后续功能仍可用），但它提示：</p>
-<ul>
-<li>你的 <code>addon.py</code> 可能比 <code>uvx</code> 拉到的 <code>blender-mcp</code> server 版本更旧</li>
-</ul>
-<p>解决方式：把 Blender 里安装的 <code>addon.py</code> 更新到与当前仓库一致的版本。</p>
-<h2 id="撤回清理建议可选"><a class="markdownIt-Anchor" href="#撤回清理建议可选"></a> “撤回/清理”建议（可选）</h2>
-<p>很多人会为了加速在本机额外做一次“预装”：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">uv tool install blender-mcp</span><br></pre></td></tr></table></figure>
-<p>这不是官方主路径（官方主路径是直接 <code>uvx blender-mcp</code> 让客户端拉起），也不是必须。想回到最简状态可以卸载：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">uv tool uninstall blender-mcp</span><br><span class="line"><span class="built_in">rm</span> -f ~/.local/bin/blender-mcp</span><br></pre></td></tr></table></figure>
-<p>保留 <code>brew install uv</code> 即可。</p>
-]]></content>
-      <categories>
-        <category>Project Notes</category>
-      </categories>
-      <tags>
-        <tag>blender</tag>
-        <tag>mcp</tag>
-        <tag>codex</tag>
-        <tag>uv</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>项目纪要 005 | 斯格明子插件实战使用指南（海报风与白底风）</title>
-    <url>/posts/2026/02/c4f5e6264421/</url>
-    <content><![CDATA[<p>这篇就做一件事：把 <code>add-sky.py</code> 这个 Blender 插件用到稳定出图。<br />
-重点不是“能不能跑”，而是“下一次还能不能一键复现同样风格”。</p>
-<h2 id="最终效果先看"><a class="markdownIt-Anchor" href="#最终效果先看"></a> 最终效果先看</h2>
-<p><img src="/img/skyrmion-plugin-guide/05-style-comparison.png" alt="风格对比" /></p>
-<p>上图分别是：</p>
-<ul>
-<li>左：Néel + Poster Dark</li>
-<li>中：Bimeron + Poster Dark</li>
-<li>右：Bloch + Paper White</li>
-</ul>
-<p>下面按我日常使用顺序写。</p>
-<h2 id="1-安装插件"><a class="markdownIt-Anchor" href="#1-安装插件"></a> 1. 安装插件</h2>
-<ol>
-<li>打开 Blender，进入 <code>Edit &gt; Preferences &gt; Add-ons</code></li>
-<li>点击 <code>Install...</code></li>
-<li>选择插件文件 <code>add-sky.py</code></li>
-<li>勾选启用</li>
-</ol>
-<p>启用后，在 3D 视图右侧（<code>N</code> 面板）会看到 <code>Skyrmion</code> 标签。</p>
-<h2 id="2-第一次生成建议参数"><a class="markdownIt-Anchor" href="#2-第一次生成建议参数"></a> 2. 第一次生成（建议参数）</h2>
-<p>先准备一个“种子对象”，推荐用锥体（方向感最直观）：</p>
-<ul>
-<li><code>Add &gt; Mesh &gt; Cone</code></li>
-<li>选中它作为当前激活对象</li>
-</ul>
-<p>然后在 <code>Skyrmion Generator</code> 里先用这组参数：</p>
-<ul>
-<li><code>Spin Type = NEEL</code></li>
-<li><code>Lattice Type = SQUARE</code></li>
-<li><code>Width = 10</code></li>
-<li><code>Radius = 7.5</code></li>
-<li><code>Spacing = 0.9</code></li>
-<li><code>Circular = On</code></li>
-<li><code>Material Type = PRINCIPLED</code></li>
-</ul>
-<p>点 <code>Generate Skyrmion</code>。</p>
-<h2 id="3-两套风格怎么用"><a class="markdownIt-Anchor" href="#3-两套风格怎么用"></a> 3. 两套风格怎么用</h2>
-<p>插件里我固定了两套可复现风格，建议直接用，不要每次手调灯光：</p>
-<h3 id="a-海报风poster-dark"><a class="markdownIt-Anchor" href="#a-海报风poster-dark"></a> A) 海报风（Poster Dark）</h3>
-<ul>
-<li><code>Visual Style = Poster Dark</code></li>
-<li><code>Apply Lighting/Background = On</code></li>
-<li><code>Camera Top-Down = On</code></li>
-<li><code>Lock Style Colors = On</code></li>
-</ul>
-<p>这套会自动给你：深色渐变背景、三点冷暖光、顶视相机，以及霓虹配色。</p>
-<p><img src="/img/skyrmion-plugin-guide/01-neel-poster-topdown.png" alt="Néel 海报风" /></p>
-<h3 id="b-白底风paper-white"><a class="markdownIt-Anchor" href="#b-白底风paper-white"></a> B) 白底风（Paper White）</h3>
-<ul>
-<li><code>Visual Style = Paper White</code></li>
-<li><code>Apply Lighting/Background = On</code></li>
-<li><code>Camera Top-Down = On</code></li>
-<li><code>Lock Style Colors = On</code></li>
-</ul>
-<p>这套会自动切成白底和柔和打光，配色是蓝-白-红，适合论文图。</p>
-<p><img src="/img/skyrmion-plugin-guide/03-bloch-paper-topdown.png" alt="Bloch 白底风" /></p>
-<h2 id="4-四种类型的切换建议"><a class="markdownIt-Anchor" href="#4-四种类型的切换建议"></a> 4. 四种类型的切换建议</h2>
-<h3 id="néel"><a class="markdownIt-Anchor" href="#néel"></a> Néel</h3>
-<ul>
-<li>默认就很好用</li>
-<li>适合先做参数基准图</li>
-</ul>
-<h3 id="bloch"><a class="markdownIt-Anchor" href="#bloch"></a> Bloch</h3>
-<ul>
-<li><code>Helicity</code> 一般设在 <code>90°</code> 附近</li>
-<li>和 Néel 对比时，其他参数尽量不动</li>
-</ul>
-<h3 id="anti-skyrmion"><a class="markdownIt-Anchor" href="#anti-skyrmion"></a> Anti-skyrmion</h3>
-<ul>
-<li>先调 <code>Anisotropy</code>（1.2~1.6 比较容易看到差异）</li>
-<li>再微调 <code>Radius</code></li>
-</ul>
-<h3 id="bimeron"><a class="markdownIt-Anchor" href="#bimeron"></a> Bimeron</h3>
-<ul>
-<li>先设 <code>Bimeron Variant = DUAL_CORE</code> 看基础双核</li>
-<li>再换 <code>CRESCENT</code> 做月牙态</li>
-<li><code>Core Separation</code> 直接决定双核“拉开程度”</li>
-</ul>
-<p><img src="/img/skyrmion-plugin-guide/02-bimeron-poster-topdown.png" alt="Bimeron 海报风" /></p>
-<h2 id="5-我自己稳定出图的流程"><a class="markdownIt-Anchor" href="#5-我自己稳定出图的流程"></a> 5. 我自己稳定出图的流程</h2>
-<p>每次我都按下面这个顺序，基本不会翻车：</p>
-<ol>
-<li>固定相机：<code>Camera Top-Down = On</code></li>
-<li>固定风格：<code>Poster</code> 或 <code>Paper</code> 二选一</li>
-<li>只改 <code>Spin Type</code></li>
-<li>最后再改 <code>Width / Radius / Spacing</code></li>
-</ol>
-<p>这样做的好处是：你改参数时，视觉变化是“可归因”的，不会被灯光和机位干扰。</p>
-<h2 id="6-常见坑很实用"><a class="markdownIt-Anchor" href="#6-常见坑很实用"></a> 6. 常见坑（很实用）</h2>
-<h3 id="坑-1点-generate-没反应"><a class="markdownIt-Anchor" href="#坑-1点-generate-没反应"></a> 坑 1：点 Generate 没反应</h3>
-<p>先检查有没有激活对象（种子对象必须选中）。</p>
-<h3 id="坑-2场景突然变了"><a class="markdownIt-Anchor" href="#坑-2场景突然变了"></a> 坑 2：场景突然变了</h3>
-<p>你开着 <code>Apply Lighting/Background</code>，插件会主动重建背景和灯光；这是设计行为，不是 bug。</p>
-<h3 id="坑-3颜色和你选的不一样"><a class="markdownIt-Anchor" href="#坑-3颜色和你选的不一样"></a> 坑 3：颜色和你选的不一样</h3>
-<p>你开着 <code>Lock Style Colors</code>，它会按风格自动覆盖颜色方案。</p>
-<h3 id="坑-4越调越卡"><a class="markdownIt-Anchor" href="#坑-4越调越卡"></a> 坑 4：越调越卡</h3>
-<p>先把 <code>Width</code> 降下来做参数探索，确认后再放大；别一上来就高密度。</p>
-<h2 id="7-一张图看当前工作场景"><a class="markdownIt-Anchor" href="#7-一张图看当前工作场景"></a> 7. 一张图看当前工作场景</h2>
-<p>这是我写这篇时的 Blender 工作视图：</p>
-<p><img src="/img/skyrmion-plugin-guide/04-viewport-ui.png" alt="Blender 工作视图" /></p>
-<hr />
-<p>这套流程的核心就一句话：</p>
-<p><strong>把“风格参数”固定，把“物理纹理参数”单独调。</strong></p>
-<p>这样同一组数据，今天和下周重跑出来的图，视觉是一致的。</p>
-]]></content>
-      <categories>
-        <category>Project Notes</category>
-      </categories>
-      <tags>
-        <tag>blender</tag>
-        <tag>skyrmion</tag>
-        <tag>插件</tag>
-        <tag>可视化</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>科研日志 001 | 拓扑超导参数扫描引擎上线</title>
     <url>/posts/2026/02/d22b78ea1490/</url>
     <content><![CDATA[<p>今天完成了 TopoSC Scan Engine 的第一版参数扫描管线，目标是稳定输出二维参数空间相图，并自动附带误差评估结果。</p>
-<h2 id="模型摘要"><a class="markdownIt-Anchor" href="#模型摘要"></a> 模型摘要</h2>
-<p>考虑有效哈密顿量：</p>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>H</mi><mo>=</mo><msub><mi>H</mi><mn>0</mn></msub><mo>+</mo><mi mathvariant="normal">Δ</mi><munder><mo>∑</mo><mi>i</mi></munder><msubsup><mi>c</mi><mrow><mi>i</mi><mo>↑</mo></mrow><mo>†</mo></msubsup><msubsup><mi>c</mi><mrow><mi>i</mi><mo>↓</mo></mrow><mo>†</mo></msubsup><mo>+</mo><mi>h</mi><mi mathvariant="normal">.</mi><mi>c</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">H = H_0 + \Delta \sum_i c_{i\uparrow}^\dagger c_{i\downarrow}^\dagger + h.c.
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.327674em;vertical-align:-1.277669em;"></span><span class="mord">Δ</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0500050000000003em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9670159999999999em;"><span style="top:-2.3986920000000005em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">↑</span></span></span></span><span style="top:-3.1809080000000005em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">†</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4374159999999999em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9670159999999999em;"><span style="top:-2.3986920000000005em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">↓</span></span></span></span><span style="top:-3.1809080000000005em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">†</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4374159999999999em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">h</span><span class="mord">.</span><span class="mord mathnormal">c</span><span class="mord">.</span></span></span></span></span></p>
-<p>扫描参数为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo separator="true">,</mo><mi mathvariant="normal">Δ</mi><mo separator="true">,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(\mu, \Delta, B)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">μ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">Δ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">)</span></span></span></span>，并在固定晶格规模下评估拓扑不变量与谱隙闭合行为。</p>
-<h2 id="管线结构"><a class="markdownIt-Anchor" href="#管线结构"></a> 管线结构</h2>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">  A[配置参数网格] --&gt; B[批量求本征谱]</span><br><span class="line">  B --&gt; C[计算拓扑判据]</span><br><span class="line">  C --&gt; D[生成相图与报告]</span><br></pre></td></tr></table></figure>
-<h2 id="当前结果"><a class="markdownIt-Anchor" href="#当前结果"></a> 当前结果</h2>
-<ul>
+<h2 id="模型摘要"><a href="#模型摘要" class="headerlink" title="模型摘要"></a>模型摘要</h2><p>考虑有效哈密顿量：</p>
+<p>$$<br>H &#x3D; H_0 + \Delta \sum_i c_{i\uparrow}^\dagger c_{i\downarrow}^\dagger + h.c.<br>$$</p>
+<p>扫描参数为 $(\mu, \Delta, B)$，并在固定晶格规模下评估拓扑不变量与谱隙闭合行为。</p>
+<h2 id="管线结构"><a href="#管线结构" class="headerlink" title="管线结构"></a>管线结构</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">  A[配置参数网格] --&gt; B[批量求本征谱]</span><br><span class="line">  B --&gt; C[计算拓扑判据]</span><br><span class="line">  C --&gt; D[生成相图与报告]</span><br></pre></td></tr></table></figure>
+
+<h2 id="当前结果"><a href="#当前结果" class="headerlink" title="当前结果"></a>当前结果</h2><ul>
 <li>完成参数点：<code>12,480</code></li>
 <li>平均单点耗时：<code>1.8s</code></li>
 <li>自动回归检测通过率：<code>97.1%</code></li>
@@ -429,6 +48,350 @@
       </tags>
   </entry>
   <entry>
+    <title>科研日志 006 | 相图控制塔首轮数据回流</title>
+    <url>/posts/2026/03/38a13f43a5b7/</url>
+    <content><![CDATA[<section class="lab-doc-panel is-hero">
+  <div class="lab-doc-eyebrow">Research Diary / Phase Atlas</div>
+  <h2>相图控制塔完成首轮高维参数回流</h2>
+  <p>今天的重点不是“又跑完一次扫描”，而是把参数回流、相边界提取和误差摘要写进了同一个 atlas 管线。这样后续每次复验都能直接定位到输入、脚本和图表来源。</p>
+</section>
+
+<span id="more"></span>
+
+<section class="lab-record-card">
+  <div class="lab-doc-eyebrow">Run Summary</div>
+  <div class="lab-metric-line"><span>Grid Size</span><span>12,480 points</span></div>
+  <div class="lab-metric-line"><span>Boundary Candidates</span><span>148</span></div>
+  <div class="lab-metric-line"><span>Failed Jobs</span><span>03 / auto recovered</span></div>
+</section>
+
+<h2 id="今日结论"><a href="#今日结论" class="headerlink" title="今日结论"></a>今日结论</h2><ul>
+<li>参数调度、边界检测和误差摘要第一次实现了统一写回。</li>
+<li>对于接近相变边界的区间，有限尺寸效应依旧是主要风险源。</li>
+<li>atlas 图谱已经足够作为下一轮局部细化扫描的入口。</li>
+</ul>
+<section class="lab-doc-panel">
+  <div class="lab-doc-eyebrow">Protocol Notes</div>
+  <ul class="lab-protocol-list">
+    <li>先做稀疏粗扫，再对高梯度区域启用 adaptive refinement。</li>
+    <li>每个区块都写入收敛步数、剩余误差与边界评分。</li>
+    <li>自动生成的报告不写结论句，只写现象、风险与下一步动作。</li>
+  </ul>
+</section>
+
+<p>$$<br>\epsilon_{atlas} &#x3D; \epsilon_{\mathrm{finite\ size}} + \epsilon_{\mathrm{solver}} + \epsilon_{\mathrm{threshold}}<br>$$</p>
+<blockquote>
+<p>下一步是把 atlas 控制塔接入张量网络误差门控器，让相图与张量实验共享一套风险判别逻辑。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Research Diary</category>
+      </categories>
+      <tags>
+        <tag>Phase Atlas</tag>
+        <tag>Topology</tag>
+        <tag>Reproducibility</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科研日志 002 | 张量网络基准测试与误差预算</title>
+    <url>/posts/2026/02/30755cba4822/</url>
+    <content><![CDATA[<p>本周对张量网络求解流程进行了系统基准测试，重点比较截断误差、边界条件与迭代收敛策略对最终观测量的影响。</p>
+<h2 id="误差分解"><a href="#误差分解" class="headerlink" title="误差分解"></a>误差分解</h2><p>将总误差近似写为：</p>
+<p>$$<br>\epsilon_{\mathrm{total}} \approx \epsilon_{\chi} + \epsilon_{\mathrm{iter}} + \epsilon_{\mathrm{finite}}<br>$$</p>
+<p>其中：</p>
+<ul>
+<li>$\epsilon_{\chi}$：截断维度带来的误差</li>
+<li>$\epsilon_{\mathrm{iter}}$：迭代未收敛误差</li>
+<li>$\epsilon_{\mathrm{finite}}$：有限尺寸误差</li>
+</ul>
+<h2 id="基准结果"><a href="#基准结果" class="headerlink" title="基准结果"></a>基准结果</h2><ul>
+<li>截断维度从 <code>chi=128</code> 提升到 <code>chi=256</code> 后，关键可观测量偏差下降 <code>41%</code></li>
+<li>采用混合收敛准则后，平均迭代步数下降 <code>18%</code></li>
+<li>全流程复现实验通过率达到 <code>95.8%</code></li>
+</ul>
+<p>下一步会把误差预算写入自动报告模板，确保每次提交都能自动输出误差来源摘要。</p>
+]]></content>
+      <categories>
+        <category>Research Diary</category>
+      </categories>
+      <tags>
+        <tag>reproducibility</tag>
+        <tag>tensor-network</tag>
+        <tag>benchmark</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>项目纪要 003 | 量子输运计算平台 v0.3</title>
+    <url>/posts/2026/02/352a3fd05692/</url>
+    <content><![CDATA[<p>TransportLab-Kubo 发布 <code>v0.3</code>，本次版本重点提升了批量任务稳定性与结果回放能力。</p>
+<h2 id="v0-3-关键更新"><a href="#v0-3-关键更新" class="headerlink" title="v0.3 关键更新"></a>v0.3 关键更新</h2><ul>
+<li>新增统一配置文件：支持实验参数版本化</li>
+<li>新增 HDF5 中间结果缓存：中断后可续跑</li>
+<li>新增报告生成器：自动导出指标与关键图表</li>
+</ul>
+<h2 id="性能对比"><a href="#性能对比" class="headerlink" title="性能对比"></a>性能对比</h2><table>
+<thead>
+<tr>
+<th>指标</th>
+<th>v0.2</th>
+<th>v0.3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单任务平均耗时</td>
+<td>7.4 min</td>
+<td>5.9 min</td>
+</tr>
+<tr>
+<td>失败重跑次数</td>
+<td>11</td>
+<td>3</td>
+</tr>
+<tr>
+<td>结果回放耗时</td>
+<td>2.1 min</td>
+<td>0.8 min</td>
+</tr>
+</tbody></table>
+<h2 id="后续路线图"><a href="#后续路线图" class="headerlink" title="后续路线图"></a>后续路线图</h2><ol>
+<li>引入任务优先级调度</li>
+<li>增加多节点并行支持</li>
+<li>与论文图表模板自动对接</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Project Notes</category>
+      </categories>
+      <tags>
+        <tag>transport</tag>
+        <tag>kubo</tag>
+        <tag>hpc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科研日志 007 | 输运算符缓存层压测</title>
+    <url>/posts/2026/03/363f67552e46/</url>
+    <content><![CDATA[<section class="lab-doc-panel is-hero">
+  <div class="lab-doc-eyebrow">Research Diary / Transport Bus</div>
+  <h2>输运算符缓存层开始产生稳定收益</h2>
+  <p>今天的工作是验证缓存层是否真的改善了 Kubo 管线，而不是只在单一输入上看起来更快。重点观察求解器切换、I/O 命中率和重复调用的收益衰减。</p>
+</section>
+
+<span id="more"></span>
+
+<div class="lab-param-strip">
+  <span>Backend: CUDA</span>
+  <span>Kernel: Kubo</span>
+  <span>Batch: 32</span>
+</div>
+
+<section class="lab-record-card">
+  <div class="lab-doc-eyebrow">Benchmark Snapshot</div>
+  <div class="lab-metric-line"><span>Median Speedup</span><span>1.41x</span></div>
+  <div class="lab-metric-line"><span>I/O Reduction</span><span>37%</span></div>
+  <div class="lab-metric-line"><span>Numerical Drift</span><span>&lt; 1.2e-4</span></div>
+</section>
+
+<h2 id="风险项"><a href="#风险项" class="headerlink" title="风险项"></a>风险项</h2><ul>
+<li>缓存层收益主要集中在算符结构重复的任务族。</li>
+<li>当参数剧烈变化时，命中率下降明显，需要单独建模是否值得缓存。</li>
+<li>如果只追求加速，很容易忽略由于截断策略变更引入的系统偏差。</li>
+</ul>
+<section class="lab-doc-panel">
+  <div class="lab-doc-eyebrow">Execution Log</div>
+  <ul class="lab-log-stream">
+    <li>21:02 — baseline run finished</li>
+    <li>21:09 — cache warmup hit rate crossed 74%</li>
+    <li>21:16 — one solver branch produced inconsistent tail behavior</li>
+    <li>21:28 — fallback precision profile enabled</li>
+  </ul>
+</section>
+
+<p>$$<br>\sigma_{xy}(\omega) \sim \mathrm{Tr}\left[v_x G^R(\omega) v_y G^A(\omega)\right]<br>$$</p>
+]]></content>
+      <categories>
+        <category>Research Diary</category>
+      </categories>
+      <tags>
+        <tag>Transport</tag>
+        <tag>Kubo</tag>
+        <tag>Benchmark</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>项目纪要 004 | Codex 连接 Blender MCP（macOS + uv）安装与排障</title>
+    <url>/posts/2026/02/249314c5f0e6/</url>
+    <content><![CDATA[<p>本文记录一次“在 macOS 上让 Codex（就是现在这个）通过 MCP 连接 Blender”的最小正确配置与排障要点。本文以仓库 <a href="https://github.com/ahujasid/blender-mcp"><code>ahujasid/blender-mcp</code></a> 为准。</p>
+<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul>
+<li>Blender 侧：启用 <code>blender-mcp</code> 的 Blender 插件，让 Blender 在本机监听一个 TCP 端口（示例：<code>127.0.0.1:9876</code>）。</li>
+<li>Codex 侧：在 <code>~/.codex/config.toml</code> 中配置 MCP server，用 <code>uvx blender-mcp</code> 拉起服务并连接到 Blender。</li>
+</ul>
+<h2 id="前置依赖（macOS）"><a href="#前置依赖（macOS）" class="headerlink" title="前置依赖（macOS）"></a>前置依赖（macOS）</h2><ol>
+<li>安装 <code>uv</code>（Homebrew）：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install uv</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>Blender 已安装并可运行。</li>
+</ol>
+<h2 id="Blender-侧：安装-启用插件"><a href="#Blender-侧：安装-启用插件" class="headerlink" title="Blender 侧：安装&#x2F;启用插件"></a>Blender 侧：安装&#x2F;启用插件</h2><p>仓库提供的是单文件插件 <code>addon.py</code>，安装流程：</p>
+<ol>
+<li>从 GitHub 仓库下载 <code>addon.py</code>（保持文件名不变也可以）。</li>
+<li>打开 Blender：<ul>
+<li><code>Edit</code> → <code>Preferences</code> → <code>Add-ons</code> → <code>Install...</code></li>
+<li>选择 <code>addon.py</code> 安装</li>
+</ul>
+</li>
+<li>在插件列表中勾选启用：<code>Interface: Blender MCP</code></li>
+</ol>
+<p>一般情况下插件会在本机监听端口（默认示例里常用 <code>9876</code>）。如果你改过端口，以你插件设置为准。</p>
+<h2 id="Codex-侧：配置-MCP（关键）"><a href="#Codex-侧：配置-MCP（关键）" class="headerlink" title="Codex 侧：配置 MCP（关键）"></a>Codex 侧：配置 MCP（关键）</h2><p>Codex 的 MCP server 配置在 <code>~/.codex/config.toml</code>。建议点：</p>
+<ul>
+<li><strong>command 用绝对路径</strong>：桌面 App 启动的进程经常拿不到你 shell 里的 PATH（尤其是 conda 初始化脚本），所以不要依赖 <code>uvx</code> “刚好在 PATH 里”。</li>
+<li><strong>host 用 <code>127.0.0.1</code></strong>：比 <code>localhost</code> 更直接；同时可以绕开少数环境里 <code>localhost</code> 解析&#x2F;优先级导致的奇怪行为。</li>
+</ul>
+<p>示例配置（核心片段）：</p>
+<figure class="highlight toml"><table><tr><td class="code"><pre><span class="line"><span class="section">[mcp_servers.blender]</span></span><br><span class="line"><span class="attr">command</span> = <span class="string">&quot;/opt/homebrew/bin/uvx&quot;</span></span><br><span class="line"><span class="attr">args</span> = [<span class="string">&quot;blender-mcp&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="section">[mcp_servers.blender.env]</span></span><br><span class="line"><span class="attr">BLENDER_HOST</span> = <span class="string">&quot;127.0.0.1&quot;</span></span><br><span class="line"><span class="attr">BLENDER_PORT</span> = <span class="string">&quot;9876&quot;</span></span><br><span class="line"><span class="attr">DISABLE_TELEMETRY</span> = <span class="string">&quot;true&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>改完后需要<strong>重启 Codex</strong>（或至少重开会话&#x2F;项目）让它重新加载配置。</p>
+<h2 id="快速连通性验证"><a href="#快速连通性验证" class="headerlink" title="快速连通性验证"></a>快速连通性验证</h2><h3 id="1-先确认-Blender-端口确实在监听"><a href="#1-先确认-Blender-端口确实在监听" class="headerlink" title="1) 先确认 Blender 端口确实在监听"></a>1) 先确认 Blender 端口确实在监听</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsof -nP -iTCP:9876 -sTCP:LISTEN</span><br><span class="line">nc -vz 127.0.0.1 9876</span><br></pre></td></tr></table></figure>
+
+<p>如果 <code>lsof</code> 没看到 Blender 在 LISTEN，说明 Blender 插件没启用&#x2F;没启动成功&#x2F;端口不是 9876。</p>
+<h3 id="2-确认-uvx-可用"><a href="#2-确认-uvx-可用" class="headerlink" title="2) 确认 uvx 可用"></a>2) 确认 <code>uvx</code> 可用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/opt/homebrew/bin/uvx --version</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-让-Codex-真正通过-MCP-调-Blender"><a href="#3-让-Codex-真正通过-MCP-调-Blender" class="headerlink" title="3) 让 Codex 真正通过 MCP 调 Blender"></a>3) 让 Codex 真正通过 MCP 调 Blender</h3><p>最直观的验证是让 Codex 调用 <code>get_viewport_screenshot</code>（抓一张 Blender 视口截图）。如果能返回 PNG，就说明链路是通的：</p>
+<p>Codex →（stdio MCP server: <code>uvx blender-mcp</code>）→（TCP）→ Blender 插件</p>
+<h2 id="常见坑-处理方式"><a href="#常见坑-处理方式" class="headerlink" title="常见坑 &amp; 处理方式"></a>常见坑 &amp; 处理方式</h2><h3 id="坑-1：host-docker-internal-在本机解析失败"><a href="#坑-1：host-docker-internal-在本机解析失败" class="headerlink" title="坑 1：host.docker.internal 在本机解析失败"></a>坑 1：<code>host.docker.internal</code> 在本机解析失败</h3><p><code>host.docker.internal</code> 主要是“容器内访问宿主机”场景；在宿主机上直接用它反而可能 DNS 找不到。</p>
+<p>如果你是在宿主机上跑 Codex&#x2F;Blender，优先用：</p>
+<ul>
+<li><code>BLENDER_HOST=127.0.0.1</code></li>
+</ul>
+<h3 id="坑-2：桌面-App-找不到-conda-用户-shell-的-PATH"><a href="#坑-2：桌面-App-找不到-conda-用户-shell-的-PATH" class="headerlink" title="坑 2：桌面 App 找不到 conda&#x2F;用户 shell 的 PATH"></a>坑 2：桌面 App 找不到 conda&#x2F;用户 shell 的 PATH</h3><p>你在终端里 <code>uvx blender-mcp</code> 能跑，不代表 Codex 里也能跑。</p>
+<p>最稳的办法是：在 <code>~/.codex/config.toml</code> 里把 <code>command</code> 写成绝对路径（例如 <code>/opt/homebrew/bin/uvx</code>）。</p>
+<h3 id="坑-3：Blender-插件与-MCP-server-版本不完全匹配"><a href="#坑-3：Blender-插件与-MCP-server-版本不完全匹配" class="headerlink" title="坑 3：Blender 插件与 MCP server 版本不完全匹配"></a>坑 3：Blender 插件与 MCP server 版本不完全匹配</h3><p>我实际遇到过 MCP server 启动时会向 Blender 发送 <code>get_telemetry_consent</code>，但 Blender 端返回 “Unknown command type”。这类报错通常不致命（后续功能仍可用），但它提示：</p>
+<ul>
+<li>你的 <code>addon.py</code> 可能比 <code>uvx</code> 拉到的 <code>blender-mcp</code> server 版本更旧</li>
+</ul>
+<p>解决方式：把 Blender 里安装的 <code>addon.py</code> 更新到与当前仓库一致的版本。</p>
+<h2 id="“撤回-清理”建议（可选）"><a href="#“撤回-清理”建议（可选）" class="headerlink" title="“撤回&#x2F;清理”建议（可选）"></a>“撤回&#x2F;清理”建议（可选）</h2><p>很多人会为了加速在本机额外做一次“预装”：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">uv tool install blender-mcp</span><br></pre></td></tr></table></figure>
+
+<p>这不是官方主路径（官方主路径是直接 <code>uvx blender-mcp</code> 让客户端拉起），也不是必须。想回到最简状态可以卸载：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">uv tool uninstall blender-mcp</span><br><span class="line"><span class="built_in">rm</span> -f ~/.local/bin/blender-mcp</span><br></pre></td></tr></table></figure>
+
+<p>保留 <code>brew install uv</code> 即可。</p>
+]]></content>
+      <categories>
+        <category>Project Notes</category>
+      </categories>
+      <tags>
+        <tag>blender</tag>
+        <tag>mcp</tag>
+        <tag>codex</tag>
+        <tag>uv</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>项目纪要 005 | 斯格明子插件实战使用指南（海报风与白底风）</title>
+    <url>/posts/2026/02/c4f5e6264421/</url>
+    <content><![CDATA[<p>这篇就做一件事：把 <code>add-sky.py</code> 这个 Blender 插件用到稳定出图。<br>重点不是“能不能跑”，而是“下一次还能不能一键复现同样风格”。</p>
+<h2 id="最终效果先看"><a href="#最终效果先看" class="headerlink" title="最终效果先看"></a>最终效果先看</h2><p><img src="/img/skyrmion-plugin-guide/05-style-comparison.png" alt="风格对比"></p>
+<p>上图分别是：</p>
+<ul>
+<li>左：Néel + Poster Dark</li>
+<li>中：Bimeron + Poster Dark</li>
+<li>右：Bloch + Paper White</li>
+</ul>
+<p>下面按我日常使用顺序写。</p>
+<h2 id="1-安装插件"><a href="#1-安装插件" class="headerlink" title="1. 安装插件"></a>1. 安装插件</h2><ol>
+<li>打开 Blender，进入 <code>Edit &gt; Preferences &gt; Add-ons</code></li>
+<li>点击 <code>Install...</code></li>
+<li>选择插件文件 <code>add-sky.py</code></li>
+<li>勾选启用</li>
+</ol>
+<p>启用后，在 3D 视图右侧（<code>N</code> 面板）会看到 <code>Skyrmion</code> 标签。</p>
+<h2 id="2-第一次生成（建议参数）"><a href="#2-第一次生成（建议参数）" class="headerlink" title="2. 第一次生成（建议参数）"></a>2. 第一次生成（建议参数）</h2><p>先准备一个“种子对象”，推荐用锥体（方向感最直观）：</p>
+<ul>
+<li><code>Add &gt; Mesh &gt; Cone</code></li>
+<li>选中它作为当前激活对象</li>
+</ul>
+<p>然后在 <code>Skyrmion Generator</code> 里先用这组参数：</p>
+<ul>
+<li><code>Spin Type = NEEL</code></li>
+<li><code>Lattice Type = SQUARE</code></li>
+<li><code>Width = 10</code></li>
+<li><code>Radius = 7.5</code></li>
+<li><code>Spacing = 0.9</code></li>
+<li><code>Circular = On</code></li>
+<li><code>Material Type = PRINCIPLED</code></li>
+</ul>
+<p>点 <code>Generate Skyrmion</code>。</p>
+<h2 id="3-两套风格怎么用"><a href="#3-两套风格怎么用" class="headerlink" title="3. 两套风格怎么用"></a>3. 两套风格怎么用</h2><p>插件里我固定了两套可复现风格，建议直接用，不要每次手调灯光：</p>
+<h3 id="A-海报风（Poster-Dark）"><a href="#A-海报风（Poster-Dark）" class="headerlink" title="A) 海报风（Poster Dark）"></a>A) 海报风（Poster Dark）</h3><ul>
+<li><code>Visual Style = Poster Dark</code></li>
+<li><code>Apply Lighting/Background = On</code></li>
+<li><code>Camera Top-Down = On</code></li>
+<li><code>Lock Style Colors = On</code></li>
+</ul>
+<p>这套会自动给你：深色渐变背景、三点冷暖光、顶视相机，以及霓虹配色。</p>
+<p><img src="/img/skyrmion-plugin-guide/01-neel-poster-topdown.png" alt="Néel 海报风"></p>
+<h3 id="B-白底风（Paper-White）"><a href="#B-白底风（Paper-White）" class="headerlink" title="B) 白底风（Paper White）"></a>B) 白底风（Paper White）</h3><ul>
+<li><code>Visual Style = Paper White</code></li>
+<li><code>Apply Lighting/Background = On</code></li>
+<li><code>Camera Top-Down = On</code></li>
+<li><code>Lock Style Colors = On</code></li>
+</ul>
+<p>这套会自动切成白底和柔和打光，配色是蓝-白-红，适合论文图。</p>
+<p><img src="/img/skyrmion-plugin-guide/03-bloch-paper-topdown.png" alt="Bloch 白底风"></p>
+<h2 id="4-四种类型的切换建议"><a href="#4-四种类型的切换建议" class="headerlink" title="4. 四种类型的切换建议"></a>4. 四种类型的切换建议</h2><h3 id="Neel"><a href="#Neel" class="headerlink" title="Néel"></a>Néel</h3><ul>
+<li>默认就很好用</li>
+<li>适合先做参数基准图</li>
+</ul>
+<h3 id="Bloch"><a href="#Bloch" class="headerlink" title="Bloch"></a>Bloch</h3><ul>
+<li><code>Helicity</code> 一般设在 <code>90°</code> 附近</li>
+<li>和 Néel 对比时，其他参数尽量不动</li>
+</ul>
+<h3 id="Anti-skyrmion"><a href="#Anti-skyrmion" class="headerlink" title="Anti-skyrmion"></a>Anti-skyrmion</h3><ul>
+<li>先调 <code>Anisotropy</code>（1.2~1.6 比较容易看到差异）</li>
+<li>再微调 <code>Radius</code></li>
+</ul>
+<h3 id="Bimeron"><a href="#Bimeron" class="headerlink" title="Bimeron"></a>Bimeron</h3><ul>
+<li>先设 <code>Bimeron Variant = DUAL_CORE</code> 看基础双核</li>
+<li>再换 <code>CRESCENT</code> 做月牙态</li>
+<li><code>Core Separation</code> 直接决定双核“拉开程度”</li>
+</ul>
+<p><img src="/img/skyrmion-plugin-guide/02-bimeron-poster-topdown.png" alt="Bimeron 海报风"></p>
+<h2 id="5-我自己稳定出图的流程"><a href="#5-我自己稳定出图的流程" class="headerlink" title="5. 我自己稳定出图的流程"></a>5. 我自己稳定出图的流程</h2><p>每次我都按下面这个顺序，基本不会翻车：</p>
+<ol>
+<li>固定相机：<code>Camera Top-Down = On</code></li>
+<li>固定风格：<code>Poster</code> 或 <code>Paper</code> 二选一</li>
+<li>只改 <code>Spin Type</code></li>
+<li>最后再改 <code>Width / Radius / Spacing</code></li>
+</ol>
+<p>这样做的好处是：你改参数时，视觉变化是“可归因”的，不会被灯光和机位干扰。</p>
+<h2 id="6-常见坑（很实用）"><a href="#6-常见坑（很实用）" class="headerlink" title="6. 常见坑（很实用）"></a>6. 常见坑（很实用）</h2><h3 id="坑-1：点-Generate-没反应"><a href="#坑-1：点-Generate-没反应" class="headerlink" title="坑 1：点 Generate 没反应"></a>坑 1：点 Generate 没反应</h3><p>先检查有没有激活对象（种子对象必须选中）。</p>
+<h3 id="坑-2：场景突然变了"><a href="#坑-2：场景突然变了" class="headerlink" title="坑 2：场景突然变了"></a>坑 2：场景突然变了</h3><p>你开着 <code>Apply Lighting/Background</code>，插件会主动重建背景和灯光；这是设计行为，不是 bug。</p>
+<h3 id="坑-3：颜色和你选的不一样"><a href="#坑-3：颜色和你选的不一样" class="headerlink" title="坑 3：颜色和你选的不一样"></a>坑 3：颜色和你选的不一样</h3><p>你开着 <code>Lock Style Colors</code>，它会按风格自动覆盖颜色方案。</p>
+<h3 id="坑-4：越调越卡"><a href="#坑-4：越调越卡" class="headerlink" title="坑 4：越调越卡"></a>坑 4：越调越卡</h3><p>先把 <code>Width</code> 降下来做参数探索，确认后再放大；别一上来就高密度。</p>
+<h2 id="7-一张图看当前工作场景"><a href="#7-一张图看当前工作场景" class="headerlink" title="7. 一张图看当前工作场景"></a>7. 一张图看当前工作场景</h2><p>这是我写这篇时的 Blender 工作视图：</p>
+<p><img src="/img/skyrmion-plugin-guide/04-viewport-ui.png" alt="Blender 工作视图"></p>
+<hr>
+<p>这套流程的核心就一句话：</p>
+<p><strong>把“风格参数”固定，把“物理纹理参数”单独调。</strong></p>
+<p>这样同一组数据，今天和下周重跑出来的图，视觉是一致的。</p>
+]]></content>
+      <categories>
+        <category>Project Notes</category>
+      </categories>
+      <tags>
+        <tag>blender</tag>
+        <tag>skyrmion</tag>
+        <tag>插件</tag>
+        <tag>可视化</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>项目纪要 008 | 张量网络门控器与误差面板</title>
     <url>/posts/2026/03/a8c55b40e825/</url>
     <content><![CDATA[<section class="lab-doc-panel is-hero">
@@ -436,7 +399,9 @@
   <h2>张量网络门控器开始替代手工判断</h2>
   <p>目标不是生成更多图，而是把“这个结果是否可信”变成一个有规则、可记录、可审计的问题。今天完成了第一版 error gate panel。</p>
 </section>
+
 <span id="more"></span>
+
 <section class="lab-record-card">
   <div class="lab-doc-eyebrow">Gate Rules</div>
   <ul class="lab-protocol-list">
@@ -445,6 +410,7 @@
     <li>有限尺寸外推只在至少三组长度参数稳定时进入 green gate。</li>
   </ul>
 </section>
+
 <div class="lab-dual-column">
   <section class="lab-doc-panel">
     <div class="lab-doc-eyebrow">Current Panel</div>
@@ -457,8 +423,8 @@
     <p>优先补齐长度参数点，再检查不同 bond dimension 下的稳定性。当前不应该给出“已收敛”的叙述。</p>
   </section>
 </div>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>ϵ</mi><mrow><mi mathvariant="normal">t</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">t</mi></mrow></msub><mo>=</mo><msub><mi>ϵ</mi><mrow><mi mathvariant="normal">t</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">c</mi></mrow></msub><mo>+</mo><msub><mi>ϵ</mi><mrow><mi mathvariant="normal">i</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">r</mi></mrow></msub><mo>+</mo><msub><mi>ϵ</mi><mi>L</mi></msub></mrow><annotation encoding="application/x-tex">\epsilon_{\mathrm{tot}}=\epsilon_{\mathrm{trunc}}+\epsilon_{\mathrm{iter}}+\epsilon_{L}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">ϵ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">t</span><span class="mord mathrm mtight">o</span><span class="mord mathrm mtight">t</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">ϵ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">t</span><span class="mord mathrm mtight">r</span><span class="mord mathrm mtight">u</span><span class="mord mathrm mtight">n</span><span class="mord mathrm mtight">c</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">ϵ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31750199999999995em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">i</span><span class="mord mathrm mtight">t</span><span class="mord mathrm mtight">e</span><span class="mord mathrm mtight">r</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">ϵ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p>$$<br>\epsilon_{\mathrm{tot}}&#x3D;\epsilon_{\mathrm{trunc}}+\epsilon_{\mathrm{iter}}+\epsilon_{L}<br>$$</p>
 ]]></content>
       <categories>
         <category>Project Notes</category>
