@@ -16,7 +16,7 @@ social:
 
 avatar:
   img: /img/1.jpg
-  effect: true
+  effect: false
 
 aside:
   enable: true
