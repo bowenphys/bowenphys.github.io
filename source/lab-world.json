@@ -43,23 +43,7 @@
       { "name": "Micromagnetics", "note": "自旋原子动力学" },
       { "name": "Wannier Tools", "note": "非线性光学与电学后处理" }
     ],
-    "sectors_cta": "进入研究地图",
-    "livefeed_kicker": "LIVE FEED",
-    "livefeed_title": "中枢总线与任务流",
-    "livefeed_subtitle": "把 timeline、terminal、system logs 与参数面板组合成可读的科研控制室，而不是简单的文章列表前缀。",
-    "timeline_title": "Milestone Bus",
-    "terminal_title": "Task Terminal",
-    "logs_title": "System Logs",
-    "equations_title": "Protocol Snapshot",
-    "equation_lines": [
-      "H(k)=H_0(k)+\\Delta(k)\\tau_x+V_z\\sigma_z",
-      "\\sigma_{xy}(\\omega)\\leftarrow \\mathrm{Tr}[v_x G^R v_y G^A]",
-      "\\epsilon_{tot}=\\epsilon_{trunc}+\\epsilon_{iter}+\\epsilon_{L}"
-    ],
-    "note_lines": [
-      "目标不是堆叠炫技元素，而是把科研信息密度做成可导航结构。",
-      "首页负责建立控制台入口，栏目页负责沉淀长期方法学与项目细节。"
-    ]
+    "sectors_cta": "进入研究地图"
   },
   "en": {
     "badge": "CONDENSED MATTER CONTROL SYSTEM // ONLINE",
@@ -105,22 +89,6 @@
       { "name": "Micromagnetics", "note": "spin atomic dynamics" },
       { "name": "Wannier Tools", "note": "nonlinear optics & electrical post-processing" }
     ],
-    "sectors_cta": "Enter Research Map",
-    "livefeed_kicker": "LIVE FEED",
-    "livefeed_title": "Bus traffic and execution panels",
-    "livefeed_subtitle": "Timeline, task terminal, system logs, and protocol snapshot presented as one condensed matter control room.",
-    "timeline_title": "Milestone Bus",
-    "terminal_title": "Task Terminal",
-    "logs_title": "System Logs",
-    "equations_title": "Protocol Snapshot",
-    "equation_lines": [
-      "H(k)=H_0(k)+\\Delta(k)\\tau_x+V_z\\sigma_z",
-      "\\sigma_{xy}(\\omega)\\leftarrow \\mathrm{Tr}[v_x G^R v_y G^A]",
-      "\\epsilon_{tot}=\\epsilon_{trunc}+\\epsilon_{iter}+\\epsilon_{L}"
-    ],
-    "note_lines": [
-      "The goal is not visual noise; the goal is a navigable high-density research interface.",
-      "The homepage is the console entry, while the section pages store long-lived methodology and project detail."
-    ]
+    "sectors_cta": "Enter Research Map"
   }
 }
