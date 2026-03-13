@@ -31,7 +31,7 @@
         "REPRODUCIBILITY // 96.8%"
       ],
       side_title: "Research Kernel",
-      side_copy: "身份信息保留真实，其余控制台指标与项目编号为占位叙事，用于建立统一的科研可视化语法。",
+      side_copy: "把模型、数值实验、误差预算与复现实验记录整合到同一套科研操作系统中。",
       stack_title: "Method Stack",
       stack: [
         "Low-energy theory / effective model reduction",
@@ -94,7 +94,7 @@
         "REPRODUCIBILITY // 96.8%"
       ],
       side_title: "Research Kernel",
-      side_copy: "Identity and affiliation remain real; operational metrics and system labels are structured placeholders for future replacement.",
+      side_copy: "A research operating system for model building, numerics, error budgeting, and reproducibility.",
       stack_title: "Method Stack",
       stack: [
         "Low-energy theory / effective model reduction",
