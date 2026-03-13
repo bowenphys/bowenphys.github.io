@@ -5,7 +5,7 @@
     "title_accent": "Control System",
     "identity": "宁波东方理工大学 × 中国科学技术大学 联合培养博士研究生",
     "lead": "把模型、数值实验、误差预算与复现实验记录整合到同一套科研操作系统中，持续追踪凝聚态计算理论的演化过程。",
-    "emphasis": "当前主轴：拓扑量子态、非常规超导、量子输运与张量网络方法学。",
+    "emphasis": "当前主轴：拓扑量子态、第一性原理计算、量子输运与量子计算",
     "command_placeholder": "输入关键词：topological SC / Kubo / DMRG / phase atlas",
     "command_button": "启动检索",
     "command_hint": "接入站内全文检索，可直达日志、论文、项目与标签。",
