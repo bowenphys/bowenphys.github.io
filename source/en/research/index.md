@@ -18,7 +18,7 @@ lang: en
 
 <section id="sector-phase-atlas" class="lab-record-card">
   <div class="lab-doc-eyebrow">Sector 01 / Phase Atlas</div>
-  <h3>Low-energy theory and phase-boundary extraction</h3>
+  <h3>Topological Quantum States and First-Principles Calculations</h3>
   <p>Focused on linking model-level assumptions to observable phase structures and packaging finite-size / convergence diagnostics into one atlas report.</p>
   <ul class="lab-protocol-list">
     <li>Model reduction and controlled analytical derivation</li>
@@ -40,7 +40,7 @@ lang: en
 
 <section id="sector-tensor" class="lab-record-card">
   <div class="lab-doc-eyebrow">Sector 03 / Tensor Stack</div>
-  <h3>Tensor numerics, error gating, and auto dossier generation</h3>
+  <h3>Tensor Networks, Quantum Computing, and Error Gating</h3>
   <p>Tensor-network computation is treated as a controlled experiment where truncation, iteration, and finite-size errors are recorded together.</p>
   <ul class="lab-protocol-list">
     <li>Hierarchical error model for truncation / iteration / finite size</li>

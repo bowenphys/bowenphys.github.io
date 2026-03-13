@@ -17,7 +17,7 @@ comments: false
 
 <section id="sector-phase-atlas" class="lab-record-card">
   <div class="lab-doc-eyebrow">Sector 01 / Phase Atlas</div>
-  <h3>相图控制塔：拓扑与非常规超导中的低能理论</h3>
+  <h3>相图控制塔：拓扑量子态与第一性原理计算</h3>
   <p>目标是从模型层面提取能够与可观测量直接关联的结构，并把相边界、有限尺寸效应和收敛误差统一纳入 atlas 报告。</p>
   <ul class="lab-protocol-list">
     <li>解析推导与最小模型化简</li>
@@ -43,7 +43,7 @@ comments: false
 
 <section id="sector-tensor" class="lab-record-card">
   <div class="lab-doc-eyebrow">Sector 03 / Tensor Stack</div>
-  <h3>张量栈：DMRG、误差门控与自动 dossier</h3>
+  <h3>张量栈：DMRG、量子计算、误差门控与自动 dossier</h3>
   <p>我把张量网络计算看作一套受控实验：截断阈值、迭代收敛和有限尺寸外推要被同时记录，而不是分散在 notebook 和记忆里。</p>
   <ul class="lab-protocol-list">
     <li>truncation / iteration / finite-size 三类误差分层建模</li>

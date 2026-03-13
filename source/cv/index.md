@@ -19,7 +19,7 @@ comments: false
   </section>
   <section class="lab-doc-card">
     <h3>研究兴趣</h3>
-    <p>拓扑量子态、非常规超导、多体数值方法、量子输运与科研工作流工程。</p>
+    <p>拓扑量子态、第一性原理计算、量子输运与量子计算。</p>
   </section>
 </div>
 

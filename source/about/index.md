@@ -13,7 +13,8 @@ comments: false
     <span>Computational Theory</span>
     <span>Topology</span>
     <span>Quantum Transport</span>
-    <span>Tensor Network</span>
+    <span>First-Principles</span>
+    <span>Quantum Computing</span>
   </div>
 </section>
 
@@ -40,9 +41,9 @@ comments: false
   <div class="lab-doc-eyebrow">Focus Map</div>
   <h3>当前聚焦</h3>
   <ul class="lab-protocol-list">
-    <li>拓扑量子态与非常规超导中的低能有效理论</li>
+    <li>拓扑量子态与第一性原理计算</li>
     <li>量子输运响应、Kubo 公式及其数值 benchmark protocol</li>
-    <li>张量网络、稀疏求解器与误差预算自动化</li>
+    <li>量子计算与张量网络方法</li>
     <li>paper-to-code 的快速转译与科研软件工程</li>
   </ul>
 </section>

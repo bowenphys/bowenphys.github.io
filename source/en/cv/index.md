@@ -20,7 +20,7 @@ lang: en
   </section>
   <section class="lab-doc-card">
     <h3>Research Interests</h3>
-    <p>Topological quantum matter, unconventional superconductivity, transport numerics, tensor methods, and scientific workflow engineering.</p>
+    <p>Topological quantum states, first-principles calculations, quantum transport, and quantum computing with tensor network methods.</p>
   </section>
 </div>
 

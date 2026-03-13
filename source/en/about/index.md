@@ -14,7 +14,8 @@ lang: en
     <span>Computational Theory</span>
     <span>Topology</span>
     <span>Quantum Transport</span>
-    <span>Tensor Network</span>
+    <span>First-Principles</span>
+    <span>Quantum Computing</span>
   </div>
 </section>
 
@@ -27,7 +28,7 @@ lang: en
 <div class="lab-doc-grid">
   <section class="lab-doc-card">
     <h3>Current focus</h3>
-    <p>Low-energy theory in topological and superconducting systems, transport response numerics, tensor-network methodology, and reproducible workflow design.</p>
+    <p>Topological quantum states, first-principles calculations, quantum transport, and quantum computing with tensor network methods.</p>
   </section>
   <section class="lab-doc-card">
     <h3>Site role</h3>
