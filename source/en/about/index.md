@@ -13,9 +13,9 @@ lang: en
     <span>Condensed Matter</span>
     <span>Computational Theory</span>
     <span>Topology</span>
-    <span>Quantum Transport</span>
+    <span>Micromagnetics</span>
     <span>First-Principles</span>
-    <span>Quantum Computing</span>
+    <span>Wannier Tools</span>
   </div>
 </section>
 
@@ -40,13 +40,13 @@ lang: en
   <section class="lab-doc-panel">
     <div class="lab-doc-eyebrow">Lab Snapshot</div>
     <div class="lab-metric-line"><span>Active Modules</span><span>04</span></div>
-    <div class="lab-metric-line"><span>Weekly Compute</span><span>186 GPU-hours</span></div>
-    <div class="lab-metric-line"><span>Reproducibility</span><span>96.8%</span></div>
+    <div class="lab-metric-line"><span>Publications</span><span>05</span></div>
+    <div class="lab-metric-line"><span>Conference Talks</span><span>08</span></div>
     <div class="lab-metric-line"><span>Pipeline</span><span>PASS</span></div>
   </section>
   <section class="lab-doc-panel">
     <div class="lab-doc-eyebrow">Contact</div>
-    <p>Email: <code>bowen.phys@example.edu</code></p>
+    <p>Email: <code>bowen@example.edu</code></p>
     <p>GitHub: <a href="https://github.com/bowenphys">https://github.com/bowenphys</a></p>
     <p>Scholar: <a href="https://scholar.google.com/citations?user=PLACEHOLDER">Google Scholar</a></p>
     <p><a href="/en/research/">Research</a> · <a href="/en/projects/">Projects</a> · <a href="/about/">中文页面</a></p>

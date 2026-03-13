@@ -4,46 +4,46 @@ date: 2026-02-08 22:33:00
 comments: false
 ---
 
-<section class="lab-doc-panel is-hero">
-  <div class="lab-doc-eyebrow">Project Vault / 模块库</div>
+<section class=”lab-doc-panel is-hero”>
+  <div class=”lab-doc-eyebrow”>Project Vault / 模块库</div>
   <h2>把研究拆成可维护、可回放、可扩展的模块</h2>
-  <p>这里收录的不是“产品化项目”，而是科研过程中的核心工具链：参数扫描、输运 benchmark、张量网络报告和 paper-to-code 脚手架。</p>
+  <p>这里收录的是四个研究方向对应的核心工具链：量子化学计算、DFT分析、微磁学模拟和Wannier后处理。</p>
 </section>
 
-<section class="lab-record-card">
-  <div class="lab-doc-eyebrow">Module 01</div>
-  <h3>Phase Atlas Core</h3>
-  <p>批量扫描拓扑超导模型参数空间，输出 phase atlas、边界热图和误差摘要。</p>
-  <div class="lab-metric-line"><span>Stack</span><span>Python / C++ / Sparse Solver</span></div>
-  <div class="lab-metric-line"><span>Status</span><span>ACTIVE</span></div>
-  <div class="lab-metric-line"><span>Repo</span><span>github.com/bowenphys/phase-atlas-core</span></div>
+<section class=”lab-record-card”>
+  <div class=”lab-doc-eyebrow”>Module 01</div>
+  <h3>Quantum VQE Toolkit</h3>
+  <p>变分量子本征求解器开发工具包，包含多种ansatz设计、误差缓解策略和优化器接口。支持Qiskit、Cirq和PennyLane后端。</p>
+  <div class=”lab-metric-line”><span>Stack</span><span>Python / Qiskit / PennyLane</span></div>
+  <div class=”lab-metric-line”><span>Status</span><span>ACTIVE</span></div>
+  <div class=”lab-metric-line”><span>Repo</span><span>github.com/bowenphys/qvqe-toolkit</span></div>
 </section>
 
-<section class="lab-record-card">
-  <div class="lab-doc-eyebrow">Module 02</div>
-  <h3>Transport Bus</h3>
-  <p>围绕 Kubo 公式建立统一求解与 benchmark protocol，关注吞吐、缓存命中与误差控制。</p>
-  <div class="lab-metric-line"><span>Stack</span><span>Julia / CUDA / HDF5</span></div>
-  <div class="lab-metric-line"><span>Status</span><span>BENCHMARKING</span></div>
-  <div class="lab-metric-line"><span>Repo</span><span>github.com/bowenphys/transport-bus</span></div>
+<section class=”lab-record-card”>
+  <div class=”lab-doc-eyebrow”>Module 02</div>
+  <h3>DFT Magnetic Analyzer</h3>
+  <p>第一性原理计算磁性分析工具，支持VASP和Quantum ESPRESSO输出文件的自动解析、磁矩分析和能带可视化。</p>
+  <div class=”lab-metric-line”><span>Stack</span><span>Python / ASE / Pymatgen</span></div>
+  <div class=”lab-metric-line”><span>Status</span><span>ACTIVE</span></div>
+  <div class=”lab-metric-line”><span>Repo</span><span>github.com/bowenphys/dft-mag-analyzer</span></div>
 </section>
 
-<section class="lab-record-card">
-  <div class="lab-doc-eyebrow">Module 03</div>
-  <h3>Tensor Gate Controller</h3>
-  <p>把 truncation、iteration 与 finite-size 误差合并成 gate rule，并自动生成报告与版本记录。</p>
-  <div class="lab-metric-line"><span>Stack</span><span>Python / Snakemake / LaTeX</span></div>
-  <div class="lab-metric-line"><span>Status</span><span>VALIDATING</span></div>
-  <div class="lab-metric-line"><span>Repo</span><span>github.com/bowenphys/tensor-gate</span></div>
+<section class=”lab-record-card”>
+  <div class=”lab-doc-eyebrow”>Module 03</div>
+  <h3>Micromagnetics Solver</h3>
+  <p>基于Landau-Lifshitz-Bloch方程的微磁学求解器，支持GPU加速和多尺度耦合。包含skyrmion动力学分析和磁畴壁运动追踪模块。</p>
+  <div class=”lab-metric-line”><span>Stack</span><span>Python / CuPy / mumax3 API</span></div>
+  <div class=”lab-metric-line”><span>Status</span><span>DEVELOPING</span></div>
+  <div class=”lab-metric-line”><span>Repo</span><span>github.com/bowenphys/micro-mag-solver</span></div>
 </section>
 
-<section class="lab-record-card">
-  <div class="lab-doc-eyebrow">Module 04</div>
-  <h3>Paper-to-Code Forge</h3>
-  <p>把论文阅读模板、假设清单、最小运行脚本和图表输出骨架合并为统一脚手架。</p>
-  <div class="lab-metric-line"><span>Stack</span><span>Markdown / Python / Hexo</span></div>
-  <div class="lab-metric-line"><span>Status</span><span>ITERATING</span></div>
-  <div class="lab-metric-line"><span>Repo</span><span>github.com/bowenphys/paper-forge</span></div>
+<section class=”lab-record-card”>
+  <div class=”lab-doc-eyebrow”>Module 04</div>
+  <h3>Wannier Post-Processor</h3>
+  <p>Wannier90后处理工具箱，实现二次谐波产生(SHG)、Berry曲率和反常霍尔效应的自动化计算。支持多种TMDC材料的批量处理。</p>
+  <div class=”lab-metric-line”><span>Stack</span><span>Python / Wannier90 / NumPy</span></div>
+  <div class=”lab-metric-line”><span>Status</span><span>VALIDATING</span></div>
+  <div class=”lab-metric-line”><span>Repo</span><span>github.com/bowenphys/wannier-postproc</span></div>
 </section>
 
 ## 标准项目骨架

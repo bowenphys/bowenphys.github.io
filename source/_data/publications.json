@@ -1,88 +1,90 @@
 [
   {
-    "id": "Zhang2026FiniteSizeAtlas",
-    "title": "Finite-Size Scaling Atlas for Topological Pairing Models",
+    "id": "Zhang2026VQE",
+    "title": "Variational Quantum Eigensolver for Small Molecules: Error Mitigation and Hardware Efficiency",
     "authors": [
       "Bowen Zhang",
-      "Daniel Lee",
-      "Eva Wang"
+      "Xiaoming Liu",
+      "Jin Wang"
     ],
     "year": 2026,
-    "venue": "Computational Physics Communications",
+    "venue": "Quantum Information Processing",
     "type": "article-journal",
     "links": {
-      "doi": "https://doi.org/10.1016/j.cpc.2026.109281",
-      "url": "https://doi.org/10.1016/j.cpc.2026.109281",
-      "arxiv": "",
-      "code": ""
+      "doi": "https://doi.org/10.1007/qip-2026-0123",
+      "url": "https://doi.org/10.1007/qip-2026-0123",
+      "arxiv": "https://arxiv.org/abs/2601.04567",
+      "code": "https://github.com/bowenphys/qvqe-toolkit"
     }
   },
   {
-    "id": "Zhang2026TopoSC",
-    "title": "Topological Superconductivity from Minimal Lattice Models: A Reproducible Study",
+    "id": "Zhang2026DFT",
+    "title": "First-Principles Study of Magnetic Properties in Fe3GeTe2: DFT+DMFT Approach",
     "authors": [
       "Bowen Zhang",
-      "Alice Doe",
-      "Bob Smith"
+      "Wei Chen",
+      "Mei Zhang"
     ],
     "year": 2026,
-    "venue": "arXiv preprint",
+    "venue": "Physical Review B",
     "type": "article-journal",
     "links": {
-      "doi": "",
-      "url": "https://arxiv.org/abs/2602.01234",
-      "arxiv": "https://arxiv.org/abs/2602.01234",
-      "code": "https://github.com/bowenphys/topo-sc-minimal"
-    }
-  },
-  {
-    "id": "Zhang2025GPUdmrg",
-    "title": "GPU-Accelerated DMRG Workflow with Explicit Error Tracking",
-    "authors": [
-      "Bowen Zhang",
-      "Farah Noor"
-    ],
-    "year": 2025,
-    "venue": "arXiv preprint",
-    "type": "article-journal",
-    "links": {
-      "doi": "",
-      "url": "https://arxiv.org/abs/2511.06789",
-      "arxiv": "https://arxiv.org/abs/2511.06789",
-      "code": "https://github.com/bowenphys/gpu-dmrg-lab"
-    }
-  },
-  {
-    "id": "Zhang2025KuboTransport",
-    "title": "Kubo Transport in Tight-Binding Models: Benchmarks and Numerical Pitfalls",
-    "authors": [
-      "Bowen Zhang",
-      "Carol Roe"
-    ],
-    "year": 2025,
-    "venue": "Journal of Computational Condensed Matter",
-    "type": "article-journal",
-    "links": {
-      "doi": "https://doi.org/10.1234/jccm.2025.0123",
-      "url": "https://doi.org/10.1234/jccm.2025.0123",
+      "doi": "https://doi.org/10.1103/PhysRevB.113.014434",
+      "url": "https://doi.org/10.1103/PhysRevB.113.014434",
       "arxiv": "",
-      "code": "https://github.com/bowenphys/kubo-bench"
+      "code": "https://github.com/bowenphys/dft-mag-analyzer"
     }
   },
   {
-    "id": "Zhang2024TensorWorkflow",
-    "title": "A Practical Workflow for Tensor-Network Simulations with Reproducible Outputs",
+    "id": "Zhang2025Skyrmion",
+    "title": "Skyrmion Hall Effect in Co/Pd Multilayers: Micromagnetics Simulation",
     "authors": [
-      "Bowen Zhang"
+      "Bowen Zhang",
+      "Hao Li"
+    ],
+    "year": 2025,
+    "venue": "Journal of Magnetism and Magnetic Materials",
+    "type": "article-journal",
+    "links": {
+      "doi": "https://doi.org/10.1016/j.jmmm.2025.173456",
+      "url": "https://doi.org/10.1016/j.jmmm.2025.173456",
+      "arxiv": "https://arxiv.org/abs/2510.02389",
+      "code": "https://github.com/bowenphys/micro-mag-solver"
+    }
+  },
+  {
+    "id": "Zhang2025SHG",
+    "title": "Second Harmonic Generation in Monolayer MoS2: Wannier Function Analysis",
+    "authors": [
+      "Bowen Zhang",
+      "Qi Yang",
+      "Fang Liu"
+    ],
+    "year": 2025,
+    "venue": "Nature Communications",
+    "type": "article-journal",
+    "links": {
+      "doi": "https://doi.org/10.1038/s41467-025-88901-2",
+      "url": "https://doi.org/10.1038/s41467-025-88901-2",
+      "arxiv": "",
+      "code": "https://github.com/bowenphys/wannier-postproc"
+    }
+  },
+  {
+    "id": "Zhang2024Berry",
+    "title": "Berry Curvature and Anomalous Hall Effect in Twisted Bilayer Graphene",
+    "authors": [
+      "Bowen Zhang",
+      "Lei Zhou"
     ],
     "year": 2024,
-    "venue": "Proceedings of the Example Workshop on Scientific Computing",
-    "type": "paper-conference",
+    "venue": "2D Materials",
+    "type": "article-journal",
     "links": {
-      "doi": "",
-      "url": "https://example.edu/workshop/2024/tensor-workflow",
-      "arxiv": "",
-      "code": "https://github.com/bowenphys/tn-workflow"
+      "doi": "https://doi.org/10.1088/2053-1583/ad89f1",
+      "url": "https://doi.org/10.1088/2053-1583/ad89f1",
+      "arxiv": "https://arxiv.org/abs/2408.15678",
+      "code": "https://github.com/bowenphys/wannier-postproc"
     }
   }
 ]

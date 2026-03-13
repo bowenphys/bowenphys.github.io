@@ -8,43 +8,43 @@ lang: en
 <section class="lab-doc-panel is-hero">
   <div class="lab-doc-eyebrow">Project Vault</div>
   <h2>Research modules designed for replay, maintenance, and extension</h2>
-  <p>These are not productized apps. They are the operational units behind parameter sweeps, transport benchmarks, tensor reports, and paper-to-code scaffolds.</p>
+  <p>Core toolchains for four research directions: quantum chemistry, DFT analysis, micromagnetics simulation, and Wannier post-processing.</p>
 </section>
 
 <section class="lab-record-card">
   <div class="lab-doc-eyebrow">Module 01</div>
-  <h3>Phase Atlas Core</h3>
-  <p>Batch parameter space scanning for topological superconducting models, outputting phase atlases, boundary heatmaps, and error summaries.</p>
-  <div class="lab-metric-line"><span>Stack</span><span>Python / C++ / Sparse Solver</span></div>
+  <h3>Quantum VQE Toolkit</h3>
+  <p>Variational Quantum Eigensolver development toolkit with multiple ansatz designs, error mitigation strategies, and optimizer interfaces. Supports Qiskit, Cirq, and PennyLane backends.</p>
+  <div class="lab-metric-line"><span>Stack</span><span>Python / Qiskit / PennyLane</span></div>
   <div class="lab-metric-line"><span>Status</span><span>ACTIVE</span></div>
-  <div class="lab-metric-line"><span>Repo</span><span>github.com/bowenphys/phase-atlas-core</span></div>
+  <div class="lab-metric-line"><span>Repo</span><span>github.com/bowenphys/qvqe-toolkit</span></div>
 </section>
 
 <section class="lab-record-card">
   <div class="lab-doc-eyebrow">Module 02</div>
-  <h3>Transport Bus</h3>
-  <p>Unified Kubo formula solving and benchmark protocol, focusing on throughput, cache hit rate, and error control.</p>
-  <div class="lab-metric-line"><span>Stack</span><span>Julia / CUDA / HDF5</span></div>
-  <div class="lab-metric-line"><span>Status</span><span>BENCHMARKING</span></div>
-  <div class="lab-metric-line"><span>Repo</span><span>github.com/bowenphys/transport-bus</span></div>
+  <h3>DFT Magnetic Analyzer</h3>
+  <p>First-principles magnetic analysis tool with automatic parsing of VASP and Quantum ESPRESSO output files, magnetic moment analysis, and band structure visualization.</p>
+  <div class="lab-metric-line"><span>Stack</span><span>Python / ASE / Pymatgen</span></div>
+  <div class="lab-metric-line"><span>Status</span><span>ACTIVE</span></div>
+  <div class="lab-metric-line"><span>Repo</span><span>github.com/bowenphys/dft-mag-analyzer</span></div>
 </section>
 
 <section class="lab-record-card">
   <div class="lab-doc-eyebrow">Module 03</div>
-  <h3>Tensor Gate Controller</h3>
-  <p>Combines truncation, iteration, and finite-size errors into gate rules, with automatic report and version logging.</p>
-  <div class="lab-metric-line"><span>Stack</span><span>Python / Snakemake / LaTeX</span></div>
-  <div class="lab-metric-line"><span>Status</span><span>VALIDATING</span></div>
-  <div class="lab-metric-line"><span>Repo</span><span>github.com/bowenphys/tensor-gate</span></div>
+  <h3>Micromagnetics Solver</h3>
+  <p>Landau-Lifshitz-Bloch equation solver with GPU acceleration and multiscale coupling. Includes skyrmion dynamics analysis and domain wall motion tracking modules.</p>
+  <div class="lab-metric-line"><span>Stack</span><span>Python / CuPy / mumax3 API</span></div>
+  <div class="lab-metric-line"><span>Status</span><span>DEVELOPING</span></div>
+  <div class="lab-metric-line"><span>Repo</span><span>github.com/bowenphys/micro-mag-solver</span></div>
 </section>
 
 <section class="lab-record-card">
   <div class="lab-doc-eyebrow">Module 04</div>
-  <h3>Paper-to-Code Forge</h3>
-  <p>Paper reading templates, assumption checklists, minimal runnable scripts, and chart output skeletons unified into one scaffold.</p>
-  <div class="lab-metric-line"><span>Stack</span><span>Markdown / Python / Hexo</span></div>
-  <div class="lab-metric-line"><span>Status</span><span>ITERATING</span></div>
-  <div class="lab-metric-line"><span>Repo</span><span>github.com/bowenphys/paper-forge</span></div>
+  <h3>Wannier Post-Processor</h3>
+  <p>Wannier90 post-processing toolkit for automated SHG, Berry curvature, and anomalous Hall effect calculations. Supports batch processing of TMDC materials.</p>
+  <div class="lab-metric-line"><span>Stack</span><span>Python / Wannier90 / NumPy</span></div>
+  <div class="lab-metric-line"><span>Status</span><span>VALIDATING</span></div>
+  <div class="lab-metric-line"><span>Repo</span><span>github.com/bowenphys/wannier-postproc</span></div>
 </section>
 
 [中文页面](/projects/)
