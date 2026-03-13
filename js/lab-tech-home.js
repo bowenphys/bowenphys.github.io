@@ -1,7 +1,6 @@
 (() => {
   const MAINFRAME_ID = "lab-tech-mainframe";
   const SECTORS_ID = "lab-tech-sectors";
-  const LIVEFEED_ID = "lab-tech-livefeed";
   const CANVAS_ID = "lab-tech-canvas";
   const RUNTIME_KEY = "__labTechRuntime";
   const PAGE_CONSOLE_CLASS = "lab-page-console";
@@ -50,23 +49,7 @@
         { name: "Tensor Stack", note: "张量网络与误差门控" },
         { name: "Method Forge", note: "paper-to-code 与复现模板" }
       ],
-      sectors_cta: "进入研究地图",
-      livefeed_kicker: "LIVE FEED",
-      livefeed_title: "中枢总线与任务流",
-      livefeed_subtitle: "把 timeline、terminal、system logs 与参数面板组合成可读的科研控制室，而不是简单的文章列表前缀。",
-      timeline_title: "Milestone Bus",
-      terminal_title: "Task Terminal",
-      logs_title: "System Logs",
-      equations_title: "Protocol Snapshot",
-      equation_lines: [
-        "H(k)=H_0(k)+\\Delta(k)\\tau_x+V_z\\sigma_z",
-        "\\sigma_{xy}(\\omega)\\leftarrow \\mathrm{Tr}[v_x G^R v_y G^A]",
-        "\\epsilon_{tot}=\\epsilon_{trunc}+\\epsilon_{iter}+\\epsilon_{L}"
-      ],
-      note_lines: [
-        "目标不是堆叠炫技元素，而是把科研信息密度做成可导航结构。",
-        "首页负责建立控制台入口，栏目页负责沉淀长期方法学与项目细节。"
-      ]
+      sectors_cta: "进入研究地图"
     },
     en: {
       badge: "CONDENSED MATTER CONTROL SYSTEM // ONLINE",
@@ -112,17 +95,8 @@
         { name: "Tensor Stack", note: "tensor numerics and error gating" },
         { name: "Method Forge", note: "paper-to-code and reproducibility templates" }
       ],
-      sectors_cta: "Enter Research Map",
-      livefeed_kicker: "LIVE FEED",
-      livefeed_title: "Bus traffic and execution panels",
-      livefeed_subtitle: "Timeline, task terminal, system logs, and protocol snapshot presented as one condensed matter control room.",
-      timeline_title: "Milestone Bus",
-      terminal_title: "Task Terminal",
-      logs_title: "System Logs",
-      equations_title: "Protocol Snapshot",
-      equation_lines: [
-        "H(k)=H_0(k)+\\Delta(k)\\tau_x+V_z\\sigma_z",
-        "\\sigma_{xy}(\\omega)\\leftarrow \\mathrm{Tr}[v_x G^R v_y G^A]",
+      sectors_cta: "Enter Research Map"
+    },
         "\\epsilon_{tot}=\\epsilon_{trunc}+\\epsilon_{iter}+\\epsilon_{L}"
       ],
       note_lines: [
@@ -321,11 +295,8 @@
     sectors_title: toText(value?.sectors_title, fallback.sectors_title),
     sectors_subtitle: toText(value?.sectors_subtitle, fallback.sectors_subtitle),
     sector_nodes: normalizeSectorNodes(value?.sector_nodes, fallback.sector_nodes),
-    sectors_cta: toText(value?.sectors_cta, fallback.sectors_cta),
-    livefeed_kicker: toText(value?.livefeed_kicker, fallback.livefeed_kicker),
-    livefeed_title: toText(value?.livefeed_title, fallback.livefeed_title),
-    livefeed_subtitle: toText(value?.livefeed_subtitle, fallback.livefeed_subtitle),
-    timeline_title: toText(value?.timeline_title, fallback.timeline_title),
+    sectors_cta: toText(value?.sectors_cta, fallback.sectors_cta)
+  };
     terminal_title: toText(value?.terminal_title, fallback.terminal_title),
     logs_title: toText(value?.logs_title, fallback.logs_title),
     equations_title: toText(value?.equations_title, fallback.equations_title),
@@ -588,48 +559,6 @@
       </article>`;
   };
 
-  const createLivefeed = (world, dashboard) => {
-    const section = document.createElement("section");
-    section.id = LIVEFEED_ID;
-    section.className = "lab-livefeed";
-    section.innerHTML = `
-      <div class="lab-section-heading">
-        <div>
-          <div class="lab-section-kicker">${escapeHtml(world.livefeed_kicker)}</div>
-          <h2 class="lab-section-title">${escapeHtml(world.livefeed_title)}</h2>
-          <p class="lab-section-subtitle">${escapeHtml(world.livefeed_subtitle)}</p>
-        </div>
-        <div class="lab-livefeed-chip">${escapeHtml(dashboard.console_title)}</div>
-      </div>
-      <div class="lab-status-bar">${createStatusItems(dashboard.status_bar)}</div>
-      <div class="lab-feed-grid">
-        <article class="lab-feed-panel">
-          <div class="lab-feed-panel-head">
-            <h3 class="lab-feed-panel-title">${escapeHtml(world.timeline_title)}</h3>
-            <span class="lab-side-code">timeline</span>
-          </div>
-          ${createTimeline(dashboard.timeline)}
-        </article>
-        <article class="lab-feed-panel">
-          <div class="lab-feed-panel-head">
-            <h3 class="lab-feed-panel-title">${escapeHtml(world.terminal_title)}</h3>
-            <span class="lab-side-code">terminal</span>
-          </div>
-          ${createTerminal(dashboard.terminal_tasks)}
-        </article>
-        <article class="lab-feed-panel is-logs">
-          <div class="lab-feed-panel-head">
-            <h3 class="lab-feed-panel-title">${escapeHtml(world.logs_title)}</h3>
-            <span class="lab-side-code">logs</span>
-          </div>
-          <ul class="lab-log-list">${createLogs(dashboard.system_logs)}</ul>
-        </article>
-        ${createProtocolPanel(world)}
-      </div>
-    `;
-    return section;
-  };
-
   const triggerLocalSearch = (keyword) => {
     const trigger = document.querySelector("#search-button > .search");
     if (!trigger) return;
@@ -770,8 +699,7 @@
 
     const mainframe = createMainframe(locale, world);
     const sectors = createSectors(world, showcase);
-    const livefeed = createLivefeed(world, dashboardPayload);
-    const inserted = insertIntoHome([mainframe, sectors, livefeed]);
+    const inserted = insertIntoHome([mainframe, sectors]);
     if (!inserted) {
       cleanup();
       return;
