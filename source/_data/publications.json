@@ -1,90 +1,88 @@
 [
   {
-    "id": "Zhang2026VQE",
-    "title": "Variational Quantum Eigensolver for Small Molecules: Error Mitigation and Hardware Efficiency",
+    "id": "Zhang2026FiniteSizeAtlas",
+    "title": "Finite-Size Scaling Atlas for Topological Pairing Models",
     "authors": [
       "Bowen Zhang",
-      "Xiaoming Liu",
-      "Jin Wang"
+      "Daniel Lee",
+      "Eva Wang"
     ],
     "year": 2026,
-    "venue": "Quantum Information Processing",
+    "venue": "Computational Physics Communications",
     "type": "article-journal",
     "links": {
-      "doi": "https://doi.org/10.1007/qip-2026-0123",
-      "url": "https://doi.org/10.1007/qip-2026-0123",
-      "arxiv": "https://arxiv.org/abs/2601.04567",
-      "code": "https://github.com/bowenphys/qvqe-toolkit"
+      "doi": "https://doi.org/10.1016/j.cpc.2026.109281",
+      "url": "https://doi.org/10.1016/j.cpc.2026.109281",
+      "arxiv": "",
+      "code": ""
     }
   },
   {
-    "id": "Zhang2026DFT",
-    "title": "First-Principles Study of Magnetic Properties in Fe3GeTe2: DFT+DMFT Approach",
+    "id": "Zhang2026TopoSC",
+    "title": "Topological Superconductivity from Minimal Lattice Models: A Reproducible Study",
     "authors": [
       "Bowen Zhang",
-      "Wei Chen",
-      "Mei Zhang"
+      "Alice Doe",
+      "Bob Smith"
     ],
     "year": 2026,
-    "venue": "Physical Review B",
+    "venue": "arXiv preprint",
     "type": "article-journal",
     "links": {
-      "doi": "https://doi.org/10.1103/PhysRevB.113.014434",
-      "url": "https://doi.org/10.1103/PhysRevB.113.014434",
-      "arxiv": "",
-      "code": "https://github.com/bowenphys/dft-mag-analyzer"
+      "doi": "",
+      "url": "https://arxiv.org/abs/2602.01234",
+      "arxiv": "https://arxiv.org/abs/2602.01234",
+      "code": "https://github.com/bowenphys/topo-sc-minimal"
     }
   },
   {
-    "id": "Zhang2025Skyrmion",
-    "title": "Skyrmion Hall Effect in Co/Pd Multilayers: Micromagnetics Simulation",
+    "id": "Zhang2025GPUdmrg",
+    "title": "GPU-Accelerated DMRG Workflow with Explicit Error Tracking",
     "authors": [
       "Bowen Zhang",
-      "Hao Li"
+      "Farah Noor"
     ],
     "year": 2025,
-    "venue": "Journal of Magnetism and Magnetic Materials",
+    "venue": "arXiv preprint",
     "type": "article-journal",
     "links": {
-      "doi": "https://doi.org/10.1016/j.jmmm.2025.173456",
-      "url": "https://doi.org/10.1016/j.jmmm.2025.173456",
-      "arxiv": "https://arxiv.org/abs/2510.02389",
-      "code": "https://github.com/bowenphys/micro-mag-solver"
+      "doi": "",
+      "url": "https://arxiv.org/abs/2511.06789",
+      "arxiv": "https://arxiv.org/abs/2511.06789",
+      "code": "https://github.com/bowenphys/gpu-dmrg-lab"
     }
   },
   {
-    "id": "Zhang2025SHG",
-    "title": "Second Harmonic Generation in Monolayer MoS2: Wannier Function Analysis",
+    "id": "Zhang2025KuboTransport",
+    "title": "Kubo Transport in Tight-Binding Models: Benchmarks and Numerical Pitfalls",
     "authors": [
       "Bowen Zhang",
-      "Qi Yang",
-      "Fang Liu"
+      "Carol Roe"
     ],
     "year": 2025,
-    "venue": "Nature Communications",
+    "venue": "Journal of Computational Condensed Matter",
     "type": "article-journal",
     "links": {
-      "doi": "https://doi.org/10.1038/s41467-025-88901-2",
-      "url": "https://doi.org/10.1038/s41467-025-88901-2",
+      "doi": "https://doi.org/10.1234/jccm.2025.0123",
+      "url": "https://doi.org/10.1234/jccm.2025.0123",
       "arxiv": "",
-      "code": "https://github.com/bowenphys/wannier-postproc"
+      "code": "https://github.com/bowenphys/kubo-bench"
     }
   },
   {
-    "id": "Zhang2024Berry",
-    "title": "Berry Curvature and Anomalous Hall Effect in Twisted Bilayer Graphene",
+    "id": "Zhang2024TensorWorkflow",
+    "title": "A Practical Workflow for Tensor-Network Simulations with Reproducible Outputs",
     "authors": [
-      "Bowen Zhang",
-      "Lei Zhou"
+      "Bowen Zhang"
     ],
     "year": 2024,
-    "venue": "2D Materials",
-    "type": "article-journal",
+    "venue": "Proceedings of the Example Workshop on Scientific Computing",
+    "type": "paper-conference",
     "links": {
-      "doi": "https://doi.org/10.1088/2053-1583/ad89f1",
-      "url": "https://doi.org/10.1088/2053-1583/ad89f1",
-      "arxiv": "https://arxiv.org/abs/2408.15678",
-      "code": "https://github.com/bowenphys/wannier-postproc"
+      "doi": "",
+      "url": "https://example.edu/workshop/2024/tensor-workflow",
+      "arxiv": "",
+      "code": "https://github.com/bowenphys/tn-workflow"
     }
   }
 ]
