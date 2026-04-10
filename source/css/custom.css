@@ -138,3 +138,55 @@ html[data-theme='dark'] .search-dialog {
   border: 1px solid rgba(116, 198, 255, 0.35);
   box-shadow: 0 14px 34px rgba(2, 10, 18, 0.46);
 }
+
+html[data-theme='dark'] #page-header.full_page #site-title.lab-home-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.12rem;
+  text-transform: none;
+}
+
+.lab-home-title-en {
+  display: block;
+  max-width: none;
+  white-space: nowrap;
+  font-family: "Baskerville", "Palatino Linotype", "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(1.8rem, 3.9vw, 3.5rem);
+  line-height: 1.06;
+  letter-spacing: 0.035em;
+  text-align: center;
+  background: linear-gradient(90deg, #eefbff 0%, #7fefff 34%, #b1fff1 62%, #eefbff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 26px rgba(101, 231, 255, 0.18);
+}
+
+.lab-home-title-zh {
+  display: block;
+  font-family: "STKaiti", "KaiTi", "Songti SC", serif;
+  font-weight: 500;
+  font-size: clamp(1.02rem, 1.75vw, 1.42rem);
+  line-height: 1.18;
+  letter-spacing: 0.08em;
+  text-align: center;
+  color: #ecf8ff;
+  text-shadow: 0 0 18px rgba(91, 210, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .lab-home-title-en {
+    white-space: normal;
+    max-width: 12ch;
+    font-size: clamp(1.45rem, 7vw, 2.35rem);
+    letter-spacing: 0.02em;
+  }
+
+  .lab-home-title-zh {
+    font-size: clamp(0.92rem, 3.8vw, 1.15rem);
+    letter-spacing: 0.04em;
+  }
+}
