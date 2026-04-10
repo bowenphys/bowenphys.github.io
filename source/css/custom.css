@@ -23,10 +23,30 @@ html[data-theme='light'] {
   backdrop-filter: blur(10px) saturate(120%);
 }
 
+.avatar-img,
+#aside-content .avatar-img,
+#sidebar .avatar-img {
+  width: 138px;
+  height: 172px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
 .avatar-img img,
 #aside-content .avatar-img img,
 #sidebar .avatar-img img {
-  object-position: center 58%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transform: none !important;
+  transition: filter 375ms ease-in .2s !important;
+}
+
+.avatar-img img:hover,
+#aside-content .avatar-img img:hover,
+#sidebar .avatar-img img:hover {
+  transform: none !important;
 }
 
 html[data-theme='dark'] #page-header.full_page::before {
