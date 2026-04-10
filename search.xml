@@ -1,53 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>科研日志 000 | 站点初始化与记录规范</title>
-    <url>/posts/2026/02/a9d6ee9d4942/</url>
-    <content><![CDATA[<p>这是新站点的第一篇公开日志，用于约定后续科研记录格式。</p>
-<h2 id="记录原则"><a href="#记录原则" class="headerlink" title="记录原则"></a>记录原则</h2><ul>
-<li>问题定义明确：先写清目标和已知条件</li>
-<li>假设可追溯：标记每个近似和边界条件</li>
-<li>结果可复现：给出参数、脚本入口和版本</li>
-</ul>
-<h2 id="公式测试"><a href="#公式测试" class="headerlink" title="公式测试"></a>公式测试</h2><p>行内公式：$E &#x3D; \hbar \omega$。</p>
-<p>行间公式：</p>
-<p>$$<br>H &#x3D; \sum_{ij} t_{ij} c_i^\dagger c_j + \sum_i U_i n_{i\uparrow} n_{i\downarrow}<br>$$</p>
-<h2 id="Mermaid-测试"><a href="#Mermaid-测试" class="headerlink" title="Mermaid 测试"></a>Mermaid 测试</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">  A[Define model] --&gt; B[Derive equations]</span><br><span class="line">  B --&gt; C[Implement numerics]</span><br><span class="line">  C --&gt; D[Validate and iterate]</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Research Diary</category>
-      </categories>
-      <tags>
-        <tag>workflow</tag>
-        <tag>reproducibility</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>科研日志 001 | 拓扑超导参数扫描引擎上线</title>
-    <url>/posts/2026/02/d22b78ea1490/</url>
-    <content><![CDATA[<p>今天完成了 TopoSC Scan Engine 的第一版参数扫描管线，目标是稳定输出二维参数空间相图，并自动附带误差评估结果。</p>
-<h2 id="模型摘要"><a href="#模型摘要" class="headerlink" title="模型摘要"></a>模型摘要</h2><p>考虑有效哈密顿量：</p>
-<p>$$<br>H &#x3D; H_0 + \Delta \sum_i c_{i\uparrow}^\dagger c_{i\downarrow}^\dagger + h.c.<br>$$</p>
-<p>扫描参数为 $(\mu, \Delta, B)$，并在固定晶格规模下评估拓扑不变量与谱隙闭合行为。</p>
-<h2 id="管线结构"><a href="#管线结构" class="headerlink" title="管线结构"></a>管线结构</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">  A[配置参数网格] --&gt; B[批量求本征谱]</span><br><span class="line">  B --&gt; C[计算拓扑判据]</span><br><span class="line">  C --&gt; D[生成相图与报告]</span><br></pre></td></tr></table></figure>
-
-<h2 id="当前结果"><a href="#当前结果" class="headerlink" title="当前结果"></a>当前结果</h2><ul>
-<li>完成参数点：<code>12,480</code></li>
-<li>平均单点耗时：<code>1.8s</code></li>
-<li>自动回归检测通过率：<code>97.1%</code></li>
-</ul>
-<p>下一步计划是引入自适应网格细化策略，降低相边界附近的插值误差。</p>
-]]></content>
-      <categories>
-        <category>Research Diary</category>
-      </categories>
-      <tags>
-        <tag>topology</tag>
-        <tag>superconductivity</tag>
-        <tag>numerical</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>科研日志 001 | 量子变分算法初探：VQE 在小分子基态能量计算中的应用</title>
     <url>/posts/2026/01/166fb31092d5/</url>
     <content><![CDATA[<p>本周开始探索量子计算在量子化学中的应用，使用变分量子本征求解器（Variational Quantum Eigensolver, VQE）计算小分子基态能量。</p>
@@ -101,6 +54,53 @@
         <tag>quantum-computing</tag>
         <tag>vqe</tag>
         <tag>quantum-chemistry</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科研日志 000 | 站点初始化与记录规范</title>
+    <url>/posts/2026/02/a9d6ee9d4942/</url>
+    <content><![CDATA[<p>这是新站点的第一篇公开日志，用于约定后续科研记录格式。</p>
+<h2 id="记录原则"><a href="#记录原则" class="headerlink" title="记录原则"></a>记录原则</h2><ul>
+<li>问题定义明确：先写清目标和已知条件</li>
+<li>假设可追溯：标记每个近似和边界条件</li>
+<li>结果可复现：给出参数、脚本入口和版本</li>
+</ul>
+<h2 id="公式测试"><a href="#公式测试" class="headerlink" title="公式测试"></a>公式测试</h2><p>行内公式：$E &#x3D; \hbar \omega$。</p>
+<p>行间公式：</p>
+<p>$$<br>H &#x3D; \sum_{ij} t_{ij} c_i^\dagger c_j + \sum_i U_i n_{i\uparrow} n_{i\downarrow}<br>$$</p>
+<h2 id="Mermaid-测试"><a href="#Mermaid-测试" class="headerlink" title="Mermaid 测试"></a>Mermaid 测试</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">  A[Define model] --&gt; B[Derive equations]</span><br><span class="line">  B --&gt; C[Implement numerics]</span><br><span class="line">  C --&gt; D[Validate and iterate]</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Research Diary</category>
+      </categories>
+      <tags>
+        <tag>workflow</tag>
+        <tag>reproducibility</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科研日志 001 | 拓扑超导参数扫描引擎上线</title>
+    <url>/posts/2026/02/d22b78ea1490/</url>
+    <content><![CDATA[<p>今天完成了 TopoSC Scan Engine 的第一版参数扫描管线，目标是稳定输出二维参数空间相图，并自动附带误差评估结果。</p>
+<h2 id="模型摘要"><a href="#模型摘要" class="headerlink" title="模型摘要"></a>模型摘要</h2><p>考虑有效哈密顿量：</p>
+<p>$$<br>H &#x3D; H_0 + \Delta \sum_i c_{i\uparrow}^\dagger c_{i\downarrow}^\dagger + h.c.<br>$$</p>
+<p>扫描参数为 $(\mu, \Delta, B)$，并在固定晶格规模下评估拓扑不变量与谱隙闭合行为。</p>
+<h2 id="管线结构"><a href="#管线结构" class="headerlink" title="管线结构"></a>管线结构</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">  A[配置参数网格] --&gt; B[批量求本征谱]</span><br><span class="line">  B --&gt; C[计算拓扑判据]</span><br><span class="line">  C --&gt; D[生成相图与报告]</span><br></pre></td></tr></table></figure>
+
+<h2 id="当前结果"><a href="#当前结果" class="headerlink" title="当前结果"></a>当前结果</h2><ul>
+<li>完成参数点：<code>12,480</code></li>
+<li>平均单点耗时：<code>1.8s</code></li>
+<li>自动回归检测通过率：<code>97.1%</code></li>
+</ul>
+<p>下一步计划是引入自适应网格细化策略，降低相边界附近的插值误差。</p>
+]]></content>
+      <categories>
+        <category>Research Diary</category>
+      </categories>
+      <tags>
+        <tag>topology</tag>
+        <tag>superconductivity</tag>
+        <tag>numerical</tag>
       </tags>
   </entry>
   <entry>
@@ -397,56 +397,6 @@
       </tags>
   </entry>
   <entry>
-    <title>科研日志 007 | 输运算符缓存层压测</title>
-    <url>/posts/2026/03/363f67552e46/</url>
-    <content><![CDATA[<section class="lab-doc-panel is-hero">
-  <div class="lab-doc-eyebrow">Research Diary / Transport Bus</div>
-  <h2>输运算符缓存层开始产生稳定收益</h2>
-  <p>今天的工作是验证缓存层是否真的改善了 Kubo 管线，而不是只在单一输入上看起来更快。重点观察求解器切换、I/O 命中率和重复调用的收益衰减。</p>
-</section>
-
-<span id="more"></span>
-
-<div class="lab-param-strip">
-  <span>Backend: CUDA</span>
-  <span>Kernel: Kubo</span>
-  <span>Batch: 32</span>
-</div>
-
-<section class="lab-record-card">
-  <div class="lab-doc-eyebrow">Benchmark Snapshot</div>
-  <div class="lab-metric-line"><span>Median Speedup</span><span>1.41x</span></div>
-  <div class="lab-metric-line"><span>I/O Reduction</span><span>37%</span></div>
-  <div class="lab-metric-line"><span>Numerical Drift</span><span>&lt; 1.2e-4</span></div>
-</section>
-
-<h2 id="风险项"><a href="#风险项" class="headerlink" title="风险项"></a>风险项</h2><ul>
-<li>缓存层收益主要集中在算符结构重复的任务族。</li>
-<li>当参数剧烈变化时，命中率下降明显，需要单独建模是否值得缓存。</li>
-<li>如果只追求加速，很容易忽略由于截断策略变更引入的系统偏差。</li>
-</ul>
-<section class="lab-doc-panel">
-  <div class="lab-doc-eyebrow">Execution Log</div>
-  <ul class="lab-log-stream">
-    <li>21:02 — baseline run finished</li>
-    <li>21:09 — cache warmup hit rate crossed 74%</li>
-    <li>21:16 — one solver branch produced inconsistent tail behavior</li>
-    <li>21:28 — fallback precision profile enabled</li>
-  </ul>
-</section>
-
-<p>$$<br>\sigma_{xy}(\omega) \sim \mathrm{Tr}\left[v_x G^R(\omega) v_y G^A(\omega)\right]<br>$$</p>
-]]></content>
-      <categories>
-        <category>Research Diary</category>
-      </categories>
-      <tags>
-        <tag>Transport</tag>
-        <tag>Kubo</tag>
-        <tag>Benchmark</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>项目纪要 003 | 量子输运计算平台 v0.3</title>
     <url>/posts/2026/02/352a3fd05692/</url>
     <content><![CDATA[<p>TransportLab-Kubo 发布 <code>v0.3</code>，本次版本重点提升了批量任务稳定性与结果回放能力。</p>
@@ -565,6 +515,56 @@
         <tag>mcp</tag>
         <tag>codex</tag>
         <tag>uv</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科研日志 007 | 输运算符缓存层压测</title>
+    <url>/posts/2026/03/363f67552e46/</url>
+    <content><![CDATA[<section class="lab-doc-panel is-hero">
+  <div class="lab-doc-eyebrow">Research Diary / Transport Bus</div>
+  <h2>输运算符缓存层开始产生稳定收益</h2>
+  <p>今天的工作是验证缓存层是否真的改善了 Kubo 管线，而不是只在单一输入上看起来更快。重点观察求解器切换、I/O 命中率和重复调用的收益衰减。</p>
+</section>
+
+<span id="more"></span>
+
+<div class="lab-param-strip">
+  <span>Backend: CUDA</span>
+  <span>Kernel: Kubo</span>
+  <span>Batch: 32</span>
+</div>
+
+<section class="lab-record-card">
+  <div class="lab-doc-eyebrow">Benchmark Snapshot</div>
+  <div class="lab-metric-line"><span>Median Speedup</span><span>1.41x</span></div>
+  <div class="lab-metric-line"><span>I/O Reduction</span><span>37%</span></div>
+  <div class="lab-metric-line"><span>Numerical Drift</span><span>&lt; 1.2e-4</span></div>
+</section>
+
+<h2 id="风险项"><a href="#风险项" class="headerlink" title="风险项"></a>风险项</h2><ul>
+<li>缓存层收益主要集中在算符结构重复的任务族。</li>
+<li>当参数剧烈变化时，命中率下降明显，需要单独建模是否值得缓存。</li>
+<li>如果只追求加速，很容易忽略由于截断策略变更引入的系统偏差。</li>
+</ul>
+<section class="lab-doc-panel">
+  <div class="lab-doc-eyebrow">Execution Log</div>
+  <ul class="lab-log-stream">
+    <li>21:02 — baseline run finished</li>
+    <li>21:09 — cache warmup hit rate crossed 74%</li>
+    <li>21:16 — one solver branch produced inconsistent tail behavior</li>
+    <li>21:28 — fallback precision profile enabled</li>
+  </ul>
+</section>
+
+<p>$$<br>\sigma_{xy}(\omega) \sim \mathrm{Tr}\left[v_x G^R(\omega) v_y G^A(\omega)\right]<br>$$</p>
+]]></content>
+      <categories>
+        <category>Research Diary</category>
+      </categories>
+      <tags>
+        <tag>Transport</tag>
+        <tag>Kubo</tag>
+        <tag>Benchmark</tag>
       </tags>
   </entry>
   <entry>
