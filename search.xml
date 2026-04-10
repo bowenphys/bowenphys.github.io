@@ -23,6 +23,90 @@
       </tags>
   </entry>
   <entry>
+    <title>科研日志 001 | 量子变分算法初探：VQE 在小分子基态能量计算中的应用</title>
+    <url>/posts/2026/01/166fb31092d5/</url>
+    <content><![CDATA[<p>本周开始探索量子计算在量子化学中的应用，使用变分量子本征求解器（Variational Quantum Eigensolver, VQE）计算小分子基态能量。</p>
+<h2 id="VQE-原理"><a href="#VQE-原理" class="headerlink" title="VQE 原理"></a>VQE 原理</h2><p>VQE 结合经典优化与量子硬件，通过参数化量子电路（Parameterized Quantum Circuit, PQC）逼近系统基态：</p>
+<p>$$<br>E(\theta) &#x3D; \langle 0|U^\dagger(\theta) H U(\theta)|0\rangle<br>$$</p>
+<p>其中 $H$ 为分子哈密顿量，$U(\theta)$ 为参数化量子门电路。</p>
+<h2 id="实验设置"><a href="#实验设置" class="headerlink" title="实验设置"></a>实验设置</h2><ul>
+<li><strong>分子体系</strong>: $H_2O$（水分子）、$H_2$（氢分子）、$LiH$（氢化锂）</li>
+<li><strong>量子模拟器</strong>: Qiskit Aer GPU backend</li>
+<li><strong>ansatz</strong>: Hardware-Efficient Ansatz (HEA)</li>
+<li><strong>优化器</strong>: COBYLA + SPSA 混合策略</li>
+</ul>
+<h2 id="当前结果"><a href="#当前结果" class="headerlink" title="当前结果"></a>当前结果</h2><table>
+<thead>
+<tr>
+<th>分子</th>
+<th>经典参考 (Hartree)</th>
+<th>VQE 结果 (Hartree)</th>
+<th>误差</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$H_2$</td>
+<td>-1.174</td>
+<td>-1.168</td>
+<td>0.006</td>
+</tr>
+<tr>
+<td>$H_2O$</td>
+<td>-76.423</td>
+<td>-76.387</td>
+<td>0.036</td>
+</tr>
+<tr>
+<td>$LiH$</td>
+<td>-8.070</td>
+<td>-8.041</td>
+<td>0.029</td>
+</tr>
+</tbody></table>
+<h2 id="下一步计划"><a href="#下一步计划" class="headerlink" title="下一步计划"></a>下一步计划</h2><ol>
+<li>引入 ZNE (Zero-Noise Extrapolation) 误差缓解</li>
+<li>测试更多分子体系：$NH_3$, $CH_4$</li>
+<li>在真实量子设备上验证（IBM Quantum）</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Research Diary</category>
+      </categories>
+      <tags>
+        <tag>quantum-computing</tag>
+        <tag>vqe</tag>
+        <tag>quantum-chemistry</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科研日志 002 | 张量网络基准测试与误差预算</title>
+    <url>/posts/2026/02/30755cba4822/</url>
+    <content><![CDATA[<p>本周对张量网络求解流程进行了系统基准测试，重点比较截断误差、边界条件与迭代收敛策略对最终观测量的影响。</p>
+<h2 id="误差分解"><a href="#误差分解" class="headerlink" title="误差分解"></a>误差分解</h2><p>将总误差近似写为：</p>
+<p>$$<br>\epsilon_{\mathrm{total}} \approx \epsilon_{\chi} + \epsilon_{\mathrm{iter}} + \epsilon_{\mathrm{finite}}<br>$$</p>
+<p>其中：</p>
+<ul>
+<li>$\epsilon_{\chi}$：截断维度带来的误差</li>
+<li>$\epsilon_{\mathrm{iter}}$：迭代未收敛误差</li>
+<li>$\epsilon_{\mathrm{finite}}$：有限尺寸误差</li>
+</ul>
+<h2 id="基准结果"><a href="#基准结果" class="headerlink" title="基准结果"></a>基准结果</h2><ul>
+<li>截断维度从 <code>chi=128</code> 提升到 <code>chi=256</code> 后，关键可观测量偏差下降 <code>41%</code></li>
+<li>采用混合收敛准则后，平均迭代步数下降 <code>18%</code></li>
+<li>全流程复现实验通过率达到 <code>95.8%</code></li>
+</ul>
+<p>下一步会把误差预算写入自动报告模板，确保每次提交都能自动输出误差来源摘要。</p>
+]]></content>
+      <categories>
+        <category>Research Diary</category>
+      </categories>
+      <tags>
+        <tag>reproducibility</tag>
+        <tag>tensor-network</tag>
+        <tag>benchmark</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>科研日志 001 | 拓扑超导参数扫描引擎上线</title>
     <url>/posts/2026/02/d22b78ea1490/</url>
     <content><![CDATA[<p>今天完成了 TopoSC Scan Engine 的第一版参数扫描管线，目标是稳定输出二维参数空间相图，并自动附带误差评估结果。</p>
@@ -108,90 +192,6 @@
         <tag>dft</tag>
         <tag>magnetism</tag>
         <tag>topological-magnet</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>科研日志 001 | 量子变分算法初探：VQE 在小分子基态能量计算中的应用</title>
-    <url>/posts/2026/01/166fb31092d5/</url>
-    <content><![CDATA[<p>本周开始探索量子计算在量子化学中的应用，使用变分量子本征求解器（Variational Quantum Eigensolver, VQE）计算小分子基态能量。</p>
-<h2 id="VQE-原理"><a href="#VQE-原理" class="headerlink" title="VQE 原理"></a>VQE 原理</h2><p>VQE 结合经典优化与量子硬件，通过参数化量子电路（Parameterized Quantum Circuit, PQC）逼近系统基态：</p>
-<p>$$<br>E(\theta) &#x3D; \langle 0|U^\dagger(\theta) H U(\theta)|0\rangle<br>$$</p>
-<p>其中 $H$ 为分子哈密顿量，$U(\theta)$ 为参数化量子门电路。</p>
-<h2 id="实验设置"><a href="#实验设置" class="headerlink" title="实验设置"></a>实验设置</h2><ul>
-<li><strong>分子体系</strong>: $H_2O$（水分子）、$H_2$（氢分子）、$LiH$（氢化锂）</li>
-<li><strong>量子模拟器</strong>: Qiskit Aer GPU backend</li>
-<li><strong>ansatz</strong>: Hardware-Efficient Ansatz (HEA)</li>
-<li><strong>优化器</strong>: COBYLA + SPSA 混合策略</li>
-</ul>
-<h2 id="当前结果"><a href="#当前结果" class="headerlink" title="当前结果"></a>当前结果</h2><table>
-<thead>
-<tr>
-<th>分子</th>
-<th>经典参考 (Hartree)</th>
-<th>VQE 结果 (Hartree)</th>
-<th>误差</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>$H_2$</td>
-<td>-1.174</td>
-<td>-1.168</td>
-<td>0.006</td>
-</tr>
-<tr>
-<td>$H_2O$</td>
-<td>-76.423</td>
-<td>-76.387</td>
-<td>0.036</td>
-</tr>
-<tr>
-<td>$LiH$</td>
-<td>-8.070</td>
-<td>-8.041</td>
-<td>0.029</td>
-</tr>
-</tbody></table>
-<h2 id="下一步计划"><a href="#下一步计划" class="headerlink" title="下一步计划"></a>下一步计划</h2><ol>
-<li>引入 ZNE (Zero-Noise Extrapolation) 误差缓解</li>
-<li>测试更多分子体系：$NH_3$, $CH_4$</li>
-<li>在真实量子设备上验证（IBM Quantum）</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Research Diary</category>
-      </categories>
-      <tags>
-        <tag>quantum-computing</tag>
-        <tag>vqe</tag>
-        <tag>quantum-chemistry</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>科研日志 002 | 张量网络基准测试与误差预算</title>
-    <url>/posts/2026/02/30755cba4822/</url>
-    <content><![CDATA[<p>本周对张量网络求解流程进行了系统基准测试，重点比较截断误差、边界条件与迭代收敛策略对最终观测量的影响。</p>
-<h2 id="误差分解"><a href="#误差分解" class="headerlink" title="误差分解"></a>误差分解</h2><p>将总误差近似写为：</p>
-<p>$$<br>\epsilon_{\mathrm{total}} \approx \epsilon_{\chi} + \epsilon_{\mathrm{iter}} + \epsilon_{\mathrm{finite}}<br>$$</p>
-<p>其中：</p>
-<ul>
-<li>$\epsilon_{\chi}$：截断维度带来的误差</li>
-<li>$\epsilon_{\mathrm{iter}}$：迭代未收敛误差</li>
-<li>$\epsilon_{\mathrm{finite}}$：有限尺寸误差</li>
-</ul>
-<h2 id="基准结果"><a href="#基准结果" class="headerlink" title="基准结果"></a>基准结果</h2><ul>
-<li>截断维度从 <code>chi=128</code> 提升到 <code>chi=256</code> 后，关键可观测量偏差下降 <code>41%</code></li>
-<li>采用混合收敛准则后，平均迭代步数下降 <code>18%</code></li>
-<li>全流程复现实验通过率达到 <code>95.8%</code></li>
-</ul>
-<p>下一步会把误差预算写入自动报告模板，确保每次提交都能自动输出误差来源摘要。</p>
-]]></content>
-      <categories>
-        <category>Research Diary</category>
-      </categories>
-      <tags>
-        <tag>reproducibility</tag>
-        <tag>tensor-network</tag>
-        <tag>benchmark</tag>
       </tags>
   </entry>
   <entry>
