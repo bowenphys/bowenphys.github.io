@@ -23,6 +23,38 @@ html[data-theme='light'] {
   backdrop-filter: blur(10px) saturate(120%);
 }
 
+.avatar-img img,
+#aside-content .avatar-img img,
+#sidebar .avatar-img img {
+  object-position: center 58%;
+}
+
+html[data-theme='dark'] #page-header.full_page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(4, 10, 18, 0.62) 0%, rgba(6, 14, 24, 0.46) 30%, rgba(6, 14, 24, 0.18) 62%, rgba(4, 10, 18, 0.1) 100%),
+    linear-gradient(180deg, rgba(4, 10, 18, 0.28) 0%, rgba(4, 10, 18, 0.16) 38%, rgba(4, 10, 18, 0.34) 100%);
+  z-index: 0;
+}
+
+html[data-theme='dark'] #page-header.full_page #site-info,
+html[data-theme='dark'] #page-header.full_page #scroll-down {
+  position: relative;
+  z-index: 1;
+}
+
+html[data-theme='dark'] #page-header.full_page #site-info {
+  padding: 1.1rem 1.6rem;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(5, 12, 22, 0.46), rgba(7, 17, 31, 0.14));
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 14px 32px rgba(2, 8, 16, 0.18);
+}
+
 .pub-container {
   margin-top: 1rem;
 }
