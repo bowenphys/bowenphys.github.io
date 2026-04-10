@@ -23,59 +23,28 @@
       </tags>
   </entry>
   <entry>
-    <title>科研日志 001 | 量子变分算法初探：VQE 在小分子基态能量计算中的应用</title>
-    <url>/posts/2026/01/166fb31092d5/</url>
-    <content><![CDATA[<p>本周开始探索量子计算在量子化学中的应用，使用变分量子本征求解器（Variational Quantum Eigensolver, VQE）计算小分子基态能量。</p>
-<h2 id="VQE-原理"><a href="#VQE-原理" class="headerlink" title="VQE 原理"></a>VQE 原理</h2><p>VQE 结合经典优化与量子硬件，通过参数化量子电路（Parameterized Quantum Circuit, PQC）逼近系统基态：</p>
-<p>$$<br>E(\theta) &#x3D; \langle 0|U^\dagger(\theta) H U(\theta)|0\rangle<br>$$</p>
-<p>其中 $H$ 为分子哈密顿量，$U(\theta)$ 为参数化量子门电路。</p>
-<h2 id="实验设置"><a href="#实验设置" class="headerlink" title="实验设置"></a>实验设置</h2><ul>
-<li><strong>分子体系</strong>: $H_2O$（水分子）、$H_2$（氢分子）、$LiH$（氢化锂）</li>
-<li><strong>量子模拟器</strong>: Qiskit Aer GPU backend</li>
-<li><strong>ansatz</strong>: Hardware-Efficient Ansatz (HEA)</li>
-<li><strong>优化器</strong>: COBYLA + SPSA 混合策略</li>
+    <title>科研日志 001 | 拓扑超导参数扫描引擎上线</title>
+    <url>/posts/2026/02/d22b78ea1490/</url>
+    <content><![CDATA[<p>今天完成了 TopoSC Scan Engine 的第一版参数扫描管线，目标是稳定输出二维参数空间相图，并自动附带误差评估结果。</p>
+<h2 id="模型摘要"><a href="#模型摘要" class="headerlink" title="模型摘要"></a>模型摘要</h2><p>考虑有效哈密顿量：</p>
+<p>$$<br>H &#x3D; H_0 + \Delta \sum_i c_{i\uparrow}^\dagger c_{i\downarrow}^\dagger + h.c.<br>$$</p>
+<p>扫描参数为 $(\mu, \Delta, B)$，并在固定晶格规模下评估拓扑不变量与谱隙闭合行为。</p>
+<h2 id="管线结构"><a href="#管线结构" class="headerlink" title="管线结构"></a>管线结构</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">  A[配置参数网格] --&gt; B[批量求本征谱]</span><br><span class="line">  B --&gt; C[计算拓扑判据]</span><br><span class="line">  C --&gt; D[生成相图与报告]</span><br></pre></td></tr></table></figure>
+
+<h2 id="当前结果"><a href="#当前结果" class="headerlink" title="当前结果"></a>当前结果</h2><ul>
+<li>完成参数点：<code>12,480</code></li>
+<li>平均单点耗时：<code>1.8s</code></li>
+<li>自动回归检测通过率：<code>97.1%</code></li>
 </ul>
-<h2 id="当前结果"><a href="#当前结果" class="headerlink" title="当前结果"></a>当前结果</h2><table>
-<thead>
-<tr>
-<th>分子</th>
-<th>经典参考 (Hartree)</th>
-<th>VQE 结果 (Hartree)</th>
-<th>误差</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>$H_2$</td>
-<td>-1.174</td>
-<td>-1.168</td>
-<td>0.006</td>
-</tr>
-<tr>
-<td>$H_2O$</td>
-<td>-76.423</td>
-<td>-76.387</td>
-<td>0.036</td>
-</tr>
-<tr>
-<td>$LiH$</td>
-<td>-8.070</td>
-<td>-8.041</td>
-<td>0.029</td>
-</tr>
-</tbody></table>
-<h2 id="下一步计划"><a href="#下一步计划" class="headerlink" title="下一步计划"></a>下一步计划</h2><ol>
-<li>引入 ZNE (Zero-Noise Extrapolation) 误差缓解</li>
-<li>测试更多分子体系：$NH_3$, $CH_4$</li>
-<li>在真实量子设备上验证（IBM Quantum）</li>
-</ol>
+<p>下一步计划是引入自适应网格细化策略，降低相边界附近的插值误差。</p>
 ]]></content>
       <categories>
         <category>Research Diary</category>
       </categories>
       <tags>
-        <tag>quantum-computing</tag>
-        <tag>vqe</tag>
-        <tag>quantum-chemistry</tag>
+        <tag>topology</tag>
+        <tag>superconductivity</tag>
+        <tag>numerical</tag>
       </tags>
   </entry>
   <entry>
@@ -104,31 +73,6 @@
         <tag>reproducibility</tag>
         <tag>tensor-network</tag>
         <tag>benchmark</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>科研日志 001 | 拓扑超导参数扫描引擎上线</title>
-    <url>/posts/2026/02/d22b78ea1490/</url>
-    <content><![CDATA[<p>今天完成了 TopoSC Scan Engine 的第一版参数扫描管线，目标是稳定输出二维参数空间相图，并自动附带误差评估结果。</p>
-<h2 id="模型摘要"><a href="#模型摘要" class="headerlink" title="模型摘要"></a>模型摘要</h2><p>考虑有效哈密顿量：</p>
-<p>$$<br>H &#x3D; H_0 + \Delta \sum_i c_{i\uparrow}^\dagger c_{i\downarrow}^\dagger + h.c.<br>$$</p>
-<p>扫描参数为 $(\mu, \Delta, B)$，并在固定晶格规模下评估拓扑不变量与谱隙闭合行为。</p>
-<h2 id="管线结构"><a href="#管线结构" class="headerlink" title="管线结构"></a>管线结构</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">  A[配置参数网格] --&gt; B[批量求本征谱]</span><br><span class="line">  B --&gt; C[计算拓扑判据]</span><br><span class="line">  C --&gt; D[生成相图与报告]</span><br></pre></td></tr></table></figure>
-
-<h2 id="当前结果"><a href="#当前结果" class="headerlink" title="当前结果"></a>当前结果</h2><ul>
-<li>完成参数点：<code>12,480</code></li>
-<li>平均单点耗时：<code>1.8s</code></li>
-<li>自动回归检测通过率：<code>97.1%</code></li>
-</ul>
-<p>下一步计划是引入自适应网格细化策略，降低相边界附近的插值误差。</p>
-]]></content>
-      <categories>
-        <category>Research Diary</category>
-      </categories>
-      <tags>
-        <tag>topology</tag>
-        <tag>superconductivity</tag>
-        <tag>numerical</tag>
       </tags>
   </entry>
   <entry>
@@ -192,6 +136,62 @@
         <tag>dft</tag>
         <tag>magnetism</tag>
         <tag>topological-magnet</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科研日志 001 | 量子变分算法初探：VQE 在小分子基态能量计算中的应用</title>
+    <url>/posts/2026/01/166fb31092d5/</url>
+    <content><![CDATA[<p>本周开始探索量子计算在量子化学中的应用，使用变分量子本征求解器（Variational Quantum Eigensolver, VQE）计算小分子基态能量。</p>
+<h2 id="VQE-原理"><a href="#VQE-原理" class="headerlink" title="VQE 原理"></a>VQE 原理</h2><p>VQE 结合经典优化与量子硬件，通过参数化量子电路（Parameterized Quantum Circuit, PQC）逼近系统基态：</p>
+<p>$$<br>E(\theta) &#x3D; \langle 0|U^\dagger(\theta) H U(\theta)|0\rangle<br>$$</p>
+<p>其中 $H$ 为分子哈密顿量，$U(\theta)$ 为参数化量子门电路。</p>
+<h2 id="实验设置"><a href="#实验设置" class="headerlink" title="实验设置"></a>实验设置</h2><ul>
+<li><strong>分子体系</strong>: $H_2O$（水分子）、$H_2$（氢分子）、$LiH$（氢化锂）</li>
+<li><strong>量子模拟器</strong>: Qiskit Aer GPU backend</li>
+<li><strong>ansatz</strong>: Hardware-Efficient Ansatz (HEA)</li>
+<li><strong>优化器</strong>: COBYLA + SPSA 混合策略</li>
+</ul>
+<h2 id="当前结果"><a href="#当前结果" class="headerlink" title="当前结果"></a>当前结果</h2><table>
+<thead>
+<tr>
+<th>分子</th>
+<th>经典参考 (Hartree)</th>
+<th>VQE 结果 (Hartree)</th>
+<th>误差</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$H_2$</td>
+<td>-1.174</td>
+<td>-1.168</td>
+<td>0.006</td>
+</tr>
+<tr>
+<td>$H_2O$</td>
+<td>-76.423</td>
+<td>-76.387</td>
+<td>0.036</td>
+</tr>
+<tr>
+<td>$LiH$</td>
+<td>-8.070</td>
+<td>-8.041</td>
+<td>0.029</td>
+</tr>
+</tbody></table>
+<h2 id="下一步计划"><a href="#下一步计划" class="headerlink" title="下一步计划"></a>下一步计划</h2><ol>
+<li>引入 ZNE (Zero-Noise Extrapolation) 误差缓解</li>
+<li>测试更多分子体系：$NH_3$, $CH_4$</li>
+<li>在真实量子设备上验证（IBM Quantum）</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Research Diary</category>
+      </categories>
+      <tags>
+        <tag>quantum-computing</tag>
+        <tag>vqe</tag>
+        <tag>quantum-chemistry</tag>
       </tags>
   </entry>
   <entry>
@@ -495,6 +495,79 @@
       </tags>
   </entry>
   <entry>
+    <title>项目纪要 004 | Codex 连接 Blender MCP（macOS + uv）安装与排障</title>
+    <url>/posts/2026/02/249314c5f0e6/</url>
+    <content><![CDATA[<p>本文记录一次“在 macOS 上让 Codex（就是现在这个）通过 MCP 连接 Blender”的最小正确配置与排障要点。本文以仓库 <a href="https://github.com/ahujasid/blender-mcp"><code>ahujasid/blender-mcp</code></a> 为准。</p>
+<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul>
+<li>Blender 侧：启用 <code>blender-mcp</code> 的 Blender 插件，让 Blender 在本机监听一个 TCP 端口（示例：<code>127.0.0.1:9876</code>）。</li>
+<li>Codex 侧：在 <code>~/.codex/config.toml</code> 中配置 MCP server，用 <code>uvx blender-mcp</code> 拉起服务并连接到 Blender。</li>
+</ul>
+<h2 id="前置依赖（macOS）"><a href="#前置依赖（macOS）" class="headerlink" title="前置依赖（macOS）"></a>前置依赖（macOS）</h2><ol>
+<li>安装 <code>uv</code>（Homebrew）：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install uv</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>Blender 已安装并可运行。</li>
+</ol>
+<h2 id="Blender-侧：安装-启用插件"><a href="#Blender-侧：安装-启用插件" class="headerlink" title="Blender 侧：安装&#x2F;启用插件"></a>Blender 侧：安装&#x2F;启用插件</h2><p>仓库提供的是单文件插件 <code>addon.py</code>，安装流程：</p>
+<ol>
+<li>从 GitHub 仓库下载 <code>addon.py</code>（保持文件名不变也可以）。</li>
+<li>打开 Blender：<ul>
+<li><code>Edit</code> → <code>Preferences</code> → <code>Add-ons</code> → <code>Install...</code></li>
+<li>选择 <code>addon.py</code> 安装</li>
+</ul>
+</li>
+<li>在插件列表中勾选启用：<code>Interface: Blender MCP</code></li>
+</ol>
+<p>一般情况下插件会在本机监听端口（默认示例里常用 <code>9876</code>）。如果你改过端口，以你插件设置为准。</p>
+<h2 id="Codex-侧：配置-MCP（关键）"><a href="#Codex-侧：配置-MCP（关键）" class="headerlink" title="Codex 侧：配置 MCP（关键）"></a>Codex 侧：配置 MCP（关键）</h2><p>Codex 的 MCP server 配置在 <code>~/.codex/config.toml</code>。建议点：</p>
+<ul>
+<li><strong>command 用绝对路径</strong>：桌面 App 启动的进程经常拿不到你 shell 里的 PATH（尤其是 conda 初始化脚本），所以不要依赖 <code>uvx</code> “刚好在 PATH 里”。</li>
+<li><strong>host 用 <code>127.0.0.1</code></strong>：比 <code>localhost</code> 更直接；同时可以绕开少数环境里 <code>localhost</code> 解析&#x2F;优先级导致的奇怪行为。</li>
+</ul>
+<p>示例配置（核心片段）：</p>
+<figure class="highlight toml"><table><tr><td class="code"><pre><span class="line"><span class="section">[mcp_servers.blender]</span></span><br><span class="line"><span class="attr">command</span> = <span class="string">&quot;/opt/homebrew/bin/uvx&quot;</span></span><br><span class="line"><span class="attr">args</span> = [<span class="string">&quot;blender-mcp&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="section">[mcp_servers.blender.env]</span></span><br><span class="line"><span class="attr">BLENDER_HOST</span> = <span class="string">&quot;127.0.0.1&quot;</span></span><br><span class="line"><span class="attr">BLENDER_PORT</span> = <span class="string">&quot;9876&quot;</span></span><br><span class="line"><span class="attr">DISABLE_TELEMETRY</span> = <span class="string">&quot;true&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>改完后需要<strong>重启 Codex</strong>（或至少重开会话&#x2F;项目）让它重新加载配置。</p>
+<h2 id="快速连通性验证"><a href="#快速连通性验证" class="headerlink" title="快速连通性验证"></a>快速连通性验证</h2><h3 id="1-先确认-Blender-端口确实在监听"><a href="#1-先确认-Blender-端口确实在监听" class="headerlink" title="1) 先确认 Blender 端口确实在监听"></a>1) 先确认 Blender 端口确实在监听</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsof -nP -iTCP:9876 -sTCP:LISTEN</span><br><span class="line">nc -vz 127.0.0.1 9876</span><br></pre></td></tr></table></figure>
+
+<p>如果 <code>lsof</code> 没看到 Blender 在 LISTEN，说明 Blender 插件没启用&#x2F;没启动成功&#x2F;端口不是 9876。</p>
+<h3 id="2-确认-uvx-可用"><a href="#2-确认-uvx-可用" class="headerlink" title="2) 确认 uvx 可用"></a>2) 确认 <code>uvx</code> 可用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/opt/homebrew/bin/uvx --version</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-让-Codex-真正通过-MCP-调-Blender"><a href="#3-让-Codex-真正通过-MCP-调-Blender" class="headerlink" title="3) 让 Codex 真正通过 MCP 调 Blender"></a>3) 让 Codex 真正通过 MCP 调 Blender</h3><p>最直观的验证是让 Codex 调用 <code>get_viewport_screenshot</code>（抓一张 Blender 视口截图）。如果能返回 PNG，就说明链路是通的：</p>
+<p>Codex →（stdio MCP server: <code>uvx blender-mcp</code>）→（TCP）→ Blender 插件</p>
+<h2 id="常见坑-处理方式"><a href="#常见坑-处理方式" class="headerlink" title="常见坑 &amp; 处理方式"></a>常见坑 &amp; 处理方式</h2><h3 id="坑-1：host-docker-internal-在本机解析失败"><a href="#坑-1：host-docker-internal-在本机解析失败" class="headerlink" title="坑 1：host.docker.internal 在本机解析失败"></a>坑 1：<code>host.docker.internal</code> 在本机解析失败</h3><p><code>host.docker.internal</code> 主要是“容器内访问宿主机”场景；在宿主机上直接用它反而可能 DNS 找不到。</p>
+<p>如果你是在宿主机上跑 Codex&#x2F;Blender，优先用：</p>
+<ul>
+<li><code>BLENDER_HOST=127.0.0.1</code></li>
+</ul>
+<h3 id="坑-2：桌面-App-找不到-conda-用户-shell-的-PATH"><a href="#坑-2：桌面-App-找不到-conda-用户-shell-的-PATH" class="headerlink" title="坑 2：桌面 App 找不到 conda&#x2F;用户 shell 的 PATH"></a>坑 2：桌面 App 找不到 conda&#x2F;用户 shell 的 PATH</h3><p>你在终端里 <code>uvx blender-mcp</code> 能跑，不代表 Codex 里也能跑。</p>
+<p>最稳的办法是：在 <code>~/.codex/config.toml</code> 里把 <code>command</code> 写成绝对路径（例如 <code>/opt/homebrew/bin/uvx</code>）。</p>
+<h3 id="坑-3：Blender-插件与-MCP-server-版本不完全匹配"><a href="#坑-3：Blender-插件与-MCP-server-版本不完全匹配" class="headerlink" title="坑 3：Blender 插件与 MCP server 版本不完全匹配"></a>坑 3：Blender 插件与 MCP server 版本不完全匹配</h3><p>我实际遇到过 MCP server 启动时会向 Blender 发送 <code>get_telemetry_consent</code>，但 Blender 端返回 “Unknown command type”。这类报错通常不致命（后续功能仍可用），但它提示：</p>
+<ul>
+<li>你的 <code>addon.py</code> 可能比 <code>uvx</code> 拉到的 <code>blender-mcp</code> server 版本更旧</li>
+</ul>
+<p>解决方式：把 Blender 里安装的 <code>addon.py</code> 更新到与当前仓库一致的版本。</p>
+<h2 id="“撤回-清理”建议（可选）"><a href="#“撤回-清理”建议（可选）" class="headerlink" title="“撤回&#x2F;清理”建议（可选）"></a>“撤回&#x2F;清理”建议（可选）</h2><p>很多人会为了加速在本机额外做一次“预装”：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">uv tool install blender-mcp</span><br></pre></td></tr></table></figure>
+
+<p>这不是官方主路径（官方主路径是直接 <code>uvx blender-mcp</code> 让客户端拉起），也不是必须。想回到最简状态可以卸载：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">uv tool uninstall blender-mcp</span><br><span class="line"><span class="built_in">rm</span> -f ~/.local/bin/blender-mcp</span><br></pre></td></tr></table></figure>
+
+<p>保留 <code>brew install uv</code> 即可。</p>
+]]></content>
+      <categories>
+        <category>Project Notes</category>
+      </categories>
+      <tags>
+        <tag>blender</tag>
+        <tag>mcp</tag>
+        <tag>codex</tag>
+        <tag>uv</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>项目纪要 005 | 斯格明子插件实战使用指南（海报风与白底风）</title>
     <url>/posts/2026/02/c4f5e6264421/</url>
     <content><![CDATA[<p>这篇就做一件事：把 <code>add-sky.py</code> 这个 Blender 插件用到稳定出图。<br>重点不是“能不能跑”，而是“下一次还能不能一键复现同样风格”。</p>
@@ -635,79 +708,6 @@
         <tag>Tensor Network</tag>
         <tag>DMRG</tag>
         <tag>Error Budget</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>项目纪要 004 | Codex 连接 Blender MCP（macOS + uv）安装与排障</title>
-    <url>/posts/2026/02/249314c5f0e6/</url>
-    <content><![CDATA[<p>本文记录一次“在 macOS 上让 Codex（就是现在这个）通过 MCP 连接 Blender”的最小正确配置与排障要点。本文以仓库 <a href="https://github.com/ahujasid/blender-mcp"><code>ahujasid/blender-mcp</code></a> 为准。</p>
-<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul>
-<li>Blender 侧：启用 <code>blender-mcp</code> 的 Blender 插件，让 Blender 在本机监听一个 TCP 端口（示例：<code>127.0.0.1:9876</code>）。</li>
-<li>Codex 侧：在 <code>~/.codex/config.toml</code> 中配置 MCP server，用 <code>uvx blender-mcp</code> 拉起服务并连接到 Blender。</li>
-</ul>
-<h2 id="前置依赖（macOS）"><a href="#前置依赖（macOS）" class="headerlink" title="前置依赖（macOS）"></a>前置依赖（macOS）</h2><ol>
-<li>安装 <code>uv</code>（Homebrew）：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install uv</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>Blender 已安装并可运行。</li>
-</ol>
-<h2 id="Blender-侧：安装-启用插件"><a href="#Blender-侧：安装-启用插件" class="headerlink" title="Blender 侧：安装&#x2F;启用插件"></a>Blender 侧：安装&#x2F;启用插件</h2><p>仓库提供的是单文件插件 <code>addon.py</code>，安装流程：</p>
-<ol>
-<li>从 GitHub 仓库下载 <code>addon.py</code>（保持文件名不变也可以）。</li>
-<li>打开 Blender：<ul>
-<li><code>Edit</code> → <code>Preferences</code> → <code>Add-ons</code> → <code>Install...</code></li>
-<li>选择 <code>addon.py</code> 安装</li>
-</ul>
-</li>
-<li>在插件列表中勾选启用：<code>Interface: Blender MCP</code></li>
-</ol>
-<p>一般情况下插件会在本机监听端口（默认示例里常用 <code>9876</code>）。如果你改过端口，以你插件设置为准。</p>
-<h2 id="Codex-侧：配置-MCP（关键）"><a href="#Codex-侧：配置-MCP（关键）" class="headerlink" title="Codex 侧：配置 MCP（关键）"></a>Codex 侧：配置 MCP（关键）</h2><p>Codex 的 MCP server 配置在 <code>~/.codex/config.toml</code>。建议点：</p>
-<ul>
-<li><strong>command 用绝对路径</strong>：桌面 App 启动的进程经常拿不到你 shell 里的 PATH（尤其是 conda 初始化脚本），所以不要依赖 <code>uvx</code> “刚好在 PATH 里”。</li>
-<li><strong>host 用 <code>127.0.0.1</code></strong>：比 <code>localhost</code> 更直接；同时可以绕开少数环境里 <code>localhost</code> 解析&#x2F;优先级导致的奇怪行为。</li>
-</ul>
-<p>示例配置（核心片段）：</p>
-<figure class="highlight toml"><table><tr><td class="code"><pre><span class="line"><span class="section">[mcp_servers.blender]</span></span><br><span class="line"><span class="attr">command</span> = <span class="string">&quot;/opt/homebrew/bin/uvx&quot;</span></span><br><span class="line"><span class="attr">args</span> = [<span class="string">&quot;blender-mcp&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="section">[mcp_servers.blender.env]</span></span><br><span class="line"><span class="attr">BLENDER_HOST</span> = <span class="string">&quot;127.0.0.1&quot;</span></span><br><span class="line"><span class="attr">BLENDER_PORT</span> = <span class="string">&quot;9876&quot;</span></span><br><span class="line"><span class="attr">DISABLE_TELEMETRY</span> = <span class="string">&quot;true&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>改完后需要<strong>重启 Codex</strong>（或至少重开会话&#x2F;项目）让它重新加载配置。</p>
-<h2 id="快速连通性验证"><a href="#快速连通性验证" class="headerlink" title="快速连通性验证"></a>快速连通性验证</h2><h3 id="1-先确认-Blender-端口确实在监听"><a href="#1-先确认-Blender-端口确实在监听" class="headerlink" title="1) 先确认 Blender 端口确实在监听"></a>1) 先确认 Blender 端口确实在监听</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsof -nP -iTCP:9876 -sTCP:LISTEN</span><br><span class="line">nc -vz 127.0.0.1 9876</span><br></pre></td></tr></table></figure>
-
-<p>如果 <code>lsof</code> 没看到 Blender 在 LISTEN，说明 Blender 插件没启用&#x2F;没启动成功&#x2F;端口不是 9876。</p>
-<h3 id="2-确认-uvx-可用"><a href="#2-确认-uvx-可用" class="headerlink" title="2) 确认 uvx 可用"></a>2) 确认 <code>uvx</code> 可用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/opt/homebrew/bin/uvx --version</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-让-Codex-真正通过-MCP-调-Blender"><a href="#3-让-Codex-真正通过-MCP-调-Blender" class="headerlink" title="3) 让 Codex 真正通过 MCP 调 Blender"></a>3) 让 Codex 真正通过 MCP 调 Blender</h3><p>最直观的验证是让 Codex 调用 <code>get_viewport_screenshot</code>（抓一张 Blender 视口截图）。如果能返回 PNG，就说明链路是通的：</p>
-<p>Codex →（stdio MCP server: <code>uvx blender-mcp</code>）→（TCP）→ Blender 插件</p>
-<h2 id="常见坑-处理方式"><a href="#常见坑-处理方式" class="headerlink" title="常见坑 &amp; 处理方式"></a>常见坑 &amp; 处理方式</h2><h3 id="坑-1：host-docker-internal-在本机解析失败"><a href="#坑-1：host-docker-internal-在本机解析失败" class="headerlink" title="坑 1：host.docker.internal 在本机解析失败"></a>坑 1：<code>host.docker.internal</code> 在本机解析失败</h3><p><code>host.docker.internal</code> 主要是“容器内访问宿主机”场景；在宿主机上直接用它反而可能 DNS 找不到。</p>
-<p>如果你是在宿主机上跑 Codex&#x2F;Blender，优先用：</p>
-<ul>
-<li><code>BLENDER_HOST=127.0.0.1</code></li>
-</ul>
-<h3 id="坑-2：桌面-App-找不到-conda-用户-shell-的-PATH"><a href="#坑-2：桌面-App-找不到-conda-用户-shell-的-PATH" class="headerlink" title="坑 2：桌面 App 找不到 conda&#x2F;用户 shell 的 PATH"></a>坑 2：桌面 App 找不到 conda&#x2F;用户 shell 的 PATH</h3><p>你在终端里 <code>uvx blender-mcp</code> 能跑，不代表 Codex 里也能跑。</p>
-<p>最稳的办法是：在 <code>~/.codex/config.toml</code> 里把 <code>command</code> 写成绝对路径（例如 <code>/opt/homebrew/bin/uvx</code>）。</p>
-<h3 id="坑-3：Blender-插件与-MCP-server-版本不完全匹配"><a href="#坑-3：Blender-插件与-MCP-server-版本不完全匹配" class="headerlink" title="坑 3：Blender 插件与 MCP server 版本不完全匹配"></a>坑 3：Blender 插件与 MCP server 版本不完全匹配</h3><p>我实际遇到过 MCP server 启动时会向 Blender 发送 <code>get_telemetry_consent</code>，但 Blender 端返回 “Unknown command type”。这类报错通常不致命（后续功能仍可用），但它提示：</p>
-<ul>
-<li>你的 <code>addon.py</code> 可能比 <code>uvx</code> 拉到的 <code>blender-mcp</code> server 版本更旧</li>
-</ul>
-<p>解决方式：把 Blender 里安装的 <code>addon.py</code> 更新到与当前仓库一致的版本。</p>
-<h2 id="“撤回-清理”建议（可选）"><a href="#“撤回-清理”建议（可选）" class="headerlink" title="“撤回&#x2F;清理”建议（可选）"></a>“撤回&#x2F;清理”建议（可选）</h2><p>很多人会为了加速在本机额外做一次“预装”：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">uv tool install blender-mcp</span><br></pre></td></tr></table></figure>
-
-<p>这不是官方主路径（官方主路径是直接 <code>uvx blender-mcp</code> 让客户端拉起），也不是必须。想回到最简状态可以卸载：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">uv tool uninstall blender-mcp</span><br><span class="line"><span class="built_in">rm</span> -f ~/.local/bin/blender-mcp</span><br></pre></td></tr></table></figure>
-
-<p>保留 <code>brew install uv</code> 即可。</p>
-]]></content>
-      <categories>
-        <category>Project Notes</category>
-      </categories>
-      <tags>
-        <tag>blender</tag>
-        <tag>mcp</tag>
-        <tag>codex</tag>
-        <tag>uv</tag>
       </tags>
   </entry>
 </search>
