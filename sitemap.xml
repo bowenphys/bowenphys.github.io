@@ -47,15 +47,6 @@
   </url>
   
   <url>
-    <loc>https://bowenphys.github.io/link/index-1</loc>
-    
-    <lastmod>2026-05-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://bowenphys.github.io/link/</loc>
     
     <lastmod>2026-05-06</lastmod>
@@ -65,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://bowenphys.github.io/projects/</loc>
+    <loc>https://bowenphys.github.io/link/index-1</loc>
     
     <lastmod>2026-05-06</lastmod>
     
@@ -83,7 +74,52 @@
   </url>
   
   <url>
+    <loc>https://bowenphys.github.io/projects/</loc>
+    
+    <lastmod>2026-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://bowenphys.github.io/research/</loc>
+    
+    <lastmod>2026-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenphys.github.io/categories/index-1</loc>
+    
+    <lastmod>2026-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenphys.github.io/categories/</loc>
+    
+    <lastmod>2026-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenphys.github.io/comment/</loc>
+    
+    <lastmod>2026-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenphys.github.io/cv/</loc>
     
     <lastmod>2026-05-06</lastmod>
     
@@ -101,6 +137,15 @@
   </url>
   
   <url>
+    <loc>https://bowenphys.github.io/en/about/</loc>
+    
+    <lastmod>2026-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://bowenphys.github.io/en/cv/</loc>
     
     <lastmod>2026-05-06</lastmod>
@@ -110,7 +155,7 @@
   </url>
   
   <url>
-    <loc>https://bowenphys.github.io/en/about/</loc>
+    <loc>https://bowenphys.github.io/en/publications/</loc>
     
     <lastmod>2026-05-06</lastmod>
     
@@ -137,7 +182,88 @@
   </url>
   
   <url>
-    <loc>https://bowenphys.github.io/en/publications/</loc>
+    <loc>https://bowenphys.github.io/posts/2026/02/a9d6ee9d4942/</loc>
+    
+    <lastmod>2026-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenphys.github.io/posts/2026/02/d22b78ea1490/</loc>
+    
+    <lastmod>2026-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenphys.github.io/posts/2026/01/166fb31092d5/</loc>
+    
+    <lastmod>2026-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenphys.github.io/posts/2026/02/30755cba4822/</loc>
+    
+    <lastmod>2026-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenphys.github.io/posts/2026/01/6e78f6cd7292/</loc>
+    
+    <lastmod>2026-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenphys.github.io/posts/2026/02/945c7dd62ccf/</loc>
+    
+    <lastmod>2026-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenphys.github.io/posts/2026/02/97ed38dd169e/</loc>
+    
+    <lastmod>2026-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenphys.github.io/posts/2026/03/38a13f43a5b7/</loc>
+    
+    <lastmod>2026-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenphys.github.io/posts/2026/02/352a3fd05692/</loc>
+    
+    <lastmod>2026-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenphys.github.io/posts/2026/03/363f67552e46/</loc>
     
     <lastmod>2026-05-06</lastmod>
     
@@ -182,133 +308,7 @@
   </url>
   
   <url>
-    <loc>https://bowenphys.github.io/categories/index-1</loc>
-    
-    <lastmod>2026-05-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenphys.github.io/categories/</loc>
-    
-    <lastmod>2026-05-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://bowenphys.github.io/archives/</loc>
-    
-    <lastmod>2026-05-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenphys.github.io/comment/</loc>
-    
-    <lastmod>2026-05-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenphys.github.io/cv/</loc>
-    
-    <lastmod>2026-05-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenphys.github.io/posts/2026/02/a9d6ee9d4942/</loc>
-    
-    <lastmod>2026-05-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenphys.github.io/posts/2026/02/d22b78ea1490/</loc>
-    
-    <lastmod>2026-05-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenphys.github.io/posts/2026/02/30755cba4822/</loc>
-    
-    <lastmod>2026-05-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenphys.github.io/posts/2026/01/6e78f6cd7292/</loc>
-    
-    <lastmod>2026-05-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenphys.github.io/posts/2026/02/97ed38dd169e/</loc>
-    
-    <lastmod>2026-05-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenphys.github.io/posts/2026/02/945c7dd62ccf/</loc>
-    
-    <lastmod>2026-05-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenphys.github.io/posts/2026/03/38a13f43a5b7/</loc>
-    
-    <lastmod>2026-05-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenphys.github.io/posts/2026/02/352a3fd05692/</loc>
-    
-    <lastmod>2026-05-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenphys.github.io/posts/2026/03/363f67552e46/</loc>
-    
-    <lastmod>2026-05-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenphys.github.io/posts/2026/01/166fb31092d5/</loc>
     
     <lastmod>2026-05-06</lastmod>
     
@@ -361,6 +361,27 @@
   </url>
   
   <url>
+    <loc>https://bowenphys.github.io/tags/quantum-computing/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenphys.github.io/tags/vqe/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenphys.github.io/tags/quantum-chemistry/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://bowenphys.github.io/tags/tensor-network/</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -396,27 +417,6 @@
   </url>
   
   <url>
-    <loc>https://bowenphys.github.io/tags/micromagnetics/</loc>
-    <lastmod>2026-05-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenphys.github.io/tags/skyrmion/</loc>
-    <lastmod>2026-05-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenphys.github.io/tags/spin-dynamics/</loc>
-    <lastmod>2026-05-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://bowenphys.github.io/tags/wannier/</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -439,6 +439,27 @@
   
   <url>
     <loc>https://bowenphys.github.io/tags/berry-curvature/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenphys.github.io/tags/micromagnetics/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenphys.github.io/tags/skyrmion/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://bowenphys.github.io/tags/spin-dynamics/</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -530,27 +551,6 @@
   
   <url>
     <loc>https://bowenphys.github.io/tags/uv/</loc>
-    <lastmod>2026-05-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenphys.github.io/tags/quantum-computing/</loc>
-    <lastmod>2026-05-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenphys.github.io/tags/vqe/</loc>
-    <lastmod>2026-05-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://bowenphys.github.io/tags/quantum-chemistry/</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
