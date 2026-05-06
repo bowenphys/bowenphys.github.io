@@ -10,7 +10,7 @@
   <rights>All rights reserved 2026, Bowen</rights>
   <subtitle>Research Notes and Scientific Journey</subtitle>
   <title>Bowen | Condensed Matter Theory</title>
-  <updated>2026-05-06T08:54:36.379Z</updated>
+  <updated>2026-05-06T09:04:08.696Z</updated>
   <entry>
     <author>
       <name>Bowen</name>
@@ -27,7 +27,7 @@
     <published>2026-03-05T03:40:00.000Z</published>
     <summary>把张量网络实验中的截断、收敛和有限尺寸误差汇总进门控面板。</summary>
     <title>项目纪要 008 | 张量网络门控器与误差面板</title>
-    <updated>2026-05-06T08:54:36.379Z</updated>
+    <updated>2026-05-06T09:04:08.696Z</updated>
   </entry>
   <entry>
     <author>
@@ -45,7 +45,7 @@
     <published>2026-03-04T13:10:00.000Z</published>
     <summary>对 Kubo 输运管线的缓存层、I/O 行为和求解器切换成本进行压测。</summary>
     <title>科研日志 007 | 输运算符缓存层压测</title>
-    <updated>2026-05-06T08:54:36.379Z</updated>
+    <updated>2026-05-06T09:04:08.695Z</updated>
   </entry>
   <entry>
     <author>
@@ -63,7 +63,7 @@
     <published>2026-03-02T01:30:00.000Z</published>
     <summary>记录相图控制塔首次完成高维参数回流、边界提取和误差摘要写入的过程。</summary>
     <title>科研日志 006 | 相图控制塔首轮数据回流</title>
-    <updated>2026-05-06T08:54:36.379Z</updated>
+    <updated>2026-05-06T09:04:08.695Z</updated>
   </entry>
   <entry>
     <author>
@@ -85,7 +85,7 @@
 <h2 id="最终效果先看"><a href="#最终效果先看" class="he]]>
     </summary>
     <title>项目纪要 005 | 斯格明子插件实战使用指南（海报风与白底风）</title>
-    <updated>2026-05-06T08:54:36.379Z</updated>
+    <updated>2026-05-06T09:04:08.696Z</updated>
   </entry>
   <entry>
     <author>
@@ -106,7 +106,7 @@
       <![CDATA[<p>本文记录一次“在 macOS 上让 Codex（就是现在这个）通过 MCP 连接 Blender”的最小正确配置与排障要点。本文以仓库 <a href="https://github.com/ahujasid/blender-mcp"><code>ahujasid/blen]]>
     </summary>
     <title>项目纪要 004 | Codex 连接 Blender MCP（macOS + uv）安装与排障</title>
-    <updated>2026-05-06T08:54:36.379Z</updated>
+    <updated>2026-05-06T09:04:08.696Z</updated>
   </entry>
   <entry>
     <author>
@@ -128,7 +128,7 @@
 <h2 id="理论背景"><a href="#理论背景" class="headerlink" title="理论背景"></a>理论背景</h2><h3 id=]]>
     </summary>
     <title>科研日志 004 | Wannier后处理：MoS2单层二次谐波响应</title>
-    <updated>2026-05-06T08:54:36.379Z</updated>
+    <updated>2026-05-06T09:04:08.695Z</updated>
   </entry>
   <entry>
     <author>
@@ -149,7 +149,7 @@
 <h2 id="v0-3-关键更新"><a href="#v0-3-关键更新" class="headerlink" title="v0.]]>
     </summary>
     <title>项目纪要 003 | 量子输运计算平台 v0.3</title>
-    <updated>2026-05-06T08:54:36.379Z</updated>
+    <updated>2026-05-06T09:04:08.695Z</updated>
   </entry>
   <entry>
     <author>
@@ -170,7 +170,7 @@
 <h2 id="误差分解"><a href="#误差分解" class="headerlink" title="误差分解"></a>误差分解</h2><p>将总误]]>
     </summary>
     <title>科研日志 002 | 张量网络基准测试与误差预算</title>
-    <updated>2026-05-06T08:54:36.379Z</updated>
+    <updated>2026-05-06T09:04:08.695Z</updated>
   </entry>
   <entry>
     <author>
@@ -191,7 +191,7 @@
 <h2 id="模型摘要"><a href="#模型摘要" class="headerlink" title="模型摘要"></a>模型]]>
     </summary>
     <title>科研日志 001 | 拓扑超导参数扫描引擎上线</title>
-    <updated>2026-05-06T08:54:36.379Z</updated>
+    <updated>2026-05-06T09:04:08.695Z</updated>
   </entry>
   <entry>
     <author>
@@ -212,7 +212,7 @@
 <li>问题定义明确：先写清目标和已知条件</li]]>
     </summary>
     <title>科研日志 000 | 站点初始化与记录规范</title>
-    <updated>2026-05-06T08:54:36.379Z</updated>
+    <updated>2026-05-06T09:04:08.695Z</updated>
   </entry>
   <entry>
     <author>
@@ -233,7 +233,7 @@
 <h2 id="理论背景"><a href="#理论背景" class="headerlink" title="理论背景"></a>理论背景</h2><p>磁sky]]>
     </summary>
     <title>科研日志 003 | 微磁学模拟：磁skyrmion的霍尔效应</title>
-    <updated>2026-05-06T08:54:36.379Z</updated>
+    <updated>2026-05-06T09:04:08.695Z</updated>
   </entry>
   <entry>
     <author>
@@ -254,7 +254,7 @@
 <h2 id="研究背景"><a href="#研究背景" class="headerlink" title="研究背景"></a>研究背景</h2><p>Fe3GeTe2 (F]]>
     </summary>
     <title>科研日志 002 | 第一性原理计算：Fe3GeTe2 电子结构与磁性</title>
-    <updated>2026-05-06T08:54:36.379Z</updated>
+    <updated>2026-05-06T09:04:08.695Z</updated>
   </entry>
   <entry>
     <author>
@@ -275,6 +275,6 @@
 <h2 id="VQE-原理"><a href="#VQE-原理" class="headerlink"]]>
     </summary>
     <title>科研日志 001 | 量子变分算法初探：VQE 在小分子基态能量计算中的应用</title>
-    <updated>2026-05-06T08:54:36.379Z</updated>
+    <updated>2026-05-06T09:04:08.695Z</updated>
   </entry>
 </feed>
