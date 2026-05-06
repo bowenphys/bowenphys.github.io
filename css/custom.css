@@ -1,19 +1,23 @@
+/* ============================================================
+   Custom overrides — glass effects, avatar, hero bridge, search
+   ============================================================ */
+
+/* ── Footer ── */
 #footer {
-  background: transparent !important;
+  background: transparent;
 }
 
 #footer::before {
-  display: none !important;
+  display: none;
 }
 
-/* 让卡片/容器更“融入”背景图（浅色模式） */
+/* ── Light Mode Glass ── */
 html[data-theme='light'] {
   --card-bg: rgba(255, 255, 255, 0.62);
   --sidebar-bg: rgba(255, 255, 255, 0.55);
   --sidebar-menu-bg: rgba(255, 255, 255, 0.62);
 }
 
-/* 玻璃感（不改文字布局/动效） */
 .cardHover,
 .card-widget,
 .recent-post-item,
@@ -23,6 +27,7 @@ html[data-theme='light'] {
   backdrop-filter: blur(10px) saturate(120%);
 }
 
+/* ── Avatar ── */
 .avatar-img,
 #aside-content .avatar-img,
 #sidebar .avatar-img {
@@ -39,95 +44,17 @@ html[data-theme='light'] {
   height: 100%;
   object-fit: cover;
   object-position: center center;
-  transform: none !important;
-  transition: filter 375ms ease-in .2s !important;
+  transform: none;
+  transition: filter 375ms ease-in .2s;
 }
 
 .avatar-img img:hover,
 #aside-content .avatar-img img:hover,
 #sidebar .avatar-img img:hover {
-  transform: none !important;
+  transform: none;
 }
 
-.pub-container {
-  margin-top: 1rem;
-}
-
-.pub-counter {
-  opacity: 0.78;
-  margin-bottom: 1rem;
-}
-
-.pub-list {
-  margin: 0;
-  padding-left: 1.35rem;
-}
-
-.pub-item {
-  margin-bottom: 1.25rem;
-  line-height: 1.65;
-}
-
-.pub-title {
-  font-weight: 600;
-}
-
-.pub-authors {
-  margin-top: 0.25rem;
-  opacity: 0.92;
-}
-
-.pub-meta {
-  margin-top: 0.2rem;
-  opacity: 0.82;
-}
-
-.pub-links {
-  margin-top: 0.2rem;
-}
-
-.pub-link {
-  display: inline-block;
-  padding: 0.1rem 0.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.16);
-  border-radius: 999px;
-  text-decoration: none;
-  font-size: 0.9em;
-}
-
-html[data-theme='dark'] .pub-link {
-  border-color: rgba(255, 255, 255, 0.22);
-}
-
-html[data-theme='dark'] {
-  --font-color: #d9e9f8;
-  --second-text-color: #98b3cc;
-  --post-link-color: #8fe8ff;
-  --headline-presudo-bgcolor: #6ce7ff;
-  --blockquote-padding-color: #0d2236;
-}
-
-html[data-theme='dark'] #article-container h1,
-html[data-theme='dark'] #article-container h2,
-html[data-theme='dark'] #article-container h3 {
-  color: #eef7ff;
-}
-
-html[data-theme='dark'] #article-container code {
-  color: #c4f7ff;
-  background: rgba(14, 32, 49, 0.72);
-}
-
-html[data-theme='dark'] #article-container pre code {
-  color: #d8efff;
-  background: transparent;
-}
-
-html[data-theme='dark'] #article-container blockquote {
-  border-left: 3px solid rgba(110, 214, 255, 0.62);
-  background: rgba(10, 23, 37, 0.72);
-}
-
+/* ── Search Dialog ── */
 #search-mask,
 #local-search .search-dialog,
 #rightside {
@@ -139,6 +66,7 @@ html[data-theme='dark'] .search-dialog {
   box-shadow: 0 14px 34px rgba(2, 10, 18, 0.46);
 }
 
+/* ── Home Page Title ── */
 html[data-theme='dark'] #page-header.full_page #site-title.lab-home-title {
   display: flex;
   flex-direction: column;
@@ -177,6 +105,115 @@ html[data-theme='dark'] #page-header.full_page #site-title.lab-home-title {
   text-shadow: 0 0 18px rgba(91, 210, 255, 0.2);
 }
 
+/* ── Hero Bridge (homepage full-header fade-in overlay) ── */
+html[data-theme='dark'][data-hero-bridge] #page-header.full_page {
+  overflow: hidden;
+}
+
+html[data-theme='dark'][data-hero-bridge] #page-header.full_page::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+html[data-theme='dark'][data-hero-bridge] #page-header.full_page #site-info,
+html[data-theme='dark'][data-hero-bridge] #page-header.full_page #scroll-down {
+  position: relative;
+  z-index: 1;
+}
+
+/* soft */
+html[data-theme='dark'][data-hero-bridge='soft'] #page-header.full_page::after {
+  height: 34vh;
+  background:
+    linear-gradient(180deg, rgba(7, 16, 29, 0) 0%, rgba(8, 19, 33, 0.18) 38%, rgba(8, 18, 31, 0.68) 100%),
+    radial-gradient(circle at 50% 100%, rgba(88, 176, 255, 0.14), transparent 58%);
+}
+
+/* mist */
+html[data-theme='dark'][data-hero-bridge='mist'] #page-header.full_page::after {
+  height: 40vh;
+  background:
+    radial-gradient(circle at 50% 92%, rgba(120, 215, 255, 0.28), transparent 42%),
+    radial-gradient(circle at 24% 100%, rgba(174, 120, 255, 0.12), transparent 34%),
+    radial-gradient(circle at 76% 100%, rgba(120, 255, 232, 0.14), transparent 34%),
+    linear-gradient(180deg, rgba(7, 16, 29, 0) 0%, rgba(7, 18, 32, 0.22) 38%, rgba(8, 18, 31, 0.74) 100%);
+  filter: blur(4px);
+}
+
+/* grid */
+html[data-theme='dark'][data-hero-bridge='grid'] #page-header.full_page::after {
+  height: 38vh;
+  background:
+    linear-gradient(180deg, rgba(7, 16, 29, 0) 0%, rgba(8, 18, 31, 0.2) 36%, rgba(8, 18, 31, 0.72) 100%),
+    radial-gradient(circle at 50% 100%, rgba(88, 176, 255, 0.16), transparent 54%),
+    repeating-linear-gradient(90deg, rgba(121, 193, 255, 0.08) 0px, rgba(121, 193, 255, 0.08) 1px, transparent 1px, transparent 22px),
+    repeating-linear-gradient(0deg, rgba(121, 193, 255, 0.05) 0px, rgba(121, 193, 255, 0.05) 1px, transparent 1px, transparent 18px);
+  background-position: center bottom, center bottom, center bottom, center bottom;
+  background-size: 100% 100%, 100% 100%, 100% 14vh, 100% 14vh;
+  mask-image: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.42) 36%, rgba(255, 255, 255, 1) 100%);
+}
+
+/* ── Bridge → content glow ── */
+html[data-theme='dark'][data-hero-bridge] #content-inner.layout {
+  position: relative;
+}
+
+html[data-theme='dark'][data-hero-bridge] #content-inner.layout::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9rem;
+  height: 18rem;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.82;
+}
+
+html[data-theme='dark'][data-hero-bridge] #content-inner.layout > * {
+  position: relative;
+  z-index: 1;
+}
+
+html[data-theme='dark'][data-hero-bridge='soft'] #content-inner.layout::before {
+  background:
+    linear-gradient(180deg, rgba(8, 18, 31, 0.76) 0%, rgba(8, 18, 31, 0.3) 42%, rgba(8, 18, 31, 0) 100%),
+    radial-gradient(circle at 50% 0%, rgba(104, 189, 255, 0.22), transparent 52%);
+  opacity: 0.68;
+}
+
+html[data-theme='dark'][data-hero-bridge='mist'] #content-inner.layout::before {
+  background:
+    radial-gradient(circle at 50% 6%, rgba(119, 236, 255, 0.78), transparent 36%),
+    radial-gradient(circle at 18% 0%, rgba(183, 135, 255, 0.42), transparent 30%),
+    radial-gradient(circle at 82% 0%, rgba(111, 255, 227, 0.4), transparent 30%),
+    linear-gradient(180deg, rgba(8, 18, 31, 0.8) 0%, rgba(8, 18, 31, 0.26) 46%, rgba(8, 18, 31, 0) 100%);
+  filter: blur(24px);
+  mix-blend-mode: screen;
+  opacity: 1;
+  box-shadow: 0 -28px 90px rgba(109, 224, 255, 0.38);
+}
+
+html[data-theme='dark'][data-hero-bridge='grid'] #content-inner.layout::before {
+  background:
+    linear-gradient(180deg, rgba(8, 18, 31, 0.82) 0%, rgba(8, 18, 31, 0.28) 44%, rgba(8, 18, 31, 0) 100%),
+    linear-gradient(90deg, rgba(107, 207, 255, 0) 0%, rgba(107, 207, 255, 0.82) 50%, rgba(107, 207, 255, 0) 100%),
+    repeating-linear-gradient(90deg, rgba(107, 207, 255, 0.28) 0px, rgba(107, 207, 255, 0.28) 1px, transparent 1px, transparent 20px),
+    repeating-linear-gradient(0deg, rgba(107, 207, 255, 0.22) 0px, rgba(107, 207, 255, 0.22) 1px, transparent 1px, transparent 18px);
+  background-size: 100% 100%, 100% 3px, 100% 12rem, 100% 12rem;
+  background-position: center top, center 5rem, center top, center top;
+  mask-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.72) 44%, rgba(255, 255, 255, 0) 100%);
+  mix-blend-mode: screen;
+  opacity: 1;
+  box-shadow: inset 0 1px 0 rgba(107, 207, 255, 0.82), 0 -18px 48px rgba(107, 207, 255, 0.28);
+}
+
+/* ── Home title mobile ── */
 @media (max-width: 768px) {
   .lab-home-title-en {
     white-space: normal;
