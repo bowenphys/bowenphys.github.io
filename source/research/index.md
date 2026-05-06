@@ -8,7 +8,7 @@ comments: false
   <div class="lab-doc-eyebrow">Research Map / 研究地图</div>
   <h2>四个研究方向并行推进</h2>
   <p>聚焦量子计算、第一性原理、微磁学与 Wannier 后处理工具开发，探索凝聚态物理的前沿问题。</p>
-  <div class="lab-param-strow">
+  <div class="lab-param-strip">
     <span>Quantum Computing: ALGORITHM DEVELOPMENT</span>
     <span>First-Principles: DFT STUDY</span>
     <span>Micromagnetics: SIMULATING</span>

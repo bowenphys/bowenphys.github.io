@@ -1,0 +1,727 @@
+/* ============================================================
+   LAB THEME — Consolidated (v3 + v2 + v1)
+   Research Control System Visual Framework
+   ============================================================ */
+
+/* ── 1. Design Tokens ── */
+:root {
+  --lab-bg-0: #060b12;
+  --lab-bg-1: #0a1320;
+  --lab-bg-2: #0d1c2d;
+  --lab-accent-cyan: #72ecff;
+  --lab-accent-green: #8effd4;
+  --lab-accent-blue: #7ba8ff;
+  --lab-accent-gold: #ffd77a;
+  --lab-text-main: #e7f6ff;
+  --lab-text-soft: #89a8c1;
+  --lab-border: rgba(113, 182, 255, 0.2);
+  --lab-border-strong: rgba(126, 207, 255, 0.32);
+  --lab-glow: 0 0 32px rgba(84, 220, 255, 0.2);
+  --lab-shadow: 0 24px 60px rgba(1, 8, 17, 0.42);
+  --lab-radius: 20px;
+  --lab-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --lab-v2-neon-cyan: #53f5ff;
+  --lab-v2-neon-green: #7dffc4;
+  --lab-v2-neon-blue: #6ba8ff;
+  --lab-v2-panel-bg: rgba(7, 16, 28, 0.8);
+}
+
+/* ── 2. Dark Theme Globals ── */
+html[data-theme='dark'] {
+  --card-bg: rgba(10, 20, 34, 0.88);
+  --sidebar-bg: rgba(9, 18, 28, 0.9);
+  --sidebar-menu-bg: rgba(11, 21, 33, 0.92);
+  --font-color: #d9e9f8;
+  --second-text-color: #98b3cc;
+  --post-link-color: #8fe8ff;
+  --headline-presudo-bgcolor: #6ce7ff;
+  --blockquote-padding-color: #0d2236;
+}
+
+html[data-theme='dark'] body {
+  color: var(--lab-text-main);
+  background:
+    radial-gradient(circle at 10% 20%, rgba(114, 236, 255, 0.08), transparent 24%),
+    radial-gradient(circle at 88% 14%, rgba(123, 168, 255, 0.11), transparent 28%),
+    radial-gradient(circle at 18% 88%, rgba(142, 255, 212, 0.09), transparent 28%),
+    radial-gradient(circle at 18% -8%, #173453 0%, #060b12 48%),
+    radial-gradient(circle at 110% 120%, #102946 0%, #060b12 50%);
+}
+
+html[data-theme='dark'] #web_bg::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(92, 143, 208, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(92, 143, 208, 0.09) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mix-blend-mode: screen;
+  opacity: 0.28;
+  animation: lab-grid-move 20s linear infinite;
+}
+
+html[data-theme='dark'] #body-wrap,
+html[data-theme='dark'] #sidebar {
+  position: relative;
+  z-index: 2;
+}
+
+/* ── 3. Navigation ── */
+html[data-theme='dark'] #nav {
+  background: rgba(8, 16, 26, 0.62);
+  border-bottom: 1px solid var(--lab-border);
+  backdrop-filter: blur(12px) saturate(130%);
+  box-shadow:
+    inset 0 -1px 0 rgba(95, 177, 255, 0.26),
+    0 0 24px rgba(22, 62, 101, 0.36);
+}
+
+html[data-theme='dark'] #nav::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(83, 245, 255, 0.75) 28%,
+    rgba(125, 255, 196, 0.8) 50%,
+    rgba(107, 168, 255, 0.74) 72%,
+    transparent 100%
+  );
+  background-size: 220% 100%;
+  animation: lab-energy-line 4.2s linear infinite;
+  opacity: 0.76;
+}
+
+html[data-theme='dark'] #nav .site-page,
+html[data-theme='dark'] #nav .nav-site-title {
+  color: var(--lab-text-main);
+}
+
+html[data-theme='dark'] #nav .site-page:hover {
+  color: var(--lab-v2-neon-cyan);
+  text-shadow: 0 0 16px rgba(54, 242, 255, 0.42);
+}
+
+html[data-theme='dark'] #nav .site-page::before {
+  content: '';
+  position: absolute;
+  left: 10%;
+  bottom: -3px;
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--lab-v2-neon-cyan), transparent);
+  transform: scaleX(0.1);
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+html[data-theme='dark'] #nav .site-page:hover::before {
+  transform: scaleX(1);
+  opacity: 0.88;
+}
+
+/* ── 4. Cards & Layout ── */
+html[data-theme='dark'] .card-widget,
+html[data-theme='dark'] .recent-post-item,
+html[data-theme='dark'] .layout > div:first-child:not(.nc),
+html[data-theme='dark'] #page,
+html[data-theme='dark'] #post,
+html[data-theme='dark'] .page:not(.lab-mainframe),
+html[data-theme='dark'] .pub-item,
+html[data-theme='dark'] #recent-posts > .recent-post-item {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--lab-border);
+  background: linear-gradient(160deg, rgba(7, 18, 33, 0.88), rgba(6, 14, 27, 0.94));
+  box-shadow: inset 0 0 0 1px rgba(128, 197, 255, 0.05), var(--lab-shadow);
+}
+
+html[data-theme='dark'] #recent-posts > .recent-post-item {
+  border-radius: 22px;
+  background: linear-gradient(160deg, rgba(7, 18, 33, 0.56), rgba(6, 14, 27, 0.66));
+  -webkit-backdrop-filter: blur(10px) saturate(118%);
+  backdrop-filter: blur(10px) saturate(118%);
+}
+
+html[data-theme='dark'] .card-widget,
+html[data-theme='dark'] .pub-item {
+  border-radius: 22px;
+}
+
+html[data-theme='dark'] .recent-post-item .article-title {
+  color: var(--lab-text-main);
+}
+
+html[data-theme='dark'] .recent-post-item .article-title:hover {
+  color: var(--lab-accent-green);
+}
+
+html[data-theme='dark'] .recent-post-item:hover,
+html[data-theme='dark'] .card-widget:hover,
+html[data-theme='dark'] .pub-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(108, 255, 184, 0.54);
+  box-shadow:
+    0 0 0 1px rgba(108, 255, 184, 0.2),
+    0 0 26px rgba(108, 255, 184, 0.24);
+}
+
+/* card top accent line */
+html[data-theme='dark'] #page::before,
+html[data-theme='dark'] #post::before,
+html[data-theme='dark'] .card-widget::before,
+html[data-theme='dark'] .pub-item::before,
+html[data-theme='dark'] #recent-posts > .recent-post-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(114, 236, 255, 0.88), rgba(142, 255, 212, 0.85), transparent);
+  opacity: 0.7;
+}
+
+html[data-theme='dark'] #page::after,
+html[data-theme='dark'] #post::after,
+html[data-theme='dark'] .card-widget::after,
+html[data-theme='dark'] .pub-item::after,
+html[data-theme='dark'] #recent-posts > .recent-post-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 100% 0%, rgba(114, 236, 255, 0.06), transparent 32%);
+  pointer-events: none;
+}
+
+/* ── 5. Article Content ── */
+html[data-theme='dark'] #article-container {
+  color: var(--lab-text-main);
+}
+
+html[data-theme='dark'] #article-container h1,
+html[data-theme='dark'] #article-container h2,
+html[data-theme='dark'] #article-container h3,
+html[data-theme='dark'] #article-container h4 {
+  color: #eff9ff;
+  letter-spacing: 0.01em;
+}
+
+html[data-theme='dark'] #article-container h2,
+html[data-theme='dark'] #article-container h3 {
+  position: relative;
+  padding-left: 1rem;
+}
+
+html[data-theme='dark'] #article-container h2::before,
+html[data-theme='dark'] #article-container h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, var(--lab-accent-cyan), var(--lab-accent-green));
+  box-shadow: 0 0 12px rgba(114, 236, 255, 0.55);
+}
+
+html[data-theme='dark'] #article-container p,
+html[data-theme='dark'] #article-container li {
+  color: #d7eaff;
+}
+
+html[data-theme='dark'] #article-container strong {
+  color: #f4fbff;
+}
+
+html[data-theme='dark'] #article-container blockquote {
+  border-left: 3px solid rgba(114, 236, 255, 0.75);
+  background: linear-gradient(140deg, rgba(10, 24, 43, 0.82), rgba(8, 18, 31, 0.86));
+  box-shadow: inset 0 0 0 1px rgba(126, 207, 255, 0.08);
+}
+
+html[data-theme='dark'] #article-container table {
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid rgba(121, 186, 255, 0.18);
+  background: rgba(8, 18, 31, 0.82);
+}
+
+html[data-theme='dark'] #article-container table th {
+  background: rgba(14, 32, 55, 0.92);
+  color: #eef9ff;
+}
+
+html[data-theme='dark'] #article-container table td {
+  color: #d9ebff;
+}
+
+html[data-theme='dark'] #article-container code {
+  color: #bdf6ff;
+  background: rgba(9, 28, 44, 0.92);
+  border: 1px solid rgba(121, 186, 255, 0.2);
+}
+
+html[data-theme='dark'] #article-container pre,
+html[data-theme='dark'] figure.highlight {
+  border: 1px solid rgba(120, 190, 255, 0.16);
+  background: linear-gradient(180deg, rgba(6, 14, 27, 0.94), rgba(8, 18, 31, 0.96));
+  box-shadow: inset 0 0 0 1px rgba(130, 197, 255, 0.05);
+}
+
+html[data-theme='dark'] .katex-display,
+html[data-theme='dark'] .mermaid {
+  border: 1px solid rgba(118, 185, 255, 0.16);
+  border-radius: 16px;
+  background: rgba(8, 18, 31, 0.8);
+  box-shadow: inset 0 0 0 1px rgba(126, 207, 255, 0.05);
+}
+
+/* ── 6. Doc Components (about / cv / research / projects) ── */
+.lab-doc-panel,
+.lab-record-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--lab-radius);
+  border: 1px solid rgba(124, 194, 255, 0.18);
+  background: linear-gradient(165deg, rgba(9, 22, 38, 0.9), rgba(7, 15, 28, 0.94));
+  box-shadow: inset 0 0 0 1px rgba(126, 198, 255, 0.04);
+  margin: 1rem 0;
+  padding: 1rem 1.05rem;
+}
+
+.lab-doc-panel::before,
+.lab-record-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgba(114, 236, 255, 0.06), transparent 26%, transparent 74%, rgba(123, 168, 255, 0.06)),
+    radial-gradient(circle at 18% 12%, rgba(114, 236, 255, 0.1), transparent 20%),
+    radial-gradient(circle at 90% 84%, rgba(142, 255, 212, 0.08), transparent 22%);
+  pointer-events: none;
+}
+
+.lab-doc-panel.is-hero {
+  padding: 1.1rem 1.15rem;
+}
+
+.lab-doc-eyebrow {
+  font-family: var(--lab-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8bdfff;
+  font-size: 0.72rem;
+}
+
+.lab-doc-panel h2,
+.lab-doc-panel h3,
+.lab-doc-card h3,
+.lab-record-card h3 {
+  margin-top: 0.25rem;
+  padding-left: 0;
+}
+
+.lab-doc-panel h2::before,
+.lab-doc-panel h3::before,
+.lab-doc-card h3::before,
+.lab-record-card h3::before {
+  display: none;
+}
+
+.lab-doc-panel p,
+.lab-record-card p {
+  margin-bottom: 0.4rem;
+}
+
+.lab-doc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.86rem;
+  margin: 1rem 0;
+}
+
+.lab-doc-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--lab-radius);
+  border: 1px solid rgba(124, 194, 255, 0.18);
+  background: linear-gradient(165deg, rgba(9, 22, 38, 0.9), rgba(7, 15, 28, 0.94));
+  box-shadow: inset 0 0 0 1px rgba(126, 198, 255, 0.04);
+  padding: 0.92rem 0.98rem;
+}
+
+.lab-doc-card h3 {
+  color: #eefaff;
+}
+
+.lab-doc-card p {
+  color: #d6eaff;
+  margin-bottom: 0.4rem;
+}
+
+.lab-dual-column {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 1rem 0;
+}
+
+.lab-metric-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.46rem 0;
+  border-bottom: 1px dashed rgba(116, 186, 255, 0.16);
+  font-family: var(--lab-mono);
+  font-size: 0.8rem;
+  color: #d9ecff;
+}
+
+.lab-metric-line:last-child {
+  border-bottom: 0;
+}
+
+.lab-metric-line span:first-child {
+  color: #8faec8;
+}
+
+.lab-protocol-list,
+.lab-log-stream {
+  margin: 0.6rem 0 0;
+  padding-left: 1rem;
+  color: #d6eaff;
+}
+
+.lab-protocol-list li,
+.lab-log-stream li {
+  margin-bottom: 0.45rem;
+}
+
+.lab-chip-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.52rem;
+  margin-top: 0.9rem;
+}
+
+.lab-chip-cloud span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid rgba(123, 191, 255, 0.2);
+  background: linear-gradient(90deg, rgba(13, 33, 56, 0.72), rgba(11, 24, 40, 0.78));
+  color: #bfeeff;
+  font-size: 0.73rem;
+  box-shadow: inset 0 0 0 1px rgba(133, 202, 255, 0.04);
+}
+
+.lab-param-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.6rem;
+  margin: 0.9rem 0 0;
+}
+
+.lab-param-strip span {
+  display: block;
+  padding: 0.6rem 0.7rem;
+  border-radius: 14px;
+  border: 1px solid rgba(119, 186, 255, 0.16);
+  background: rgba(8, 19, 34, 0.74);
+  color: #d9ecff;
+  font-family: var(--lab-mono);
+  font-size: 0.78rem;
+}
+
+/* ── 7. V2 Background Effects ── */
+.lab-v2-bg-layer,
+.lab-v2-beam-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.lab-v2-bg-layer {
+  background:
+    radial-gradient(circle at var(--lab-v2-cursor-x, 50vw) var(--lab-v2-cursor-y, 35vh), rgba(83, 245, 255, 0.16), transparent 26%),
+    radial-gradient(circle at 82% 14%, rgba(107, 168, 255, 0.15), transparent 34%),
+    radial-gradient(circle at 18% 88%, rgba(125, 255, 196, 0.14), transparent 34%);
+  mix-blend-mode: screen;
+  animation: lab-nebula-float 14s ease-in-out infinite alternate;
+}
+
+.lab-v2-bg-layer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(156, 218, 255, 0.07) 0px,
+    rgba(156, 218, 255, 0.07) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  opacity: 0.12;
+}
+
+.lab-v2-beam-layer {
+  overflow: hidden;
+}
+
+.lab-v2-beam-layer::before {
+  content: '';
+  position: absolute;
+  top: -18%;
+  left: -20%;
+  width: 140%;
+  height: 36%;
+  background: linear-gradient(
+    105deg,
+    transparent 15%,
+    rgba(98, 205, 255, 0.2) 47%,
+    rgba(111, 255, 201, 0.18) 52%,
+    transparent 82%
+  );
+  filter: blur(9px);
+  animation: lab-scan 8.4s linear infinite;
+}
+
+html.lab-v2-mobile .lab-v2-beam-layer {
+  display: none;
+}
+
+html.lab-v2-mobile .lab-v2-bg-layer {
+  opacity: 0.58;
+}
+
+html.lab-v2-mobile .recent-post-item::before,
+html.lab-v2-mobile .card-widget::before {
+  display: none;
+}
+
+/* ── 8. Cursor Glow on Cards ── */
+html[data-theme='dark'] .recent-post-item,
+html[data-theme='dark'] .card-widget,
+html[data-theme='dark'] .pub-item {
+  will-change: transform, box-shadow;
+  transition: transform 0.26s ease, box-shadow 0.26s ease, border-color 0.26s ease;
+}
+
+html[data-theme='dark'] .recent-post-item::before,
+html[data-theme='dark'] .card-widget::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(circle at var(--lab-v2-cursor-x, 50vw) var(--lab-v2-cursor-y, 35vh), rgba(112, 235, 255, 0.18), transparent 40%);
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+
+html[data-theme='dark'] .recent-post-item:hover::before,
+html[data-theme='dark'] .card-widget:hover::before {
+  opacity: 1;
+}
+
+/* ── 9. Reveal Animation ── */
+.lab-reveal-ready {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.lab-reveal-ready.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.44s ease, transform 0.44s ease;
+}
+
+/* ── 10. Publications ── */
+.pub-container {
+  margin-top: 1rem;
+}
+
+.pub-counter {
+  opacity: 0.78;
+  margin-bottom: 1rem;
+}
+
+.pub-list {
+  margin: 0;
+  padding-left: 1.35rem;
+}
+
+.pub-item {
+  margin-bottom: 1.25rem;
+  line-height: 1.65;
+}
+
+.pub-title {
+  font-weight: 600;
+}
+
+.pub-authors {
+  margin-top: 0.25rem;
+  opacity: 0.92;
+}
+
+.pub-meta {
+  margin-top: 0.2rem;
+  opacity: 0.82;
+}
+
+.pub-links {
+  margin-top: 0.2rem;
+}
+
+.pub-link {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.9em;
+  color: #c8ecff;
+  border-color: rgba(116, 208, 255, 0.45);
+  background: rgba(12, 28, 45, 0.68);
+}
+
+.pub-link:hover {
+  background: rgba(36, 102, 163, 0.35);
+  border-color: rgba(102, 255, 201, 0.62);
+}
+
+html[data-theme='dark'] .pub-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+html[data-theme='dark'] .pub-item {
+  border: 1px solid rgba(117, 176, 255, 0.26);
+  border-radius: 12px;
+  padding: 0.82rem 0.86rem;
+  background: rgba(9, 19, 31, 0.68);
+  box-shadow: inset 0 0 0 1px rgba(117, 176, 255, 0.1);
+}
+
+html[data-theme='dark'] .pub-title {
+  color: #eef7ff;
+}
+
+html[data-theme='dark'] .pub-meta {
+  color: #9bb7d3;
+}
+
+/* ── 11. Code Copy Button ── */
+.highlight-tools {
+  position: relative;
+}
+
+.code-copy-btn {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.45rem;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid rgba(132, 187, 255, 0.28);
+  border-radius: 6px;
+  background: rgba(12, 25, 40, 0.78);
+  color: #9cc7e5;
+  font-family: var(--lab-mono);
+  font-size: 0.68rem;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  z-index: 3;
+}
+
+.code-copy-btn:hover {
+  color: var(--lab-accent-green);
+  border-color: rgba(142, 255, 212, 0.5);
+  background: rgba(18, 40, 58, 0.88);
+}
+
+.code-copy-btn.copied {
+  color: var(--lab-accent-green);
+  border-color: rgba(142, 255, 212, 0.6);
+}
+
+/* ── 12. Keyframes ── */
+@keyframes lab-grid-move {
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(42px, 42px, 0); }
+}
+
+@keyframes lab-energy-line {
+  0%   { background-position: 0% 0; }
+  100% { background-position: 220% 0; }
+}
+
+@keyframes lab-nebula-float {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  100% { transform: translate3d(2%, -2%, 0) scale(1.04); }
+}
+
+@keyframes lab-scan {
+  0%   { transform: translate3d(-10%, -24%, 0) rotate(0.5deg); }
+  100% { transform: translate3d(10%, 112%, 0) rotate(0.5deg); }
+}
+
+/* ── 13. Responsive ── */
+@media (max-width: 900px) {
+  .lab-v2-beam-layer {
+    display: none;
+  }
+
+  .lab-doc-grid,
+  .lab-dual-column {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .lab-doc-panel,
+  .lab-record-card {
+    padding-left: 0.82rem;
+    padding-right: 0.82rem;
+  }
+
+  .lab-param-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── 14. Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  #web_bg::before,
+  .lab-v2-bg-layer,
+  .lab-v2-bg-layer::before,
+  .lab-v2-beam-layer::before,
+  #nav::after,
+  .lab-v2-beam-layer {
+    animation: none !important;
+  }
+
+  .lab-v2-beam-layer {
+    display: none !important;
+  }
+
+  .lab-reveal-ready,
+  .lab-reveal-ready.is-visible,
+  .recent-post-item,
+  .card-widget,
+  .pub-item {
+    transform: none !important;
+    transition: none !important;
+  }
+}

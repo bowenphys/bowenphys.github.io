@@ -59,6 +59,22 @@ search:
   content: true
   format: html
 
+# RSS
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content: true
+  content_limit: 140
+
+# Sitemap
+sitemap:
+  path:
+    - sitemap.xml
+  rel: false
+  tags: true
+  categories: true
 
 deploy:
   type: git

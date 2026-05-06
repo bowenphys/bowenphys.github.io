@@ -15,7 +15,7 @@ comments: false
     <h3>教育背景</h3>
     <p><strong>宁波东方理工大学 & 中国科学技术大学（联合培养）</strong></p>
     <p>物理学博士研究生（在读）｜2022 - 现在</p>
-    <p>导师：张三教授、李四教授</p>
+     <p>导师：周通教授</p>
     <p><strong>中国科学技术大学</strong></p>
     <p>物理学学士｜2018 - 2022</p>
     <p>GPA: 3.8/4.0</p>
@@ -66,6 +66,6 @@ comments: false
 <section class="lab-doc-panel">
   <div class="lab-doc-eyebrow">Contact</div>
   <p>GitHub: <a href="https://github.com/bowenphys">https://github.com/bowenphys</a></p>
-  <p>Email: <code>bowen@example.edu</code></p>
+  <p>Email: <code>bwphys@163.com</code></p>
   <p><a href="/en/cv/">English Version</a></p>
 </section>

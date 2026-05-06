@@ -81,9 +81,9 @@ comments: false
   </section>
   <section class="lab-doc-panel">
     <div class="lab-doc-eyebrow">联系与入口</div>
-    <p>Email: <code>bowen@example.edu</code></p>
+     <p>Email: <code>bwphys@163.com</code></p>
     <p>GitHub: <a href="https://github.com/bowenphys">https://github.com/bowenphys</a></p>
-    <p>Scholar: <a href="https://scholar.google.com/citations?user=PLACEHOLDER">Google Scholar</a></p>
+     <p>Scholar: <a href="https://scholar.google.com/citations?user=0000">Google Scholar</a></p>
     <p><a href="/research/">研究地图</a> · <a href="/projects/">项目仓库</a> · <a href="/cv/">学术 dossier</a> · <a href="/en/about/">English</a></p>
   </section>
 </div>

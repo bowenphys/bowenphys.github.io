@@ -7,7 +7,7 @@ tags:
   - micromagnetics
   - skyrmion
   - spin-dynamics
-abbrlink: 10003
+abbrlink: 10007
 katex: true
 ---
 

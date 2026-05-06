@@ -46,9 +46,9 @@ lang: en
   </section>
   <section class="lab-doc-panel">
     <div class="lab-doc-eyebrow">Contact</div>
-    <p>Email: <code>bowen@example.edu</code></p>
+    <p>Email: <code>bwphys@163.com</code></p>
     <p>GitHub: <a href="https://github.com/bowenphys">https://github.com/bowenphys</a></p>
-    <p>Scholar: <a href="https://scholar.google.com/citations?user=PLACEHOLDER">Google Scholar</a></p>
+    <p>Scholar: <a href="https://scholar.google.com/citations?user=0000">Google Scholar</a></p>
     <p><a href="/en/research/">Research</a> · <a href="/en/projects/">Projects</a> · <a href="/about/">中文页面</a></p>
   </section>
 </div>

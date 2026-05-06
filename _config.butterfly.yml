@@ -10,8 +10,8 @@ favicon: /favicon.ico
 
 social:
   fab fa-github: https://github.com/bowenphys || GitHub
-  fas fa-envelope: mailto:bowen.phys@example.edu || Email
-  fas fa-graduation-cap: https://scholar.google.com/citations?user=PLACEHOLDER || Scholar
+  fas fa-envelope: mailto:bwphys@163.com || Email
+  fas fa-graduation-cap: https://scholar.google.com/citations?user=0000 || Scholar
   fab fa-orcid: https://orcid.org/0000-0000-0000-0000 || ORCID
 
 avatar:
@@ -108,12 +108,10 @@ busuanzi:
 
 inject:
   head:
+    - <link rel="stylesheet" href="/css/lab.css">
     - <link rel="stylesheet" href="/css/custom.css">
-    - <link rel="stylesheet" href="/css/lab-tech.css">
-    - <link rel="stylesheet" href="/css/lab-tech-v2.css">
-    - <link rel="stylesheet" href="/css/lab-tech-v3.css">
   bottom:
-    - <script defer src="/js/password-protect.js"></script>
     - <script defer src="/js/lang-toggle.js"></script>
-    - <script defer src="/js/lab-tech-home.js"></script>
     - <script defer src="/js/lab-tech-effects.js"></script>
+    - <script defer src="/js/lab-tech-home.js"></script>
+    - <script defer src="/js/code-copy.js"></script>

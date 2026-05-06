@@ -16,7 +16,7 @@ lang: en
     <h3>Education</h3>
     <p><strong>Eastern Institute of Technology, Ningbo & USTC (Joint Program)</strong></p>
     <p>PhD Student in Physics ｜ 2022 - Present</p>
-    <p>Supervisors: Prof. San Zhang, Prof. Si Li</p>
+    <p>Supervisors: Prof. Tong Zhou</p>
     <p><strong>University of Science and Technology of China</strong></p>
     <p>BSc in Physics ｜ 2018 - 2022</p>
     <p>GPA: 3.8/4.0</p>
@@ -67,6 +67,6 @@ lang: en
 <section class="lab-doc-panel">
   <div class="lab-doc-eyebrow">Contact</div>
   <p>GitHub: <a href="https://github.com/bowenphys">https://github.com/bowenphys</a></p>
-  <p>Email: <code>bowen@example.edu</code></p>
+  <p>Email: <code>bwphys@163.com</code></p>
   <p><a href="/cv/">中文页面</a></p>
 </section>
