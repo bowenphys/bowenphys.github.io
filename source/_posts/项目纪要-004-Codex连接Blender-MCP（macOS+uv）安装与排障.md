@@ -34,7 +34,7 @@ brew install uv
 
 1. 从 GitHub 仓库下载 `addon.py`（保持文件名不变也可以）。
 2. 打开 Blender：
-   - `Edit` → `Preferences` → `Add-ons` → `Install...`
+   - `Edit` → `Preferences` → `Add-ons` → `Install…`
    - 选择 `addon.py` 安装
 3. 在插件列表中勾选启用：`Interface: Blender MCP`
 

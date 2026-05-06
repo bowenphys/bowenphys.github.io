@@ -11,6 +11,15 @@
   display: none;
 }
 
+/* ── Typography ── */
+#article-container h1,
+#article-container h2,
+#article-container h3,
+#article-container h4 {
+  text-wrap: balance;
+  scroll-margin-top: 5rem;
+}
+
 /* ── Light Mode Glass ── */
 html[data-theme='light'] {
   --card-bg: rgba(255, 255, 255, 0.62);

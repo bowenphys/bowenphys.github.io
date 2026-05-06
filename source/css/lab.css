@@ -27,6 +27,14 @@
   --lab-v2-panel-bg: rgba(7, 16, 28, 0.8);
 }
 
+html {
+  touch-action: manipulation;
+}
+
+html[data-theme='dark'] {
+  color-scheme: dark;
+}
+
 /* ── 2. Dark Theme Globals ── */
 html[data-theme='dark'] {
   --card-bg: rgba(10, 20, 34, 0.88);
@@ -212,6 +220,8 @@ html[data-theme='dark'] #article-container h3,
 html[data-theme='dark'] #article-container h4 {
   color: #eff9ff;
   letter-spacing: 0.01em;
+  text-wrap: balance;
+  scroll-margin-top: 5rem;
 }
 
 html[data-theme='dark'] #article-container h2,
