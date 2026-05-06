@@ -76,6 +76,12 @@ sitemap:
   tags: true
   categories: true
 
+# Blog Encrypt
+encrypt:
+  enable: true
+  default_abstract: 这是一篇加密文章，请输入密码阅读。
+  default_message: 请输入文章密码：
+
 deploy:
   type: git
   repository: git@github.com:bowenphys/bowenphys.github.io.git

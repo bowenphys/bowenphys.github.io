@@ -115,5 +115,7 @@ inject:
     - <script defer src="/js/lab-tech-effects.js"></script>
     - <script defer src="/js/lab-tech-home.js"></script>
     - <script defer src="/js/lab-dashboard.js"></script>
+    - <script defer src="/js/lab-crystal.js"></script>
     - <script defer src="/js/lab-hero-canvas.js"></script>
+    - <script defer src="/js/page-transitions.js"></script>
     - <script defer src="/js/code-copy.js"></script>
