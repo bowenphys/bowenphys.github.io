@@ -817,6 +817,94 @@ html[data-theme='dark'] .pub-meta {
   margin-bottom: 0.35rem;
 }
 
+/* crystal lattice canvas */
+.lab-crystal-wrap {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 38%;
+  pointer-events: none;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.62;
+}
+
+#lab-crystal-canvas {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.lab-doc-panel.is-hero {
+  position: relative;
+  min-height: 0;
+}
+
+/* sector card accent */
+.lab-record-card {
+  position: relative;
+}
+
+.lab-record-card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  border-radius: 3px 0 0 3px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+#sector-quantum::after         { background: var(--lab-accent-cyan); }
+#sector-first-principles::after { background: var(--lab-accent-blue); }
+#sector-micromagnetics::after  { background: var(--lab-accent-gold); }
+#sector-wannier::after         { background: var(--lab-accent-green); }
+
+/* sector indicator dots */
+#sector-quantum .lab-doc-eyebrow::before,
+#sector-first-principles .lab-doc-eyebrow::before,
+#sector-micromagnetics .lab-doc-eyebrow::before,
+#sector-wannier .lab-doc-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 0.45rem;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
+#sector-quantum .lab-doc-eyebrow::before         { background: var(--lab-accent-cyan);  box-shadow: 0 0 8px rgba(114, 236, 255, 0.6); }
+#sector-first-principles .lab-doc-eyebrow::before { background: var(--lab-accent-blue);  box-shadow: 0 0 8px rgba(123, 168, 255, 0.6); }
+#sector-micromagnetics .lab-doc-eyebrow::before  { background: var(--lab-accent-gold);  box-shadow: 0 0 8px rgba(255, 215, 122, 0.6); }
+#sector-wannier .lab-doc-eyebrow::before         { background: var(--lab-accent-green); box-shadow: 0 0 8px rgba(142, 255, 212, 0.6); }
+
+/* page transitions */
+@keyframes page-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes page-fade-out {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(-4px); }
+}
+
+#content-inner.is-entering {
+  animation: page-fade-in 0.28s ease-out;
+}
+
+#content-inner.is-leaving {
+  animation: page-fade-out 0.16s ease-in;
+}
+
 .recent-post-item {
   position: relative;
 }
