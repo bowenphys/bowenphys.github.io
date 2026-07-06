@@ -14,7 +14,7 @@
     "version": "8.1.1"
   },
   "dependencies": {
-    "@citation-js/plugin-bibtex": "^0.7.21",
+    "@citation-js/plugin-bibtex": "^0.8.1",
     "citation-js": "^0.7.22",
     "hexo": "^8.1.1",
     "hexo-abbrlink": "^2.2.1",
